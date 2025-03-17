@@ -59,7 +59,6 @@ m.download("mov.*cidol.*loop.usm", video_format="MP4")  # animated character car
       - `media.dummy.GkmasDummyMedia`
       - `media.image.GkmasUnityImage` - Texture2D image handling
       - `media.audio.GkmasUnityAudio` - AudioClip audio handling
-      - `media.ai_caption.GPTCaptionEngine` - Image and video captioning
 
 
 

@@ -49,20 +49,10 @@ def api_assetbundle_bytestream(id):
     return Response(bytestream, mimetype=mimetype)
 
 
-@app.route("/api/assetbundle/<id>/caption")
-def api_assetbundle_caption(id):
-    return _get_manifest().assetbundles[int(id)].get_caption()
-
-
 @app.route("/api/resource/<id>/bytestream")
 def api_resource_bytestream(id):
     bytestream, mimetype = _get_manifest().resources[int(id)].get_data()
     return Response(bytestream, mimetype=mimetype)
-
-
-@app.route("/api/resource/<id>/caption")
-def api_resource_caption(id):
-    return _get_manifest().resources[int(id)].get_caption()
 
 
 # Frontend routes

@@ -7,7 +7,6 @@ and PNG image handler for GkmasResource.
 from ..log import Logger
 from ..const import IMAGE_RESIZE_ARGTYPE
 from .dummy import GkmasDummyMedia
-from .ai_caption import GPTImageCaptionEngine
 
 from io import BytesIO
 from pathlib import Path
@@ -27,9 +26,6 @@ class GkmasImage(GkmasDummyMedia):
         super().__init__(name, raw)
         self.mimetype = "image"
         self.raw_format = name.split(".")[-1][:-1]
-
-    def caption(self) -> str:
-        return GPTImageCaptionEngine().generate(self.get_embed_url())
 
     def _convert(self, raw: bytes, **kwargs) -> bytes:
         return self._img2bytes(Image.open(BytesIO(raw)), **kwargs)

@@ -14,7 +14,3 @@ UnityPy
 pillow
 pydub
 ffmpeg-python
-
-# GPT captioning engine
-PyYAML
-openai

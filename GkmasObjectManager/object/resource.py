@@ -75,10 +75,6 @@ class GkmasResource:
         # Not set at initialization, since downloading bytes is a prerequisite.
         self._media = None
 
-        # We expect the client to use get_caption(),
-        # so this *internal* variable has a leading underscore.
-        self._caption = None
-
     def __repr__(self):
         return f"<GkmasResource {self._idname}>"
 
@@ -109,15 +105,6 @@ class GkmasResource:
 
     def get_data(self, **kwargs) -> Tuple[bytes, str]:
         return self._get_media().get_data(**kwargs)
-
-    # No leading underscore, since this should be client-side visible
-    def get_caption(self) -> str:
-        if self._caption is None:
-            caption = self._get_media().caption()
-            if caption.startswith("["):  # error message
-                return caption  # display in frontend, but don't cache
-            self._caption = caption
-        return self._caption
 
     def download(
         self,

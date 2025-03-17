@@ -8,8 +8,7 @@
     height: 75vh;
 }
 
-#loadingSpinnerMedia,
-#loadingSpinnerCaption {
+#loadingSpinnerMedia {
     display: flex;
     align-items: center;
 }

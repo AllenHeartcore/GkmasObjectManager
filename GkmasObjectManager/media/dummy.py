@@ -64,9 +64,6 @@ class GkmasDummyMedia:
         data, mimetype = self.get_data(**kwargs)
         return f"data:{mimetype};base64,{base64.b64encode(data).decode()}"
 
-    def caption(self) -> str:
-        return "[Captioning not supported for this type of media.]"
-
     def export(self, path: Path, **kwargs):
         # not overriding self.mimetype indicates unhandled media type
         if self.mimetype and kwargs.get(f"convert_{self.mimetype}", True):

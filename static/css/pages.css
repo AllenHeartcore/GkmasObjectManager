@@ -64,10 +64,3 @@
     object-fit: contain;
     object-position: center;
 }
-
-#viewCaption {
-    min-height: 10vh;
-    overflow: hidden;
-    font-size: 1.25rem;
-    line-height: 1.5;
-}
