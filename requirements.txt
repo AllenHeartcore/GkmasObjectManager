@@ -1,5 +1,6 @@
 rich
 flask
+gunicorn
 
 # Manifest:
 # request, decrypt, parse, export
