@@ -1,5 +1,5 @@
 runtime: python312
-entrypoint: gunicorn -b :$PORT app:app
+entrypoint: gunicorn -b :$PORT server:app
 
 instance_class: F2
 
