@@ -82,3 +82,16 @@ class GkmasManifestRevision:
                 self.this > other.this
             ), "'This' revision of minuend (self) must be newer."
             return GkmasManifestRevision(self.this, other.this)
+
+    def __add__(self, other):
+        """
+        Returns the sum of two revisions.
+        Requires self.this == other.base to be valid.
+        """
+
+        assert (
+            self.this != other.this
+        ), "Cannot add revisions with identical 'this' revision."
+        a, b = (self, other) if self.this < other.this else (other, self)
+        assert a.this == b.base, "Revisions not comparable."
+        return GkmasManifestRevision(b.this, a.base)

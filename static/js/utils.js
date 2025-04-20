@@ -33,6 +33,7 @@ const CHARACTER_ALIAS = {
     "hume": "Hanami Ume",
     "hmsz": "Hataya Misuzu",
     "jsna": "Juo Sena",
+    "nasr": "Neo Asari",
 };
 
 const RARITY_ALIAS = {
@@ -58,9 +59,9 @@ const SONG_ALIAS = {
 
 function dumpErrorToConsole(...args) {
     var name_of_parent_function = arguments.callee.caller.name;
-    console.log("Error in " + name_of_parent_function);
+    console.error("Error in " + name_of_parent_function);
     args.forEach((arg) => {
-        console.log(arg);
+        console.error(arg);
     });
 }
 
@@ -72,10 +73,12 @@ function getMediaBlobURL(type, id) {
             xhrFields: { responseType: "arraybuffer" },
             success: function (data, status, request) {
                 const mimetype = request.getResponseHeader("Content-Type");
+                const mtime = request.getResponseHeader("Last-Modified");
                 blob = new Blob([data], { type: mimetype });
                 resolve({
                     url: URL.createObjectURL(blob),
                     mimetype: mimetype,
+                    mtime: mtime.replace(/ GMT.*/, ""),
                 });
             },
             error: function (...args) {
@@ -86,6 +89,7 @@ function getMediaBlobURL(type, id) {
                 reject({
                     url: URL.createObjectURL(blob),
                     mimetype: "text/plain",
+                    mtime: "Unknown",
                 });
             },
         });

@@ -7,7 +7,6 @@ and MP3 audio handler for GkmasResource.
 from ..log import Logger
 from .dummy import GkmasDummyMedia
 
-import os
 import platform
 import tempfile
 import subprocess
@@ -16,6 +15,8 @@ from pathlib import Path
 
 import UnityPy
 from pydub import AudioSegment
+from zipfile import ZipFile, ZipInfo
+from datetime import datetime
 
 
 logger = Logger()
@@ -24,8 +25,8 @@ logger = Logger()
 class GkmasAudio(GkmasDummyMedia):
     """Handler for audio of common formats recognized by pydub."""
 
-    def __init__(self, name: str, raw: bytes):
-        super().__init__(name, raw)
+    def __init__(self, name: str, raw: bytes, mtime: str = ""):
+        super().__init__(name, raw, mtime)
         self.mimetype = "audio"
         self.raw_format = name.split(".")[-1][:-1]
 
@@ -37,8 +38,8 @@ class GkmasAudio(GkmasDummyMedia):
 class GkmasUnityAudio(GkmasAudio):
     """Conversion plugin for Unity audio."""
 
-    def __init__(self, name: str, raw: bytes):
-        super().__init__(name, raw)
+    def __init__(self, name: str, raw: bytes, mtime: str = ""):
+        super().__init__(name, raw, mtime)
         self.raw_format = None  # don't override
         self.converted_format = "wav"
 
@@ -55,24 +56,27 @@ class GkmasUnityAudio(GkmasAudio):
 class GkmasAWBAudio(GkmasDummyMedia):
     """Conversion plugin for AWB audio."""
 
-    def __init__(self, name: str, raw: bytes):
-        super().__init__(name, raw)
+    def __init__(self, name: str, raw: bytes, mtime: str = ""):
+        super().__init__(name, raw, mtime)
         self.mimetype = "audio"
         self.converted_format = "wav"
 
     def _convert(self, raw: bytes, **kwargs) -> bytes:
-        # doesn't use pydub, which is why this class is not inherited from GkmasAudio
+        # uses pydub in vastly different ways,
+        # thus this class is not inherited from GkmasAudio
 
         audio = None
         success = False
+        exception = None
+        input_ext = self.name.split(".")[-1][:-1]
 
-        try:
-            input_ext = self.name.split(".")[-1][:-1]
-            tmp_in = tempfile.NamedTemporaryFile(suffix=f".{input_ext}", delete=False)
+        # vgmstream doesn't like delete=True
+        with tempfile.NamedTemporaryFile(
+            suffix=f".{input_ext}", delete=False
+        ) as tmp_in, tempfile.TemporaryDirectory() as tmp_out:
+
             tmp_in.write(raw)
-            tmp_out = tempfile.NamedTemporaryFile(
-                suffix=f".{self.converted_format}", delete=False
-            )
+            tmp_in.flush()
 
             system_name = platform.system()
             if system_name == "Windows":
@@ -84,33 +88,48 @@ class GkmasAWBAudio(GkmasDummyMedia):
             else:
                 raise OSError(f"Unsupported system: {system_name}")
 
-            process = subprocess.run(
-                [
-                    Path(__file__).parent / f"vgmstream/vgmstream-{exe_suffix}",
-                    "-o",
-                    tmp_out.name,
-                    tmp_in.name,
-                ],
-                shell=True,  # Otherwise, gets [WinError 193] 'invalid Win32 application'
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,  # suppresses console output
-            )
-            assert process.returncode == 0
-            audio = AudioSegment.from_file(tmp_out.name)
-            success = True
-        except Exception as e:
-            exception = e  # 'e' only lives in the 'except' block
-            # parent class handles the rest
-        finally:
-            tmp_in.close()
-            tmp_out.close()
-            os.remove(tmp_in.name)
-            os.remove(tmp_out.name)
-            # this 'finally' block is why the 'success' flag,
-            # along with all these try-catch hassle, ever exists
-            # (vgmstream doesn't like NamedTemporaryFile with delete=True)
+            try:
+                subprocess.run(
+                    [
+                        Path(__file__).parent / f"vgmstream/vgmstream-{exe_suffix}",
+                        "-S",  # select subsongs
+                        "-1",  # all of them (shell=True forces string args)
+                        "-o",
+                        Path(tmp_out, "?n.wav"),  # use internal stream name
+                        tmp_in.name,
+                    ],
+                    shell=True,  # Otherwise, gets [WinError 193] 'invalid Win32 application'
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,  # suppresses console output
+                    check=True,
+                )
+                audio = [
+                    (f.name, AudioSegment.from_file(f)) for f in Path(tmp_out).iterdir()
+                ]
+                success = True
+            except Exception as e:
+                exception = e
 
-        if success:
-            return audio.export(format=self.converted_format).read()
-        else:
+        Path(tmp_in.name).unlink()
+
+        if not success:
             raise exception  # delay the exception after cleanup
+
+        if len(audio) == 1:
+            return audio[0][1].export(format=self.converted_format).read()
+            # discard stream name and follow filename
+
+        with BytesIO() as buffer:
+            with ZipFile(buffer, "w") as zip_file:
+                dt = (
+                    datetime.fromtimestamp(self.mtime) if self.mtime else datetime.now()
+                )
+                for f, segment in audio:
+                    zip_file.writestr(
+                        ZipInfo(
+                            Path(f).with_suffix(f".{self.converted_format}").name,
+                            date_time=dt.timetuple(),
+                        ),
+                        segment.export(format=self.converted_format).read(),
+                    )
+            return buffer.getvalue()

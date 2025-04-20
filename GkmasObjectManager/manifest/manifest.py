@@ -9,7 +9,7 @@ from ..const import (
     PATH_ARGTYPE,
     CSV_COLUMNS,
     DEFAULT_DOWNLOAD_PATH,
-    DEFAULT_DOWNLOAD_NWORKER,
+    CHARACTER_ABBREVS,
 )
 
 from .revision import GkmasManifestRevision
@@ -18,9 +18,11 @@ from .listing import GkmasObjectList
 
 import re
 import json
+import yaml
+import asyncio
+import subprocess
 import pandas as pd
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 # The logger would better be a global variable in the
@@ -43,7 +45,6 @@ class GkmasManifest:
     Methods:
         download(
             *criteria: str,
-            nworker: int = DEFAULT_DOWNLOAD_NWORKER,
             path: Union[str, Path] = DEFAULT_DOWNLOAD_PATH,
             categorize: bool = True,
             convert_image: bool = True,
@@ -120,11 +121,6 @@ class GkmasManifest:
         # could also try self[key]
 
     def __sub__(self, other):
-        """
-        [INTERNAL] Creates a manifest from a differentiation dictionary.
-        The diffdict refers to a dictionary containing differentiated
-        assetbundles and resources, created by listing.GkmasObjectList.diff().
-        """
         return GkmasManifest(
             {  # this is not a standard JSON dict, more like named arguments
                 "revision": self.revision - other.revision,  # handles sanity check
@@ -132,6 +128,20 @@ class GkmasManifest:
                 "resourceList": self.resources - other.resources,
                 "urlFormat": self.urlformat,
                 # always override with the higher revision, in case this ever differs
+            }
+        )
+
+    def __add__(self, other):
+        new_revision = self.revision + other.revision
+        a, b = (
+            (self, other) if new_revision.this == other.revision.this else (other, self)
+        )  # 'b' must be newer; this matters in list addition
+        return GkmasManifest(
+            {
+                "revision": new_revision,
+                "assetBundleList": a.assetbundles + b.assetbundles,
+                "resourceList": a.resources + b.resources,
+                "urlFormat": b.urlformat,
             }
         )
 
@@ -251,33 +261,26 @@ class GkmasManifest:
     def search(self, criterion: str):
         """
         Searches the manifest for objects matching the specified criterion.
-        Returns a list of object names.
+        Returns a list of objects.
 
         Args:
             criterion (str): Regex pattern of object names.
         """
 
-        names = []
-        for obj in self:
-            if re.match(criterion, obj.name, flags=re.IGNORECASE):
-                names.append(obj.name)
-        return [self[name] for name in sorted(names)]
+        matches = filter(
+            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            list(self),
+        )
+        return sorted(matches, key=lambda x: x.name)
         # This will be called by frontend.
         # We instantiate here to make ID's readily available.
 
-    def download(
-        self,
-        *criteria: str,
-        nworker: int = DEFAULT_DOWNLOAD_NWORKER,
-        **kwargs,
-    ):
+    def download(self, *criteria: str, **kwargs):
         """
         Downloads the regex-specified assetbundles/resources to the specified path.
 
         Args:
             *criteria (str): Regex patterns of assetbundle/resource names.
-            nworker (int) = DEFAULT_DOWNLOAD_NWORKER: Number of concurrent download workers.
-                Defaults to multiprocessing.cpu_count().
             path (Union[str, Path]) = DEFAULT_DOWNLOAD_PATH: A directory to which the objects are downloaded.
                 *WARNING: Behavior is undefined if the path points to an definite file (with extension).*
             categorize (bool) = True: Whether to categorize the downloaded objects into subdirectories.
@@ -293,52 +296,122 @@ class GkmasManifest:
                 If Tuple[int, int], images are resized to the specified exact dimensions.
         """
 
-        objects = []
+        if "preset" in kwargs:
+            self.download_preset(kwargs.pop("preset"))
+            return
 
-        for criterion in criteria:
-            objects.extend(self.search(criterion))
+        if not criteria:
+            logger.warning(
+                "No criteria specified; download everything with download_all() instead"
+            )
+            return
+
+        objects = self.search("|".join(criteria))
 
         if not objects:
             logger.warning("No objects matched the criteria, aborted")
             return
 
-        self._do_download(objects, nworker, **kwargs)
+        asyncio.run(self._dispatch(objects, **kwargs))
 
-    def download_all_assetbundles(
-        self, nworker: int = DEFAULT_DOWNLOAD_NWORKER, **kwargs
-    ):
+    def download_preset(self, preset_filename: str):
+        """
+        [INTERNAL] Downloads by a predefined preset (see examples in presets/).
+        """
+
+        # READ PRESET
+
+        with open(preset_filename, "r") as f:
+            preset = yaml.safe_load(f)
+
+        root = preset.get("root", DEFAULT_DOWNLOAD_PATH)
+        root = root.replace("{revision}", f"v{self.revision._get_canon_repr()}")
+
+        global_kwargs = preset.get("global-kwargs", {})
+        proto_instrs = preset.get("instructions", [])
+
+        pp_path = preset.get("post-processing", "")
+        if pp_path:
+            pp_path = Path(preset_filename).parent / pp_path
+
+        # PARSE INSTRUCTIONS
+
+        instrs = []
+
+        for instr in proto_instrs:
+
+            criterion = instr.pop("criterion", "")
+            subdir = instr.pop("subdir", "")
+
+            if "{char}" not in criterion:
+                assert "{char}" not in subdir, "Standalone {char} flag in subdir"
+                instrs.append((criterion, {"path": Path(root, subdir), **instr}))
+            else:
+                for char in CHARACTER_ABBREVS[:12]:  # hardcoded
+                    instrs.append(
+                        (
+                            criterion.replace("{char}", char),
+                            {
+                                "path": Path(root, subdir.replace("{char}", char)),
+                                **instr,
+                            },
+                        )
+                    )
+
+        # DISPATCH
+
+        asyncio.run(
+            self._dispatch(
+                [
+                    (obj, kw)
+                    for criterion, kw in instrs
+                    for obj in self.search(criterion)
+                ],
+                **global_kwargs,
+            )
+        )
+
+        if pp_path:
+            logger.info(f"Running post-processing script '{pp_path}'")
+            subprocess.run(["python", pp_path, root], check=True)
+
+    def download_all_assetbundles(self, **kwargs):
         """
         Downloads all assetbundles to the specified path.
         See download() for a list of keyword arguments.
         """
-        objects = [ab for ab in self.assetbundles]
-        self._do_download(objects, nworker, **kwargs)
+        asyncio.run(self._dispatch(list(self.assetbundles), **kwargs))
 
-    def download_all_resources(self, nworker: int = DEFAULT_DOWNLOAD_NWORKER, **kwargs):
+    def download_all_resources(self, **kwargs):
         """
         Downloads all resources to the specified path.
         See download() for a list of keyword arguments.
         """
-        objects = [res for res in self.resources]
-        self._do_download(objects, nworker, **kwargs)
+        asyncio.run(self._dispatch(list(self.resources), **kwargs))
 
-    def download_all(self, nworker: int = DEFAULT_DOWNLOAD_NWORKER, **kwargs):
+    def download_all(self, **kwargs):
         """
         Downloads all assetbundles and resources to the specified path.
         See download() for a list of keyword arguments.
         """
-        # Instead of calling two separate methods,
-        # this approach ensures all workers are busy at transition.
-        objects = [ab for ab in self.assetbundles]
-        objects.extend([res for res in self.resources])
-        self._do_download(objects, nworker, **kwargs)
+        asyncio.run(self._dispatch(list(self), **kwargs))
 
-    def _do_download(self, objects: list, nworker: int, **kwargs):
+    async def _dispatch(self, obj_kw: list, **kwargs):
         """
-        [INTERNAL] Dispatches a list of objects to concurrent download tasks.
+        [INTERNAL] Dispatches a list of object-kwargs pairs to async download tasks.
         """
-        self.executor = ThreadPoolExecutor(max_workers=nworker)
-        futures = [self.executor.submit(obj.download, **kwargs) for obj in objects]
-        for future in as_completed(futures):
-            future.result()
-        self.executor.shutdown()
+
+        # if obj_kw is a list of objects, append empty kwargs
+        if not isinstance(obj_kw[0], tuple):
+            obj_kw = [(obj, {}) for obj in obj_kw]
+
+        # if kwargs not empty, broadcast to all pairs
+        if kwargs:
+            obj_kw = [(obj, {**kw, **kwargs}) for (obj, kw) in obj_kw]
+
+        await asyncio.gather(
+            *[
+                asyncio.create_task(asyncio.to_thread(obj.download, **kw))
+                for (obj, kw) in obj_kw
+            ]
+        )

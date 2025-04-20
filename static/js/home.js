@@ -23,7 +23,7 @@ function populateHomepageContainers(data) {
 
     // Place images in the correct order since Promise's are async
     latestSamples.forEach((item, index) => {
-        getMediaBlobURL("AssetBundle", item.id).then(({ url, mimetype }) => {
+        getMediaBlobURL("AssetBundle", item.id).then(({ url, mimetype, _ }) => {
             if (!mimetype.startsWith("image/")) {
                 console.log(
                     `Expected an image mimetype for asset ${item.id}, but got ${mimetype}`
@@ -73,8 +73,9 @@ $(document).ready(function () {
 
     $("#homeGotoForm").submit(function (event) {
         event.preventDefault();
-        let id = $("#homeGotoInput").val();
-        let type = $("#homeGotoType").val();
+        // sanitize user input, suppress 'DOM text reinterpreted as HTML' in CodeQL
+        let id = encodeURIComponent($("#homeGotoInput").val());
+        let type = encodeURIComponent($("#homeGotoType").val());
         window.location.href = `/view/${type}/${id}`;
     });
 

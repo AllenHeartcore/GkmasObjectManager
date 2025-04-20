@@ -1,0 +1,30 @@
+root: "gkmas_wallpaper_kit_{revision}"
+
+global-kwargs:
+    categorize: false
+    convert_image: true
+
+instructions:
+    - criterion: "img_general_cidol.*thumb-landscape-large"
+      subdir: "cidol-landscape"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_cidol.*full"
+      subdir: "cidol-portrait"
+      image_format: "jpeg"
+      image_resize: "9:16"
+
+    - criterion: "img_general_csprt.*full"
+      subdir: "csprt"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_meishi_base_story-bg.*full"
+      subdir: "bg"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_meishi_base_(?!story-bg).*full"
+      subdir: "base"
+      image_resize: "16:9"

@@ -21,7 +21,7 @@ Example Usage
 from GkmasObjectManager import GkmasManifest
 manifest = GkmasManifest("EncryptedCache/octocacheevai")
 manifest.export('DecryptedCache/')
-manifest.download('adv.*ttmr.*', 'sud_vo.*fktn.*', 'mdl.*hski.*', nworker=8)
+manifest.download('adv.*ttmr.*', 'sud_vo.*fktn.*', 'mdl.*hski.*')
 
 manifest_old = GkmasManifest("EncryptedCache/octocacheevai_old")
 mdiff = manifest - manifest_old

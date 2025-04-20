@@ -80,6 +80,13 @@ class GkmasObjectList:
                     canon_reprs.append(this_repr)
         return GkmasObjectList(canon_reprs, self.base_class)
 
+    def __add__(self, other: "GkmasObjectList") -> "GkmasObjectList":
+        # 'other' is assumed to be newer, since revision is not accessible here
+        assert self.base_class == other.base_class
+        mapped = {entry["id"]: entry for entry in self._get_canon_repr()}
+        mapped.update({entry["id"]: entry for entry in other._get_canon_repr()})  # hack
+        return GkmasObjectList(list(mapped.values()), self.base_class)
+
     def _get_canon_repr(self):
         """
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the object list.

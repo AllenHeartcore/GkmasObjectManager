@@ -1,6 +1,8 @@
 import GkmasObjectManager as gom
 
 from flask import Flask, render_template, request, jsonify, Response
+from email.utils import parsedate_to_datetime
+from datetime import datetime, timezone, timedelta
 
 
 # Bookkeeping
@@ -15,6 +17,12 @@ def _get_manifest():
     if m is None:
         m = gom.fetch()
     return m
+
+
+def _sanitize_mtime(mtime):
+    mtime = parsedate_to_datetime(mtime)
+    mtime = mtime.astimezone(timezone(timedelta(hours=9)))  # Japan Standard Time
+    return mtime.strftime("%Y-%m-%d %H:%M:%S")
 
 
 # API endpoints
@@ -45,14 +53,24 @@ def api_search():
 
 @app.route("/api/assetbundle/<id>/bytestream")
 def api_assetbundle_bytestream(id):
-    bytestream, mimetype = _get_manifest().assetbundles[int(id)].get_data()
-    return Response(bytestream, mimetype=mimetype)
+    obj = _get_manifest().assetbundles[int(id)]
+    bytestream, mimetype = obj.get_data()
+    return Response(
+        bytestream,
+        mimetype=mimetype,
+        headers={"Last-Modified": _sanitize_mtime(obj._mtime)},
+    )
 
 
 @app.route("/api/resource/<id>/bytestream")
 def api_resource_bytestream(id):
-    bytestream, mimetype = _get_manifest().resources[int(id)].get_data()
-    return Response(bytestream, mimetype=mimetype)
+    obj = _get_manifest().resources[int(id)]
+    bytestream, mimetype = obj.get_data()
+    return Response(
+        bytestream,
+        mimetype=mimetype,
+        headers={"Last-Modified": _sanitize_mtime(obj._mtime)},
+    )
 
 
 # Frontend routes
@@ -65,8 +83,14 @@ def home():
 
 @app.route("/search")
 def search():
-    query = request.args.get("query", "")
-    return render_template("search.html", query=query)
+    return render_template(
+        "search.html",
+        query=request.args.get("query", ""),
+        byID=request.args.get("byID", "true") == "true",
+        ascending=request.args.get("ascending", "false") == "true",
+        entriesPerPage=int(request.args.get("entriesPerPage", 12)),
+        currentPage=int(request.args.get("currentPage", 1)),
+    )
 
 
 @app.route("/view/assetbundle/<id>")

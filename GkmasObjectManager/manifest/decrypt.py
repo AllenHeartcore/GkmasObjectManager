@@ -3,8 +3,10 @@ crypt.py
 [INTERNAL] GkmasManifest decryptor.
 """
 
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
+from cryptography.hazmat.primitives.ciphers import Cipher
+from cryptography.hazmat.primitives.ciphers.algorithms import AES
+from cryptography.hazmat.primitives.ciphers.modes import CBC
+from cryptography.hazmat.primitives.padding import PKCS7
 
 
 class AESCBCDecryptor:
@@ -12,10 +14,12 @@ class AESCBCDecryptor:
     General-purpose AES decryptor (CBC mode).
 
     Attributes:
-        cipher (Crypto.Cipher.AES): AES cipher object.
+        cipher (cryptography.hazmat.primitives.ciphers.Cipher): AES cipher object.
+        unpadder (cryptography.hazmat.primitives.padding.PKCS7): PKCS7 unpadder object.
+        block_size (int): AES block size, fixed at 128 // 8 = 16 bytes.
 
     Methods:
-        process(enc: bytes, block_size: int = 16) -> bytes:
+        process(enc: bytes) -> bytes:
             Decrypts the given ciphertext into plaintext.
     """
 
@@ -28,9 +32,11 @@ class AESCBCDecryptor:
             iv (bytes): The AES initialization vector.
         """
 
-        self.cipher = AES.new(key, AES.MODE_CBC, iv)
+        self.cipher = Cipher(AES(key), CBC(iv)).decryptor()
+        self.unpadder = PKCS7(AES.block_size).unpadder()
+        self.block_size = AES.block_size // 8
 
-    def process(self, enc: bytes, block_size: int = 16) -> bytes:
+    def process(self, enc: bytes) -> bytes:
         """
         Decrypts the given ciphertext into plaintext.
 
@@ -41,10 +47,10 @@ class AESCBCDecryptor:
                 ciphertext is 16-byte aligned by trimming these leading bytes.
         """
 
-        clen = len(enc) // block_size * block_size
+        clen = len(enc) // self.block_size * self.block_size
         enc = enc[-clen:]
 
-        dec = self.cipher.decrypt(enc)
-        dec = unpad(dec, block_size=block_size, style="pkcs7")
+        dec = self.cipher.update(enc) + self.cipher.finalize()
+        dec = self.unpadder.update(dec) + self.unpadder.finalize()
 
         return dec

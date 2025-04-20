@@ -1,5 +1,6 @@
 function displayMedia() {
-    getMediaBlobURL(type, info.id).then(({ url, mimetype }) => {
+    getMediaBlobURL(type, info.id).then(({ url, mimetype, mtime }) => {
+        $("#uploadTime").text(mtime);
         $("#loadingSpinnerMedia").hide();
         $("#viewMediaContent").show();
         let container = $("#viewMediaContent");
@@ -20,6 +21,39 @@ function displayMedia() {
                     .attr({ src: url, controls: true })
                     .attr("alt", info.name)
             );
+        } else if (mimetype === "application/zip") {
+            // an archive of WAV files (subsongs extracted from .acb)
+            $("#viewMediaContent").addClass("vertically-scrollable");
+
+            fetch(url)
+                .then((response) => response.blob())
+                .then((blob) => JSZip.loadAsync(blob))
+                .then((zip) => {
+                    Object.keys(zip.files).forEach((filename) => {
+                        let row = $("<div>").addClass(
+                            "row align-center my-2 gx-0"
+                        );
+                        let col0 = $("<div>").addClass("col-1");
+                        let col1 = $("<div>").addClass("col-2 align-left fs-5");
+                        let col2 = $("<div>").addClass("col-9");
+
+                        let alias = filename.split(".")[0].split("_").pop();
+                        col1.text(alias);
+
+                        zip.files[filename].async("blob").then((fblob) => {
+                            fblob = new Blob([fblob], { type: "audio/wav" });
+                            const furl = URL.createObjectURL(fblob);
+                            col2.append(
+                                $("<audio>")
+                                    .attr({ src: furl, controls: true })
+                                    .attr("alt", filename)
+                            );
+                        });
+
+                        row.append(col0).append(col1).append(col2);
+                        container.append(row);
+                    });
+                });
         } else {
             handleUnsupportedMedia(url);
             return;
@@ -53,6 +87,5 @@ function handleUnsupportedMedia(url) {
 
 $(document).ready(function () {
     setAccentColorByString(info.name);
-
     displayMedia();
 });

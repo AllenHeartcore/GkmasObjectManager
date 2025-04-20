@@ -81,11 +81,12 @@ class GkmasAssetBundle(GkmasResource):
         if self._media is None:
             data = self._download_bytes()
             if self.name.startswith("img_"):
-                self._media = GkmasUnityImage(self._idname, data)
+                media_class = GkmasUnityImage
             elif self.name.startswith("sud_"):
-                self._media = GkmasUnityAudio(self._idname, data)
+                media_class = GkmasUnityAudio
             else:
-                self._media = GkmasDummyMedia(self._idname, data)
+                media_class = GkmasDummyMedia
+            self._media = media_class(self._idname, data, self._mtime)
 
         return self._media
 

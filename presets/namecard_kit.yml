@@ -1,0 +1,90 @@
+root: "gkmas_namecard_kit_{revision}"
+
+global-kwargs:
+    categorize: false
+    convert_image: true
+
+instructions:
+    - criterion: "img_general_icon_contest-rank.*"
+      subdir: "profile"
+
+    - criterion: "img_general_meishi_illust_idol-.*"
+      subdir: "idol/full"
+
+    - criterion: "img_general_meishi_illust_sd.*"
+      subdir: "idol/mini"
+      image_resize: "2:3"
+
+    - criterion: "img_general_cidol-{char}.*full"
+      subdir: "idol/produce/{char}"
+      image_format: "jpeg"
+      image_resize: "9:16"
+
+    - criterion: "img_general_cidol-{char}.*thumb-landscape-large"
+      subdir: "idol/produce/{char}"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_cidol-{char}.*thumb-portrait"
+      subdir: "idol/produce/{char}"
+      image_resize: "3:4"
+
+    - criterion: "img_general_meishi_illust_sign.*02-full"
+      subdir: "idol/sign"
+
+    - criterion: "img_general_csprt.*full"
+      subdir: "support"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_meishi_base_story-bg.*full"
+      subdir: "base/commu"
+      image_format: "jpeg"
+      image_resize: "16:9"
+
+    - criterion: "img_general_meishi_base_common-frame.*full"
+      subdir: "base/frame"
+      image_resize: "16:9"
+
+    - criterion: "img_general_meishi_base_(?!(story-bg|common-frame)).*full"
+      subdir: "base"
+      image_resize: "16:9"
+
+    - criterion: "img_general_achievement(?:_char)?_{char}.*"
+      subdir: "achievement/idol/{char}"
+
+    - criterion: "img_general_achievement_produce.*"
+      subdir: "achievement/produce"
+
+    - criterion: "img_general_achievement_common.*"
+      subdir: "achievement/misc"
+
+    - criterion: "img_general_meishi_illust_music-logo.*"
+      subdir: "parts/logo"
+      image_resize: "3:2"
+
+    - criterion: "img_general_meishi_illust_pict-icon.*"
+      subdir: "parts/icon"
+
+    - criterion: "img_general_meishi_illust_stamp.*"
+      subdir: "parts/stamp"
+
+    - criterion: "img_general_meishi_illust_costume.*"
+      subdir: "parts/costume"
+
+    - criterion: "img_general_meishi_illust_event.*"
+      subdir: "parts/event"
+
+    - criterion: "img_general_meishi_illust_highscore.*full"
+      subdir: "parts/highscore"
+
+    - criterion: "img_general_skillcard.*"
+      subdir: "produce/skillcard"
+
+    - criterion: "img_general_pitem.*"
+      subdir: "produce/pitem"
+
+    - criterion: "img_general_pdrink.*"
+      subdir: "produce/pdrink"
+
+post-processing: "namecard_kit_pp.py"
