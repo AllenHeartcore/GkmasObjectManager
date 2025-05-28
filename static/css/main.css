@@ -25,15 +25,6 @@ body {
 
 /* General layout */
 
-.full-width {
-    width: 100%;
-}
-
-.align-left {
-    text-align: left;
-    float: left;
-}
-
 .align-center {
     display: flex;
     justify-content: center;
@@ -42,19 +33,8 @@ body {
     margin: 0 auto;
 }
 
-.align-right {
-    text-align: right;
-    float: right;
-}
-
 .hide-by-default {
     display: none;
-}
-
-.vertically-scrollable {
-    overflow-y: auto;
-    max-height: 100%;
-    width: 100% !important;
 }
 
 .col-md-1-13 {
@@ -76,24 +56,10 @@ body {
     font-size: 0.75rem !important;
 }
 
+/*  Should better be called text-black,
+    but black is also a color... bruh  */
 .text-bold {
     font-weight: 900;
-}
-
-.text-italic {
-    font-style: italic;
-}
-
-.text-tightline {
-    line-height: 1.2;
-}
-
-.text-monospace {
-    font-family: Consolas, monospace;
-}
-
-.text-gray {
-    color: gray;
 }
 
 .text-gradient {
@@ -110,17 +76,4 @@ body {
     overflow: hidden;
     width: 100%;
     height: auto;
-}
-
-.image-roundedge {
-    border-radius: 0.5rem;
-}
-
-.anchor-no-decoration {
-    text-decoration: none;
-    color: inherit;
-}
-.anchor-no-decoration:hover {
-    text-decoration: none;
-    color: inherit;
 }

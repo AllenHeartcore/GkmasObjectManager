@@ -4,17 +4,14 @@ Unity image conversion plugin for GkmasAssetBundle,
 and PNG image handler for GkmasResource.
 """
 
-from ..log import Logger
-from ..const import IMAGE_RESIZE_ARGTYPE
-from .dummy import GkmasDummyMedia
-
 from io import BytesIO
-from pathlib import Path
-from typing import Union, Tuple
+from typing import Tuple, Union
 
 import UnityPy
 from PIL import Image
 
+from ..utils import Logger
+from .dummy import GkmasDummyMedia
 
 logger = Logger()
 
@@ -22,37 +19,34 @@ logger = Logger()
 class GkmasImage(GkmasDummyMedia):
     """Handler for images of common formats recognized by PIL."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
+    def _init_mimetype(self):
         self.mimetype = "image"
-        self.raw_format = name.split(".")[-1][:-1]
+        self.raw_format = self._name_ext
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
-        return self._img2bytes(Image.open(BytesIO(raw)), **kwargs)
+    def _convert(self, raw: bytes) -> bytes:
+        return self._img2bytes(Image.open(BytesIO(raw)))
 
-    # don't put 'image_resize' in signature to match the parent class
-    def _img2bytes(self, img: Image, **kwargs) -> bytes:
-        """
-        Args:
-            image_resize (Union[None, str, Tuple[int, int]]) = None: Image resizing argument.
-                If None, image is downloaded as is.
-                If str, string must contain exactly one ':' and image is resized to the specified ratio.
-                If Tuple[int, int], image is resized to the specified exact dimensions.
-        """
+    def _img2bytes(self, img: Image) -> bytes:
 
-        image_resize = kwargs.get("image_resize", None)
+        image_resize = self.image_resize
         if image_resize:
-            if type(image_resize) == str:
+            if isinstance(image_resize, str):
                 image_resize = self._determine_new_size(img.size, ratio=image_resize)
             img = img.resize(image_resize, Image.LANCZOS)
 
+        if img.mode == "RGBA":
+            if img.getchannel("A").getextrema() == (255, 255):  # fully opaque
+                img = img.convert("RGB")
+
         io = BytesIO()
         try:
-            img.save(io, format=self.converted_format.upper(), quality=100)
+            img.save(io, format=self.converted_format, quality=100)
         except OSError:  # cannot write mode RGBA as {self.converted_format}
-            img.convert("RGB").save(
-                io, format=self.converted_format.upper(), quality=100
+            logger.warning(
+                f"{self.converted_format} doesn't support RGBA mode, fallback to PNG."
             )
+            self.converted_format = "png"
+            img.save(io, format="PNG", quality=100)
 
         return io.getvalue()
 
@@ -109,13 +103,12 @@ class GkmasImage(GkmasDummyMedia):
 class GkmasUnityImage(GkmasImage):
     """Conversion plugin for Unity images."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
-        self.raw_format = None  # don't override
-        self.converted_format = "png"
+    def _init_mimetype(self):
+        self.mimetype = "image"
+        self.default_converted_format = "png"
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
+    def _convert(self, raw: bytes) -> bytes:
         env = UnityPy.load(raw)
         values = list(env.container.values())
         assert len(values) == 1, f"{self.name} contains {len(values)} images."
-        return super()._img2bytes(values[0].read().image, **kwargs)
+        return super()._img2bytes(values[0].read().image)

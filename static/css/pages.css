@@ -1,15 +1,14 @@
-#homepageElements,
-#missingpageElements {
-    margin-top: 7.5rem;
+#homepageElements {
+    margin-top: 15vh;
 }
 
 #searchpageElements,
-#viewpageElements {
-    margin-top: 5rem;
+#viewpageElements,
+#missingpageElements {
+    margin-top: 12vh;
 }
 
 .title {
-    margin: 30px 0 0 0;
     font-size: 4.2rem;
     line-height: 1;
 }

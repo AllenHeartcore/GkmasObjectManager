@@ -23,7 +23,7 @@ function displayMedia() {
             );
         } else if (mimetype === "application/zip") {
             // an archive of WAV files (subsongs extracted from .acb)
-            $("#viewMediaContent").addClass("vertically-scrollable");
+            $("#viewMediaContent").addClass("overflow-y-auto w-100");
 
             fetch(url)
                 .then((response) => response.blob())
@@ -34,7 +34,7 @@ function displayMedia() {
                             "row align-center my-2 gx-0"
                         );
                         let col0 = $("<div>").addClass("col-1");
-                        let col1 = $("<div>").addClass("col-2 align-left fs-5");
+                        let col1 = $("<div>").addClass("col-2 text-start fs-5");
                         let col2 = $("<div>").addClass("col-9");
 
                         let alias = filename.split(".")[0].split("_").pop();

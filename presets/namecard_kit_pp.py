@@ -1,6 +1,5 @@
-from sys import argv
 from pathlib import Path
-
+from sys import argv
 
 cat_instrs = [
     ("produce/skillcard", lambda s: s.split("_")[-2]),

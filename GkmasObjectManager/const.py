@@ -4,32 +4,19 @@ Module-wide constants (macro equivalents).
 """
 
 from pathlib import Path
+from typing import Union
 from urllib.parse import urljoin
-from typing import Union, Tuple
-from cryptography.hazmat.primitives import hashes
 
-
-def sha256sum(data: bytes) -> bytes:
-    digest = hashes.Hash(hashes.SHA256())
-    digest.update(data)
-    return digest.finalize()
-
-
-def md5sum(data: bytes) -> bytes:
-    digest = hashes.Hash(hashes.MD5())
-    digest.update(data)
-    return digest.finalize()
-
+from .utils import md5sum, sha256sum
 
 # argument type hints
-PATH_ARGTYPE = Union[str, Path]
-IMAGE_RESIZE_ARGTYPE = Union[None, str, Tuple[int, int]]
+PathArgtype = Union[str, Path]
 
 # manifest request
 GKMAS_APPID = 400
 GKMAS_VERSION = 205000
 GKMAS_VERSION_PC = 705000
-GKMAS_API_SERVER = f"https://api.asset.game-gakuen-idolmaster.jp/"
+GKMAS_API_SERVER = "https://api.asset.game-gakuen-idolmaster.jp/"
 GKMAS_API_URL = urljoin(
     GKMAS_API_SERVER, f"v2/pub/a/{GKMAS_APPID}/v/{GKMAS_VERSION}/list/"
 )
@@ -48,23 +35,13 @@ GKMAS_ONLINEPDB_KEY_PC = sha256sum("x5HFaJCJywDyuButLM0f".encode("utf-8"))
 GKMAS_OCTOCACHE_KEY = md5sum("1nuv9td1bw1udefk".encode("utf-8"))
 GKMAS_OCTOCACHE_IV = md5sum("LvAUtf+tnz".encode("utf-8"))
 
-# manifest diff
-OBJLIST_ID_FIELD = "id"
-OBJLIST_NAME_FIELD = "name"
-
 # manifest export
 CSV_COLUMNS = ["objectName", "md5", "name", "size", "state"]
 
 # manifest download dispatcher
 DEFAULT_DOWNLOAD_PATH = "objects/"
 
-# object instantiation
-RESOURCE_INFO_FIELDS_HEAD = ["id", "name", "size"]
-RESOURCE_INFO_FIELDS_TAIL = ["state", "md5", "objectName", "uploadVersionId"]
-RESOURCE_INFO_FIELDS = RESOURCE_INFO_FIELDS_HEAD + RESOURCE_INFO_FIELDS_TAIL
-
 # object download
-GKMAS_OBJECT_SERVER = "https://object.asset.game-gakuen-idolmaster.jp/"
 CHARACTER_ABBREVS = [
     "hski",  # Hanami SaKI
     "ttmr",  # Tsukimura TeMaRi

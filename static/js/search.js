@@ -160,7 +160,7 @@ function refreshCardContainer() {
         );
         let anchor = $("<a>")
             .attr("href", `/view/${entry.type.toLowerCase()}/${entry.id}`)
-            .addClass("anchor-no-decoration")
+            .addClass("text-decoration-none text-reset")
             .append(card);
         $("#searchEntryCardContainer").append(
             $("<div>").addClass("col-md-3").append(anchor)

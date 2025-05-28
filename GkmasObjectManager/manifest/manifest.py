@@ -3,27 +3,22 @@ manifest.py
 Manifest decryption, exporting, and object downloading.
 """
 
-from ..object import GkmasAssetBundle, GkmasResource
-from ..log import Logger
-from ..const import (
-    PATH_ARGTYPE,
-    CSV_COLUMNS,
-    DEFAULT_DOWNLOAD_PATH,
-    CHARACTER_ABBREVS,
-)
-
-from .revision import GkmasManifestRevision
-from .octodb_pb2 import dict2pdbytes
-from .listing import GkmasObjectList
-
-import re
-import json
-import yaml
 import asyncio
+import json
+import re
 import subprocess
-import pandas as pd
 from pathlib import Path
 
+import pandas as pd
+import yaml
+from google.protobuf.json_format import ParseError
+
+from ..const import CHARACTER_ABBREVS, CSV_COLUMNS, DEFAULT_DOWNLOAD_PATH, PathArgtype
+from ..object import GkmasAssetBundle, GkmasResource
+from ..utils import Logger, nocache
+from .listing import GkmasObjectList
+from .octodb_pb2 import dict2pdbytes
+from .revision import GkmasManifestRevision
 
 # The logger would better be a global variable in the
 # modular __init__.py, but Python won't allow me to
@@ -39,21 +34,24 @@ class GkmasManifest:
         assetbundles (GkmasObjectList): List of assetbundle *info dictionaries*.
         resources (GkmasObjectList): List of resource *info dictionaries*.
         urlformat (str): URL format for downloading assetbundles/resources.
-            Solely for faithful reconstruction of the manifest.
-    *Documentation for GkmasObjectList can be found in listing.py.*
 
     Methods:
+        export(path: Union[str, Path]) -> None:
+            Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
+        search(criterion: str) -> list:
+            Searches the manifest for objects with names *fully* matching the specified criterion.
         download(
             *criteria: str,
             path: Union[str, Path] = DEFAULT_DOWNLOAD_PATH,
             categorize: bool = True,
-            convert_image: bool = True,
-            image_format: str = "png",
-            image_resize: Union[None, str, Tuple[int, int]] = None,
+            **kwargs,
         ) -> None:
             Downloads the regex-specified assetbundles/resources to the specified path.
-        export(path: Union[str, Path]) -> None:
-            Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
+        download_preset(preset_filename: str) -> None:
+            Downloads by a predefined preset (see examples in presets/).
+        download_all_assetbundles(**kwargs) -> None
+        download_all_resources(**kwargs) -> None
+        download_all(**kwargs) -> None
     """
 
     def __init__(self, jdict: dict, base_revision: int = 0):
@@ -62,8 +60,8 @@ class GkmasManifest:
 
         Args:
             jdict (dict): JSON-serialized dictionary extracted from protobuf.
-                Must contain 'revision', 'assetBundleList', 'resourceList',
-                and 'urlFormat' keys.
+                Must contain 'revision' and 'urlFormat' fields.
+                May contain 'assetBundleList' and 'resourceList'.
             base_revision (int) = 0: The revision number of the base manifest.
                 Manually specified when loading a diff, at which case
                 a warning of conflict is raised if jdict['revision'] is already a tuple.
@@ -75,7 +73,7 @@ class GkmasManifest:
         if base_revision != 0:  # leave negative base handling to the Revision class
             if base_revision != revision[1] != 0:  # equivalent to a 2-AND
                 logger.warning(
-                    f"Overriding detected base revision v{revision[1]} with specified revision v{base_revision}."
+                    f"Overriding detected base revision v{revision[1]} with specified v{base_revision}."
                 )
             revision = (revision[0], base_revision)  # proceed anyway
 
@@ -84,10 +82,12 @@ class GkmasManifest:
             self.assetbundles = GkmasObjectList(
                 jdict.get("assetBundleList", []),  # might be empty in recent diffs
                 GkmasAssetBundle,
+                jdict["urlFormat"],
             )
             self.resources = GkmasObjectList(
                 jdict.get("resourceList", []),  # same as above ^
                 GkmasResource,
+                jdict["urlFormat"],
             )
         except TypeError:  # instantiate from diff, skip type conversion
             self.revision = jdict["revision"]
@@ -97,10 +97,10 @@ class GkmasManifest:
         self.urlformat = jdict["urlFormat"]
         # 'jdict' is then discarded and losslessly reconstructed at export
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<GkmasManifest revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
-    def __getitem__(self, key: str):
+    def __getitem__(self, key: str) -> object:
         try:
             return self.assetbundles[key]
         except KeyError:
@@ -113,14 +113,14 @@ class GkmasManifest:
         for res in self.resources:
             yield res
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.assetbundles) + len(self.resources)
 
-    def __contains__(self, key: str):
+    def __contains__(self, key: str) -> bool:
         return key in self.assetbundles or key in self.resources
         # could also try self[key]
 
-    def __sub__(self, other):
+    def __sub__(self, other: "GkmasManifest") -> "GkmasManifest":
         return GkmasManifest(
             {  # this is not a standard JSON dict, more like named arguments
                 "revision": self.revision - other.revision,  # handles sanity check
@@ -131,7 +131,7 @@ class GkmasManifest:
             }
         )
 
-    def __add__(self, other):
+    def __add__(self, other: "GkmasManifest") -> "GkmasManifest":
         new_revision = self.revision + other.revision
         a, b = (
             (self, other) if new_revision.this == other.revision.this else (other, self)
@@ -145,7 +145,7 @@ class GkmasManifest:
             }
         )
 
-    def _get_canon_repr(self):
+    def _get_canon_repr(self) -> dict:
         """
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the manifest.
         """
@@ -158,7 +158,7 @@ class GkmasManifest:
 
     # ------------ EXPORT ------------ #
 
-    def export(self, path: PATH_ARGTYPE, format: str = "infer"):
+    def export(self, path: PathArgtype, format: str = "infer"):
         """
         Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
         This is a dispatcher method.
@@ -174,6 +174,9 @@ class GkmasManifest:
         """
 
         path = Path(path)
+        if path.exists():
+            logger.warning(f"{path} already exists, aborting")
+            return
 
         if format == "infer":
             if path.suffix == ".pdb":
@@ -214,7 +217,7 @@ class GkmasManifest:
         try:
             path.write_bytes(dict2pdbytes(jdict))
             logger.success(f"ProtoDB has been written into {path}")
-        except:
+        except ParseError:
             logger.error(f"Failed to write ProtoDB into {path}")
 
     def _export_json(self, path: Path):
@@ -228,7 +231,7 @@ class GkmasManifest:
         try:
             path.write_text(json.dumps(self._get_canon_repr(), indent=4))
             logger.success(f"JSON has been written into {path}")
-        except:
+        except TypeError:  # non-JSON-serializable object in dict
             logger.error(f"Failed to write JSON into {path}")
 
     def _export_csv(self, path: Path):
@@ -245,7 +248,7 @@ class GkmasManifest:
         # which handles integer keys (index by ID) and messes up with standard modules
         # like pandas that rely on self[0] as a "sample" object from the list.
         dfa = pd.DataFrame(self.assetbundles._get_canon_repr(), columns=CSV_COLUMNS)
-        dfa["name"] = dfa["name"].apply(lambda x: x + ".unity3d")
+        dfa["name"] = dfa["name"].apply(lambda x: x + ".unity3d")  # stripped in canon
         dfr = pd.DataFrame(self.resources._get_canon_repr(), columns=CSV_COLUMNS)
         df = pd.concat([dfa, dfr], ignore_index=True)
         df.sort_values("name", inplace=True)
@@ -258,7 +261,12 @@ class GkmasManifest:
 
     # ----------- DOWNLOAD ----------- #
 
-    def search(self, criterion: str):
+    def search(
+        self,
+        criterion: str,
+        by_name: bool = True,
+        ascending: bool = True,
+    ) -> list[object]:
         """
         Searches the manifest for objects matching the specified criterion.
         Returns a list of objects.
@@ -267,14 +275,18 @@ class GkmasManifest:
             criterion (str): Regex pattern of object names.
         """
 
+        # This will be called by frontend; we instantiate here to make ID's visible.
         matches = filter(
             lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
             list(self),
         )
-        return sorted(matches, key=lambda x: x.name)
-        # This will be called by frontend.
-        # We instantiate here to make ID's readily available.
+        return sorted(
+            matches,
+            key=lambda x: x.name if by_name else x.id,
+            reverse=not ascending,
+        )
 
+    @nocache
     def download(self, *criteria: str, **kwargs):
         """
         Downloads the regex-specified assetbundles/resources to the specified path.
@@ -283,17 +295,8 @@ class GkmasManifest:
             *criteria (str): Regex patterns of assetbundle/resource names.
             path (Union[str, Path]) = DEFAULT_DOWNLOAD_PATH: A directory to which the objects are downloaded.
                 *WARNING: Behavior is undefined if the path points to an definite file (with extension).*
-            categorize (bool) = True: Whether to categorize the downloaded objects into subdirectories.
+            categorize (bool) = True: Whether to categorize downloaded objects into subdirectories.
                 If False, all objects are downloaded to the specified 'path' in a flat structure.
-            convert_image (bool) = True: Whether to extract images from assetbundles of type 'img'.
-                If False, 'img_.*\\.unity3d' are downloaded as is.
-            image_format (str) = 'png': Image format for extraction. Case-insensitive.
-                Effective only when 'convert_image' is True. Format must support RGBA mode.
-                Valid options are checked by PIL.Image.save() and are not enumerated.
-            image_resize (Union[None, str, Tuple[int, int]]) = None: Image resizing argument.
-                If None, images are downloaded as is.
-                If str, string must contain exactly one ':' and images are resized to the specified ratio.
-                If Tuple[int, int], images are resized to the specified exact dimensions.
         """
 
         if "preset" in kwargs:
@@ -314,6 +317,7 @@ class GkmasManifest:
 
         asyncio.run(self._dispatch(objects, **kwargs))
 
+    @nocache
     def download_preset(self, preset_filename: str):
         """
         [INTERNAL] Downloads by a predefined preset (see examples in presets/).
@@ -321,7 +325,7 @@ class GkmasManifest:
 
         # READ PRESET
 
-        with open(preset_filename, "r") as f:
+        with open(preset_filename, "r", encoding="utf-8") as f:
             preset = yaml.safe_load(f)
 
         root = preset.get("root", DEFAULT_DOWNLOAD_PATH)
@@ -375,6 +379,7 @@ class GkmasManifest:
             logger.info(f"Running post-processing script '{pp_path}'")
             subprocess.run(["python", pp_path, root], check=True)
 
+    @nocache
     def download_all_assetbundles(self, **kwargs):
         """
         Downloads all assetbundles to the specified path.
@@ -382,6 +387,7 @@ class GkmasManifest:
         """
         asyncio.run(self._dispatch(list(self.assetbundles), **kwargs))
 
+    @nocache
     def download_all_resources(self, **kwargs):
         """
         Downloads all resources to the specified path.
@@ -389,6 +395,7 @@ class GkmasManifest:
         """
         asyncio.run(self._dispatch(list(self.resources), **kwargs))
 
+    @nocache
     def download_all(self, **kwargs):
         """
         Downloads all assetbundles and resources to the specified path.

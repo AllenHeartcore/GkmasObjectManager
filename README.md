@@ -13,7 +13,7 @@ Request API & decryption algorithms borrowed from [HatsuboshiToolkit](https://gi
 ## Features
 
 - Fetch, decrypt, deserialize, and export manifest as ProtoDB, JSON, or CSV
-- Differentiate between manifest revisions
+- Differentiate between / add (apply patch to) manifest revisions
 - Download and deobfuscate assetbundles and resources in parallel
 - Media conversion plugins for Texture2D, AudioClip audio, AWB audio, and USM video
 
@@ -37,6 +37,14 @@ m.download(
 )
 m.download("sud.*inst.*.awb", audio_format="WAV")  # instrumental songs
 m.download("mov.*cidol.*loop.usm", video_format="MP4")  # animated character cards
+m.download(
+    "sud_vo_adv_unit.*",
+    path="mainstory_voicelines",
+    audio_format="mp3",  # applies to all subsongs
+    unpack_subsongs=True,  # unpack ZIP to output directory
+)
+
+m.download_preset("presets/namecard_kit.yml")
 ```
 
 

@@ -4,11 +4,6 @@ listing.py
 optimized for indexing and comparison.
 """
 
-from ..const import (
-    OBJLIST_ID_FIELD,
-    OBJLIST_NAME_FIELD,
-)
-
 from typing import Union
 
 
@@ -17,28 +12,33 @@ class GkmasObjectList:
     A list of assetbundle/resource metadata, optimized for indexing and comparison.
     Implemented as listing utility wrappers around a list of dictionaries.
 
-    Methods:
-        __sub__(other: GkmasObjectList) -> GkmasObjectList:
-            Subtracts another object list from this one.
-            Returns the list of elements unique to 'self'.
-        rip_field(targets: list) -> GkmasObjectList:
-            Removes selected fields from all dictionaries.
-        diff(other: GkmasObjectList, ignored_fields: list) -> GkmasObjectList:
-            Compares two object lists while ignoring selected fields,
-            but **retains all fields** in the reconstructed output.
+    Attributes:
+        infos (list): List of dictionaries containing metadata for each object.
+        base_class (object): The class that will be instantiated for each object.
+        url_template (str): URL template for fetching the objects.
+            Only used when instantiating objects from the list.
     """
 
-    def __init__(self, infos: list, base_class: object):
-        infos.sort(key=lambda x: x[OBJLIST_ID_FIELD])
+    def __init__(self, infos: list[dict], base_class: object, url_template: str):
+        infos.sort(key=lambda x: x["id"])
+
         self.infos = infos
         self.base_class = base_class
+        self.url_template = url_template
+
         self._objects = [None] * len(infos)
-        self._id_idx = {info[OBJLIST_ID_FIELD]: i for i, info in enumerate(infos)}
-        self._name_idx = {info[OBJLIST_NAME_FIELD]: i for i, info in enumerate(infos)}
+        self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
+        self._name_idx = {info["name"]: i for i, info in enumerate(infos)}
         # 'self._*_idx' are int/str -> int lookup tables
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<GkmasObjectList of {len(self.infos)} {self.base_class.__name__}'s>"
+
+    def _get_object(self, idx: int) -> object:
+        # necessary for enabling cache everywhere
+        if self._objects[idx] is None:
+            self._objects[idx] = self.base_class(self.infos[idx], self.url_template)
+        return self._objects[idx]
 
     def __getitem__(self, key: Union[int, str]) -> object:
 
@@ -49,16 +49,13 @@ class GkmasObjectList:
         else:
             raise TypeError  # just in case, should never reach here
 
-        if self._objects[idx] is None:
-            self._objects[idx] = self.base_class(self.infos[idx])
-
-        return self._objects[idx]
+        return self._get_object(idx)
 
     def __iter__(self):
-        for info in self.infos:
-            yield self.base_class(info)
+        for i in range(len(self.infos)):
+            yield self._get_object(i)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
@@ -69,25 +66,26 @@ class GkmasObjectList:
         assert self.base_class == other.base_class
         canon_reprs = []
         for entry in self:
+            this_repr = entry._get_canon_repr()
             try:
-                this_repr = entry._get_canon_repr()
                 other_repr = other[entry.name]._get_canon_repr()
             except KeyError:
                 canon_reprs.append(this_repr)
-                continue
             else:
                 if this_repr != other_repr:
                     canon_reprs.append(this_repr)
-        return GkmasObjectList(canon_reprs, self.base_class)
+        return GkmasObjectList(canon_reprs, self.base_class, self.url_template)
 
     def __add__(self, other: "GkmasObjectList") -> "GkmasObjectList":
         # 'other' is assumed to be newer, since revision is not accessible here
         assert self.base_class == other.base_class
         mapped = {entry["id"]: entry for entry in self._get_canon_repr()}
         mapped.update({entry["id"]: entry for entry in other._get_canon_repr()})  # hack
-        return GkmasObjectList(list(mapped.values()), self.base_class)
+        return GkmasObjectList(
+            list(mapped.values()), self.base_class, self.url_template
+        )
 
-    def _get_canon_repr(self):
+    def _get_canon_repr(self) -> list[dict]:
         """
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the object list.
         """

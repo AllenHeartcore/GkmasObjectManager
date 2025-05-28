@@ -4,20 +4,19 @@ AWB/ACB audio conversion plugin for GkmasResource,
 and MP3 audio handler for GkmasResource.
 """
 
-from ..log import Logger
-from .dummy import GkmasDummyMedia
-
 import platform
-import tempfile
 import subprocess
+import tempfile
+from datetime import datetime
 from io import BytesIO
 from pathlib import Path
+from zipfile import ZipFile, ZipInfo
 
 import UnityPy
 from pydub import AudioSegment
-from zipfile import ZipFile, ZipInfo
-from datetime import datetime
 
+from ..utils import Logger
+from .dummy import GkmasDummyMedia
 
 logger = Logger()
 
@@ -25,12 +24,11 @@ logger = Logger()
 class GkmasAudio(GkmasDummyMedia):
     """Handler for audio of common formats recognized by pydub."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
+    def _init_mimetype(self):
         self.mimetype = "audio"
-        self.raw_format = name.split(".")[-1][:-1]
+        self.raw_format = self._name_ext
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
+    def _convert(self, raw: bytes) -> bytes:
         audio = AudioSegment.from_file(BytesIO(raw))
         return audio.export(format=self.converted_format).read()
 
@@ -38,12 +36,11 @@ class GkmasAudio(GkmasDummyMedia):
 class GkmasUnityAudio(GkmasAudio):
     """Conversion plugin for Unity audio."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
-        self.raw_format = None  # don't override
-        self.converted_format = "wav"
+    def _init_mimetype(self):
+        self.mimetype = "audio"
+        self.default_converted_format = "wav"
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
+    def _convert(self, raw: bytes) -> bytes:
         env = UnityPy.load(raw)
         values = list(env.container.values())
         assert len(values) == 1, f"{self.name} contains {len(values)} audio clips."
@@ -56,19 +53,26 @@ class GkmasUnityAudio(GkmasAudio):
 class GkmasAWBAudio(GkmasDummyMedia):
     """Conversion plugin for AWB audio."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
+    def _init_mimetype(self):
         self.mimetype = "audio"
-        self.converted_format = "wav"
+        self.default_converted_format = "wav"
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
+    def _make_vgmstream_args(self, tmp_in: str, tmp_out: str, suffix: str) -> list:
+        return [
+            Path(__file__).parent.parent / f"bin/vgmstream/vgmstream-{suffix}",
+            "-o",
+            Path(tmp_out, "converted.wav"),  # name can be anything except '?n' wildcard
+            tmp_in,
+        ]
+
+    def _convert(self, raw: bytes) -> bytes:
         # uses pydub in vastly different ways,
         # thus this class is not inherited from GkmasAudio
 
         audio = None
         success = False
         exception = None
-        input_ext = self.name.split(".")[-1][:-1]
+        input_ext = self._name_ext
 
         # vgmstream doesn't like delete=True
         with tempfile.NamedTemporaryFile(
@@ -90,14 +94,7 @@ class GkmasAWBAudio(GkmasDummyMedia):
 
             try:
                 subprocess.run(
-                    [
-                        Path(__file__).parent / f"vgmstream/vgmstream-{exe_suffix}",
-                        "-S",  # select subsongs
-                        "-1",  # all of them (shell=True forces string args)
-                        "-o",
-                        Path(tmp_out, "?n.wav"),  # use internal stream name
-                        tmp_in.name,
-                    ],
+                    self._make_vgmstream_args(tmp_in.name, tmp_out, exe_suffix),
                     shell=True,  # Otherwise, gets [WinError 193] 'invalid Win32 application'
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,  # suppresses console output
@@ -133,3 +130,17 @@ class GkmasAWBAudio(GkmasDummyMedia):
                         segment.export(format=self.converted_format).read(),
                     )
             return buffer.getvalue()
+
+
+class GkmasACBAudio(GkmasAWBAudio):
+    """Conversion plugin for ACB audio archive."""
+
+    def _make_vgmstream_args(self, tmp_in: str, tmp_out: str, suffix: str) -> list:
+        return [
+            Path(__file__).parent.parent / f"bin/vgmstream/vgmstream-{suffix}",
+            "-S",  # select subsongs
+            "-1",  # all of them (this is a number; shell=True forces string args)
+            "-o",
+            Path(tmp_out, "?n.wav"),  # use internal stream name
+            tmp_in,
+        ]

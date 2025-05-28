@@ -15,7 +15,7 @@
 <div id="viewpageElements" class="container">
     <div class="row">
         <div class="col-md-12 title">{{ type }} #{{ info.id }}</div>
-        <div class="col-md-12 subtitle text-monospace">{{ info.name }}</div>
+        <div class="col-md-12 subtitle font-monospace">{{ info.name }}</div>
     </div>
 
     <div class="row mt-4">
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <a
-                        href="https://object.asset.game-gakuen-idolmaster.jp/{{ info.objectName }}"
+                        href="{{ info.raw_url }}"
                         rel="noopener noreferrer"
                         class="btn btn-outline-primary w-100 fs-3"
                     >
@@ -68,7 +68,7 @@
                     <table class="table table-bordered table-hover">
                         <tbody class="align-middle">
                             <tr>
-                                <th class="text-tightline">Upload Time</th>
+                                <th class="lh-sm">Upload Time</th>
                                 <td id="uploadTime">Loading...</td>
                             </tr>
                             <tr>
@@ -83,7 +83,7 @@
                             {% endif %}
                             <tr>
                                 <th>MD5</th>
-                                <td class="text-monospace fs-6">
+                                <td class="font-monospace fs-6">
                                     {{ info.md5 }}
                                 </td>
                             </tr>
@@ -95,7 +95,7 @@
                                     <ul>
                                         {% if info.dependencies %} {% for dep in
                                         info.dependencies %}
-                                        <li class="text-monospace fs-6">
+                                        <li class="font-monospace fs-6">
                                             <a
                                                 href="/view/assetbundle/{{ dep.id }}"
                                                 >{{ dep.name }}</a

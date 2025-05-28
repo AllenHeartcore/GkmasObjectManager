@@ -3,6 +3,8 @@ revision.py
 Version control for GkmasManifest.
 """
 
+from typing import Union
+
 
 class GkmasManifestRevision:
     """
@@ -25,16 +27,16 @@ class GkmasManifestRevision:
         self.this = this
         self.base = base
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"<GkmasManifestRevision {self}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.base == 0:
             return f"v{self.this}"
         else:
             return f"v{self.this}-diff-v{self.base}"
 
-    def _get_canon_repr(self):
+    def _get_canon_repr(self) -> Union[int, tuple[int, int]]:
         """
         [INTERNAL] Returns the "canonical" representation of the revision,
         either as an integer or a tuple. Used in manifest export.
@@ -44,16 +46,16 @@ class GkmasManifestRevision:
         else:
             return (self.this, self.base)
 
-    def __eq__(self, other):
+    def __eq__(self, other: "GkmasManifestRevision") -> bool:
         return self.this == other.this and self.base == other.base
 
-    def __ne__(self, other):
+    def __ne__(self, other: "GkmasManifestRevision") -> bool:
         return not self.__eq__(other)
 
     # No comparison magic methods; things are starting to get ambiguous at this point.
     # We are primarily concerned with the *difference* between revisions.
 
-    def __sub__(self, other):
+    def __sub__(self, other: "GkmasManifestRevision") -> "GkmasManifestRevision":
         """
         Returns the difference between two revisions.
         Cases where base = 0 is regarded as the "empty base" and processed at instantiation.
@@ -83,7 +85,7 @@ class GkmasManifestRevision:
             ), "'This' revision of minuend (self) must be newer."
             return GkmasManifestRevision(self.this, other.this)
 
-    def __add__(self, other):
+    def __add__(self, other: "GkmasManifestRevision") -> "GkmasManifestRevision":
         """
         Returns the sum of two revisions.
         Requires self.this == other.base to be valid.

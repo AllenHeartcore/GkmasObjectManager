@@ -1,22 +1,29 @@
-from ..const import (
-    PATH_ARGTYPE,
-    GKMAS_API_URL,
-    GKMAS_API_URL_PC,
-    GKMAS_API_HEADER,
-    GKMAS_ONLINEPDB_KEY,
-    GKMAS_ONLINEPDB_KEY_PC,
-    GKMAS_OCTOCACHE_KEY,
-    GKMAS_OCTOCACHE_IV,
-)
-
-from .manifest import GkmasManifest
-from .decrypt import AESCBCDecryptor
-from .octodb_pb2 import pdbytes2dict
+"""
+manifest/
+Manifest (object database) management.
+Entry point of the GkmasObjectManager package.
+"""
 
 import json
-import requests
 from pathlib import Path
 from urllib.parse import urljoin
+
+import requests
+from google.protobuf.message import DecodeError
+
+from ..const import (
+    GKMAS_API_HEADER,
+    GKMAS_API_URL,
+    GKMAS_API_URL_PC,
+    GKMAS_OCTOCACHE_IV,
+    GKMAS_OCTOCACHE_KEY,
+    GKMAS_ONLINEPDB_KEY,
+    GKMAS_ONLINEPDB_KEY_PC,
+    PathArgtype,
+)
+from .decrypt import AESCBCDecryptor
+from .manifest import GkmasManifest
+from .octodb_pb2 import pdbytes2dict
 
 
 def fetch(base_revision: int = 0, pc: bool = False) -> GkmasManifest:
@@ -32,14 +39,16 @@ def fetch(base_revision: int = 0, pc: bool = False) -> GkmasManifest:
             Defaults to False (mobile).
     """
     url = urljoin(GKMAS_API_URL_PC if pc else GKMAS_API_URL, str(base_revision))
-    enc = requests.get(url, headers=GKMAS_API_HEADER).content
+    req = requests.get(url, headers=GKMAS_API_HEADER, timeout=10)
+    req.raise_for_status()  # Raise an error for bad responses
+    enc = req.content
     dec = AESCBCDecryptor(
         GKMAS_ONLINEPDB_KEY_PC if pc else GKMAS_ONLINEPDB_KEY, enc[:16]
     ).process(enc[16:])
     return GkmasManifest(pdbytes2dict(dec), base_revision=base_revision)
 
 
-def load(src: PATH_ARGTYPE, base_revision: int = 0) -> GkmasManifest:
+def load(src: PathArgtype, base_revision: int = 0) -> GkmasManifest:
     """
     Initializes a manifest from the given offline source.
     The protobuf referred to can be either encrypted or not.
@@ -56,11 +65,14 @@ def load(src: PATH_ARGTYPE, base_revision: int = 0) -> GkmasManifest:
             by GkmasObjectManager older than or equal to v0.4-beta.**
     """
     try:
-        return GkmasManifest(json.loads(Path(src).read_text()), base_revision)
-    except:
+        return GkmasManifest(
+            json.loads(Path(src).read_text(encoding="utf-8")),
+            base_revision,
+        )
+    except json.JSONDecodeError:
         enc = Path(src).read_bytes()
         try:
             return GkmasManifest(pdbytes2dict(enc), base_revision)
-        except:
+        except DecodeError:
             dec = AESCBCDecryptor(GKMAS_OCTOCACHE_KEY, GKMAS_OCTOCACHE_IV).process(enc)
             return GkmasManifest(pdbytes2dict(dec[16:]), base_revision)  # trim md5 hash

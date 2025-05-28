@@ -33,7 +33,7 @@ function populateHomepageContainers(data) {
             let image = $("<img>")
                 .attr("src", url)
                 .attr("alt", item.name)
-                .addClass("image-landscape image-roundedge shadow-at-hover");
+                .addClass("image-landscape rounded-3 shadow-at-hover");
             let link = $("<a>")
                 .attr("href", `/view/assetbundle/${item.id}`)
                 .append(image);

@@ -3,12 +3,11 @@ adv/adventure.py
 Adventure (story script) plugin for GkmasResource.
 """
 
-from ..log import Logger
-from ..media import GkmasDummyMedia
-from .parser import GkadvCommandParser
-
 import json
 
+from ..media import GkmasDummyMedia
+from ..utils import Logger
+from .parser import GkadvCommandParser
 
 logger = Logger()
 parser = GkadvCommandParser()
@@ -17,20 +16,23 @@ parser = GkadvCommandParser()
 class GkmasAdventure(GkmasDummyMedia):
     """Handler for adventure story scripts."""
 
-    def __init__(self, name: str, raw: bytes, mtime: str = ""):
-        super().__init__(name, raw, mtime)
+    def _init_mimetype(self):
         self.mimetype = "text"
-        self.converted_format = "json"
+        self.default_converted_format = "json"
 
-        self.commands = [
-            parser.process(line) for line in raw.decode("utf-8").splitlines()
-        ]
+    def _get_commands(self) -> list[dict]:
+        if not hasattr(self, "commands"):
+            self.commands = [
+                parser.process(line)
+                for line in self._get_raw().decode("utf-8").splitlines()
+            ]
+        return self.commands
 
-    def _convert(self, raw: bytes, **kwargs) -> bytes:
+    def _convert(self, raw: bytes) -> bytes:
         # only for compatibility with GkmasResource
         return bytes(
             json.dumps(
-                self.commands,
+                self._get_commands(),
                 indent=4,
                 ensure_ascii=False,
             ),
