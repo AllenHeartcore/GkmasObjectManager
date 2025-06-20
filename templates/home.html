@@ -5,14 +5,14 @@
     src="{{ url_for('static', filename='js/home.js') }}"
 ></script>
 
-<div id="loadingSpinner">
-    <div class="spinner-border me-2" role="status"></div>
+<div id="loadingBlinker">
+    <img id="loadingBlinkerImage" src="" alt="Loading" />
     Fetching manifest...
 </div>
 
-<div id="homepageElements" class="container align-center hide-by-default">
+<div id="homepageElements" class="below-navbar align-center hide-by-default">
     <div class="row">
-        <div class="col-md-12 title">
+        <div class="col-md-12 title mt-4">
             High-quality
             <span id="homeTitleGakumas" class="text-gradient">Gakumas</span>
             assets.<br />

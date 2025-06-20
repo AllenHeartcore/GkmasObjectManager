@@ -10,10 +10,7 @@ from typing import Tuple, Union
 import UnityPy
 from PIL import Image
 
-from ..utils import Logger
 from .dummy import GkmasDummyMedia
-
-logger = Logger()
 
 
 class GkmasImage(GkmasDummyMedia):
@@ -21,7 +18,7 @@ class GkmasImage(GkmasDummyMedia):
 
     def _init_mimetype(self):
         self.mimetype = "image"
-        self.raw_format = self._name_ext
+        self.raw_format = self.ext
 
     def _convert(self, raw: bytes) -> bytes:
         return self._img2bytes(Image.open(BytesIO(raw)))
@@ -35,23 +32,24 @@ class GkmasImage(GkmasDummyMedia):
             img = img.resize(image_resize, Image.LANCZOS)
 
         if img.mode == "RGBA":
-            if img.getchannel("A").getextrema() == (255, 255):  # fully opaque
+            if img.getchannel("A").getextrema()[0] >= 254:  # (255, 255) means opaque
+                # we leave a bit room for accumulated errors in decompression algo
                 img = img.convert("RGB")
 
         io = BytesIO()
         try:
             img.save(io, format=self.converted_format, quality=100)
         except OSError:  # cannot write mode RGBA as {self.converted_format}
-            logger.warning(
-                f"{self.converted_format} doesn't support RGBA mode, fallback to PNG."
+            self.reporter.warning(
+                f"{self.converted_format.upper()} doesn't support RGBA mode, fallback to PNG."
             )
             self.converted_format = "png"
             img.save(io, format="PNG", quality=100)
 
         return io.getvalue()
 
+    @staticmethod
     def _determine_new_size(
-        self,
         size: Tuple[int, int],
         ratio: str,
         mode: Union["maximize", "ensure_fit", "preserve_npixel"] = "maximize",
@@ -110,5 +108,6 @@ class GkmasUnityImage(GkmasImage):
     def _convert(self, raw: bytes) -> bytes:
         env = UnityPy.load(raw)
         values = list(env.container.values())
-        assert len(values) == 1, f"{self.name} contains {len(values)} images."
+        if len(values) != 1:
+            self.reporter.error(f"Contains {len(values)} images, expected 1.")
         return super()._img2bytes(values[0].read().image)

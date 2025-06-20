@@ -12,7 +12,7 @@
     let info = {{ info | tojson }};
 </script>
 
-<div id="viewpageElements" class="container">
+<div id="viewpageElements" class="below-navbar">
     <div class="row">
         <div class="col-md-12 title">{{ type }} #{{ info.id }}</div>
         <div class="col-md-12 subtitle font-monospace">{{ info.name }}</div>
@@ -23,17 +23,23 @@
             <!-- left -->
             <div class="row">
                 <div class="col-md-12">
-                    <div id="viewMedia" class="container align-center">
-                        <div id="loadingSpinnerMedia">
-                            <div
-                                class="spinner-border me-2"
-                                role="status"
-                            ></div>
-                            Loading media...
+                    <div
+                        id="viewMedia"
+                        class="media-container media-container-view"
+                    >
+                        <div class="prog-container">
+                            <div class="d-flex justify-content-between">
+                                <span class="prog-stage">Starting...</span>
+                                <span class="prog-num"
+                                    >0 / {{ info.size }}</span
+                                >
+                            </div>
+                            <div class="prog-bar-container">
+                                <div class="prog-bar"></div>
+                            </div>
                         </div>
                         <div
-                            id="viewMediaContent"
-                            class="hide-by-default"
+                            class="hide-by-default media-content media-content-view"
                         ></div>
                     </div>
                 </div>

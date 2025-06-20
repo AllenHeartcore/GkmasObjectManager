@@ -20,6 +20,9 @@ class GkmasManifestRevision:
             while base > 0 indicates a diff to be applied to the base manifest.
     """
 
+    this: int
+    base: int
+
     def __init__(self, this: int, base: int = 0):
         assert this > 0, "'this' revision number must be positive."
         assert base >= 0, "'base' revision number must be non-negative."
@@ -36,7 +39,8 @@ class GkmasManifestRevision:
         else:
             return f"v{self.this}-diff-v{self.base}"
 
-    def _get_canon_repr(self) -> Union[int, tuple[int, int]]:
+    @property
+    def canon_repr(self) -> Union[int, tuple[int, int]]:
         """
         [INTERNAL] Returns the "canonical" representation of the revision,
         either as an integer or a tuple. Used in manifest export.

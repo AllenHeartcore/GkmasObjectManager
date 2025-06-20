@@ -3,17 +3,13 @@ assetbundle.py
 Unity asset bundle downloading, deobfuscation, and media extraction.
 """
 
-from pathlib import Path
-
-from ..const import UNITY_SIGNATURE, PathArgtype
+from ..const import UNITY_SIGNATURE
 from ..media import GkmasDummyMedia
 from ..media.audio import GkmasUnityAudio
 from ..media.image import GkmasUnityImage
-from ..utils import Logger
+from ..rich import ProgressReporter
 from .deobfuscate import GkmasAssetBundleDeobfuscator
 from .resource import GkmasResource
-
-logger = Logger()
 
 
 class GkmasAssetBundle(GkmasResource):
@@ -49,31 +45,26 @@ class GkmasAssetBundle(GkmasResource):
         super().__init__(info, url_template)
         self.name += ".unity3d"
         self._idname = f"AB[{self.id:05}] '{self.name}'"
+        self._reporter = ProgressReporter(title=self._idname, total=self.size)
+        # need to re-instantiate since self._idname has changed
 
     def __repr__(self) -> str:
         return f"<GkmasAssetBundle {self._idname}>"
 
-    def _get_canon_repr(self) -> dict:
-        canon = super()._get_canon_repr()
+    @property
+    def canon_repr(self) -> dict:
+        canon = super().canon_repr
         canon["name"] = canon["name"].replace(".unity3d", "")
         return canon
 
-    def _get_media(self) -> GkmasDummyMedia:
-        """
-        [INTERNAL] Instantiates a high-level media class based on the assetbundle name.
-        Used to dispatch download and extraction.
-        """
-
-        if self._media is None:
-            if self.name.startswith("img_"):
-                media_class = GkmasUnityImage
-            elif self.name.startswith("sud_"):
-                media_class = GkmasUnityAudio
-            else:
-                media_class = GkmasDummyMedia
-            self._media = media_class(self._idname, self._download_bytes)
-
-        return self._media
+    @property
+    def _media_class(self) -> type:
+        if self.name.startswith("img_"):
+            return GkmasUnityImage
+        elif self.name.startswith("sud_"):
+            return GkmasUnityAudio
+        else:
+            return GkmasDummyMedia
 
     def _download_bytes(self) -> dict:
         """
@@ -85,9 +76,10 @@ class GkmasAssetBundle(GkmasResource):
         _bytes, _mtime = data["bytes"], data["mtime"]
 
         if not _bytes.startswith(UNITY_SIGNATURE):
+            self._reporter.update("Deobfuscating")
             _bytes = GkmasAssetBundleDeobfuscator(self.name).process(_bytes)
             if not _bytes.startswith(UNITY_SIGNATURE):
-                logger.warning(f"{self._idname} downloaded but LEFT OBFUSCATED")
+                self._reporter.warning("Downloaded but LEFT OBFUSCATED")
                 # Unexpected things may happen...
                 # So unlike _download_bytes(), here we don't raise an error and abort.
 

@@ -10,15 +10,13 @@ import tempfile
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
+from typing import Tuple
 from zipfile import ZipFile, ZipInfo
 
 import UnityPy
 from pydub import AudioSegment
 
-from ..utils import Logger
 from .dummy import GkmasDummyMedia
-
-logger = Logger()
 
 
 class GkmasAudio(GkmasDummyMedia):
@@ -26,7 +24,7 @@ class GkmasAudio(GkmasDummyMedia):
 
     def _init_mimetype(self):
         self.mimetype = "audio"
-        self.raw_format = self._name_ext
+        self.raw_format = self.ext
 
     def _convert(self, raw: bytes) -> bytes:
         audio = AudioSegment.from_file(BytesIO(raw))
@@ -43,7 +41,8 @@ class GkmasUnityAudio(GkmasAudio):
     def _convert(self, raw: bytes) -> bytes:
         env = UnityPy.load(raw)
         values = list(env.container.values())
-        assert len(values) == 1, f"{self.name} contains {len(values)} audio clips."
+        if len(values) != 1:
+            self.reporter.error(f"Contains {len(values)} audio clips, expected 1.")
         samples = values[0].read().samples
         sample = list(samples.values())[0]
         return sample if self.converted_format == "wav" else super()._convert(sample)
@@ -57,11 +56,14 @@ class GkmasAWBAudio(GkmasDummyMedia):
         self.mimetype = "audio"
         self.default_converted_format = "wav"
 
-    def _make_vgmstream_args(self, tmp_in: str, tmp_out: str, suffix: str) -> list:
+    @staticmethod
+    def _make_vgmstream_args(tmp_in: str, tmp_out: str, suffix: str) -> list:
         return [
             Path(__file__).parent.parent / f"bin/vgmstream/vgmstream-{suffix}",
+            "-S",  # select subsongs
+            "-1",  # all of them (this is a number; shell=True forces string args)
             "-o",
-            Path(tmp_out, "converted.wav"),  # name can be anything except '?n' wildcard
+            Path(tmp_out, "?s.wav"),  # use subsong number (stream names are identical)
             tmp_in,
         ]
 
@@ -69,14 +71,20 @@ class GkmasAWBAudio(GkmasDummyMedia):
         # uses pydub in vastly different ways,
         # thus this class is not inherited from GkmasAudio
 
-        audio = None
+        segments = self._read_segments(raw)
+        if not segments:
+            self.reporter.error("Found no audio segments in the archive.")
+        return self._write_segments(segments)
+
+    def _read_segments(self, raw: bytes) -> list[Tuple[str, AudioSegment]]:
+
+        segments = []
         success = False
         exception = None
-        input_ext = self._name_ext
 
         # vgmstream doesn't like delete=True
         with tempfile.NamedTemporaryFile(
-            suffix=f".{input_ext}", delete=False
+            suffix=f".{self.ext}", delete=False
         ) as tmp_in, tempfile.TemporaryDirectory() as tmp_out:
 
             tmp_in.write(raw)
@@ -100,7 +108,7 @@ class GkmasAWBAudio(GkmasDummyMedia):
                     stderr=subprocess.DEVNULL,  # suppresses console output
                     check=True,
                 )
-                audio = [
+                segments = [
                     (f.name, AudioSegment.from_file(f)) for f in Path(tmp_out).iterdir()
                 ]
                 success = True
@@ -108,12 +116,38 @@ class GkmasAWBAudio(GkmasDummyMedia):
                 exception = e
 
         Path(tmp_in.name).unlink()
-
         if not success:
             raise exception  # delay the exception after cleanup
 
-        if len(audio) == 1:
-            return audio[0][1].export(format=self.converted_format).read()
+        return segments
+
+    def _write_segments(self, segments: list[Tuple[str, AudioSegment]]) -> bytes:
+
+        return (
+            sum([seg for _, seg in segments])  # concatenate all segments
+            .export(format=self.converted_format)
+            .read()
+        )
+
+
+class GkmasACBAudio(GkmasAWBAudio):
+    """Conversion plugin for ACB audio archive."""
+
+    @staticmethod
+    def _make_vgmstream_args(tmp_in: str, tmp_out: str, suffix: str) -> list:
+        return [
+            Path(__file__).parent.parent / f"bin/vgmstream/vgmstream-{suffix}",
+            "-S",
+            "-1",
+            "-o",
+            Path(tmp_out, "?n.wav"),  # use internal stream name
+            tmp_in,
+        ]
+
+    def _write_segments(self, segments: list[Tuple[str, AudioSegment]]) -> bytes:
+
+        if len(segments) == 1:
+            return segments[0][1].export(format=self.converted_format).read()
             # discard stream name and follow filename
 
         with BytesIO() as buffer:
@@ -121,7 +155,7 @@ class GkmasAWBAudio(GkmasDummyMedia):
                 dt = (
                     datetime.fromtimestamp(self.mtime) if self.mtime else datetime.now()
                 )
-                for f, segment in audio:
+                for f, segment in segments:
                     zip_file.writestr(
                         ZipInfo(
                             Path(f).with_suffix(f".{self.converted_format}").name,
@@ -130,17 +164,3 @@ class GkmasAWBAudio(GkmasDummyMedia):
                         segment.export(format=self.converted_format).read(),
                     )
             return buffer.getvalue()
-
-
-class GkmasACBAudio(GkmasAWBAudio):
-    """Conversion plugin for ACB audio archive."""
-
-    def _make_vgmstream_args(self, tmp_in: str, tmp_out: str, suffix: str) -> list:
-        return [
-            Path(__file__).parent.parent / f"bin/vgmstream/vgmstream-{suffix}",
-            "-S",  # select subsongs
-            "-1",  # all of them (this is a number; shell=True forces string args)
-            "-o",
-            Path(tmp_out, "?n.wav"),  # use internal stream name
-            tmp_in,
-        ]

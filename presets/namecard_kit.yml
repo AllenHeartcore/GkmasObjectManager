@@ -11,7 +11,7 @@ instructions:
     - criterion: "img_general_meishi_illust_idol-.*"
       subdir: "idol/full"
 
-    - criterion: "img_general_meishi_illust_sd.*"
+    - criterion: "img_general_meishi_illust_sd.*full"
       subdir: "idol/mini"
       image_resize: "2:3"
 
@@ -59,7 +59,7 @@ instructions:
     - criterion: "img_general_achievement_common.*"
       subdir: "achievement/misc"
 
-    - criterion: "img_general_meishi_illust_music-logo.*"
+    - criterion: "img_general_meishi_illust_music-logo.*full"
       subdir: "parts/logo"
       image_resize: "3:2"
 
@@ -69,7 +69,7 @@ instructions:
     - criterion: "img_general_meishi_illust_stamp.*"
       subdir: "parts/stamp"
 
-    - criterion: "img_general_meishi_illust_costume.*"
+    - criterion: "img_general_meishi_illust_costume.*full"
       subdir: "parts/costume"
 
     - criterion: "img_general_meishi_illust_event.*"

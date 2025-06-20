@@ -1,69 +1,106 @@
-function displayMedia() {
-    getMediaBlobURL(type, info.id).then(({ url, mimetype, mtime }) => {
-        $("#uploadTime").text(mtime);
-        $("#loadingSpinnerMedia").hide();
-        $("#viewMediaContent").show();
-        let container = $("#viewMediaContent");
+let acb_basename = "";
+let acb_aliases = [];
 
-        if (mimetype.startsWith("image/")) {
-            container.append(
-                $("<img>").attr("src", url).attr("alt", info.name)
-            );
-        } else if (mimetype.startsWith("audio/")) {
-            container.append(
-                $("<audio>")
-                    .attr({ src: url, controls: true })
-                    .attr("alt", info.name)
-            );
-        } else if (mimetype.startsWith("video/")) {
-            container.append(
-                $("<video>")
-                    .attr({ src: url, controls: true })
-                    .attr("alt", info.name)
-            );
-        } else if (mimetype === "application/zip") {
-            // an archive of WAV files (subsongs extracted from .acb)
-            $("#viewMediaContent").addClass("overflow-y-auto w-100");
+function viewMediaPopulator(media, url, mimetype, mtime) {
+    $("#uploadTime").text(mtime);
 
-            fetch(url)
-                .then((response) => response.blob())
-                .then((blob) => JSZip.loadAsync(blob))
-                .then((zip) => {
-                    Object.keys(zip.files).forEach((filename) => {
-                        let row = $("<div>").addClass(
-                            "row align-center my-2 gx-0"
+    if (mimetype.startsWith("image/")) {
+        media.append($("<img>").attr("src", url).attr("alt", info.name));
+    } else if (mimetype.startsWith("audio/")) {
+        media.append(
+            $("<audio>")
+                .attr({ src: url, controls: true })
+                .attr("alt", info.name)
+        );
+    } else if (mimetype.startsWith("video/")) {
+        media.append(
+            $("<video>")
+                .attr({ src: url, controls: true })
+                .attr("alt", info.name)
+        );
+    } else if (mimetype === "application/zip") {
+        // an archive of WAV files (subsongs extracted from .acb)
+        media.addClass("overflow-y-auto w-100");
+
+        fetch(url)
+            .then((response) => response.blob())
+            .then((blob) => JSZip.loadAsync(blob))
+            .then((zip) => {
+                Object.keys(zip.files).forEach((filename) => {
+                    let row = $("<div>").addClass(
+                        "row align-center my-2 mx-5 gx-0"
+                    );
+                    let col1 = $("<div>").addClass("col-2 text-start fs-5");
+                    let col2 = $("<div>").addClass("col-10 text-end fs-5");
+                    let col3 = $("<div>").addClass("col-12 mb-3");
+
+                    let alias = filename.split(".")[0];
+                    if (filename.startsWith(acb_basename)) {
+                        alias = alias.slice(acb_basename.length + 1);
+                    } else {
+                        console.warn(
+                            "Subsong basename mismatch: expected",
+                            acb_basename,
+                            "but got",
+                            filename
                         );
-                        let col0 = $("<div>").addClass("col-1");
-                        let col1 = $("<div>").addClass("col-2 text-start fs-5");
-                        let col2 = $("<div>").addClass("col-9");
+                    }
 
-                        let alias = filename.split(".")[0].split("_").pop();
-                        col1.text(alias);
+                    acb_aliases.push(alias);
+                    col1.text(alias);
+                    col2.attr("id", "caption_" + alias).text(
+                        "Loading caption..."
+                    );
 
-                        zip.files[filename].async("blob").then((fblob) => {
-                            fblob = new Blob([fblob], { type: "audio/wav" });
-                            const furl = URL.createObjectURL(fblob);
-                            col2.append(
-                                $("<audio>")
-                                    .attr({ src: furl, controls: true })
-                                    .attr("alt", filename)
-                            );
-                        });
-
-                        row.append(col0).append(col1).append(col2);
-                        container.append(row);
+                    zip.files[filename].async("blob").then((fblob) => {
+                        fblob = new Blob([fblob], { type: "audio/wav" });
+                        const furl = URL.createObjectURL(fblob);
+                        col3.append(
+                            $("<audio>")
+                                .attr({ src: furl, controls: true })
+                                .attr("alt", filename)
+                                .addClass("w-100")
+                        );
                     });
-                });
-        } else {
-            handleUnsupportedMedia(url);
-            return;
-        }
 
-        $("#downloadConvertedMedia")
-            .text("Download Converted " + mimetype.split("/")[1].toUpperCase())
-            .attr("href", url)
-            .attr("download", info.name.replace(/\.[^/.]+$/, ""))
-            .removeClass("disabled");
+                    row.append(col1).append(col2).append(col3);
+                    media.append(row);
+                });
+                populateCaption();
+            });
+    } else {
+        handleUnsupportedMedia(url);
+        return;
+    }
+
+    $("#downloadConvertedMedia")
+        .text("Download Converted " + mimetype.split("/")[1].toUpperCase())
+        .attr("href", url)
+        .attr("download", info.name.replace(/\.[^/.]+$/, ""))
+        .removeClass("disabled");
+}
+
+function populateCaption() {
+    $.ajax({
+        url: "/api/caption_map/" + info.name,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            acb_aliases.forEach((alias) => {
+                let captionElt = $("#caption_" + alias);
+                if (data["error"]) {
+                    captionElt.text("ERROR: " + data["error"]);
+                } else if (data[acb_basename + "_" + alias]) {
+                    captionElt.text(data[acb_basename + "_" + alias]);
+                } else {
+                    captionElt.text("ERROR: Caption not found");
+                }
+            });
+        },
+        error: function (...args) {
+            dumpErrorToConsole(...args);
+        },
     });
 }
 
@@ -86,6 +123,7 @@ function handleUnsupportedMedia(url) {
 }
 
 $(document).ready(function () {
+    acb_basename = info.name.split(".")[0];
     setAccentColorByString(info.name);
-    displayMedia();
+    progressedMediaDriver(type, info.id, $("#viewMedia"), viewMediaPopulator);
 });

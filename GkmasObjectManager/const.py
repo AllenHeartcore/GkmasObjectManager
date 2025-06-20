@@ -72,3 +72,6 @@ CHARACTER_ABBREVS = [
 # object deobfuscate
 GKMAS_UNITY_VERSION = "2022.3.21f1"
 UNITY_SIGNATURE = b"UnityFS"
+
+# adventure captioning
+DEFAULT_USERNAME = "プロデューサー"

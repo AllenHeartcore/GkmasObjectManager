@@ -18,35 +18,53 @@ function populateHomepageContainers(data) {
     // Pre-populate with empty divs for indexing
     let container = $("#homeFeaturedContainer");
     for (let i = 0; i < NUM_FEATURED_SAMPLES; i++) {
-        container.append($("<div>").addClass("col-md-2 mt-3 "));
+        container.append(
+            $("<div>")
+                .addClass("media-container media-container-home col-md-2 mt-3")
+                .append(
+                    $("<div>")
+                        .addClass("prog-container")
+                        .append(
+                            $("<div>")
+                                .addClass("prog-bar-container")
+                                .append($("<div>").addClass("prog-bar"))
+                        )
+                )
+                .append($("<div>").addClass("hide-by-default media-content"))
+        );
     }
 
     // Place images in the correct order since Promise's are async
     latestSamples.forEach((item, index) => {
-        getMediaBlobURL("AssetBundle", item.id).then(({ url, mimetype, _ }) => {
-            if (!mimetype.startsWith("image/")) {
-                console.log(
-                    `Expected an image mimetype for asset ${item.id}, but got ${mimetype}`
-                );
-                return;
+        progressedMediaDriver(
+            "AssetBundle",
+            item.id,
+            container.children().eq(index),
+            (media, url, mimetype, mtime) => {
+                if (!mimetype.startsWith("image/")) {
+                    console.error(
+                        `Expected an image mimetype for asset ${item.id}, but got ${mimetype}`
+                    );
+                    return;
+                }
+                let image = $("<img>")
+                    .attr("src", url)
+                    .attr("alt", item.name)
+                    .addClass("image-landscape rounded-3 shadow-at-hover");
+                let link = $("<a>")
+                    .attr("href", `/view/assetbundle/${item.id}`)
+                    .append(image);
+                media.append(link);
             }
-            let image = $("<img>")
-                .attr("src", url)
-                .attr("alt", item.name)
-                .addClass("image-landscape rounded-3 shadow-at-hover");
-            let link = $("<a>")
-                .attr("href", `/view/assetbundle/${item.id}`)
-                .append(image);
-            container.children().eq(index).append(link);
-        });
+        );
     });
 
-    $("#loadingSpinner").hide();
+    $("#loadingBlinker").hide();
     $("#homepageElements").show();
 }
 
 function reportHomepageError() {
-    $("#loadingSpinner").hide();
+    $("#loadingBlinker").hide();
     $("#homeMetadata").html(`
         GkmasManifest cannot be fetched. <br>
         Check Internet connection. <br>

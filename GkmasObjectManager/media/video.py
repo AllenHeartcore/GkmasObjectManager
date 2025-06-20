@@ -3,12 +3,9 @@ media/video.py
 USM video conversion plugin for GkmasResource.
 """
 
-import ffmpeg
+import subprocess
 
-from ..utils import Logger
 from .dummy import GkmasDummyMedia
-
-logger = Logger()
 
 
 class GkmasUSMVideo(GkmasDummyMedia):
@@ -20,20 +17,22 @@ class GkmasUSMVideo(GkmasDummyMedia):
 
     def _convert(self, raw: bytes) -> bytes:
 
-        stream_in = ffmpeg.input("pipe:0")
-        stream_out = ffmpeg.output(
-            stream_in,
-            "pipe:1",
-            vcodec="libx264",
-            preset="ultrafast",
-            format=self.converted_format,
-            movflags="frag_keyframe",
-            # otherwise libx264 reports 'muxer does not support non seekable output'
-        )
-
-        return ffmpeg.run(
-            stream_out,
+        return subprocess.run(
+            [
+                "ffmpeg",
+                "-i",
+                "pipe:0",  # input bytestream
+                "-f",
+                self.converted_format,
+                "-preset",
+                "ultrafast",
+                "-movflags",
+                "faststart+frag_keyframe",
+                # otherwise libx264 reports 'muxer does not support non seekable output'
+                "pipe:1",  # output bytestream
+            ],
             input=raw,
-            capture_stdout=True,
-            capture_stderr=True,
-        )[0]
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,  # disposed
+            check=True,
+        ).stdout

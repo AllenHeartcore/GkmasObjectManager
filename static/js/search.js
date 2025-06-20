@@ -123,6 +123,7 @@ function highlightTokens(text) {
 }
 
 function refreshCardContainer() {
+    $("html, body").animate({ scrollTop: 0 }, "fast");
     $("#searchEntryCardContainer").empty();
 
     let start = (currentPage - 1) * entriesPerPage;
@@ -134,12 +135,27 @@ function refreshCardContainer() {
             .addClass("card shadow-at-hover")
             .attr("id", "searchEntryCard");
         if (entry.name.startsWith("img_")) {
-            getMediaBlobURL(entry.type, entry.id).then(
-                ({ url, mimetype, _ }) => {
-                    card.prepend(
+            let mediaContainer = $("<div>")
+                .addClass("media-container media-container-search")
+                .append(
+                    $("<div>")
+                        .addClass("prog-container")
+                        .append(
+                            $("<div>")
+                                .addClass("prog-bar-container")
+                                .append($("<div>").addClass("prog-bar"))
+                        )
+                )
+                .append($("<div>").addClass("hide-by-default media-content"));
+            card.prepend(mediaContainer);
+            progressedMediaDriver(
+                entry.type,
+                entry.id,
+                mediaContainer,
+                (media, url, mimetype, mtime) => {
+                    media.append(
                         $("<img>")
-                            .addClass("card-img-top")
-                            .attr("id", "searchEntryCardImage")
+                            .addClass("card-img-top media-content-search")
                             .attr("src", url)
                             .attr("alt", entry.name)
                     );
@@ -254,7 +270,7 @@ function populateSearchpageContainers(queryDisplay) {
         updateEpp((resetPage = false));
     }
 
-    $("#loadingSpinner").hide();
+    $("#loadingBlinker").hide();
     $("#searchpageElements").show();
 }
 
@@ -262,7 +278,7 @@ $(document).ready(function () {
     setAccentColorByString(query);
     let queryDisplay = query.trim().replace(/\s+/g, " "); // trimmed, duplicate spaces removed
     $("#searchInput").val(queryDisplay + " "); // allows immediate edit/resubmission
-    // search input should be displayed alongside the spinner, before a successful AJAX response
+    // search input should be displayed alongside the blinker, before a successful AJAX response
 
     tokens = queryDisplay.split(/\s+/);
 

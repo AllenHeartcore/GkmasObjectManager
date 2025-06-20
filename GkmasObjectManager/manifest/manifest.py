@@ -8,17 +8,22 @@ import json
 import re
 import subprocess
 from pathlib import Path
+from typing import Union
 
 import pandas as pd
 import yaml
 from google.protobuf.json_format import ParseError
+from rich.progress import BarColumn, Progress, TextColumn, TimeElapsedColumn
 
 from ..const import CHARACTER_ABBREVS, CSV_COLUMNS, DEFAULT_DOWNLOAD_PATH, PathArgtype
 from ..object import GkmasAssetBundle, GkmasResource
-from ..utils import Logger, nocache
+from ..rich import Logger
+from ..utils import nocache
 from .listing import GkmasObjectList
 from .octodb_pb2 import dict2pdbytes
 from .revision import GkmasManifestRevision
+
+ObjectClass = Union[GkmasAssetBundle, GkmasResource]
 
 # The logger would better be a global variable in the
 # modular __init__.py, but Python won't allow me to
@@ -53,6 +58,11 @@ class GkmasManifest:
         download_all_resources(**kwargs) -> None
         download_all(**kwargs) -> None
     """
+
+    revision: GkmasManifestRevision
+    assetbundles: GkmasObjectList
+    resources: GkmasObjectList
+    urlformat: str
 
     def __init__(self, jdict: dict, base_revision: int = 0):
         """
@@ -100,7 +110,7 @@ class GkmasManifest:
     def __repr__(self) -> str:
         return f"<GkmasManifest revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
-    def __getitem__(self, key: str) -> object:
+    def __getitem__(self, key: str) -> ObjectClass:
         try:
             return self.assetbundles[key]
         except KeyError:
@@ -145,20 +155,26 @@ class GkmasManifest:
             }
         )
 
-    def _get_canon_repr(self) -> dict:
+    @property
+    def canon_repr(self) -> dict:
         """
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the manifest.
         """
         return {
-            "revision": self.revision._get_canon_repr(),
-            "assetBundleList": self.assetbundles._get_canon_repr(),
-            "resourceList": self.resources._get_canon_repr(),
+            "revision": self.revision.canon_repr,
+            "assetBundleList": self.assetbundles.canon_repr,
+            "resourceList": self.resources.canon_repr,
             "urlFormat": self.urlformat,
         }
 
     # ------------ EXPORT ------------ #
 
-    def export(self, path: PathArgtype, format: str = "infer"):
+    def export(
+        self,
+        path: PathArgtype,
+        format: str = "infer",
+        force_overwrite: bool = False,
+    ):
         """
         Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
         This is a dispatcher method.
@@ -171,10 +187,12 @@ class GkmasManifest:
                 a warning is issued if the extension is not .pdb.)
             format (str) = 'infer': The format to export.
                 Should be one of 'pdb', 'json', 'csv', or 'infer'.
+            force_overwrite (bool) = False: Whether to overwrite the file if it already exists.
+                Meant for exclusive use by update_manifest watcher.
         """
 
         path = Path(path)
-        if path.exists():
+        if path.exists() and not force_overwrite:
             logger.warning(f"{path} already exists, aborting")
             return
 
@@ -209,7 +227,7 @@ class GkmasManifest:
         if path.suffix != ".pdb":
             logger.warning("Attempting to write ProtoDB into a non-.pdb file")
 
-        jdict = self._get_canon_repr()
+        jdict = self.canon_repr
         if isinstance(jdict["revision"], tuple):
             logger.warning("Exporting a diff manifest as ProtoDB, base revision lost")
             jdict["revision"] = jdict["revision"][0]
@@ -229,7 +247,7 @@ class GkmasManifest:
             logger.warning("Attempting to write JSON into a non-.json file")
 
         try:
-            path.write_text(json.dumps(self._get_canon_repr(), indent=4))
+            path.write_text(json.dumps(self.canon_repr, indent=4))
             logger.success(f"JSON has been written into {path}")
         except TypeError:  # non-JSON-serializable object in dict
             logger.error(f"Failed to write JSON into {path}")
@@ -247,9 +265,9 @@ class GkmasManifest:
         # [RESOLVED] Forced list conversion is necessary since GkmasObjectList overrides __iter__,
         # which handles integer keys (index by ID) and messes up with standard modules
         # like pandas that rely on self[0] as a "sample" object from the list.
-        dfa = pd.DataFrame(self.assetbundles._get_canon_repr(), columns=CSV_COLUMNS)
+        dfa = pd.DataFrame(self.assetbundles.canon_repr, columns=CSV_COLUMNS)
         dfa["name"] = dfa["name"].apply(lambda x: x + ".unity3d")  # stripped in canon
-        dfr = pd.DataFrame(self.resources._get_canon_repr(), columns=CSV_COLUMNS)
+        dfr = pd.DataFrame(self.resources.canon_repr, columns=CSV_COLUMNS)
         df = pd.concat([dfa, dfr], ignore_index=True)
         df.sort_values("name", inplace=True)
 
@@ -266,7 +284,7 @@ class GkmasManifest:
         criterion: str,
         by_name: bool = True,
         ascending: bool = True,
-    ) -> list[object]:
+    ) -> list[ObjectClass]:
         """
         Searches the manifest for objects matching the specified criterion.
         Returns a list of objects.
@@ -329,7 +347,7 @@ class GkmasManifest:
             preset = yaml.safe_load(f)
 
         root = preset.get("root", DEFAULT_DOWNLOAD_PATH)
-        root = root.replace("{revision}", f"v{self.revision._get_canon_repr()}")
+        root = root.replace("{revision}", f"v{self.revision.canon_repr}")
 
         global_kwargs = preset.get("global-kwargs", {})
         proto_instrs = preset.get("instructions", [])
@@ -408,17 +426,31 @@ class GkmasManifest:
         [INTERNAL] Dispatches a list of object-kwargs pairs to async download tasks.
         """
 
-        # if obj_kw is a list of objects, append empty kwargs
+        # if "obj_kw" is a list of objects, append empty kwargs
         if not isinstance(obj_kw[0], tuple):
             obj_kw = [(obj, {}) for obj in obj_kw]
 
-        # if kwargs not empty, broadcast to all pairs
+        # if "kwargs" is not empty, broadcast to all pairs
         if kwargs:
             obj_kw = [(obj, {**kw, **kwargs}) for (obj, kw) in obj_kw]
 
-        await asyncio.gather(
-            *[
-                asyncio.create_task(asyncio.to_thread(obj.download, **kw))
-                for (obj, kw) in obj_kw
-            ]
+        tasks = []
+        progress = Progress(
+            TextColumn("{task.description}"),
+            BarColumn(),
+            TextColumn("{task.completed}/{task.total}"),
+            TimeElapsedColumn(),
         )
+        progress.start()
+
+        for obj, kw in obj_kw:
+            kw["progress"] = progress
+            kw["task_id"] = progress.add_task(obj._idname, visible=False)
+            tasks.append(
+                asyncio.create_task(
+                    asyncio.to_thread(obj.download, **kw),
+                ),
+            )
+
+        await asyncio.gather(*tasks)
+        progress.stop()

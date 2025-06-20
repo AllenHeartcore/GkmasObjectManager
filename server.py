@@ -3,14 +3,22 @@ server.py
 Flask web server entry point.
 """
 
+import json
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from queue import Queue
+from typing import Optional, Union
 
 from flask import Flask, Response, jsonify, render_template, request
 
 import GkmasObjectManager as gom
 from GkmasObjectManager.manifest import GkmasManifest
+from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
+
+# bookkeeping & helpers
 
 app = Flask(__name__)
+queues = defaultdict(Queue)
 m = None
 
 
@@ -19,6 +27,24 @@ def _get_manifest() -> GkmasManifest:
     if m is None:
         m = gom.fetch()
     return m
+
+
+def _get_object(
+    type: str, id: Union[int, str]
+) -> Union[GkmasAssetBundle, GkmasResource]:
+    m = _get_manifest()
+
+    try:
+        id = int(id)
+    except ValueError:
+        pass
+
+    if type == "assetbundle":
+        return m.assetbundles[id]
+    elif type == "resource":
+        return m.resources[id]
+    else:
+        raise ValueError(f"Unknown type: {type}")
 
 
 def _sanitize_mtime(mtime: float) -> str:
@@ -32,7 +58,7 @@ def _sanitize_mtime(mtime: float) -> str:
 
 @app.route("/api/manifest")
 def api_manifest() -> Response:
-    return jsonify(_get_manifest()._get_canon_repr())
+    return jsonify(_get_manifest().canon_repr)
 
 
 @app.route("/api/search")
@@ -53,10 +79,18 @@ def api_search() -> Response:
     )
 
 
-@app.route("/api/assetbundle/<id>/bytestream")
-def api_assetbundle_bytestream(id: str) -> Response:
-    obj = _get_manifest().assetbundles[int(id)]
-    data = obj.get_data()
+@app.route("/api/<type>/<id>/bytestream")
+def api_bytestream(type: str, id: str) -> Response:
+
+    try:
+        obj = _get_object(type, id)
+    except (ValueError, KeyError):
+        return jsonify({"error": "Object not found"})
+
+    q = queues[(type, id)]
+    data = obj.get_data(upstream=q)
+    obj._reporter.success("Data ready at frontend")
+
     return Response(
         data["bytes"],
         mimetype=data["mimetype"],
@@ -64,14 +98,62 @@ def api_assetbundle_bytestream(id: str) -> Response:
     )
 
 
-@app.route("/api/resource/<id>/bytestream")
-def api_resource_bytestream(id: str) -> Response:
-    obj = _get_manifest().resources[int(id)]
-    data = obj.get_data()
+@app.route("/api/caption_map/<name>")
+def api_caption_map(name: str) -> Response:
+    try:
+        ret = _get_object(
+            "resource", name.replace("sud_vo_", "").replace(".acb", ".txt")
+        ).media.caption_map
+    except KeyError:
+        ret = {"error": "Caption not found"}
+    except AttributeError:
+        ret = {"error": "Caption not supported"}
+    except ValueError:
+        ret = {"error": "Caption loading failed"}
+    return jsonify(ret)
+
+
+# SSE endpoints
+
+
+def _poll_and_format(type: str, id: str) -> str:
+
+    event: str = ""
+    data: dict = {}
+    q: Optional[Queue[dict]] = None
+
+    q = queues[(type, id)]
+
+    try:
+        progress: dict = q.get(timeout=1)
+    except Exception:
+        return ":keep-alive\n\n"  # no new data, keep connection alive
+    if not progress:
+        event = "error"
+        data = {"message": "Progress stream is empty"}
+    else:
+        event = progress.pop("event", event)
+        data = progress.copy()
+
+    ret = f"event: {event}\n" if event else ""
+    ret += f"data: {json.dumps(data)}\n\n"
+    return ret
+
+
+@app.route("/sse/<type>/<id>/progress")
+def sse_progress(type: str, id: str) -> Response:
+
+    def generate():
+        while True:
+            yield _poll_and_format(type, id)
+
     return Response(
-        data["bytes"],
-        mimetype=data["mimetype"],
-        headers={"Last-Modified": _sanitize_mtime(data["mtime"])},
+        generate(),
+        mimetype="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+        },
     )
 
 
@@ -95,38 +177,33 @@ def search() -> str:
     )
 
 
-@app.route("/view/assetbundle/<id>")
-def view_assetbundle(id: str) -> str:
+@app.route("/view/<type>/<id>")
+def view(type: str, id: str) -> str:
+
+    if type == "assetbundle":
+        type_display = "AssetBundle"
+    elif type == "resource":
+        type_display = "Resource"
+    else:
+        return render_template("404.html")
 
     try:
-        obj = _get_manifest().assetbundles[int(id)]
-    except KeyError:
-        return render_template("404.html"), 404
+        obj = _get_object(type, id)
+    except (ValueError, KeyError):
+        return render_template("404.html")
 
-    info = obj._get_canon_repr()
+    info = obj.canon_repr
     info["raw_url"] = obj._url
     if "dependencies" in info:
         info["dependencies"] = [
             {
                 "id": dep,
-                "name": _get_manifest().assetbundles[int(dep)].name,
+                "name": _get_object(type, dep).name,  # error handling?
             }
             for dep in info["dependencies"]
         ]
-    return render_template("view.html", info=info, type="AssetBundle")
 
-
-@app.route("/view/resource/<id>")
-def view_resource(id: str) -> str:
-
-    try:
-        obj = _get_manifest().resources[int(id)]
-    except KeyError:
-        return render_template("404.html"), 404
-
-    info = obj._get_canon_repr()
-    info["raw_url"] = obj._url
-    return render_template("view.html", info=info, type="Resource")
+    return render_template("view.html", info=info, type=type_display)
 
 
 @app.errorhandler(404)

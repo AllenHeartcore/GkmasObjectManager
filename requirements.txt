@@ -11,8 +11,7 @@ protobuf
 pandas
 
 # Object/Media plugins for
-# .unity3d, image, audio, video
+# .unity3d, image, audio
 UnityPy
 pillow
 pydub
-ffmpeg-python

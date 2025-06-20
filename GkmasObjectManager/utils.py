@@ -1,12 +1,12 @@
 """
 utils.py
-General-purpose utilities: hashing, rich console logger.
+General-purpose utilities: hashing, decorators, etc.
 """
 
+import re
 from typing import Callable
 
 from cryptography.hazmat.primitives import hashes
-from rich.console import Console
 
 
 def sha256sum(data: bytes) -> bytes:
@@ -39,30 +39,32 @@ def nocache(func) -> Callable:
     return wrapper
 
 
-class Logger(Console):
+def make_caption_map(commands: list[dict]) -> dict[str, str]:
     """
-    A rich console logger with custom log levels.
-
-    Methods:
-        info(message: str): Logs an informational message in white text.
-        success(message: str): Logs a success message in green text.
-        warning(message: str): Logs a warning message in yellow text.
-        error(message: str): Logs an error message in red text
-            followed by traceback, and raises an error.
+    Converts a list of adventure commands into a mapping
+    of voicelines' *in-archive aliases* to their captions.
     """
 
-    def __init__(self):
-        super().__init__()
+    from .const import DEFAULT_USERNAME
 
-    def info(self, message: str):
-        self.print(f"[bold white][Info][/bold white] {message}")
+    caption_map = {}
 
-    def success(self, message: str):
-        self.print(f"[bold green][Success][/bold green] {message}")
+    commands = sorted(
+        filter(lambda cmd: cmd["cmd"] in ["message", "voice"], commands),
+        key=lambda cmd: cmd["clip"]["_startTime"],
+    )  # m- and v- commands don't necessarily go together in raw data
 
-    def warning(self, message: str):
-        self.print(f"[bold yellow][Warning][/bold yellow] {message}")
+    for cmd1, cmd2 in zip(commands, commands[1:]):
+        if cmd1["cmd"] == "message" and cmd2["cmd"] == "voice":
 
-    def error(self, message: str):
-        self.print(f"[bold red][Error][/bold red] {message}")
-        raise
+            caption = cmd1.get("text", "").strip().replace(r"\n", "")
+            caption = caption.replace("{user}", DEFAULT_USERNAME)
+
+            # Superscripts look like "<r\\=AAA>BBB</r>", where BBB
+            # is pronounced as AAA. We keep the pronunciation here.
+            caption = re.sub(r"<r\\=([^>]+)>.*</r>", r"\1", caption)
+            caption = re.sub(r"<[^<>]*>", "", caption)  # remove XML tags
+
+            caption_map[cmd2["voice"]] = caption
+
+    return caption_map

@@ -1,11 +1,5 @@
-#homepageElements {
-    margin-top: 15vh;
-}
-
-#searchpageElements,
-#viewpageElements,
-#missingpageElements {
-    margin-top: 12vh;
+.below-navbar {
+    margin-top: 7.5rem;
 }
 
 .title {
@@ -18,12 +12,23 @@
     line-height: 1;
 }
 
+.media-container {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* Navbar */
 
 #navbarNav {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 4.5rem;
 }
 
 #navbarSticker {
@@ -42,6 +47,10 @@
     max-width: 100%;
 }
 
+.media-container-home {
+    aspect-ratio: 16 / 9;
+}
+
 /* Search */
 
 #eppValue {
@@ -56,25 +65,27 @@
     margin: 0.5rem 0;
 }
 
-#searchEntryCardImage {
+.media-container-search {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+.media-content-search {
     max-height: 10rem;
     object-fit: contain;
 }
 
 /* View */
 
-#viewMedia {
-    display: flex;
+.media-container-view {
     flex-direction: column; /* stack children vertically */
     width: 100%;
-    height: auto;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
     border: 2px dotted lightgray;
 }
 
-#viewMediaContent img,
-#viewMediaContent video {
+.media-content-view img,
+.media-content-view video {
     display: block;
     max-width: 100%;
     max-height: 30rem;
@@ -82,7 +93,7 @@
     object-position: center;
 }
 
-#viewMediaContent audio {
+.media-content-view audio {
     display: block;
     width: 36rem;
     object-fit: contain;

@@ -1,3 +1,5 @@
+let accentColorKey = "";
+
 const ACCENT_COLORS = {
     "hski": "#FF4F64",
     "ttmr": "#27B4EB",
@@ -62,6 +64,12 @@ function findAccentColorKey(str) {
 }
 
 function setAccentColorByKey(key) {
+    if (!ACCENT_COLORS[key]) {
+        console.warn(`Invalid accent color key: ${key}`);
+        return;
+    }
+
+    accentColorKey = key;
     let accent = ACCENT_COLORS[key];
     let hsl = rgb2hsl(...hex2rgb(accent));
 

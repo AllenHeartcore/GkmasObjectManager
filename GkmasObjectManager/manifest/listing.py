@@ -4,7 +4,11 @@ listing.py
 optimized for indexing and comparison.
 """
 
-from typing import Union
+from typing import Optional, Union
+
+from ..object import GkmasAssetBundle, GkmasResource
+
+ObjectClass = Union[GkmasAssetBundle, GkmasResource]
 
 
 class GkmasObjectList:
@@ -19,7 +23,15 @@ class GkmasObjectList:
             Only used when instantiating objects from the list.
     """
 
-    def __init__(self, infos: list[dict], base_class: object, url_template: str):
+    infos: list[dict]
+    base_class: ObjectClass
+    url_template: str
+
+    _objects: list[Optional[ObjectClass]]
+    _id_idx: dict[int, int]
+    _name_idx: dict[str, int]
+
+    def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
         infos.sort(key=lambda x: x["id"])
 
         self.infos = infos
@@ -34,13 +46,13 @@ class GkmasObjectList:
     def __repr__(self) -> str:
         return f"<GkmasObjectList of {len(self.infos)} {self.base_class.__name__}'s>"
 
-    def _get_object(self, idx: int) -> object:
+    def _get_object(self, idx: int) -> ObjectClass:
         # necessary for enabling cache everywhere
         if self._objects[idx] is None:
             self._objects[idx] = self.base_class(self.infos[idx], self.url_template)
         return self._objects[idx]
 
-    def __getitem__(self, key: Union[int, str]) -> object:
+    def __getitem__(self, key: Union[int, str]) -> ObjectClass:
 
         if isinstance(key, int):
             idx = self._id_idx[key]
@@ -66,9 +78,9 @@ class GkmasObjectList:
         assert self.base_class == other.base_class
         canon_reprs = []
         for entry in self:
-            this_repr = entry._get_canon_repr()
+            this_repr = entry.canon_repr
             try:
-                other_repr = other[entry.name]._get_canon_repr()
+                other_repr = other[entry.name].canon_repr
             except KeyError:
                 canon_reprs.append(this_repr)
             else:
@@ -79,14 +91,15 @@ class GkmasObjectList:
     def __add__(self, other: "GkmasObjectList") -> "GkmasObjectList":
         # 'other' is assumed to be newer, since revision is not accessible here
         assert self.base_class == other.base_class
-        mapped = {entry["id"]: entry for entry in self._get_canon_repr()}
-        mapped.update({entry["id"]: entry for entry in other._get_canon_repr()})  # hack
+        mapped = {entry["id"]: entry for entry in self.canon_repr}
+        mapped.update({entry["id"]: entry for entry in other.canon_repr})  # hack
         return GkmasObjectList(
             list(mapped.values()), self.base_class, self.url_template
         )
 
-    def _get_canon_repr(self) -> list[dict]:
+    @property
+    def canon_repr(self) -> list[dict]:
         """
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the object list.
         """
-        return [entry._get_canon_repr() for entry in self]
+        return [entry.canon_repr for entry in self]

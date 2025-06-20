@@ -23,6 +23,10 @@ class AESCBCDecryptor:
             Decrypts the given ciphertext into plaintext.
     """
 
+    cipher: Cipher
+    unpadder: PKCS7
+    block_size: int
+
     def __init__(self, key: bytes, iv: bytes):
         """
         Initializes the decryptor with the given key and IV.
