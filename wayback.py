@@ -1,18 +1,14 @@
 """
-wayback.py
-Interface with the "wayback machine", i.e. the object history log.
+manifest.py
+Manifest decryption, exporting, and object downloading.
 """
 
-from pathlib import Path
+import re
+from typing import Optional
 
-from google.protobuf.json_format import ParseError
-
-from GkmasObjectManager.const import PathArgtype
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.rich import Logger
-from GkmasObjectManager.utils import _json_dump
 from GkmasObjectManager.manifest.listing import GkmasObjectList
-from GkmasObjectManager.manifest.octodb_pb2 import dict2pdbytes
 from GkmasObjectManager.manifest.revision import GkmasManifestRevision
 
 ObjectClass = GkmasAssetBundle | GkmasResource
@@ -20,6 +16,78 @@ ObjectClass = GkmasAssetBundle | GkmasResource
 # The logger would better be a global variable in the
 # modular __init__.py, but Python won't allow me to
 logger = Logger()
+
+
+class GkmasObjectList:
+    """
+    A list of assetbundle/resource metadata, optimized for indexing and comparison.
+    Implemented as listing utility wrappers around a list of dictionaries.
+
+    Attributes:
+        infos (list): List of dictionaries containing metadata for each object.
+        base_class (object): The class that will be instantiated for each object.
+        url_template (str): URL template for fetching the objects.
+            Only used when instantiating objects from the list.
+    """
+
+    infos: list[dict]
+    base_class: ObjectClass
+    url_template: str
+
+    _objects: list[Optional[ObjectClass]]
+    _id_idx: dict[int, int]
+    _name_idx: dict[str, int]
+
+    @staticmethod
+    def _sanitize_name(name: str) -> str:
+        # isolate this util as an undesirable accommodation for choosing to
+        # include the suffix in object.assetbundle.name for now
+        return name.removesuffix(".unity3d")
+
+    def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
+        infos.sort(key=lambda x: x["id"])
+
+        self.infos = infos
+        self.base_class = base_class
+        self.url_template = url_template
+
+        self._objects = [None] * len(infos)
+        self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
+        self._name_idx = {
+            self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
+        }
+        # 'self._*_idx' are int/str -> int lookup tables
+
+    def __repr__(self) -> str:
+        return f"<GkmasObjectList of {len(self.infos)} {self.base_class.__name__}'s>"
+
+    def _get_object(self, idx: int) -> ObjectClass:
+        # necessary for enabling cache everywhere
+        if self._objects[idx] is None:
+            self._objects[idx] = self.base_class(self.infos[idx], self.url_template)
+        return self._objects[idx]
+
+    def __getitem__(self, key: int | str) -> ObjectClass:
+
+        if isinstance(key, int):
+            idx = self._id_idx[key]
+        elif isinstance(key, str):
+            idx = self._name_idx[self._sanitize_name(key)]
+        else:
+            raise TypeError  # just in case, should never reach here
+
+        return self._get_object(idx)
+
+    def __iter__(self):
+        for i in range(len(self.infos)):
+            yield self._get_object(i)
+
+    def __len__(self) -> int:
+        return len(self.infos)
+
+    def __contains__(self, key: str) -> bool:
+        return self._sanitize_name(key) in self._name_idx
+        # 'if <numerical ID> in self' is nonsensical
 
 
 class GkmasManifest:
@@ -34,7 +102,7 @@ class GkmasManifest:
 
     Methods:
         export(path: str | Path) -> None:
-            Exports the manifest as ProtoDB and/or JSON to the specified path.
+            Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
         search(criterion: str) -> list:
             Searches the manifest for objects with names *fully* matching the specified criterion.
         download(
@@ -122,120 +190,27 @@ class GkmasManifest:
         return key in self.assetbundles or key in self.resources
         # could also try self[key]
 
-    def __sub__(self, other: "GkmasManifest") -> "GkmasManifest":
-        return GkmasManifest(
-            {  # this is not a standard JSON dict, more like named arguments
-                "revision": self.revision - other.revision,  # handles sanity check
-                "assetBundleList": self.assetbundles - other.assetbundles,
-                "resourceList": self.resources - other.resources,
-                "urlFormat": self.urlformat,
-                # always override with the higher revision, in case this ever differs
-            }
-        )
-
-    def __add__(self, other: "GkmasManifest") -> "GkmasManifest":
-        new_revision = self.revision + other.revision
-        a, b = (
-            (self, other) if new_revision.this == other.revision.this else (other, self)
-        )  # 'b' must be newer; this matters in list addition
-        return GkmasManifest(
-            {
-                "revision": new_revision,
-                "assetBundleList": a.assetbundles + b.assetbundles,
-                "resourceList": a.resources + b.resources,
-                "urlFormat": b.urlformat,
-            }
-        )
-
-    @property
-    def canon_repr(self) -> dict:
-        """
-        [INTERNAL] Returns the JSON-compatible "canonical" representation of the manifest.
-        """
-        return {
-            "revision": self.revision.canon_repr,
-            "assetBundleList": self.assetbundles.canon_repr,
-            "resourceList": self.resources.canon_repr,
-            "urlFormat": self.urlformat,
-        }
-
-    # ------------ EXPORT ------------ #
-
-    def export(
+    def search(
         self,
-        path: PathArgtype,
-        format: str = "infer",
-        force_overwrite: bool = False,
-    ):
+        criterion: str,
+        by_name: bool = True,
+        ascending: bool = True,
+    ) -> list[ObjectClass]:
         """
-        Exports the manifest as ProtoDB and/or JSON to the specified path.
-        This is a dispatcher method.
+        Searches the manifest for objects matching the specified criterion.
+        Returns a list of objects.
 
         Args:
-            path (str | Path): A file path.
-                The format is determined by the extension if 'format' is 'infer'.
-                (All extensions other than .json are inferred
-                as raw binary and therefore exported as ProtoDB, but
-                a warning is issued if the extension is not .pdb.)
-            format (str) = 'infer': The format to export.
-                Should be one of 'pdb', 'json', or 'infer'.
-            force_overwrite (bool) = False: Whether to overwrite the file if it already exists.
-                Meant for exclusive use by update_manifest watcher.
+            criterion (str): Regex pattern of object names.
         """
 
-        path = Path(path)
-        if path.exists() and not force_overwrite:
-            logger.warning(f"{path} already exists, aborting")
-            return
-
-        if format == "infer":
-            if path.suffix == ".pdb":
-                format = "pdb"
-            elif path.suffix == ".json":
-                format = "json"
-            else:
-                logger.warning("Unrecognized file extension, defaulting to ProtoDB")
-                format = "pdb"
-
-        if format == "pdb":
-            self._export_pdb(path)
-        elif format == "json":
-            self._export_json(path)
-        else:
-            logger.warning(f"Unrecognized format '{format}', aborted")
-            # Could also be logger.error, but let's fail gracefully.
-            # This check used to appear in the type hint, but then
-            # this method would *silently* fail if the format was invalid.
-
-    def _export_pdb(self, path: Path):
-        """
-        [INTERNAL] Writes raw protobuf bytes into the specified path.
-        """
-
-        if path.suffix != ".pdb":
-            logger.warning("Attempting to write ProtoDB into a non-.pdb file")
-
-        jdict = self.canon_repr
-        if isinstance(jdict["revision"], tuple):
-            logger.warning("Exporting a diff manifest as ProtoDB, base revision lost")
-            jdict["revision"] = jdict["revision"][0]
-
-        try:
-            path.write_bytes(dict2pdbytes(jdict))
-            logger.success(f"ProtoDB has been written into {path}")
-        except ParseError:
-            logger.error(f"Failed to write ProtoDB into {path}")
-
-    def _export_json(self, path: Path):
-        """
-        [INTERNAL] Writes JSON-serialized dictionary into the specified path.
-        """
-
-        if path.suffix != ".json":
-            logger.warning("Attempting to write JSON into a non-.json file")
-
-        try:
-            _json_dump(self.canon_repr, path)
-            logger.success(f"JSON has been written into {path}")
-        except TypeError:  # non-JSON-serializable object in dict
-            logger.error(f"Failed to write JSON into {path}")
+        # This will be called by frontend; we instantiate here to make ID's visible.
+        matches = filter(
+            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            list(self),
+        )
+        return sorted(
+            matches,
+            key=lambda x: x.name if by_name else x.id,
+            reverse=not ascending,
+        )
