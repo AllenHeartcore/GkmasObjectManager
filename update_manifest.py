@@ -21,7 +21,7 @@ from GkmasObjectManager.utils import _json_dump, _json_load
 
 def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
 
-    manifest = fetch(rev)
+    manifest = fetch(rev, _use_local_commits_database=True)
     prog.update(1)
     return manifest
 
