@@ -18,8 +18,8 @@ from ..const import (
     GKMAS_OCTOCACHE_KEY,
     GKMAS_ONLINEPDB_KEY,
     GKMAS_ONLINEPDB_KEY_PC,
-    WAYBACK_COMMITS_DATABASE_LOCAL,
-    WAYBACK_COMMITS_DATABASE_REMOTE,
+    WAYBACK_COMMITS_LOG_LOCAL,
+    WAYBACK_COMMITS_LOG_REMOTE,
     WAYBACK_MANIFEST_URL_TEMPLATE,
     PathArgtype,
 )
@@ -33,7 +33,7 @@ def fetch(
     this_revision: int = -1,
     base_revision: int = 0,
     pc: bool = False,
-    _use_local_commits_database: bool = False,
+    _use_local_commits_log: bool = False,
 ) -> GkmasManifest:
     """
     Requests an online manifest by the specified revision.
@@ -51,21 +51,18 @@ def fetch(
         pc (bool): Whether to use the PC manifest API.
             Defaults to False (mobile).
     """
-    #   _use_local_commits_database (bool): Whether to use the local commits database.
+    #   _use_local_commits_log (bool): Whether to use the local "commits log".
     #       Defaults to False.
-    #       Falls back to the remote database if the local one is not found.
-    #       Exclusively used in rebuilding wayback index before remote database is updated.
+    #       Falls back to the remote "commits log" if the local one is not found.
+    #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
     if this_revision != -1:
 
-        if (
-            _use_local_commits_database
-            and Path(WAYBACK_COMMITS_DATABASE_LOCAL).is_file()
-        ):
-            commits = _json_load(WAYBACK_COMMITS_DATABASE_LOCAL)
+        if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
+            commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
         else:
-            commits = _json_load(WAYBACK_COMMITS_DATABASE_REMOTE)
+            commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
 
         if str(this_revision) not in commits:
             raise ValueError(f"Manifest revision {this_revision} not found in history.")
