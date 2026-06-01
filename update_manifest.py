@@ -18,6 +18,18 @@ from GkmasObjectManager.const import (
 )
 from GkmasObjectManager.utils import _json_dump, _json_load
 
+# FUNCTION HIERARCHY:
+# [main]
+#   -> do_update
+#       -> _export_diff_manifests
+#           -> _export_diff_manifest
+#       -> rebuild_log
+#           -> _fetch_old_manifests
+#               -> _fetch_old_manifest
+#           -> _append_log
+#               -> _sanitize_canon_repr
+#   -> record_commit_hash
+
 
 def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
 
@@ -110,16 +122,16 @@ def rebuild_log(latest_manifest: GkmasManifest):
     # Manifest #old_revision must still be fetched for diff
 
     manifests = asyncio.run(_fetch_old_manifests(revs))
+    if manifests[-1].revision == latest_manifest.revision:
+        manifests.pop()  # remove the last duplicate
     manifests.append(latest_manifest)
 
-    for i in tqdm(range(len(manifests)), desc="Appending manifest diffs"):
-        if i == 0:
-            if not is_incremental:
-                _append_log(log, manifests[i])
-            # in incremental update, everything is diff'ed
-            # and update starts from [1]-[0], so [0] is skipped
-        else:
-            _append_log(log, manifests[i] - manifests[i - 1])
+    # in incremental update, everything is diff'ed
+    # and update starts from [1]-[0], so [0] is skipped
+    if not is_incremental:
+        _append_log(log, manifests[0])
+    for i in tqdm(range(1, len(manifests)), desc="Appending manifest diffs"):
+        _append_log(log, manifests[i] - manifests[i - 1])
 
     del log["ab_id_lookup"]
     del log["res_id_lookup"]
