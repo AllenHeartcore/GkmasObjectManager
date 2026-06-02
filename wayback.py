@@ -1,6 +1,6 @@
 """
-manifest.py
-Manifest decryption, exporting, and object downloading.
+wayback.py
+Interface with the "wayback machine", i.e. the object history log.
 """
 
 import re
@@ -8,7 +8,6 @@ from typing import Optional
 
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.rich import Logger
-from GkmasObjectManager.manifest.listing import GkmasObjectList
 from GkmasObjectManager.manifest.revision import GkmasManifestRevision
 
 ObjectClass = GkmasAssetBundle | GkmasResource
@@ -16,13 +15,13 @@ ObjectClass = GkmasAssetBundle | GkmasResource
 logger = Logger()
 
 
-class GkmasObjectList:
+class WaybackEntryList:
 
     infos: list[dict]
     base_class: ObjectClass
     url_template: str
 
-    _objects: list[Optional[ObjectClass]]
+    _entries: list[Optional[ObjectClass]]
     _id_idx: dict[int, int]
     _name_idx: dict[str, int]
 
@@ -37,19 +36,19 @@ class GkmasObjectList:
         self.base_class = base_class
         self.url_template = url_template
 
-        self._objects = [None] * len(infos)
+        self._entries = [None] * len(infos)
         self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
         self._name_idx = {
             self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
         }
 
     def __repr__(self) -> str:
-        return f"<GkmasObjectList of {len(self.infos)} {self.base_class.__name__}'s>"
+        return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
 
-    def _get_object(self, idx: int) -> ObjectClass:
-        if self._objects[idx] is None:
-            self._objects[idx] = self.base_class(self.infos[idx], self.url_template)
-        return self._objects[idx]
+    def _get_entry(self, idx: int) -> ObjectClass:
+        if self._entries[idx] is None:
+            self._entries[idx] = self.base_class(self.infos[idx], self.url_template)
+        return self._entries[idx]
 
     def __getitem__(self, key: int | str) -> ObjectClass:
 
@@ -60,11 +59,11 @@ class GkmasObjectList:
         else:
             raise TypeError
 
-        return self._get_object(idx)
+        return self._get_entry(idx)
 
     def __iter__(self):
         for i in range(len(self.infos)):
-            yield self._get_object(i)
+            yield self._get_entry(i)
 
     def __len__(self) -> int:
         return len(self.infos)
@@ -73,16 +72,16 @@ class GkmasObjectList:
         return self._sanitize_name(key) in self._name_idx
 
 
-class GkmasManifest:
+class WaybackMachine:
 
     revision: GkmasManifestRevision
-    assetbundles: GkmasObjectList
-    resources: GkmasObjectList
+    assetbundles: WaybackEntryList
+    resources: WaybackEntryList
     urlformat: str
 
-    def __init__(self, jdict: dict, base_revision: int = 0):
+    def __init__(self, log: dict, base_revision: int = 0):
 
-        revision = jdict["revision"]  # not jdict.get() to enforce presence
+        revision = log["revision"]  # not log.get() to enforce presence
         if isinstance(revision, int):
             revision = (revision, 0)
         if base_revision != 0:  # leave negative base handling to the Revision class
@@ -93,21 +92,21 @@ class GkmasManifest:
             revision = (revision[0], base_revision)  # proceed anyway
 
         self.revision = GkmasManifestRevision(*revision)
-        self.assetbundles = GkmasObjectList(
-            jdict.get("assetBundleList", []),
+        self.assetbundles = WaybackEntryList(
+            log.get("assetBundleList", []),
             GkmasAssetBundle,
-            jdict["urlFormat"],
+            log["urlFormat"],
         )
-        self.resources = GkmasObjectList(
-            jdict.get("resourceList", []),
+        self.resources = WaybackEntryList(
+            log.get("resourceList", []),
             GkmasResource,
-            jdict["urlFormat"],
+            log["urlFormat"],
         )
 
-        self.urlformat = jdict["urlFormat"]
+        self.urlformat = log["urlFormat"]
 
     def __repr__(self) -> str:
-        return f"<GkmasManifest revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
+        return f"<WaybackMachine revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
     def __getitem__(self, key: str) -> ObjectClass:
         try:
