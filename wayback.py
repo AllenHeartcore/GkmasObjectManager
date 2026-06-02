@@ -7,12 +7,8 @@ import re
 from typing import Optional
 
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.rich import Logger
-from GkmasObjectManager.manifest.revision import GkmasManifestRevision
 
 ObjectClass = GkmasAssetBundle | GkmasResource
-
-logger = Logger()
 
 
 class WaybackEntryList:
@@ -74,33 +70,19 @@ class WaybackEntryList:
 
 class WaybackMachine:
 
-    revision: GkmasManifestRevision
+    revision: int
     assetbundles: WaybackEntryList
     resources: WaybackEntryList
     urlformat: str
 
-    def __init__(self, log: dict, base_revision: int = 0):
+    def __init__(self, log: dict):
 
-        revision = log["revision"]  # not log.get() to enforce presence
-        if isinstance(revision, int):
-            revision = (revision, 0)
-        if base_revision != 0:  # leave negative base handling to the Revision class
-            if base_revision != revision[1] != 0:  # equivalent to a 2-AND
-                logger.warning(
-                    f"Overriding detected base revision v{revision[1]} with specified v{base_revision}."
-                )
-            revision = (revision[0], base_revision)  # proceed anyway
-
-        self.revision = GkmasManifestRevision(*revision)
+        self.revision = log["revision"]
         self.assetbundles = WaybackEntryList(
-            log.get("assetBundleList", []),
-            GkmasAssetBundle,
-            log["urlFormat"],
+            log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
         )
         self.resources = WaybackEntryList(
-            log.get("resourceList", []),
-            GkmasResource,
-            log["urlFormat"],
+            log["resourceList"], GkmasResource, log["urlFormat"]
         )
 
         self.urlformat = log["urlFormat"]
