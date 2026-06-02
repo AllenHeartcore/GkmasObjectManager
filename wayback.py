@@ -6,9 +6,42 @@ Interface with the "wayback machine", i.e. the object history log.
 import re
 from typing import Optional
 
+from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
+from GkmasObjectManager.utils import _json_load
 
 ObjectClass = GkmasAssetBundle | GkmasResource
+
+
+class WaybackEntry:
+
+    id: int
+    name: str
+    history: list[ObjectClass]
+
+    def __init__(self, info: dict, base_class: ObjectClass, url_template: str):
+        self.id = info["id"]
+        self.name = info["name"]
+        self.history = []
+        for entry in sorted(info["history"], key=lambda x: x["revision"]):
+            rev, objectName, md5, size, dependencies = entry.split("|")
+            self.history.append(
+                base_class(
+                    {
+                        "id": self.id,
+                        "name": self.name,
+                        "objectName": objectName,
+                        "md5": md5,
+                        "size": int(size),
+                        "dependencies": (
+                            list(map(int, dependencies.split(",")))
+                            if dependencies
+                            else []
+                        ),
+                    },
+                    url_template,
+                )
+            )
 
 
 class WaybackEntryList:
@@ -17,7 +50,7 @@ class WaybackEntryList:
     base_class: ObjectClass
     url_template: str
 
-    _entries: list[Optional[ObjectClass]]
+    _entries: list[Optional[WaybackEntry]]
     _id_idx: dict[int, int]
     _name_idx: dict[str, int]
 
@@ -41,12 +74,14 @@ class WaybackEntryList:
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
 
-    def _get_entry(self, idx: int) -> ObjectClass:
+    def _get_entry(self, idx: int) -> WaybackEntry:
         if self._entries[idx] is None:
-            self._entries[idx] = self.base_class(self.infos[idx], self.url_template)
+            self._entries[idx] = WaybackEntry(
+                self.infos[idx], self.base_class, self.url_template
+            )
         return self._entries[idx]
 
-    def __getitem__(self, key: int | str) -> ObjectClass:
+    def __getitem__(self, key: int | str) -> WaybackEntry:
 
         if isinstance(key, int):
             idx = self._id_idx[key]
@@ -73,11 +108,10 @@ class WaybackMachine:
     revision: int
     assetbundles: WaybackEntryList
     resources: WaybackEntryList
-    urlformat: str
 
-    def __init__(self, log: dict):
-
-        self.revision = log["revision"]
+    def __init__(self):
+        log = _json_load(WAYBACK_OBJECTS_LOG_REMOTE)
+        self.revision = log["latest_revision"]
         self.assetbundles = WaybackEntryList(
             log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
         )
@@ -85,16 +119,16 @@ class WaybackMachine:
             log["resourceList"], GkmasResource, log["urlFormat"]
         )
 
-        self.urlformat = log["urlFormat"]
-
     def __repr__(self) -> str:
         return f"<WaybackMachine revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
-    def __getitem__(self, key: str) -> ObjectClass:
-        try:
+    def __getitem__(self, key: str) -> WaybackEntry:
+        if key in self.assetbundles:
             return self.assetbundles[key]
-        except KeyError:
+        elif key in self.resources:
             return self.resources[key]
+        else:
+            raise KeyError(f"No entry with name '{key}'.")
 
     def __iter__(self):
         for ab in self.assetbundles:
@@ -113,7 +147,7 @@ class WaybackMachine:
         criterion: str,
         by_name: bool = True,
         ascending: bool = True,
-    ) -> list[ObjectClass]:
+    ) -> list[WaybackEntry]:
         matches = filter(
             lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
             list(self),
