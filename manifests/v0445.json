@@ -1,0 +1,19 @@
+{
+    "revision": [
+        446,
+        445
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 19988,
+            "name": "mov_general_media_birthday-live-2026-ttmr-003.usm",
+            "size": 887947936,
+            "state": "ADD",
+            "md5": "c25785d14468f29142bd17cc987dfb33",
+            "objectName": "MQUgKY",
+            "uploadVersionId": 205000
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

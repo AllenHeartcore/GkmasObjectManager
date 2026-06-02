@@ -1,6 +1,6 @@
 {
     "revision": [
-        444,
+        446,
         239
     ],
     "assetBundleList": [
@@ -113960,6 +113960,86 @@
             "md5": "cf13706cbb8930c10d1d78b38ff6f0d7",
             "objectName": "oC4I7E",
             "uploadVersionId": 205000
+        },
+        {
+            "id": 22592,
+            "name": "img_general_meishi_illust_ttmr-birthday-stream-logo-001-full",
+            "size": 36270,
+            "crc": 1408878969,
+            "state": "ADD",
+            "md5": "879e92463a28c2392e819c36c77f80e6",
+            "objectName": "ev8dnX",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22593,
+            "name": "img_general_meishi_illust_ttmr-birthday-stream-logo-001-thumb",
+            "size": 28934,
+            "crc": 1355739897,
+            "state": "ADD",
+            "md5": "d36de4a59b65c417ba40c593cac1bef6",
+            "objectName": "51ujlX",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22594,
+            "name": "img_notice_birthday_birthday-ttmr-2026",
+            "size": 337179,
+            "crc": 506806145,
+            "state": "ADD",
+            "md5": "07e764b9538f0e99f041e180d7d47cb1",
+            "objectName": "tyOBNU",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22595,
+            "name": "img_notice_information_birthday-ttmr-2026-large",
+            "size": 122695,
+            "crc": 1453021865,
+            "state": "ADD",
+            "md5": "6a41ea4e5f55138f733a6711dc07da92",
+            "objectName": "awZ739",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22596,
+            "name": "img_general_home_birthday_birthday-ttmr-2026-001",
+            "size": 17120,
+            "crc": 259670661,
+            "state": "ADD",
+            "md5": "7425ad6e3ec6a37fbd57bf8569efa5c8",
+            "objectName": "y02H8x",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22597,
+            "name": "img_general_media_birthday-live-2026-ttmr",
+            "size": 872357,
+            "crc": 4100548736,
+            "state": "ADD",
+            "md5": "52cd0b689b888d7afbb089eda5b2a4e9",
+            "objectName": "bW88Gm",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22598,
+            "name": "img_general_meishi_base_ttmr-birthday-03-full",
+            "size": 897519,
+            "crc": 2221050320,
+            "state": "ADD",
+            "md5": "b3461a2da9c29e9a328a3029c5d97dad",
+            "objectName": "uf6YRb",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22599,
+            "name": "img_general_meishi_base_ttmr-birthday-03-thumb",
+            "size": 29716,
+            "crc": 2316912601,
+            "state": "ADD",
+            "md5": "ccdfc7775f4590758cf40262671e690b",
+            "objectName": "thUvKH",
+            "uploadVersionId": 205000
         }
     ],
     "resourceList": [
@@ -178644,6 +178724,15 @@
             "state": "ADD",
             "md5": "3b19769cad19acdb116b768d93184fa3",
             "objectName": "mdq5aR",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 19988,
+            "name": "mov_general_media_birthday-live-2026-ttmr-003.usm",
+            "size": 887947936,
+            "state": "ADD",
+            "md5": "c25785d14468f29142bd17cc987dfb33",
+            "objectName": "MQUgKY",
             "uploadVersionId": 205000
         }
     ],
