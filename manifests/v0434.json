@@ -1,6 +1,6 @@
 {
     "revision": [
-        448,
+        449,
         434
     ],
     "assetBundleList": [
@@ -5669,6 +5669,15 @@
             "uploadVersionId": 205000
         },
         {
+            "id": 19271,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.awb",
+            "size": 329674,
+            "state": "UPDATE",
+            "md5": "3dfb6b08a341c52b575b9be681463c73",
+            "objectName": "nTNhLk",
+            "uploadVersionId": 205000
+        },
+        {
             "id": 19272,
             "name": "adv_pstep_003_cmmn_before-lesson-param-02-b.txt",
             "size": 9541,
@@ -5702,6 +5711,15 @@
             "state": "UPDATE",
             "md5": "61bd2cd3358ba9fff663c5a3e3bff4f5",
             "objectName": "adrvmr",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 19325,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "1c6653d609e985940bca9396f29f4c40",
+            "objectName": "CwxzDb",
             "uploadVersionId": 205000
         },
         {

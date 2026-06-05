@@ -1,6 +1,6 @@
 {
     "revision": [
-        448,
+        449,
         447
     ],
     "assetBundleList": [],
@@ -111,6 +111,24 @@
             "state": "UPDATE",
             "md5": "029ebca0911e055c3519945a435720bd",
             "objectName": "WLgoaC",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 19271,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.awb",
+            "size": 329674,
+            "state": "UPDATE",
+            "md5": "3dfb6b08a341c52b575b9be681463c73",
+            "objectName": "nTNhLk",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 19325,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "1c6653d609e985940bca9396f29f4c40",
+            "objectName": "CwxzDb",
             "uploadVersionId": 205000
         },
         {

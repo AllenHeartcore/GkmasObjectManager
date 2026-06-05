@@ -1,6 +1,6 @@
 {
     "revision": [
-        251,
+        252,
         244
     ],
     "assetBundleList": [
@@ -5336,6 +5336,15 @@
             "uploadVersionId": 705000
         },
         {
+            "id": 18575,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.awb",
+            "size": 329674,
+            "state": "UPDATE",
+            "md5": "3dfb6b08a341c52b575b9be681463c73",
+            "objectName": "xecSzb",
+            "uploadVersionId": 705000
+        },
+        {
             "id": 18723,
             "name": "adv_produce_lesson_param-vi-pose-unit1-001.txt",
             "size": 41146,
@@ -5639,6 +5648,15 @@
             "state": "UPDATE",
             "md5": "1f90b998f27b489714ee056c7c1a0c00",
             "objectName": "TP7Gr7",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 19579,
+            "name": "sud_bgm_produce_3rd-open-lesson-star-da-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "1c6653d609e985940bca9396f29f4c40",
+            "objectName": "TtmtLa",
             "uploadVersionId": 705000
         },
         {
