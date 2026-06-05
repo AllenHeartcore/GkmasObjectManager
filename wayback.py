@@ -23,7 +23,7 @@ class WaybackEntry:
         self.id = info["id"]
         self.name = info["name"]
         self.history = []
-        for entry in sorted(info["history"], key=lambda x: x["revision"]):
+        for entry in info["history"]:
             rev, objectName, md5, size, dependencies = entry.split("|")
             self.history.append(
                 base_class(
