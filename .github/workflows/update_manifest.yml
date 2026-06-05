@@ -64,7 +64,7 @@ jobs:
             - name: Commit wayback changes
               if: steps.run_script.outputs.exit_code == 0
               run: |
-                  git add wayback_commits.json wayback_index.json
+                  git add wayback_commits.json wayback_objects.json
                   REV_NUMBER="$(cat manifests/LATEST_REVISION)"
                   git commit -m "Rebuild wayback index for manifest revision v$REV_NUMBER"
                   git push origin manifest-update

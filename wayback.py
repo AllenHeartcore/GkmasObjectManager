@@ -1,0 +1,159 @@
+"""
+wayback.py
+Interface with the "wayback machine", i.e. the object history log.
+"""
+
+import re
+from typing import Optional
+
+from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
+from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
+from GkmasObjectManager.utils import _json_load
+
+ObjectClass = GkmasAssetBundle | GkmasResource
+
+
+class WaybackEntry:
+
+    id: int
+    name: str
+    history: list[ObjectClass]
+
+    def __init__(self, info: dict, base_class: ObjectClass, url_template: str):
+        self.id = info["id"]
+        self.name = info["name"]
+        self.history = []
+        for entry in info["history"]:
+            rev, objectName, md5, size, dependencies = entry.split("|")
+            self.history.append(
+                base_class(
+                    {
+                        "id": self.id,
+                        "name": self.name,
+                        "objectName": objectName,
+                        "md5": md5,
+                        "size": int(size),
+                        "dependencies": (
+                            list(map(int, dependencies.split(",")))
+                            if dependencies
+                            else []
+                        ),
+                    },
+                    url_template,
+                )
+            )
+
+
+class WaybackEntryList:
+
+    infos: list[dict]
+    base_class: ObjectClass
+    url_template: str
+
+    _entries: list[Optional[WaybackEntry]]
+    _id_idx: dict[int, int]
+    _name_idx: dict[str, int]
+
+    @staticmethod
+    def _sanitize_name(name: str) -> str:
+        return name.removesuffix(".unity3d")
+
+    def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
+        infos.sort(key=lambda x: x["id"])
+
+        self.infos = infos
+        self.base_class = base_class
+        self.url_template = url_template
+
+        self._entries = [None] * len(infos)
+        self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
+        self._name_idx = {
+            self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
+        }
+
+    def __repr__(self) -> str:
+        return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
+
+    def _get_entry(self, idx: int) -> WaybackEntry:
+        if self._entries[idx] is None:
+            self._entries[idx] = WaybackEntry(
+                self.infos[idx], self.base_class, self.url_template
+            )
+        return self._entries[idx]
+
+    def __getitem__(self, key: int | str) -> WaybackEntry:
+
+        if isinstance(key, int):
+            idx = self._id_idx[key]
+        elif isinstance(key, str):
+            idx = self._name_idx[self._sanitize_name(key)]
+        else:
+            raise TypeError
+
+        return self._get_entry(idx)
+
+    def __iter__(self):
+        for i in range(len(self.infos)):
+            yield self._get_entry(i)
+
+    def __len__(self) -> int:
+        return len(self.infos)
+
+    def __contains__(self, key: str) -> bool:
+        return self._sanitize_name(key) in self._name_idx
+
+
+class WaybackMachine:
+
+    revision: int
+    assetbundles: WaybackEntryList
+    resources: WaybackEntryList
+
+    def __init__(self):
+        log = _json_load(WAYBACK_OBJECTS_LOG_REMOTE)
+        self.revision = log["latest_revision"]
+        self.assetbundles = WaybackEntryList(
+            log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
+        )
+        self.resources = WaybackEntryList(
+            log["resourceList"], GkmasResource, log["urlFormat"]
+        )
+
+    def __repr__(self) -> str:
+        return f"<WaybackMachine revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
+
+    def __getitem__(self, key: str) -> WaybackEntry:
+        if key in self.assetbundles:
+            return self.assetbundles[key]
+        elif key in self.resources:
+            return self.resources[key]
+        else:
+            raise KeyError(f"No entry with name '{key}'.")
+
+    def __iter__(self):
+        for ab in self.assetbundles:
+            yield ab
+        for res in self.resources:
+            yield res
+
+    def __len__(self) -> int:
+        return len(self.assetbundles) + len(self.resources)
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.assetbundles or key in self.resources
+
+    def search(
+        self,
+        criterion: str,
+        by_name: bool = True,
+        ascending: bool = True,
+    ) -> list[WaybackEntry]:
+        matches = filter(
+            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            list(self),
+        )
+        return sorted(
+            matches,
+            key=lambda x: x.name if by_name else x.id,
+            reverse=not ascending,
+        )
