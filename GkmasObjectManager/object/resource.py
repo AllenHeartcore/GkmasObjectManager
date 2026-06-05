@@ -49,10 +49,11 @@ class GkmasResource:
     _fields: list[str]
     _idname: str
     _url: str
+    _deobf_key: str
     _media: Optional[GkmasDummyMedia] = None
     _reporter: ProgressReporter
 
-    def __init__(self, info: dict, url_template: str):
+    def __init__(self, info: dict, url_template: str, _deobf_key: str = ""):
         """
         Initializes a resource with the given information.
         Usually called from GkmasManifest.
@@ -62,6 +63,7 @@ class GkmasResource:
             url_template (str): URL template for downloading the resource.
                 {o} will be replaced with self.objectName.
         """
+        #   _deobf_key (str): ignored; for class compatibility only
 
         self._fields = list(info.keys())
         for field in self._fields:

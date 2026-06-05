@@ -29,7 +29,7 @@ class WaybackEntry:
                 base_class(
                     {
                         "id": self.id,
-                        "name": self.name,
+                        "name": f"{self.name}__v{int(rev):04d}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -40,6 +40,7 @@ class WaybackEntry:
                         ),
                     },
                     url_template,
+                    _deobf_key=self.name,
                 )
             )
 

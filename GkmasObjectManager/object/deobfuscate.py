@@ -46,7 +46,7 @@ class GkmasAssetBundleDeobfuscator:
         self.offset = offset
         self.stream_pos = stream_pos
         self.header_len = header_len
-        self.mask = self._make_mask(key.replace(".unity3d", ""))
+        self.mask = self._make_mask(key.removesuffix(".unity3d"))
 
     @staticmethod
     def _make_mask(key: str) -> bytes:
