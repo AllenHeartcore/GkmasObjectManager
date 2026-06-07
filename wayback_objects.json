@@ -1,5 +1,5 @@
 {
-    "latest_revision": 450,
+    "latest_revision": 451,
     "assetBundleList": [
         {
             "id": 1,
@@ -161682,6 +161682,55 @@
             "name": "img_general_home_gasha_gasha-00910-2phif-fes-001.unity3d",
             "history": [
                 "0450|Pt1NPt|cab53b590b4d54984c58f11628471c51|15421|"
+            ]
+        },
+        {
+            "id": 22828,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-select-m.unity3d",
+            "history": [
+                "0451|JhVQDr|78bb8c20820305f9866d34ec470cfb7a|53734|"
+            ]
+        },
+        {
+            "id": 22829,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-select-s.unity3d",
+            "history": [
+                "0451|S68238|7d868e896509b291808763a077f377b7|29857|"
+            ]
+        },
+        {
+            "id": 22830,
+            "name": "img_general_gasha_bg_gasha_gasha-00910-2phif-fes-002.unity3d",
+            "history": [
+                "0451|F5zbol|68ae188af4327cfedd38b3c8b5d953aa|403819|"
+            ]
+        },
+        {
+            "id": 22831,
+            "name": "img_general_home_gasha_gasha-00910-2phif-fes-002.unity3d",
+            "history": [
+                "0451|sTWCfH|7c95c47e737f0e9a2cc8b4f1146e39f5|15367|"
+            ]
+        },
+        {
+            "id": 22832,
+            "name": "img_notice_gasha_gasha-00910-2phif-fes-002.unity3d",
+            "history": [
+                "0451|VNusZi|ccb80c6f16291ec84cf54b8e3cae4fec|363261|"
+            ]
+        },
+        {
+            "id": 22833,
+            "name": "img_notice_gasha_gasha-00910-2phif-fes-002-banner-01-large.unity3d",
+            "history": [
+                "0451|yCm4WB|06b315f6d4bce49b7bbf44f515535c05|104491|"
+            ]
+        },
+        {
+            "id": 22834,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-logo.unity3d",
+            "history": [
+                "0451|pNs6v7|a5735cce802eb19216c585aa851f223b|12894|"
             ]
         }
     ],
