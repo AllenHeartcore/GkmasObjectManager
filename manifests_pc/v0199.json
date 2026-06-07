@@ -1,6 +1,6 @@
 {
     "revision": [
-        253,
+        254,
         199
     ],
     "assetBundleList": [
@@ -32726,6 +32726,76 @@
             "state": "ADD",
             "md5": "efda9a5353ebef6642bb24ae742b4e3c",
             "objectName": "py43kX",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22778,
+            "name": "img_general_gasha_bg_gasha_gasha-00910-2phif-fes-002",
+            "size": 1168225,
+            "crc": 1590374391,
+            "state": "ADD",
+            "md5": "f69afb2cc6f3bb9792f9c2ad4d1be874",
+            "objectName": "c73VR8",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22779,
+            "name": "img_general_home_gasha_gasha-00910-2phif-fes-002",
+            "size": 39476,
+            "crc": 2259283049,
+            "state": "ADD",
+            "md5": "d05471cdb4191d32c9e70e95c77fcc4d",
+            "objectName": "aQQoXs",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22780,
+            "name": "img_notice_gasha_gasha-00910-2phif-fes-002",
+            "size": 2737805,
+            "crc": 288753210,
+            "state": "ADD",
+            "md5": "716b1781dcee04f5855c90455c8373a7",
+            "objectName": "0BVx4w",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22781,
+            "name": "img_notice_gasha_gasha-00910-2phif-fes-002-banner-01-large",
+            "size": 854049,
+            "crc": 803094911,
+            "state": "ADD",
+            "md5": "5098bff42d6d5cf7fd51925114aea543",
+            "objectName": "USbhXi",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22782,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-logo",
+            "size": 30511,
+            "crc": 4096056428,
+            "state": "ADD",
+            "md5": "423cede05f395ed381b012dd1a7a591c",
+            "objectName": "cjIfYG",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22783,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-select-m",
+            "size": 150597,
+            "crc": 475076522,
+            "state": "ADD",
+            "md5": "8e633e03a2929feca20f8cece8a731ee",
+            "objectName": "015cct",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22784,
+            "name": "img_gasha_banner_gasha-00910-2phif-fes-002-select-s",
+            "size": 81278,
+            "crc": 2860456437,
+            "state": "ADD",
+            "md5": "06b7e0891e958519b3fc0b29f918f14a",
+            "objectName": "JKbKiz",
             "uploadVersionId": 705000
         }
     ],
