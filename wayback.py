@@ -44,6 +44,10 @@ class WaybackEntry:
                 )
             )
 
+    def __repr__(self) -> str:
+        type_abbrev = "AB" if isinstance(self.history[-1], GkmasAssetBundle) else "RS"
+        return f"<WaybackEntry {type_abbrev}[{self.id:05}] '{self.name}' with {len(self.history)} revisions>"
+
 
 class WaybackEntryList:
 

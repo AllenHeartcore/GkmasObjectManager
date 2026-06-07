@@ -31,7 +31,7 @@ class GkmasAssetBundle(GkmasResource):
             Also performs media conversion if applicable.
     """
 
-    def __init__(self, info: dict, url_template: str, _debuf_key: str = ""):
+    def __init__(self, info: dict, url_template: str, _deobf_key: str = ""):
         """
         Initializes an assetbundle with the given information.
         Usually called from GkmasManifest.
