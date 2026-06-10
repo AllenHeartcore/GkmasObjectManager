@@ -1,5 +1,5 @@
 {
-    "latest_revision": 451,
+    "latest_revision": 452,
     "assetBundleList": [
         {
             "id": 1,
@@ -161731,6 +161731,34 @@
             "name": "img_gasha_banner_gasha-00910-2phif-fes-002-logo.unity3d",
             "history": [
                 "0451|pNs6v7|a5735cce802eb19216c585aa851f223b|12894|"
+            ]
+        },
+        {
+            "id": 22835,
+            "name": "img_general_comic4_0145.unity3d",
+            "history": [
+                "0452|s8XJKV|c8ee0771d4996c38a499a0389e4ff500|213828|"
+            ]
+        },
+        {
+            "id": 22836,
+            "name": "img_general_comic4_0145-thumb.unity3d",
+            "history": [
+                "0452|yOyptP|c0e48954df00c811ec4495decf46b893|25548|"
+            ]
+        },
+        {
+            "id": 22837,
+            "name": "img_general_comic4_0146.unity3d",
+            "history": [
+                "0452|RM4RPs|4dfaeadc9fdccd617f45c3d3fbab1ef0|261212|"
+            ]
+        },
+        {
+            "id": 22838,
+            "name": "img_general_comic4_0146-thumb.unity3d",
+            "history": [
+                "0452|XBsbMe|3fa27c546c6d742af3470194d912c70c|28716|"
             ]
         }
     ],
