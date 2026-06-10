@@ -1,6 +1,6 @@
 {
     "revision": [
-        451,
+        452,
         405
     ],
     "assetBundleList": [
@@ -28414,6 +28414,46 @@
             "state": "ADD",
             "md5": "a5735cce802eb19216c585aa851f223b",
             "objectName": "pNs6v7",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22835,
+            "name": "img_general_comic4_0145",
+            "size": 213828,
+            "crc": 2340488886,
+            "state": "ADD",
+            "md5": "c8ee0771d4996c38a499a0389e4ff500",
+            "objectName": "s8XJKV",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22836,
+            "name": "img_general_comic4_0145-thumb",
+            "size": 25548,
+            "crc": 3486447646,
+            "state": "ADD",
+            "md5": "c0e48954df00c811ec4495decf46b893",
+            "objectName": "yOyptP",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22837,
+            "name": "img_general_comic4_0146",
+            "size": 261212,
+            "crc": 2622239211,
+            "state": "ADD",
+            "md5": "4dfaeadc9fdccd617f45c3d3fbab1ef0",
+            "objectName": "RM4RPs",
+            "uploadVersionId": 205000
+        },
+        {
+            "id": 22838,
+            "name": "img_general_comic4_0146-thumb",
+            "size": 28716,
+            "crc": 2343218394,
+            "state": "ADD",
+            "md5": "3fa27c546c6d742af3470194d912c70c",
+            "objectName": "XBsbMe",
             "uploadVersionId": 205000
         }
     ],

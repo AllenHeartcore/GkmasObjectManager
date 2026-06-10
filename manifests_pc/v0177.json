@@ -1,6 +1,6 @@
 {
     "revision": [
-        254,
+        255,
         177
     ],
     "assetBundleList": [
@@ -48396,6 +48396,46 @@
             "state": "ADD",
             "md5": "06b7e0891e958519b3fc0b29f918f14a",
             "objectName": "JKbKiz",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22785,
+            "name": "img_general_comic4_0146",
+            "size": 525618,
+            "crc": 377545720,
+            "state": "ADD",
+            "md5": "188005a07c60ab6f961e158947eaf28a",
+            "objectName": "JUE0Jp",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22786,
+            "name": "img_general_comic4_0146-thumb",
+            "size": 57185,
+            "crc": 4270609503,
+            "state": "ADD",
+            "md5": "4d9d60ad03017e21f71f8ff5ae5ddb77",
+            "objectName": "w0SeQ0",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22787,
+            "name": "img_general_comic4_0145",
+            "size": 417257,
+            "crc": 2961576323,
+            "state": "ADD",
+            "md5": "66375ee5453aaeffb87591f7583adff2",
+            "objectName": "6g7Nuu",
+            "uploadVersionId": 705000
+        },
+        {
+            "id": 22788,
+            "name": "img_general_comic4_0145-thumb",
+            "size": 48305,
+            "crc": 319451072,
+            "state": "ADD",
+            "md5": "3291eeed2b7b082af81610a4b55fc469",
+            "objectName": "veWmkg",
             "uploadVersionId": 705000
         }
     ],
