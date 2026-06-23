@@ -5,6 +5,26 @@ global-kwargs:
     convert_image: true
 
 instructions:
+    - criterion: "img_chr.*(full|bustup)"
+      subdir: "img__misc/_chr"
+      image_resize: "2:3"
+
+    - criterion: "img_general_sign"
+      subdir: "img__misc/_general_sign"
+      image_resize: "2:3"
+
+    - criterion: "img_general_stamp"
+      subdir: "img__misc/_general_stamp"
+      image_resize: "2:3"
+
+    - criterion: "img_sd.*(?<!thumb-circle)"
+      subdir: "img__misc/_sd"
+      image_resize: "2:3"
+
+    - criterion: "img_(chr|sd)_{char}.*thumb-(circle|push)"
+      subdir: "img__misc/_thumb"
+      image_resize: "2:3"
+
     - criterion: "img_general_cidol-{char}.*full"
       subdir: "img_general_cidol__full/{char}"
       image_resize: "9:16"
