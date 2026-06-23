@@ -5,20 +5,35 @@ global-kwargs:
     convert_image: true
 
 instructions:
+
+    # Identity
+
     - criterion: "img_chr.*(full|bustup)"
       subdir: "img__misc/_chr"
 
+    - criterion: "img_general_meishi_illust_idol-.*"
+      subdir: "img__misc/_chr"
+
+    - criterion: "img_sd.*(?<!thumb-circle)"
+      subdir: "img__misc/_sd"
+
+    - criterion: "img_general_meishi_illust_sd.*full"
+      subdir: "img__misc/_sd"
+      image_resize: "2:3"
+
+    - criterion: "img_(chr|sd)_{char}.*thumb-(circle|push)"
+      subdir: "img__misc/_thumb"
+
     - criterion: "img_general_sign"
+      subdir: "img__misc/_general_sign"
+
+    - criterion: "img_general_meishi_illust_sign.*02-full"
       subdir: "img__misc/_general_sign"
 
     - criterion: "img_general_stamp"
       subdir: "img__misc/_general_stamp"
 
-    - criterion: "img_sd.*(?<!thumb-circle)"
-      subdir: "img__misc/_sd"
-
-    - criterion: "img_(chr|sd)_{char}.*thumb-(circle|push)"
-      subdir: "img__misc/_thumb"
+    # Core Collection
 
     - criterion: "img_general_cidol-{char}.*full"
       subdir: "img_general_cidol__full/{char}"
@@ -48,6 +63,8 @@ instructions:
       subdir: "img_general_meishi_base__full"
       image_resize: "16:9"
 
+    # Misc (excl. UI)
+
     - criterion: "img_adv_speaker"
       subdir: "img__misc/adv_speaker"
 
@@ -71,9 +88,6 @@ instructions:
       subdir: "img__misc/general_live_music"
       image_resize: "16:9"
 
-    - criterion: "img_general_meishi_illust_sign.*02-full"
-      subdir: "img__misc/_general_sign"
-
     - criterion: "img_general_meishi_illust_music-logo.*full"
       subdir: "img__misc/music-logo"
       image_resize: "3:2"
@@ -85,5 +99,16 @@ instructions:
     - criterion: "img_produce_refresh"
       subdir: "img__misc/produce_refresh"
       image_resize: "16:9"
+
+    # Many Small Images
+
+    # - criterion: "img_general_skillcard.*"
+    #   subdir: "img__many/skillcard"
+
+    # - criterion: "img_general_pitem.*"
+    #   subdir: "img__many/pitem"
+
+    # - criterion: "img_general_pdrink.*"
+    #   subdir: "img__many/pdrink"
 
 post-processing: "novelmaster_kit_pp.py"
