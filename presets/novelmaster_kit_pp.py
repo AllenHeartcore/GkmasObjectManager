@@ -29,7 +29,7 @@ if __name__ == "__main__":
     parser.add_argument("--dry", action="store_true")
     args = parser.parse_args()
 
-    cwd = Path(args.cwd)
+    cwd = Path(args.cwd) / "img_general_cidol"
     paths = list(cwd.rglob("*.png"))
     hashes = asyncio.run(sha256sum_all(paths))
 

@@ -14,14 +14,14 @@ instructions:
     - criterion: "img_general_meishi_illust_idol-.*"
       subdir: "img__misc/_chr"
 
-    - criterion: "img_sd.*(?<!thumb-circle)"
+    - criterion: "img_sd.*(?<!thumb-circle.unity3d)$"
       subdir: "img__misc/_sd"
 
     - criterion: "img_general_meishi_illust_sd.*full"
       subdir: "img__misc/_sd"
-      image_resize: "2:3"
+      image_resize: "5:7"
 
-    - criterion: "img_(chr|sd)_{char}.*thumb-(circle|push)"
+    - criterion: "img_(chr|sd).*thumb-(circle|push)"
       subdir: "img__misc/_thumb"
 
     - criterion: "img_general_sign.*"
@@ -30,7 +30,7 @@ instructions:
     - criterion: "img_general_meishi_illust_sign.*02-full"
       subdir: "img__misc/_general_sign"
 
-    - criterion: "img_general_stamp.*"
+    - criterion: "img_general_stamp_(?!non).*"
       subdir: "img__misc/_general_stamp"
 
     # Core Collection
@@ -59,20 +59,20 @@ instructions:
       subdir: "img_general_meishi_base/birthday"
       image_resize: "16:9"
 
-    - criterion: "img_general_meishi_base_(?!(story-bg|common-frame|event|birthday)).*full"
+    - criterion: "img_general_meishi_base_(?!(story-bg|common-frame|event|master-ranking)).*full"
       subdir: "img_general_meishi_base"
       image_resize: "16:9"
 
     - criterion: "img_general_commu_thumb.*"
-      subdir: "img_general_commu"
+      subdir: "img_general__commu"
       image_resize: "16:9"
 
     - criterion: "img_general_media.*"
-      subdir: "img_general_media"
+      subdir: "img_general__media"
       image_resize: "16:9"
 
     - criterion: "img_general_live_music.*true-end"
-      subdir: "img_general_live_music"
+      subdir: "img_general__live_music"
       image_resize: "16:9"
 
     # Misc (excl. UI)
@@ -82,19 +82,31 @@ instructions:
 
     - criterion: "img_adv_still.*"
       subdir: "img__misc/adv_still"
-      image_resize: "16:9"
+      image_resize: "9:16"
 
     - criterion: "img_general_comic_.*"
       subdir: "img__misc/general_comic"
-      image_resize: "3:4"
+      image_resize: "4:3"
 
-    - criterion: "img_general_comic4.*full"
+    - criterion: "img_general_comic4.*(?<!thumb.unity3d)$"
       subdir: "img__misc/general_comic4"
       image_resize: "1:3"
 
-    - criterion: "img_general_(event_story|meishi_illust)_event.*"
+    - criterion: "img_general_event_story.*header"
       subdir: "img__misc/general_event"
-      image_resize: "16:9"
+      image_resize: "4:3"
+
+    - criterion: "img_general_event_story.*(?<!story)(?<!reward)-banner.unity3d"
+      subdir: "img__misc/general_event"
+      image_resize: "3:1"
+
+    - criterion: "img_general_event_story.*logo"
+      subdir: "img__misc/general_event"
+      image_resize: "3:2"
+
+    - criterion: "img_general_meishi_illust_event.*"
+      subdir: "img__misc/general_event"
+      image_resize: "3:2"
 
     - criterion: "img_general_meishi_illust_music-logo.*full"
       subdir: "img__misc/music-logo"
@@ -102,11 +114,11 @@ instructions:
 
     - criterion: "img_login_bg.*"
       subdir: "img__misc/login_bg"
-      image_resize: "16:9"
+      image_resize: "9:16"
 
     - criterion: "img_produce_refresh.*"
       subdir: "img__misc/produce_refresh"
-      image_resize: "16:9"
+      image_resize: "9:16"
 
     # Many Small Images
 

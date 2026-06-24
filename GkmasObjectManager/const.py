@@ -71,8 +71,8 @@ CHARACTER_ABBREVS = [
     "hmsz",  # Hataya MiSuZu
     "jsna",  # Juo SeNA
     "atbm",  # Amaya TsuBaMe
-    "jkno",  # Juo KuNiO
     "nasr",  # Neo ASaRi
+    "jkno",  # Juo KuNiO
     "trvo",  # VOcal TRainer
     "trda",  # DAnce TRainer
     "trvi",  # VIsual TRainer
