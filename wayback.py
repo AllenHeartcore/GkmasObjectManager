@@ -4,6 +4,7 @@ Interface with the "wayback machine", i.e. the object history log.
 """
 
 import re
+from pathlib import Path
 from typing import Optional
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
@@ -25,11 +26,13 @@ class WaybackEntry:
         self.history = []
         for entry in info["history"]:
             rev, objectName, md5, size, dependencies = entry.split("|")
+            stem, ext = Path(self.name).stem, Path(self.name).suffix
+            ext = ext.removesuffix(".unity3d")
             self.history.append(
                 base_class(
                     {
                         "id": self.id,
-                        "name": f"{self.name}__v{int(rev):04d}",
+                        "name": f"{stem}__v{int(rev):04d}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -162,3 +165,8 @@ class WaybackMachine:
             key=lambda x: x.name if by_name else x.id,
             reverse=not ascending,
         )
+
+    def download_old_revisions(self, criterion: str, output_dir: str, **kwargs):
+        for entry in self.search(criterion):
+            for obj in entry.history[:-1]:
+                obj.download(output_dir, **kwargs)
