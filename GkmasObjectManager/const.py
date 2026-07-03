@@ -48,7 +48,6 @@ WAYBACK_OBJECTS_LOG_REMOTE = REPO_OBJECT_URL_TEMPLATE.format(
 WAYBACK_MANIFEST_URL_TEMPLATE = REPO_OBJECT_URL_TEMPLATE.format(
     branch="{hash}", path="manifests/v{revision:04d}.json"
 )
-WAYBACK_IGNORED_FIELDS = ["id", "name", "uploadVersionId"]
 
 # manifest export
 CSV_COLUMNS = ["objectName", "md5", "name", "size", "state"]
