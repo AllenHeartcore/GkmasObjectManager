@@ -170,3 +170,70 @@ class WaybackMachine:
         for entry in self.search(criterion):
             for obj in entry.history[:-1]:
                 obj.download(output_dir, **kwargs)
+
+    @nocache
+    def download(self, *criteria: str, **kwargs):
+        """
+        Downloads the regex-specified assetbundles/resources to the specified path.
+
+        Args:
+            *criteria (str): Regex patterns of assetbundle/resource names.
+            path (str | Path) = DEFAULT_DOWNLOAD_PATH: A directory to which the objects are downloaded.
+                *WARNING: Behavior is undefined if the path points to an definite file (with extension).*
+            categorize (bool) = True: Whether to categorize downloaded objects into subdirectories.
+                If False, all objects are downloaded to the specified 'path' in a flat structure.
+        """
+
+        if "preset" in kwargs:
+            self.download_preset(kwargs.pop("preset"))
+            return
+
+        if not criteria:
+            logger.warning(
+                "No criteria specified; download everything with download_all() instead"
+            )
+            return
+
+        objects = self.search("|".join(criteria))
+
+        if not objects:
+            logger.warning("No objects matched the criteria, aborted")
+            return
+
+        asyncio.run(self._dispatch(objects, **kwargs))
+
+    async def _dispatch(
+        self,
+        obj_kw: list[ObjectClass | Tuple[ObjectClass, dict]],
+        **kwargs,
+    ):
+        """
+        [INTERNAL] Dispatches a list of object-kwargs pairs to async download tasks.
+        """
+
+        # if "obj_kw" is a list of objects, append empty kwargs
+        if not isinstance(obj_kw[0], tuple):
+            obj_kw = [(obj, {}) for obj in obj_kw]
+
+        progress = Progress(
+            TextColumn("{task.description}"),
+            BarColumn(),
+            TextColumn("{task.completed}/{task.total}"),
+        )
+
+        tasks = [
+            asyncio.create_task(
+                asyncio.to_thread(
+                    obj.download,
+                    progress=progress,
+                    task_id=progress.add_task(obj._idname, visible=False),
+                    **kw,
+                    **kwargs,  # if not empty, broadcast to all tasks
+                )
+            )
+            for obj, kw in obj_kw
+        ]
+
+        progress.start()
+        await asyncio.gather(*tasks)
+        progress.stop()
