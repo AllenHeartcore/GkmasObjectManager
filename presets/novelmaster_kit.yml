@@ -92,16 +92,16 @@ instructions:
       subdir: "img__misc/general_comic4"
       image_resize: "1:3"
 
-    - criterion: "img_general_event_story.*header"
+    - criterion: "img_general.*event.*header"
       subdir: "img__misc/general_event"
       image_resize: "4:3"
 
-    - criterion: "img_general_event_story.*(?<!story)(?<!reward)-banner.unity3d"
-      subdir: "img__misc/general_event"
+    - criterion: "img_general.*event.*(?<!story)(?<!reward)(?<!rev)-banner.unity3d"
+      subdir: "img__misc/general_event/banner"
       image_resize: "3:1"
 
-    - criterion: "img_general_event_story.*logo"
-      subdir: "img__misc/general_event"
+    - criterion: "img_general.*event.*logo"
+      subdir: "img__misc/general_event/logo"
       image_resize: "3:2"
 
     - criterion: "img_general_meishi_illust_event.*"
