@@ -164,7 +164,7 @@ class ProgressReporter:
             # might be redundant since GUI never runs non-standalone Reporters
             self.progress.update(self.task_id, visible=True)
 
-        self._emit_progress("Starting", total=self.total)
+        self._emit_progress("Waiting", total=self.total)
 
     def update(self, stage: str, advance: Optional[int] = None):
         """

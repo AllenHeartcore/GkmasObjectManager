@@ -198,14 +198,14 @@ class GkmasDummyMedia:
         if self.mimetype and kwargs.get(f"convert_{self.mimetype}", True):
             try:
                 self._export_converted(path, **kwargs)
+                return
             except Exception as e:
-                self.reporter.warning(
-                    "Conversion failed, fallback to rawdump; exception to follow"
-                )
-                self._export_raw(path)
-                raise e
-        else:
+                self.reporter.warning(f"Conversion failed, fallback to rawdump. {e}")
+
+        try:
             self._export_raw(path)
+        except Exception as e:
+            self.reporter.warning(f"Rawdump failed, skipping export. {e}")
 
     def _export_raw(self, path: Path):
 
