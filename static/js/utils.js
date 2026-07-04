@@ -53,9 +53,18 @@ const SONG_ALIAS = {
     "all -007": "ハッピーミルフィーユ",
     "all -008": "古今東西ちょちょいのちょい",
     "all -009": "雪解けに",
-    "char -001": "(1st Single)",
-    "char -002": "(2nd Single)",
-    "char -003": "(2024-25 Birthday Song)",
+    "all -010": "桜フォトグラフ",
+    "all -011": "Howling over the World",
+    "all -012": "ミラクルナナウ(ﾟ∀ﾟ)！",
+    "all -013": "がむしゃらに行こう！",
+    "all -014": "ENDLESS DANCE",
+    "all -016": "ガラクタロード",
+    "all -022": "SEARCH RIGHT",
+    "char -001": "( 1st Single )",
+    "char -002": "( 2nd Single )",
+    "char -005": "( 2nd Single - B-side )",
+    "char -004": "( 3rd Single )",
+    "char -003": "( 2024-25 Birthday Song )",
 };
 
 function dumpErrorToConsole(...args) {
