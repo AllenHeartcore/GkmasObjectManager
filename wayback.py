@@ -169,6 +169,7 @@ class WaybackMachine:
             reverse=not ascending,
         )
 
+    @nocache
     def download_old_revisions(self, *criteria: str, **kwargs):
         entries = self.search("|".join(criteria))
         asyncio.run(self._dispatch(entries, **kwargs))
