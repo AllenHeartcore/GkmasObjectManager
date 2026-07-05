@@ -64,8 +64,7 @@ class WaybackEntryList:
     base_class: ObjectClass
     url_template: str
 
-    _entries: list[Optional[WaybackEntry]]
-    _name_idx: dict[str, int]
+    _entries: dict[str, Optional[WaybackEntry]]
 
     @staticmethod
     def _sanitize_name(name: str) -> str:
@@ -79,35 +78,30 @@ class WaybackEntryList:
         self.base_class = base_class
         self.url_template = url_template
 
-        self._entries = [None] * len(infos)
-        self._name_idx = {self._sanitize_name(name): i for i, name in enumerate(infos)}
+        self._entries = {name: None for name in infos}
 
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
 
-    def _get_entry(self, idx: int) -> WaybackEntry:
-        if self._entries[idx] is None:
-            self._entries[idx] = WaybackEntry(
-                list(self.infos.keys())[idx],
-                list(self.infos.values())[idx],
-                self.base_class,
-                self.url_template,
+    def _get_entry(self, name: str) -> WaybackEntry:
+        if self._entries[name] is None:
+            self._entries[name] = WaybackEntry(
+                name, self.infos[name], self.base_class, self.url_template
             )
-        return self._entries[idx]
+        return self._entries[name]
 
     def __getitem__(self, key: str) -> WaybackEntry:
-        idx = self._name_idx[self._sanitize_name(key)]
-        return self._get_entry(idx)
+        return self._get_entry(self._sanitize_name(key))
 
     def __iter__(self):
-        for i in range(len(self.infos)):
-            yield self._get_entry(i)
+        for name in self.infos:
+            yield self._get_entry(name)
 
     def __len__(self) -> int:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return self._sanitize_name(key) in self._name_idx
+        return self._sanitize_name(key) in self._entries
 
 
 class WaybackMachine:
