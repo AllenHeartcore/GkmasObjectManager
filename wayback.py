@@ -22,10 +22,16 @@ class WaybackEntry:
     name: str
     history: list[ObjectClass]
 
-    def __init__(self, info: dict, base_class: ObjectClass, url_template: str):
-        self.name = info["name"]
+    def __init__(
+        self,
+        name: str,
+        history: list[str],
+        base_class: ObjectClass,
+        url_template: str,
+    ):
+        self.name = name
         self.history = []
-        for entry in info["history"]:
+        for entry in history:
             rev, objectName, md5, size, dependencies = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
             ext = ext.removesuffix(".unity3d")
@@ -54,7 +60,7 @@ class WaybackEntry:
 
 class WaybackEntryList:
 
-    infos: list[dict]
+    infos: dict[str, list[str]]
     base_class: ObjectClass
     url_template: str
 
@@ -65,16 +71,16 @@ class WaybackEntryList:
     def _sanitize_name(name: str) -> str:
         return name.removesuffix(".unity3d")
 
-    def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
+    def __init__(
+        self, infos: dict[str, list[str]], base_class: ObjectClass, url_template: str
+    ):
 
         self.infos = infos
         self.base_class = base_class
         self.url_template = url_template
 
         self._entries = [None] * len(infos)
-        self._name_idx = {
-            self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
-        }
+        self._name_idx = {self._sanitize_name(name): i for i, name in enumerate(infos)}
 
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
@@ -82,7 +88,10 @@ class WaybackEntryList:
     def _get_entry(self, idx: int) -> WaybackEntry:
         if self._entries[idx] is None:
             self._entries[idx] = WaybackEntry(
-                self.infos[idx], self.base_class, self.url_template
+                list(self.infos.keys())[idx],
+                list(self.infos.values())[idx],
+                self.base_class,
+                self.url_template,
             )
         return self._entries[idx]
 
