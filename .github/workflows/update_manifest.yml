@@ -48,10 +48,9 @@ jobs:
               run: |
                   git config user.name "GitHub Actions"
                   git config user.email ""
-                  git add manifests/ manifests_pc/
+                  git add manifests/
                   REV_NUMBER="$(cat manifests/LATEST_REVISION)"
-                  REV_NUMBER_PC="$(cat manifests_pc/LATEST_REVISION)"
-                  git commit -m "Update mobile manifest to revision v$REV_NUMBER and PC to v$REV_NUMBER_PC"
+                  git commit -m "Update mobile manifest to revision v$REV_NUMBER"
                   git push origin manifest-update
 
             - name: Record commit hash
