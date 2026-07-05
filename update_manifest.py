@@ -31,6 +31,9 @@ from GkmasObjectManager.utils import _json_dump, _json_load
 #   -> record_commit_hash
 
 
+sort_dict = lambda d: dict(sorted(d.items(), key=lambda x: x[0]))
+
+
 def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
 
     manifest = fetch(rev, _use_local_commits_log=True)
@@ -109,6 +112,8 @@ def rebuild_log(latest_manifest: GkmasManifest):
     for i in tqdm(range(1, len(manifests)), desc="Appending manifest diffs"):
         _append_log(log, manifests[i] - manifests[i - 1])
 
+    log["assetBundleList"] = sort_dict(log["assetBundleList"])
+    log["resourceList"] = sort_dict(log["resourceList"])
     _json_dump(log, WAYBACK_OBJECTS_LOG_LOCAL)
 
 
@@ -155,7 +160,7 @@ def record_commit_hash(rev_hash: str) -> bool:
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     commits[rev] = commit_hash
-    commits = dict(sorted(commits.items(), key=lambda x: int(x[0])))
+    commits = sort_dict({int(k): v for k, v in commits.items()})
     _json_dump(commits, WAYBACK_COMMITS_LOG_LOCAL)
 
     return True
