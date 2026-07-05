@@ -19,12 +19,10 @@ ObjectClass = GkmasAssetBundle | GkmasResource
 
 class WaybackEntry:
 
-    id: int
     name: str
     history: list[ObjectClass]
 
     def __init__(self, info: dict, base_class: ObjectClass, url_template: str):
-        self.id = info["id"]
         self.name = info["name"]
         self.history = []
         for entry in info["history"]:
@@ -34,7 +32,7 @@ class WaybackEntry:
             self.history.append(
                 base_class(
                     {
-                        "id": self.id,
+                        "id": -1,  # stripped when building wayback log for compatibility
                         "name": f"{stem}__v{int(rev):04d}{ext}",
                         "objectName": objectName,
                         "md5": md5,
@@ -51,8 +49,7 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        type_abbrev = "AB" if isinstance(self.history[-1], GkmasAssetBundle) else "RS"
-        return f"<WaybackEntry {type_abbrev}[{self.id:05}] '{self.name}' with {len(self.history)} revisions>"
+        return f"<WaybackEntry '{self.name}' with {len(self.history)} revisions>"
 
 
 class WaybackEntryList:
@@ -62,7 +59,6 @@ class WaybackEntryList:
     url_template: str
 
     _entries: list[Optional[WaybackEntry]]
-    _id_idx: dict[int, int]
     _name_idx: dict[str, int]
 
     @staticmethod
@@ -70,14 +66,12 @@ class WaybackEntryList:
         return name.removesuffix(".unity3d")
 
     def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
-        infos.sort(key=lambda x: x["id"])
 
         self.infos = infos
         self.base_class = base_class
         self.url_template = url_template
 
         self._entries = [None] * len(infos)
-        self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
         self._name_idx = {
             self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
         }
@@ -92,15 +86,8 @@ class WaybackEntryList:
             )
         return self._entries[idx]
 
-    def __getitem__(self, key: int | str) -> WaybackEntry:
-
-        if isinstance(key, int):
-            idx = self._id_idx[key]
-        elif isinstance(key, str):
-            idx = self._name_idx[self._sanitize_name(key)]
-        else:
-            raise TypeError
-
+    def __getitem__(self, key: str) -> WaybackEntry:
+        idx = self._name_idx[self._sanitize_name(key)]
         return self._get_entry(idx)
 
     def __iter__(self):
@@ -153,21 +140,12 @@ class WaybackMachine:
     def __contains__(self, key: str) -> bool:
         return key in self.assetbundles or key in self.resources
 
-    def search(
-        self,
-        criterion: str,
-        by_name: bool = True,
-        ascending: bool = True,
-    ) -> list[WaybackEntry]:
+    def search(self, criterion: str, ascending: bool = True) -> list[WaybackEntry]:
         matches = filter(
             lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
             list(self),
         )
-        return sorted(
-            matches,
-            key=lambda x: x.name if by_name else x.id,
-            reverse=not ascending,
-        )
+        return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
     @nocache
     def download_old_revisions(self, *criteria: str, **kwargs):
@@ -187,7 +165,7 @@ class WaybackMachine:
                 asyncio.to_thread(
                     obj.download,
                     progress=progress,
-                    task_id=progress.add_task(obj._idname, visible=False),
+                    task_id=progress.add_task(obj.name, visible=False),
                     **kwargs,  # if not empty, broadcast to all tasks
                 )
             )
