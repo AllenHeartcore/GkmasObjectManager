@@ -61,14 +61,12 @@ def _sanitize_canon_repr(canon_repr: dict, rev: int) -> str:
 def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
     for obj in manifest.assetbundles:
-        ab_idx = log["ab_name_lookup"][obj.name]
-        log["assetBundleList"][ab_idx]["history"].append(
+        log["assetBundleList"][obj.name].append(
             _sanitize_canon_repr(obj.canon_repr, manifest.revision.this)
         )
 
     for obj in manifest.resources:
-        res_idx = log["res_name_lookup"][obj.name]
-        log["resourceList"][res_idx]["history"].append(
+        log["resourceList"][obj.name].append(
             _sanitize_canon_repr(obj.canon_repr, manifest.revision.this)
         )
 
@@ -78,18 +76,8 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     log = {
         "latest_revision": latest_manifest.revision.canon_repr,
-        "assetBundleList": [
-            {"name": obj.name, "history": []} for obj in latest_manifest.assetbundles
-        ],
-        "resourceList": [
-            {"name": obj.name, "history": []} for obj in latest_manifest.resources
-        ],
-        "ab_name_lookup": {
-            obj.name: idx for idx, obj in enumerate(latest_manifest.assetbundles)
-        },
-        "res_name_lookup": {
-            obj.name: idx for idx, obj in enumerate(latest_manifest.resources)
-        },
+        "assetBundleList": {obj.name: [] for obj in latest_manifest.assetbundles},
+        "resourceList": {obj.name: [] for obj in latest_manifest.resources},
         "urlFormat": latest_manifest.urlformat,
     }
 
@@ -102,18 +90,8 @@ def rebuild_log(latest_manifest: GkmasManifest):
         old_revision = int(old_log["latest_revision"])
         if old_revision >= latest_manifest.revision.this:
             return  # already up-to-date
-
-        # patch log with history **in-place**
-        for old_entry in old_log["assetBundleList"]:
-            entry_idx = log["ab_name_lookup"][old_entry["name"]]
-            entry = log["assetBundleList"][entry_idx]  # is a pointer
-            assert entry["name"] == old_entry["name"]
-            entry["history"] = old_entry["history"]
-        for old_entry in old_log["resourceList"]:
-            entry_idx = log["res_name_lookup"][old_entry["name"]]
-            entry = log["resourceList"][entry_idx]
-            assert entry["name"] == old_entry["name"]
-            entry["history"] = old_entry["history"]
+        log["assetBundleList"] = old_log["assetBundleList"]
+        log["resourceList"] = old_log["resourceList"]
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     revs = sorted([int(k) for k in commits.keys() if int(k) >= old_revision])
@@ -131,8 +109,6 @@ def rebuild_log(latest_manifest: GkmasManifest):
     for i in tqdm(range(1, len(manifests)), desc="Appending manifest diffs"):
         _append_log(log, manifests[i] - manifests[i - 1])
 
-    del log["ab_name_lookup"]
-    del log["res_name_lookup"]
     _json_dump(log, WAYBACK_OBJECTS_LOG_LOCAL)
 
 
