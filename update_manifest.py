@@ -138,24 +138,22 @@ def rebuild_log(latest_manifest: GkmasManifest):
     _json_dump(log, WAYBACK_OBJECTS_LOG_LOCAL)
 
 
-def _export_diff_manifest(path: Path, rev: int, pc: bool) -> None:
-    fetch(base_revision=rev, pc=pc).export(
-        path / f"v{rev:04}.json", force_overwrite=True
-    )
+def _export_diff_manifest(path: Path, rev: int) -> None:
+    fetch(base_revision=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
 
 
-async def _export_diff_manifests(path: Path, revs: list[int], pc: bool) -> None:
+async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
 
     await asyncio.gather(
-        *[asyncio.to_thread(_export_diff_manifest, path, rev, pc) for rev in revs]
+        *[asyncio.to_thread(_export_diff_manifest, path, rev) for rev in revs]
     )
 
 
-def do_update(path: Path, pc: bool = False) -> bool:
+def do_update(path: Path) -> bool:
     """Check for manifest update from server and optionally update all diff revisions."""
-    print(f"Checking for {'PC' if pc else 'mobile'} manifest update...")
+    print(f"Checking for manifest update...")
 
-    m_remote = fetch(pc=pc)
+    m_remote = fetch()
     rev_remote = m_remote.revision.canon_repr
     rev_local = int((path / "LATEST_REVISION").read_text())
 
@@ -169,10 +167,9 @@ def do_update(path: Path, pc: bool = False) -> bool:
     (path / "LATEST_REVISION").write_text(str(rev_remote))
 
     m_remote.export(path / "v0000.json", force_overwrite=True)
-    asyncio.run(_export_diff_manifests(path, list(range(1, rev_remote)), pc))
+    asyncio.run(_export_diff_manifests(path, list(range(1, rev_remote))))
 
-    if not pc:
-        rebuild_log(m_remote)
+    rebuild_log(m_remote)
 
     return True
 
@@ -204,5 +201,4 @@ if __name__ == "__main__":
         sys.exit(not record_commit_hash(args.record_commit_hash))
 
     HAS_UPDATE = do_update(Path("manifests"))
-    HAS_UPDATE_PC = do_update(Path("manifests_pc"), pc=True)
-    sys.exit(not (HAS_UPDATE or HAS_UPDATE_PC))  # avoids short-circuiting
+    sys.exit(not (HAS_UPDATE))
