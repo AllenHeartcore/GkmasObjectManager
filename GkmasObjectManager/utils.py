@@ -22,7 +22,7 @@ def _rget(url: str, **kwargs) -> requests.Response:
     return r
 
 
-def _json_load(src: PathArgtype) -> dict:
+def _json_load(src: PathArgtype) -> dict | list:
     """Loads a JSON file from the given path."""
     if isinstance(src, str) and urlparse(src).scheme in ("http", "https"):
         return _rget(src).json()  # fetch from 'src' if it's a URL
@@ -30,7 +30,7 @@ def _json_load(src: PathArgtype) -> dict:
         return json.load(fin)
 
 
-def _json_dump(obj: dict, dst: PathArgtype) -> None:
+def _json_dump(obj: dict | list, dst: PathArgtype) -> None:
     """Dumps a JSON file to the given path."""
     with open(dst, "w", encoding="utf-8") as fout:
         json.dump(obj, fout, indent=4, ensure_ascii=False)

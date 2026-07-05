@@ -3,12 +3,16 @@ wayback.py
 Interface with the "wayback machine", i.e. the object history log.
 """
 
+import asyncio
 import re
+from pathlib import Path
 from typing import Optional
+
+from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load
+from GkmasObjectManager.utils import _json_load, nocache
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -25,11 +29,13 @@ class WaybackEntry:
         self.history = []
         for entry in info["history"]:
             rev, objectName, md5, size, dependencies = entry.split("|")
+            stem, ext = Path(self.name).stem, Path(self.name).suffix
+            ext = ext.removesuffix(".unity3d")
             self.history.append(
                 base_class(
                     {
                         "id": self.id,
-                        "name": self.name,
+                        "name": f"{stem}__v{int(rev):04d}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -40,8 +46,13 @@ class WaybackEntry:
                         ),
                     },
                     url_template,
+                    _deobf_key=self.name,
                 )
             )
+
+    def __repr__(self) -> str:
+        type_abbrev = "AB" if isinstance(self.history[-1], GkmasAssetBundle) else "RS"
+        return f"<WaybackEntry {type_abbrev}[{self.id:05}] '{self.name}' with {len(self.history)} revisions>"
 
 
 class WaybackEntryList:
@@ -157,3 +168,33 @@ class WaybackMachine:
             key=lambda x: x.name if by_name else x.id,
             reverse=not ascending,
         )
+
+    @nocache
+    def download_old_revisions(self, *criteria: str, **kwargs):
+        entries = self.search("|".join(criteria))
+        asyncio.run(self._dispatch(entries, **kwargs))
+
+    async def _dispatch(self, entries: list[WaybackEntry], **kwargs):
+
+        progress = Progress(
+            TextColumn("{task.description}"),
+            BarColumn(),
+            TextColumn("{task.completed}/{task.total}"),
+        )
+
+        tasks = [
+            asyncio.create_task(
+                asyncio.to_thread(
+                    obj.download,
+                    progress=progress,
+                    task_id=progress.add_task(obj._idname, visible=False),
+                    **kwargs,  # if not empty, broadcast to all tasks
+                )
+            )
+            for entry in entries
+            for obj in entry.history[:-1]
+        ]
+
+        progress.start()
+        await asyncio.gather(*tasks)
+        progress.stop()

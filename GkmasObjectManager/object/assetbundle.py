@@ -25,7 +25,7 @@ class GkmasAssetBundle(GkmasResource):
             Also performs media conversion if applicable.
     """
 
-    def __init__(self, info: dict, url_template: str):
+    def __init__(self, info: dict, url_template: str, _deobf_key: str = ""):
         """
         Initializes an assetbundle with the given information.
         Usually called from GkmasManifest.
@@ -35,10 +35,15 @@ class GkmasAssetBundle(GkmasResource):
             url_template (str): URL template for downloading the assetbundle.
                 {o} will be replaced with self.objectName.
         """
+        #   _deobf_key (str): Key for header deobfuscation.
+        #       Exclusively used in wayback interface where self.name is appended with version number.
+        #       NOT FOR GENERAL USE.
 
         super().__init__(info, url_template)
         self.name += ".unity3d"
         self._idname = f"AB[{self.id:05}] '{self.name}'"
+        self._deobf_key = _deobf_key or self.name
+        # need to re-instantiate since self._idname has changed
 
     def __repr__(self) -> str:
         return f"<GkmasAssetBundle {self._idname}>"
