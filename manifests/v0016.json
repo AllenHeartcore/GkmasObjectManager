@@ -1,0 +1,30 @@
+{
+    "revision": [
+        17,
+        16
+    ],
+    "assetBundleList": [
+        {
+            "id": 23425,
+            "name": "img_notice_gasha_gasha-00940-pickup-001-banner-01-large-pre",
+            "size": 955295,
+            "crc": 1290194265,
+            "state": "ADD",
+            "md5": "3b06006eac87be451e3f0dc2c620c96e",
+            "objectName": "FM862q",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23426,
+            "name": "img_notice_notice-list_event_panel_evnet-panel-mission-0011-banner-pre",
+            "size": 626525,
+            "crc": 1166215205,
+            "state": "ADD",
+            "md5": "0ac0fb89b6f63baddc2d10e5a051493d",
+            "objectName": "3SLmtK",
+            "uploadVersionId": 705100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
