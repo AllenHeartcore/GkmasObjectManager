@@ -12,7 +12,7 @@ from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load, nocache, remove_unity_suffix
+from GkmasObjectManager.utils import _json_load, append_unity_suffix, nocache
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -69,13 +69,11 @@ class WaybackEntryList:
         self, infos: dict[str, list[str]], base_class: ObjectClass, url_template: str
     ):
 
-        self.infos = {
-            remove_unity_suffix(name): history for name, history in infos.items()
-        }
+        self.infos = infos
         self.base_class = base_class
         self.url_template = url_template
 
-        self._entries = {name: None for name in self.infos}
+        self._entries = {name: None for name in infos}
 
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
@@ -88,7 +86,7 @@ class WaybackEntryList:
         return self._entries[name]
 
     def __getitem__(self, key: str) -> WaybackEntry:
-        return self._get_entry(remove_unity_suffix(key))
+        return self._get_entry(append_unity_suffix(key))
 
     def __iter__(self):
         for name in self.infos:
@@ -98,7 +96,7 @@ class WaybackEntryList:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return remove_unity_suffix(key) in self._entries
+        return append_unity_suffix(key) in self._entries
 
 
 class WaybackMachine:
