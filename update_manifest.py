@@ -38,6 +38,7 @@ sort_dict = lambda d: dict(sorted(d.items(), key=lambda x: x[0]))
 def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
 
     manifest = fetch(rev, _use_local_commits_log=True)
+    manifest.revision.this = rev
     prog.update(1)
     return manifest
 
@@ -53,7 +54,7 @@ async def _fetch_old_manifests(revs: list[int]) -> list[GkmasManifest]:
 def _sanitize_canon_repr(canon_repr: dict, rev: int) -> str:
     return "|".join(
         [
-            f"{rev:04d}",
+            f"{rev:010d}",
             canon_repr["objectName"],
             canon_repr["md5"],
             str(canon_repr["size"]),
@@ -77,6 +78,7 @@ def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
 def rebuild_log(latest_manifest: GkmasManifest):
     print("Rebuilding wayback log...")
+    latest_manifest.revision.this += 7051000000
 
     log = {
         "latest_revision": latest_manifest.revision.canon_repr,

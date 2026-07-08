@@ -67,8 +67,8 @@ def fetch(
         )
 
         manifest = GkmasManifest(_rget(url).json(), base_revision)
-        assert manifest.revision.canon_repr == int(
-            this_revision
+        assert (
+            manifest.revision.canon_repr == int(this_revision) % 1000
         ), "Manifest revision mismatch with commit history record."
         return manifest
 
