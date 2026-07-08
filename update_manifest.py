@@ -7,6 +7,7 @@ compatible with 'Update Manifest' workflow.
 import asyncio
 import sys
 from argparse import ArgumentParser
+from collections import defaultdict
 from pathlib import Path
 
 from tqdm import tqdm
@@ -16,7 +17,7 @@ from GkmasObjectManager.const import (
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_OBJECTS_LOG_LOCAL,
 )
-from GkmasObjectManager.utils import _json_dump, _json_load
+from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 
 # FUNCTION HIERARCHY:
 # [main]
@@ -64,7 +65,7 @@ def _sanitize_canon_repr(canon_repr: dict, rev: int) -> str:
 def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
     for obj in manifest.assetbundles:
-        log["assetBundleList"][obj.name].append(
+        log["assetBundleList"][append_unity_suffix(obj.name)].append(
             _sanitize_canon_repr(obj.canon_repr, manifest.revision.this)
         )
 
@@ -79,8 +80,8 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     log = {
         "latest_revision": latest_manifest.revision.canon_repr,
-        "assetBundleList": {obj.name: [] for obj in latest_manifest.assetbundles},
-        "resourceList": {obj.name: [] for obj in latest_manifest.resources},
+        "assetBundleList": defaultdict(list),
+        "resourceList": defaultdict(list),
         "urlFormat": latest_manifest.urlformat,
     }
 
@@ -93,8 +94,8 @@ def rebuild_log(latest_manifest: GkmasManifest):
         old_revision = int(old_log["latest_revision"])
         if old_revision >= latest_manifest.revision.this:
             return  # already up-to-date
-        log["assetBundleList"] = old_log["assetBundleList"]
-        log["resourceList"] = old_log["resourceList"]
+        log["assetBundleList"] = defaultdict(list, old_log["assetBundleList"])
+        log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     revs = sorted([int(k) for k in commits.keys() if int(k) >= old_revision])
