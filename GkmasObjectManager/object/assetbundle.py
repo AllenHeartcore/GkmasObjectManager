@@ -8,6 +8,7 @@ from ..media import GkmasDummyMedia
 from ..media.audio import GkmasUnityAudio
 from ..media.image import GkmasUnityImage
 from ..rich import ProgressReporter
+from ..utils import append_unity_suffix, remove_unity_suffix
 from .deobfuscate import GkmasAssetBundleDeobfuscator
 from .resource import GkmasResource
 
@@ -46,7 +47,7 @@ class GkmasAssetBundle(GkmasResource):
         #       NOT FOR GENERAL USE.
 
         super().__init__(info, url_template)
-        self.name += ".unity3d"
+        self.name = append_unity_suffix(self.name)
         self._idname = f"AB[{self.id:05}] '{self.name}'"
         self._deobf_key = _deobf_key or self.name
         self._reporter = ProgressReporter(title=self._idname, total=self.size)
@@ -58,7 +59,7 @@ class GkmasAssetBundle(GkmasResource):
     @property
     def canon_repr(self) -> dict:
         canon = super().canon_repr
-        canon["name"] = canon["name"].removesuffix(".unity3d")
+        canon["name"] = remove_unity_suffix(canon["name"])
         return canon
 
     @property

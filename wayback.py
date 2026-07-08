@@ -38,7 +38,7 @@ class WaybackEntry:
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": remove_unity_suffix(f"{stem}__v{int(rev):04d}{ext}"),
+                        "name": f"{stem}__v{int(rev):04d}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -69,11 +69,13 @@ class WaybackEntryList:
         self, infos: dict[str, list[str]], base_class: ObjectClass, url_template: str
     ):
 
-        self.infos = infos
+        self.infos = {
+            remove_unity_suffix(name): history for name, history in infos.items()
+        }
         self.base_class = base_class
         self.url_template = url_template
 
-        self._entries = {name: None for name in infos}
+        self._entries = {name: None for name in self.infos}
 
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"

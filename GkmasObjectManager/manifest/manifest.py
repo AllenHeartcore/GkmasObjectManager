@@ -17,7 +17,7 @@ from rich.progress import BarColumn, Progress, TextColumn
 from ..const import CHARACTER_ABBREVS, CSV_COLUMNS, DEFAULT_DOWNLOAD_PATH, PathArgtype
 from ..object import GkmasAssetBundle, GkmasResource
 from ..rich import Logger
-from ..utils import _json_dump, nocache
+from ..utils import _json_dump, append_unity_suffix, nocache
 from .listing import GkmasObjectList
 from .octodb_pb2 import dict2pdbytes
 from .revision import GkmasManifestRevision
@@ -265,7 +265,7 @@ class GkmasManifest:
         # which handles integer keys (index by ID) and messes up with standard modules
         # like pandas that rely on self[0] as a "sample" object from the list.
         dfa = pd.DataFrame(self.assetbundles.canon_repr, columns=CSV_COLUMNS)
-        dfa["name"] = dfa["name"].apply(lambda x: x + ".unity3d")  # stripped in canon
+        dfa["name"] = dfa["name"].apply(append_unity_suffix)  # stripped in canon
         dfr = pd.DataFrame(self.resources.canon_repr, columns=CSV_COLUMNS)
         df = pd.concat([dfa, dfr], ignore_index=True)
         df.sort_values("name", inplace=True)
