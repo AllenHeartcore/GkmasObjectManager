@@ -12,30 +12,33 @@ from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load, nocache
+from GkmasObjectManager.utils import _json_load, nocache, remove_unity_suffix
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
 
 class WaybackEntry:
 
-    id: int
     name: str
     history: list[ObjectClass]
 
-    def __init__(self, info: dict, base_class: ObjectClass, url_template: str):
-        self.id = info["id"]
-        self.name = info["name"]
+    def __init__(
+        self,
+        name: str,
+        history: list[str],
+        base_class: ObjectClass,
+        url_template: str,
+    ):
+        self.name = name
         self.history = []
-        for entry in info["history"]:
+        for entry in history:
             rev, objectName, md5, size, dependencies = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
-            ext = ext.removesuffix(".unity3d")
             self.history.append(
                 base_class(
                     {
-                        "id": self.id,
-                        "name": f"{stem}__v{int(rev):04d}{ext}",
+                        "id": -1,  # stripped when building wayback log for compatibility
+                        "name": remove_unity_suffix(f"{stem}__v{int(rev):04d}{ext}"),
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -51,67 +54,49 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        type_abbrev = "AB" if isinstance(self.history[-1], GkmasAssetBundle) else "RS"
-        return f"<WaybackEntry {type_abbrev}[{self.id:05}] '{self.name}' with {len(self.history)} revisions>"
+        return f"<WaybackEntry '{self.name}' with {len(self.history)} revisions>"
 
 
 class WaybackEntryList:
 
-    infos: list[dict]
+    infos: dict[str, list[str]]
     base_class: ObjectClass
     url_template: str
 
-    _entries: list[Optional[WaybackEntry]]
-    _id_idx: dict[int, int]
-    _name_idx: dict[str, int]
+    _entries: dict[str, Optional[WaybackEntry]]
 
-    @staticmethod
-    def _sanitize_name(name: str) -> str:
-        return name.removesuffix(".unity3d")
-
-    def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
-        infos.sort(key=lambda x: x["id"])
+    def __init__(
+        self, infos: dict[str, list[str]], base_class: ObjectClass, url_template: str
+    ):
 
         self.infos = infos
         self.base_class = base_class
         self.url_template = url_template
 
-        self._entries = [None] * len(infos)
-        self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
-        self._name_idx = {
-            self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
-        }
+        self._entries = {name: None for name in infos}
 
     def __repr__(self) -> str:
         return f"<WaybackEntryList of {len(self.infos)} {self.base_class.__name__}'s>"
 
-    def _get_entry(self, idx: int) -> WaybackEntry:
-        if self._entries[idx] is None:
-            self._entries[idx] = WaybackEntry(
-                self.infos[idx], self.base_class, self.url_template
+    def _get_entry(self, name: str) -> WaybackEntry:
+        if self._entries[name] is None:
+            self._entries[name] = WaybackEntry(
+                name, self.infos[name], self.base_class, self.url_template
             )
-        return self._entries[idx]
+        return self._entries[name]
 
-    def __getitem__(self, key: int | str) -> WaybackEntry:
-
-        if isinstance(key, int):
-            idx = self._id_idx[key]
-        elif isinstance(key, str):
-            idx = self._name_idx[self._sanitize_name(key)]
-        else:
-            raise TypeError
-
-        return self._get_entry(idx)
+    def __getitem__(self, key: str) -> WaybackEntry:
+        return self._get_entry(remove_unity_suffix(key))
 
     def __iter__(self):
-        for i in range(len(self.infos)):
-            yield self._get_entry(i)
+        for name in self.infos:
+            yield self._get_entry(name)
 
     def __len__(self) -> int:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return self._sanitize_name(key) in self._name_idx
+        return remove_unity_suffix(key) in self._entries
 
 
 class WaybackMachine:
@@ -153,21 +138,12 @@ class WaybackMachine:
     def __contains__(self, key: str) -> bool:
         return key in self.assetbundles or key in self.resources
 
-    def search(
-        self,
-        criterion: str,
-        by_name: bool = True,
-        ascending: bool = True,
-    ) -> list[WaybackEntry]:
+    def search(self, criterion: str, ascending: bool = True) -> list[WaybackEntry]:
         matches = filter(
             lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
             list(self),
         )
-        return sorted(
-            matches,
-            key=lambda x: x.name if by_name else x.id,
-            reverse=not ascending,
-        )
+        return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
     @nocache
     def download_old_revisions(self, *criteria: str, **kwargs):
@@ -187,7 +163,7 @@ class WaybackMachine:
                 asyncio.to_thread(
                     obj.download,
                     progress=progress,
-                    task_id=progress.add_task(obj._idname, visible=False),
+                    task_id=progress.add_task(obj.name, visible=False),
                     **kwargs,  # if not empty, broadcast to all tasks
                 )
             )

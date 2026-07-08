@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 import requests
 from cryptography.hazmat.primitives import hashes
 
+UNITY_SUFFIX = ".unity3d"
 REQUEST_TIMEOUT = 10
 PathArgtype = str | Path
 # putting these in const.py causes circular imports
@@ -50,6 +51,18 @@ def md5sum(data: bytes) -> bytes:
     digest = hashes.Hash(hashes.MD5())
     digest.update(data)
     return digest.finalize()
+
+
+def remove_unity_suffix(name: str) -> str:
+    """Removes the '.unity3d' suffix from a name, if present."""
+    # a suboptimal accommodation for choosing to
+    # include this suffix in object.assetbundle.name
+    return name.removesuffix(UNITY_SUFFIX)
+
+
+def append_unity_suffix(name: str) -> str:
+    """Appends the '.unity3d' suffix to a name, if not already present."""
+    return name if name.endswith(UNITY_SUFFIX) else name + UNITY_SUFFIX
 
 
 def nocache(func) -> Callable:
