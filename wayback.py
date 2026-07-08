@@ -12,7 +12,7 @@ from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load, nocache, remove_unity_suffix
+from GkmasObjectManager.utils import _json_load, remove_unity_suffix
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -145,7 +145,6 @@ class WaybackMachine:
         )
         return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
-    @nocache
     def download_old_revisions(self, *criteria: str, **kwargs):
         entries = self.search("|".join(criteria))
         asyncio.run(self._dispatch(entries, **kwargs))
