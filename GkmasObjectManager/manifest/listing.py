@@ -7,6 +7,7 @@ optimized for indexing and comparison.
 from typing import Optional
 
 from ..object import GkmasAssetBundle, GkmasResource
+from ..utils import remove_unity_suffix
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -31,12 +32,6 @@ class GkmasObjectList:
     _id_idx: dict[int, int]
     _name_idx: dict[str, int]
 
-    @staticmethod
-    def _sanitize_name(name: str) -> str:
-        # isolate this util as an undesirable accommodation for choosing to
-        # include the suffix in object.assetbundle.name for now
-        return name.removesuffix(".unity3d")
-
     def __init__(self, infos: list[dict], base_class: ObjectClass, url_template: str):
         infos.sort(key=lambda x: x["id"])
 
@@ -47,7 +42,7 @@ class GkmasObjectList:
         self._objects = [None] * len(infos)
         self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
         self._name_idx = {
-            self._sanitize_name(info["name"]): i for i, info in enumerate(infos)
+            remove_unity_suffix(info["name"]): i for i, info in enumerate(infos)
         }
         # 'self._*_idx' are int/str -> int lookup tables
 
@@ -65,7 +60,7 @@ class GkmasObjectList:
         if isinstance(key, int):
             idx = self._id_idx[key]
         elif isinstance(key, str):
-            idx = self._name_idx[self._sanitize_name(key)]
+            idx = self._name_idx[remove_unity_suffix(key)]
         else:
             raise TypeError  # just in case, should never reach here
 
@@ -79,7 +74,7 @@ class GkmasObjectList:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return self._sanitize_name(key) in self._name_idx
+        return remove_unity_suffix(key) in self._name_idx
         # 'if <numerical ID> in self' is nonsensical
 
     def __sub__(self, other: "GkmasObjectList") -> "GkmasObjectList":

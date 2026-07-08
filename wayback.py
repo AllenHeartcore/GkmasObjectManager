@@ -12,7 +12,7 @@ from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load, nocache
+from GkmasObjectManager.utils import _json_load, nocache, remove_unity_suffix
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -34,12 +34,11 @@ class WaybackEntry:
         for entry in history:
             rev, objectName, md5, size, dependencies = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
-            ext = ext.removesuffix(".unity3d")
             self.history.append(
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": f"{stem}__v{int(rev):04d}{ext}",
+                        "name": remove_unity_suffix(f"{stem}__v{int(rev):04d}{ext}"),
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -66,10 +65,6 @@ class WaybackEntryList:
 
     _entries: dict[str, Optional[WaybackEntry]]
 
-    @staticmethod
-    def _sanitize_name(name: str) -> str:
-        return name.removesuffix(".unity3d")
-
     def __init__(
         self, infos: dict[str, list[str]], base_class: ObjectClass, url_template: str
     ):
@@ -91,7 +86,7 @@ class WaybackEntryList:
         return self._entries[name]
 
     def __getitem__(self, key: str) -> WaybackEntry:
-        return self._get_entry(self._sanitize_name(key))
+        return self._get_entry(remove_unity_suffix(key))
 
     def __iter__(self):
         for name in self.infos:
@@ -101,7 +96,7 @@ class WaybackEntryList:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return self._sanitize_name(key) in self._entries
+        return remove_unity_suffix(key) in self._entries
 
 
 class WaybackMachine:
