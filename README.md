@@ -8,16 +8,12 @@ Refactored from [gkmasToolkit](https://github.com/kishidanatsumi/gkmasToolkit) b
 which in turn was adapted from [HoshimiToolkit](https://github.com/MalitsPlus/HoshimiToolkit) by Vibbit. <br>
 Request API & decryption algorithms borrowed from [HatsuboshiToolkit](https://github.com/DreamGallery/HatsuboshiToolkit) by DreamGallery.
 
-
-
 ## Features
 
 - Fetch, decrypt, deserialize, and export manifest as ProtoDB, JSON, or CSV
 - Differentiate between / add (apply patch to) manifest revisions
 - Download and deobfuscate assetbundles and resources in parallel
 - Media conversion plugins for Texture2D, AudioClip audio, AWB audio, and USM video
-
-
 
 ## Example Usage
 
@@ -47,23 +43,21 @@ m.download(
 m.download_preset("presets/namecard_kit.yml")
 ```
 
-
-
 ## Class Hierarchy
 
 - `manifest.decrypt.AESCBCDecryptor` - Manifest decryption
 - `manifest.octodb_pb2.Database` - ProtoDB deserialization
 - `manifest.manifest.GkmasManifest` - **ENTRY POINT**
-  - `manifest.revision.GkmasManifestRevision` - Manifest revision management
-  - `manifest.listing.GkmasObjectList` - Object listing and indexing
-    - `object.resource.GkmasResource` - Non-Unity object
-      - `media.dummy.GkmasDummyMedia` - Base class for media conversion plugins
-      - `media.image.GkmasImage` - PNG image handling
-      - `media.audio.GkmasAudio` - MP3 audio handling
-      - `media.audio.GkmasAWBAudio` - ACB/AWB audio conversion
-      - `media.video.GkmasUSMVideo` - USM video conversion
-    - `object.deobfuscate.GkmasAssetBundleDeobfuscator`
-    - `object.assetbundle.GkmasAssetBundle` - Unity object
-      - `media.dummy.GkmasDummyMedia`
-      - `media.image.GkmasUnityImage` - Texture2D image handling
-      - `media.audio.GkmasUnityAudio` - AudioClip audio handling
+    - `manifest.revision.GkmasManifestRevision` - Manifest revision management
+    - `manifest.listing.GkmasObjectList` - Object listing and indexing
+        - `object.resource.GkmasResource` - Non-Unity object
+            - `media.dummy.GkmasDummyMedia` - Base class for media conversion plugins
+            - `media.image.GkmasImage` - PNG image handling
+            - `media.audio.GkmasAudio` - MP3 audio handling
+            - `media.audio.GkmasAWBAudio` - ACB/AWB audio conversion
+            - `media.video.GkmasUSMVideo` - USM video conversion
+        - `object.deobfuscate.GkmasAssetBundleDeobfuscator`
+        - `object.assetbundle.GkmasAssetBundle` - Unity object
+            - `media.dummy.GkmasDummyMedia`
+            - `media.image.GkmasUnityImage` - Texture2D image handling
+            - `media.audio.GkmasUnityAudio` - AudioClip audio handling

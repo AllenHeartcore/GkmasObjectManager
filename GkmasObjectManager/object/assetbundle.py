@@ -3,6 +3,7 @@ assetbundle.py
 Unity asset bundle downloading, deobfuscation, and media extraction.
 """
 
+from ..utils import remove_unity_suffix
 from .resource import GkmasResource
 
 
@@ -51,5 +52,5 @@ class GkmasAssetBundle(GkmasResource):
     @property
     def canon_repr(self) -> dict:
         canon = super().canon_repr
-        canon["name"] = canon["name"].removesuffix(".unity3d")
+        canon["name"] = remove_unity_suffix(canon["name"])
         return canon

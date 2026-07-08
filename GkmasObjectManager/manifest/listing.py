@@ -41,9 +41,7 @@ class GkmasObjectList:
 
         self._objects = [None] * len(infos)
         self._id_idx = {info["id"]: i for i, info in enumerate(infos)}
-        self._name_idx = {
-            remove_unity_suffix(info["name"]): i for i, info in enumerate(infos)
-        }
+        self._name_idx = {info["name"]: i for i, info in enumerate(infos)}
         # 'self._*_idx' are int/str -> int lookup tables
 
     def __repr__(self) -> str:

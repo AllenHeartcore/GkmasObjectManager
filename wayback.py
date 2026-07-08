@@ -12,7 +12,7 @@ from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
-from GkmasObjectManager.utils import _json_load, remove_unity_suffix
+from GkmasObjectManager.utils import _json_load, append_unity_suffix
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -38,7 +38,7 @@ class WaybackEntry:
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": remove_unity_suffix(f"{stem}__v{int(rev):04d}{ext}"),
+                        "name": f"{stem}__v{int(rev):04d}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -86,7 +86,7 @@ class WaybackEntryList:
         return self._entries[name]
 
     def __getitem__(self, key: str) -> WaybackEntry:
-        return self._get_entry(remove_unity_suffix(key))
+        return self._get_entry(append_unity_suffix(key))
 
     def __iter__(self):
         for name in self.infos:
@@ -96,7 +96,7 @@ class WaybackEntryList:
         return len(self.infos)
 
     def __contains__(self, key: str) -> bool:
-        return remove_unity_suffix(key) in self._entries
+        return append_unity_suffix(key) in self._entries
 
 
 class WaybackMachine:
