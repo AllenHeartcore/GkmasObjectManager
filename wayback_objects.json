@@ -1,5 +1,5 @@
 {
-    "latest_revision": 7051000017,
+    "latest_revision": 7051000019,
     "assetBundleList": {
         "actor-shader.unity3d": [
             "2050000025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182|",
@@ -5989,6 +5989,9 @@
             "2050000365|nUNgPq|77a9c804710ac2c044422a3c9e22098b|55911|",
             "7051000014|PyoSf9|d211393e275944662fb06b4d1c76a02e|148852|"
         ],
+        "img_cos_atbm-cstm-0118_body.unity3d": [
+            "7051000019|BnLYdp|d533f4cc49a0a9bb8122dcfb58f02b3e|92398|"
+        ],
         "img_cos_atbm-cstm-0128_body.unity3d": [
             "2050000390|zaVwaZ|4256ac59a5548a4437b858c2deccfa61|40503|",
             "7051000014|nhh9jA|94dd5710c5f087ff1d9101ff74e66e87|104881|"
@@ -8546,6 +8549,9 @@
             "2050000251|WzeBRQ|775d3743153f4834872c700cb262e03c|45130|",
             "7051000014|rzR1Cf|4ae5d3e7634863c6a0257c9e77d02de3|119332|"
         ],
+        "img_cos_kcna-cstm-0118_body.unity3d": [
+            "7051000019|ZUs4bi|664792cf1be8da77ba5b8b1e33e1bec9|92234|"
+        ],
         "img_cos_kcna-cstm-0119_body.unity3d": [
             "2050000237|QWvXMu|bb785cd8399cd62e51825193d012920f|35712|",
             "7051000014|lB3ZM5|8860c47a48f0df6e04bcece8fab5f1a8|96513|"
@@ -8702,6 +8708,9 @@
         "img_cos_kllj-cstm-0117_body.unity3d": [
             "2050000259|0OStfT|633f3cd075274153562e540bf644b3c9|53299|",
             "7051000014|PNHgFc|f6eed4aff703277dfd73fbbfb4719480|139938|"
+        ],
+        "img_cos_kllj-cstm-0118_body.unity3d": [
+            "7051000019|aYSHWj|ce3709cbca678be2958a73282383a033|92142|"
         ],
         "img_cos_kllj-cstm-0119_body.unity3d": [
             "2050000237|2YRlKI|9aef78665ae3192e773e5cba2ce61b83|35747|",
@@ -11387,6 +11396,24 @@
         ],
         "img_gasha_banner_gasha-00940-pickup-001-select-s.unity3d": [
             "7051000017|9oN4gA|8bfe84daf2a1fcf605deabd76d12fcd9|81335|"
+        ],
+        "img_gasha_banner_gasha-00940-pickup-002-logo.unity3d": [
+            "7051000019|FMDnEV|87ca90f1cc1a2171210fe763584c90e4|23331|"
+        ],
+        "img_gasha_banner_gasha-00940-pickup-002-select-m.unity3d": [
+            "7051000019|G4ABd4|1c6b49d29d5006e98dac52afb202bd4a|169557|"
+        ],
+        "img_gasha_banner_gasha-00940-pickup-002-select-s.unity3d": [
+            "7051000019|Eoe6tw|8f731ca7284bcf12847ada8019f0efca|81746|"
+        ],
+        "img_gasha_banner_gasha-00940-select-pickup-001-logo.unity3d": [
+            "7051000019|nDayt6|61bb121f2894b0dcecbaeeed7e8312ca|25788|"
+        ],
+        "img_gasha_banner_gasha-00940-select-pickup-001-select-m.unity3d": [
+            "7051000019|zPqhhO|2a1f4849ad3d1eea5368f300f7a996f4|141582|"
+        ],
+        "img_gasha_banner_gasha-00940-select-pickup-001-select-s.unity3d": [
+            "7051000019|nZwVeB|f2f22fa53a98818b89bcc928734fce75|80307|"
         ],
         "img_gasha_banner_gasha-00940-wednesday-001-logo.unity3d": [
             "7051000017|nbeCWB|7185e9cd1d0a4a16373abca0b6864710|21153|"
@@ -18038,6 +18065,42 @@
             "2050000422|ybT5gE|9cc0084b0669786b3b53ccfffa2af169|9662|",
             "7051000014|8TEpm0|7e808181e7115031540cadbf1d032181|17437|"
         ],
+        "img_general_cidol-atbm-3-009_0-full.unity3d": [
+            "7051000019|s20Oit|6f74a56437ab4f74c4900f4ff1b8327f|2688356|"
+        ],
+        "img_general_cidol-atbm-3-009_0-thumb-gasha.unity3d": [
+            "7051000019|IDDnDN|dd861b9f3de397e6f3a3416adf7537ab|140029|"
+        ],
+        "img_general_cidol-atbm-3-009_0-thumb-landscape-large.unity3d": [
+            "7051000019|N4igTz|f5b0e5b8acb4319ab0792a0ca3934642|2564652|"
+        ],
+        "img_general_cidol-atbm-3-009_0-thumb-landscape.unity3d": [
+            "7051000019|WJvWh0|23ad80b89f0a07fab8f52f9bd4b4d072|45151|"
+        ],
+        "img_general_cidol-atbm-3-009_0-thumb-portrait.unity3d": [
+            "7051000019|b7QTtR|4c3931b3475f491b3c570337b829beda|87863|"
+        ],
+        "img_general_cidol-atbm-3-009_0-thumb-square.unity3d": [
+            "7051000019|8CID1W|afc77cdbf9e203cfc91c60654564c43c|23733|"
+        ],
+        "img_general_cidol-atbm-3-009_1-full.unity3d": [
+            "7051000019|XM7tSf|18cfe962b2e82599976dbb8ed724318b|2688356|"
+        ],
+        "img_general_cidol-atbm-3-009_1-thumb-gasha.unity3d": [
+            "7051000019|gsDnMY|5705d6ba1f6d5b4d7e1ac3e2049e9298|139570|"
+        ],
+        "img_general_cidol-atbm-3-009_1-thumb-landscape-large.unity3d": [
+            "7051000019|9un9vB|bc4cade76a274807f60314a6f79168b8|2527936|"
+        ],
+        "img_general_cidol-atbm-3-009_1-thumb-landscape.unity3d": [
+            "7051000019|ukTfF5|63dd01948277f47a306430ee080a5565|44834|"
+        ],
+        "img_general_cidol-atbm-3-009_1-thumb-portrait.unity3d": [
+            "7051000019|xZsQAG|e76e5cf5e966c5e2d6e6f4549ca2876b|86538|"
+        ],
+        "img_general_cidol-atbm-3-009_1-thumb-square.unity3d": [
+            "7051000019|jTtPNA|6edfc123254f67d3ba4358d02038af64|23672|"
+        ],
         "img_general_cidol-atbm-3-012_0-full.unity3d": [
             "2050000365|Dtpapw|7d26e03d4271a12ed1d7c3d0c3616f78|855618|",
             "7051000014|dhDiib|32cbb40459ba278bfd1d2d38c68adca5|2346872|"
@@ -19772,6 +19835,9 @@
         "img_general_cidol-hmsz-3-011_1-full.unity3d": [
             "2050000251|D3KqQk|6c9a83ab4b007ccccd6f142c1e9c9b58|925034|",
             "7051000014|9U4HjN|a61ea75a9073a495a6ae0248f9f459a6|2670386|"
+        ],
+        "img_general_cidol-hmsz-3-011_1-thumb-gasha.unity3d": [
+            "7051000019|kbLABS|926a9b8098ceb0a580b70609df7530dc|138816|"
         ],
         "img_general_cidol-hmsz-3-011_1-thumb-landscape-large.unity3d": [
             "2050000251|wir5Fy|666800cfc872bfd917d79bd2ccf1fcb0|883491|",
@@ -30246,6 +30312,18 @@
         "img_general_comic4_0150.unity3d": [
             "7051000017|Xj1Bvt|a906ecad2653bbb377fdea3d1ce12853|379037|"
         ],
+        "img_general_comic4_0151-thumb.unity3d": [
+            "7051000019|sFlQE4|40274e19f9f31ae8bd4ccc6242bf45f1|47536|"
+        ],
+        "img_general_comic4_0151.unity3d": [
+            "7051000019|mCy9nz|4352b5278441d42442e11743b69739d8|436492|"
+        ],
+        "img_general_comic4_0152-thumb.unity3d": [
+            "7051000019|7QIh0B|118d7dd210c15c70f5a09b594c9efda5|57704|"
+        ],
+        "img_general_comic4_0152.unity3d": [
+            "7051000019|vQY44g|2ea265d376388643a6ae80141ad3cd4d|609465|"
+        ],
         "img_general_comic4_radio-0000-thumb.unity3d": [
             "2050000262|lqqLLT|7570d8148e4bb32aeed23854d23a2a58|25613|",
             "7051000014|7OdSzz|17d9ca665c87b87b4b0118d94fb11281|49002|"
@@ -36263,6 +36341,12 @@
         "img_general_home_gasha_gasha-00940-pickup-001.unity3d": [
             "7051000017|9yyBNA|edbb2fa7a9470d6f6e3370a9575b67b7|43545|"
         ],
+        "img_general_home_gasha_gasha-00940-pickup-002.unity3d": [
+            "7051000019|6Sz9sH|47882069a427c5d59fa9340b8661bb5e|43841|"
+        ],
+        "img_general_home_gasha_gasha-00940-select-pickup-001.unity3d": [
+            "7051000019|9racrW|001c4bd2d853c0030722d169e1787954|40070|"
+        ],
         "img_general_home_gasha_gasha-200limit-select-pickup-001.unity3d": [
             "2050000365|pcbpHC|a8621ee92e0d05e60137a96d18590aa4|15826|",
             "7051000014|zfV6LZ|a3f92828b1a245503a8b2e217b3e3560|41631|"
@@ -36374,6 +36458,9 @@
         "img_general_home_shop_costume_item-0072.unity3d": [
             "2050000422|lejl3k|778a8e349a36c29408a4361adc9b8657|15310|",
             "7051000014|aDOD1q|d43bdc89d48f0d6f6ec8777e94c83948|29502|"
+        ],
+        "img_general_home_shop_costume_item-0073.unity3d": [
+            "7051000019|B9K555|e5b44134d66e88dce841b7948b697825|38539|"
         ],
         "img_general_home_shop_jewel_item-0008-banner-01.unity3d": [
             "2050000025|ook83q|d35da2ba7191cf086e966da4df7622b6|14621|",
@@ -42321,6 +42408,9 @@
             "2050000422|7XfPwN|b83544ed1d41516a85b6bc286dfd43ed|223996|",
             "7051000014|SQN5tY|cfe5d2959adfd3441d339a7d9b22d2c0|462820|"
         ],
+        "img_general_live_music-all-atbm-011_true-end.unity3d": [
+            "7051000019|4CixQA|3d06fd1fdbd6a5a1eed42d82a32f9704|620344|"
+        ],
         "img_general_live_music-all-atbm-014_true-end.unity3d": [
             "2050000390|XhRq9h|7fc9ca2206ebf3ea737d1205850c0a1b|221274|",
             "7051000014|2R3Ork|04a3c161761f623611e22348b4c2179e|602072|"
@@ -42470,6 +42560,9 @@
         "img_general_live_music-all-hmsz-010_true-end.unity3d": [
             "2050000422|EY1QA3|9627d6896989a8c65c0183138bcb7f76|224667|",
             "7051000014|0ksSIC|21f4f6699f797c94b125697638eb7c11|463791|"
+        ],
+        "img_general_live_music-all-hmsz-011_true-end.unity3d": [
+            "7051000019|gG8iyQ|61204b7a070d48cd025a44dd8cdc3fa2|622857|"
         ],
         "img_general_live_music-all-hmsz-012_true-end.unity3d": [
             "2050000301|SXU5BP|a1c3e3e13ecf43d2391f0c3fd6423d19|219717|",
@@ -52355,6 +52448,9 @@
             "2050000422|JRBrvh|6a9a5316361de7478c9599f2eb7a2338|409908|",
             "7051000014|omiTF3|b6d58df5a3229202fd80632558499a83|819926|"
         ],
+        "img_general_music_jacket_all-atbm-011.unity3d": [
+            "7051000019|oJ2xoU|746a7cc2adcc8e1f44cdf24c14a8ef49|1308464|"
+        ],
         "img_general_music_jacket_all-atbm-014.unity3d": [
             "2050000390|oIUkE6|121da263bd68ba97386b92293c09eeb6|421816|",
             "7051000014|4q5WO3|4a668e4dae147643be95e95423aab139|1185390|"
@@ -52467,7 +52563,8 @@
         ],
         "img_general_music_jacket_all-hmsz-011.unity3d": [
             "2050000251|391CVU|f7afff61fd95b94ec61f2c95b2393ca5|452263|",
-            "7051000014|yJf9gs|d88d683f1984b2fd9f820b696b77888d|1292955|"
+            "7051000014|yJf9gs|d88d683f1984b2fd9f820b696b77888d|1292955|",
+            "7051000019|1M4EYb|8b1a33f998305c6a86d303d724a14a33|1292962|"
         ],
         "img_general_music_jacket_all-hmsz-012.unity3d": [
             "2050000301|1ZpF6W|ff0b7468021b83fb8ab7cdf846b3cb3c|385132|",
@@ -56630,6 +56727,18 @@
         "img_general_shop_costume_0064-small.unity3d": [
             "2050000422|tsg6Zp|0b56e589f6aa0945a27b5cb4bbef950c|26082|",
             "7051000014|3W4IP5|bd5eb43c744bca1cf2bbf45f2fff169f|51355|"
+        ],
+        "img_general_shop_costume_0065-large.unity3d": [
+            "7051000019|Ut3BVx|dcd4d4389560e2f5f803b418c63cf62f|338315|"
+        ],
+        "img_general_shop_costume_0065-small.unity3d": [
+            "7051000019|q1hxQU|76c9721576a81e56f5a40d5238c3e1b7|66092|"
+        ],
+        "img_general_shop_costume_0066-large.unity3d": [
+            "7051000019|Puzzwv|c2caa1a0445aa71948ba670dfef599dd|336566|"
+        ],
+        "img_general_shop_costume_0066-small.unity3d": [
+            "7051000019|lQg0qZ|c6431f564535a329a894357634c5dc16|64961|"
         ],
         "img_general_shop_jewel_0001-small.unity3d": [
             "2050000025|ezRwiu|924c9430eaceddce8c532e664f9974f7|32250|",
@@ -68986,6 +69095,9 @@
             "2050000422|S9bcJe|a5201c5ef4ff4731fb0d0a68a09a828c|807812|",
             "7051000014|N3okeA|0e2976c7fff2d1deb7a441a9ac5d891b|1527556|"
         ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-009.unity3d": [
+            "7051000019|5XnlgD|d3f7e47a93b0ca270838dfed9298015c|2302844|"
+        ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-012.unity3d": [
             "2050000365|TIfkab|e2b03bb5da9427a8d7f58c78c7030a70|720247|",
             "7051000014|phtWSX|f8888ddefcdc9edab85aef23f3957d80|1883316|"
@@ -69111,7 +69223,8 @@
         ],
         "img_mov_general_gasha_bg_idol_cidol-hmsz-3-011.unity3d": [
             "2050000251|04RNfd|52009aa1fac1b9d53bb6e4f3c7411dba|813975|",
-            "7051000014|z6cMBr|ba3b24e012cb37b0b708db6973bb8cc5|2208145|"
+            "7051000014|z6cMBr|ba3b24e012cb37b0b708db6973bb8cc5|2208145|",
+            "7051000019|jqRn6P|eadfc0fad467d79660223b571bc00691|2263854|"
         ],
         "img_mov_general_gasha_bg_idol_cidol-hmsz-3-012.unity3d": [
             "2050000301|7jHN7G|9f89911152d2c6e73174162b5578f9f4|803510|",
@@ -72713,8 +72826,23 @@
         "img_notice_gasha_gasha-00940-pickup-001-banner-01-large.unity3d": [
             "7051000017|OS1mPB|c5edcc2f060eacbc9b67df0d80ea2b60|961259|"
         ],
+        "img_notice_gasha_gasha-00940-pickup-001-banner-02-large-pre.unity3d": [
+            "7051000019|BiAE1U|a39805f0b9191604d648e4e2485c430e|1266255|"
+        ],
+        "img_notice_gasha_gasha-00940-pickup-001-banner-02-large.unity3d": [
+            "7051000019|wpx2VS|4b0b8685e2a6e9d983a85279e6d854e6|1272664|"
+        ],
         "img_notice_gasha_gasha-00940-pickup-001.unity3d": [
             "7051000017|R2NQCw|b5268ad265b30f09209f84f93714ef32|3570014|"
+        ],
+        "img_notice_gasha_gasha-00940-select-pickup-001-banner-01-large-pre.unity3d": [
+            "7051000019|axJx45|644916a64eb63c71a29837da01bd7e6a|736911|"
+        ],
+        "img_notice_gasha_gasha-00940-select-pickup-001-banner-01-large.unity3d": [
+            "7051000019|GZM3hN|1d1b2f9de7b5064b6f0bc4afc3307b36|745987|"
+        ],
+        "img_notice_gasha_gasha-00940-select-pickup-001.unity3d": [
+            "7051000019|z2iQmO|03363edea2af347f1a5f315b4c91bd17|3528903|"
         ],
         "img_notice_gasha_gasha-200limit-select-pickup-001-banner-01-large-pre.unity3d": [
             "2050000361|X2mXZD|ac58241e0be6e33a4a87eaa5bc31be60|108965|",
@@ -74182,6 +74310,9 @@
             "2050000422|GryZiY|414e73a2b760705d1e661f86a8c69030|90451|",
             "7051000014|zog2Ow|e74bf47e6e6e548d44ecbd7c4659e232|171967|"
         ],
+        "img_notice_notice-list_shop_costume_item-0073.unity3d": [
+            "7051000019|9ohsEa|7f8de5ff5743fea861a88c18a1a41bb8|459976|"
+        ],
         "img_notice_notice-list_shop_costume_trng-0002.unity3d": [
             "2050000307|Q1r7Ju|f8d6133f3539cefd12a752311ccac346|101498|",
             "7051000014|SWRA5e|51d101aa30aa2c316d4ce921b8c7aa0b|617141|"
@@ -74613,6 +74744,9 @@
         "img_notice_shop_costume_item-0072.unity3d": [
             "2050000422|GsS5nu|b702454d31f151251c04497d5dc67138|291264|",
             "7051000014|eU2YNP|2880f63a1b22fe93b8504d423b8d28b1|564778|"
+        ],
+        "img_notice_shop_costume_item-0073.unity3d": [
+            "7051000019|lDZTDX|7a316caa6df5cae13a54c5b0ff7261f5|1529306|"
         ],
         "img_notice_shop_jewel_item-0008.unity3d": [
             "2050000025|5ZObx7|971655b2b0361f4702c6f9366b2d4d59|222975|",
@@ -77080,6 +77214,9 @@
             "2050000406|wTYDXw|5dffe134a32589ea28ab0266f9841431|4978159|2071",
             "7051000014|sGk3uI|2a14927042049a9da278f285263ebee8|6485029|1608"
         ],
+        "mdl_chr_atbm-cstm-0118_body.unity3d": [
+            "7051000019|CGjU3u|ce0842442343d009d1b37557a60722f7|8018196|1608"
+        ],
         "mdl_chr_atbm-cstm-0128_body.unity3d": [
             "2050000390|1ptyxT|24a7f3b2865a9544f6193fd103520ce9|8094018|2071",
             "7051000014|1SdGyo|e1bcc1195fbf468d1f6808bccaf9b6f9|10831188|1608"
@@ -77131,6 +77268,15 @@
             "2050000129|xuKYLu|1b67036e10f2fe056524342989c50725|5179348|2071",
             "2050000338|pGqBsL|d4b617377309c1e7e20fb9a9c192a619|5179351|2071",
             "7051000014|Tm3fVL|ee9b2ac5e6338398e1f9ee33097bd731|6366300|1608"
+        ],
+        "mdl_chr_atbm-spcs-0000_body.unity3d": [
+            "7051000019|8C8Olo|3a22f57dc47004875633338f64526569|8020399|1608"
+        ],
+        "mdl_chr_atbm-spcs-0000_face.unity3d": [
+            "7051000019|3LKl8T|f6f17ae9bf228190fe525b2a2d6e5942|361648|1608,1488,16706,3151"
+        ],
+        "mdl_chr_atbm-spcs-0000_hair.unity3d": [
+            "7051000019|dh0U13|c31c041263f9d0376217ea2ca99a5200|4067672|1608"
         ],
         "mdl_chr_atbm-trng-0000_body.unity3d": [
             "2050000220|gIAUYQ|aeec3231d92f63c3439c4bfd7e5792fe|6430224|2071",
@@ -77784,6 +77930,15 @@
             "2050000025|CLU1mg|d39c5e9c4788dbc47c41418c5f782a35|5070756|2071",
             "2050000242|pTMmYI|399c42e1c7c5af2a265bc35db7d114aa|5071433|2071",
             "7051000014|2Ydors|8cd60aacbf126e956d7f69d90e87a71a|7288322|1608"
+        ],
+        "mdl_chr_hmsz-spcs-0000_body.unity3d": [
+            "7051000019|uEGSK5|c6ed5a355ec752f46f597f26a524524e|7722900|1608"
+        ],
+        "mdl_chr_hmsz-spcs-0000_face.unity3d": [
+            "7051000019|cgUnFd|ee68103c820f85cdd36f4dc3a826b9ca|337556|22522,3151,1608,1488"
+        ],
+        "mdl_chr_hmsz-spcs-0000_hair.unity3d": [
+            "7051000019|WLZSGX|bd3ae57bede5b660467e4b7e2d049625|5702265|1608"
         ],
         "mdl_chr_hmsz-trng-0000_body.unity3d": [
             "2050000025|h4IuDe|d0bf02b27cd35e3999d93aa20d8cc2b4|6002734|2071",
@@ -79338,6 +79493,9 @@
         "mdl_chr_kcna-cstm-0117_hair.unity3d": [
             "2050000251|67DC6B|0a42b4304449cde83fcfe8e3e89fd8cd|2953167|2071",
             "7051000014|xsD561|de160745b48b6a786489c186b64646df|3413269|1608"
+        ],
+        "mdl_chr_kcna-cstm-0118_body.unity3d": [
+            "7051000019|LBTwHv|65a1c3addb60a08741c72a38da766055|8014247|1608"
         ],
         "mdl_chr_kcna-cstm-0119_body.unity3d": [
             "2050000237|YYn9Wh|2819b2e17a462eebaaf3b2a5ae8a6fdf|7124869|2071",
@@ -92770,6 +92928,9 @@
         "sud_music_live_all-011-amao_true-001.unity3d": [
             "2050000251|bYyIKI|ed7919a41fe0ab7ba8d24658812d713a|1935190|",
             "7051000014|dW3qz7|12e8f2a813dc5c3d9d5677fdf6dac5b3|1935190|"
+        ],
+        "sud_music_live_all-011-atbm_true-001.unity3d": [
+            "7051000019|QT9u3H|c49526d304151c690fccaa8dd725d449|1865327|"
         ],
         "sud_music_live_all-011-fktn_true-001.unity3d": [
             "2050000251|AtN08R|6a78119624a2eb599719fcb1931abc25|1919774|",
@@ -106368,6 +106529,9 @@
         "img_general_music_jacket_all-atbm-010.png": [
             "2050000422|fRBjst|749db5af5cf241c6e13c3ed721b6bc06|1347680|"
         ],
+        "img_general_music_jacket_all-atbm-011.png": [
+            "7051000019|bj0T9h|d09fedf63438311fc9e3bb1c45da2cec|1702923|"
+        ],
         "img_general_music_jacket_all-atbm-014.png": [
             "2050000390|NpAcRL|7e6bb0a06a7e0af9a7688b2f80f69d11|1750127|"
         ],
@@ -106453,7 +106617,8 @@
             "2050000422|BtYea5|35c732ff88020a442c59474fb47e539e|1384447|"
         ],
         "img_general_music_jacket_all-hmsz-011.png": [
-            "2050000251|voeaF7|c7781a8013e7b5e57534ea7349503f62|1811377|"
+            "2050000251|voeaF7|c7781a8013e7b5e57534ea7349503f62|1811377|",
+            "7051000019|lnlL3c|d622cd5e265609747c5221b78f13e5fa|1811377|"
         ],
         "img_general_music_jacket_all-hmsz-012.png": [
             "2050000301|RLLGV8|50f04b808ac6462cef40319a6fe1d180|1310775|"
@@ -107712,6 +107877,18 @@
         ],
         "mov_general_cidol-atbm-3-007_1.usm": [
             "2050000422|RjQgL6|3eeb7ea2ddc739b333f45b3d8e5047aa|12274016|"
+        ],
+        "mov_general_cidol-atbm-3-009_1-gasha.usm": [
+            "7051000019|ru83yL|9940c454c67f9cf55d1618ef2549d6f9|661888|"
+        ],
+        "mov_general_cidol-atbm-3-009_1-loop-gasha.usm": [
+            "7051000019|z9pYt4|ad5259b8d52953a7a2999a3ea58bf771|5929728|"
+        ],
+        "mov_general_cidol-atbm-3-009_1-loop.usm": [
+            "7051000019|gnxfah|d7a77af39eac553b6475cafdca23d431|16303264|"
+        ],
+        "mov_general_cidol-atbm-3-009_1.usm": [
+            "7051000019|NEbCss|f48eff9a9e84bae3295e7fd8190d0320|16303264|"
         ],
         "mov_general_cidol-atbm-3-012_1-gasha.usm": [
             "2050000365|FH3Xn9|bc10ccae6c9c9948577d5ce10a4b84c1|3871648|"
@@ -110150,6 +110327,9 @@
         "mov_general_gasha_bg_idol_cidol-atbm-3-007.usm": [
             "2050000422|I6VFiJ|c089ad44ca98e92ea4387a03d263c485|18631200|"
         ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-009.usm": [
+            "7051000019|6bwSex|92d98ced9c34c4d2fd2fc00cd618a8e8|19059168|"
+        ],
         "mov_general_gasha_bg_idol_cidol-atbm-3-012.usm": [
             "2050000365|vbFcjS|7d13297af5a23fd891e1444b478c0eca|22228032|"
         ],
@@ -110246,7 +110426,8 @@
         ],
         "mov_general_gasha_bg_idol_cidol-hmsz-3-011.usm": [
             "2050000251|HvUDnW|27ab43f56265212ee874f7ff9061544b|20320064|",
-            "7051000014|S8rbm4|f5680f76f9fda8b7d671d1e7ef9934a3|18760832|"
+            "7051000014|S8rbm4|f5680f76f9fda8b7d671d1e7ef9934a3|18760832|",
+            "7051000019|Sah48j|b1a9a69842d780969dd9fa22c10a1cf4|18532608|"
         ],
         "mov_general_gasha_bg_idol_cidol-hmsz-3-012.usm": [
             "2050000301|yx02pg|d8479779530502e1bf5e9d6cac1ee9bf|22566912|"
@@ -111032,6 +111213,9 @@
         "mov_general_gasha_live_i_card-skin-atbm-3-007-result.usm": [
             "2050000422|4QAmkN|7b0ebfec7590d0eb3540619f57732ee4|1991296|"
         ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-009-result.usm": [
+            "7051000019|qMCEO6|6b37a83e0a08f6529f82c84dcae4b86b|1987552|"
+        ],
         "mov_general_gasha_live_i_card-skin-atbm-3-012-result.usm": [
             "2050000365|sUIOty|8fd698dc65fe530bd8411449cf275aae|2050432|"
         ],
@@ -111127,7 +111311,8 @@
         ],
         "mov_general_gasha_live_i_card-skin-hmsz-3-011-result.usm": [
             "2050000251|qgtBud|b7552020819ed2387d77aca593f6b3f8|1978784|",
-            "7051000014|btIUtH|51273b6bcd71f05274d316e0e94a9ea1|1965152|"
+            "7051000014|btIUtH|51273b6bcd71f05274d316e0e94a9ea1|1965152|",
+            "7051000019|w9PXme|9ebad3920af5656a8e3296249b4e7094|1972448|"
         ],
         "mov_general_gasha_live_i_card-skin-hmsz-3-012-result.usm": [
             "2050000301|E4awuC|4d4fc5f34eeb359de1c2a22a66636b30|1962496|"
@@ -114723,6 +114908,15 @@
         ],
         "sud_music_general_all-011-amao_game.mp3": [
             "2050000251|BxuODf|82ed59bfbc63422ba12ec4e1a77f7fd5|1537923|"
+        ],
+        "sud_music_general_all-011-atbm_game.acb": [
+            "7051000019|YvXO9s|e3569bd8ddca5a2d96a403d7d708dc1b|10752|"
+        ],
+        "sud_music_general_all-011-atbm_game.awb": [
+            "7051000019|MSm5xb|4dd2d7455f49f7339a408afcb6379f49|2822244|"
+        ],
+        "sud_music_general_all-011-atbm_game.mp3": [
+            "7051000019|UykdlF|2b50733a6d0bda56afc6c9b2628c63f0|1537924|"
         ],
         "sud_music_general_all-011-fktn_game.acb": [
             "2050000251|BfoEJT|e786e3aef0e2b94c6640e58e14800438|10720|"
@@ -130777,6 +130971,12 @@
         "sud_vo_system_atbm-cstm-0111_02.acb": [
             "2050000338|ALAzpg|d82ac6bc068a1884a868495800239961|94240|"
         ],
+        "sud_vo_system_atbm-cstm-0118_01.acb": [
+            "7051000019|N7tDKq|feacfc7781e3cee05e95eb1c9ccedbbc|85408|"
+        ],
+        "sud_vo_system_atbm-cstm-0118_02.acb": [
+            "7051000019|LJINlN|6ae15dccbb54c8c16320f5d60c3f07cd|90880|"
+        ],
         "sud_vo_system_atbm-cstm-0128_01.acb": [
             "2050000390|CMDADa|1f995bba7621497cbccb397b8c6a847e|72128|"
         ],
@@ -132019,6 +132219,15 @@
         ],
         "sud_vo_system_cidol-atbm-3-007_home_cmmn-03.acb": [
             "2050000422|E786l8|6d50c74ffc5174b792b1740ed060f214|86432|"
+        ],
+        "sud_vo_system_cidol-atbm-3-009_home_cmmn-01.acb": [
+            "7051000019|ArOU1l|979cb3465769de90a630e9a1b1d3d459|89184|"
+        ],
+        "sud_vo_system_cidol-atbm-3-009_home_cmmn-02.acb": [
+            "7051000019|cGcvcK|d44823adb008c347a270c19565f7c172|83360|"
+        ],
+        "sud_vo_system_cidol-atbm-3-009_home_cmmn-03.acb": [
+            "7051000019|CwGVT9|99c5305c7181fe1a043c03ea7546cd57|85408|"
         ],
         "sud_vo_system_cidol-atbm-3-012_home_cmmn-01.acb": [
             "2050000365|7NZ7rB|abaad097b7bcfa27c06f6aa794b6f009|63904|"
@@ -146922,6 +147131,12 @@
         "sud_vo_system_kcna-cstm-0116_02.acb": [
             "2050000251|nBMnpv|570ca7a07e05877d3b0584011544d611|91200|"
         ],
+        "sud_vo_system_kcna-cstm-0118_01.acb": [
+            "7051000019|9SBksz|96c593ae0ace4d6ea4c3d38ca1897054|82304|"
+        ],
+        "sud_vo_system_kcna-cstm-0118_02.acb": [
+            "7051000019|Ubzw8x|692d528c71991c471078d84443e5969f|71072|"
+        ],
         "sud_vo_system_kcna-cstm-0119_01.acb": [
             "2050000237|X69E64|20e5fd94b9485d5ada0a4e14a26e6628|77888|"
         ],
@@ -148016,6 +148231,12 @@
         ],
         "sud_vo_system_kllj-cstm-0116_02.acb": [
             "2050000259|NP9M1A|fe68c3d9645f7719f9d984c4913a5956|50944|"
+        ],
+        "sud_vo_system_kllj-cstm-0118_01.acb": [
+            "7051000019|QvjbbK|59f5136009b7766f5a05b3bde5e6d2da|75168|"
+        ],
+        "sud_vo_system_kllj-cstm-0118_02.acb": [
+            "7051000019|CJ8Mze|6eb362c4c29ebd87320c450c59665f8f|56416|"
         ],
         "sud_vo_system_kllj-cstm-0119_01.acb": [
             "2050000237|QABLLy|9f884e44e597800084f9baac7f3b631a|57088|"
