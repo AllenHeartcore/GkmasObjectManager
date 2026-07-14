@@ -1,0 +1,208 @@
+{
+    "revision": [
+        19,
+        18
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 1424,
+            "name": "mov_general_gasha_live_i_card-skin-hmsz-3-011-result.usm",
+            "size": 1972448,
+            "state": "UPDATE",
+            "md5": "9ebad3920af5656a8e3296249b4e7094",
+            "objectName": "w9PXme",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 2236,
+            "name": "mov_general_gasha_bg_idol_cidol-hmsz-3-011.usm",
+            "size": 18532608,
+            "state": "UPDATE",
+            "md5": "b1a9a69842d780969dd9fa22c10a1cf4",
+            "objectName": "Sah48j",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 3237,
+            "name": "img_general_music_jacket_all-hmsz-011.png",
+            "size": 1811377,
+            "state": "UPDATE",
+            "md5": "d622cd5e265609747c5221b78f13e5fa",
+            "objectName": "lnlL3c",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20793,
+            "name": "sud_vo_system_cidol-atbm-3-009_home_cmmn-03.acb",
+            "size": 85408,
+            "state": "ADD",
+            "md5": "99c5305c7181fe1a043c03ea7546cd57",
+            "objectName": "CwGVT9",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20794,
+            "name": "mov_general_gasha_bg_idol_cidol-atbm-3-009.usm",
+            "size": 19059168,
+            "state": "ADD",
+            "md5": "92d98ced9c34c4d2fd2fc00cd618a8e8",
+            "objectName": "6bwSex",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20795,
+            "name": "sud_vo_system_cidol-atbm-3-009_home_cmmn-01.acb",
+            "size": 89184,
+            "state": "ADD",
+            "md5": "979cb3465769de90a630e9a1b1d3d459",
+            "objectName": "ArOU1l",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20796,
+            "name": "sud_vo_system_cidol-atbm-3-009_home_cmmn-02.acb",
+            "size": 83360,
+            "state": "ADD",
+            "md5": "d44823adb008c347a270c19565f7c172",
+            "objectName": "cGcvcK",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20797,
+            "name": "sud_vo_system_atbm-cstm-0118_02.acb",
+            "size": 90880,
+            "state": "ADD",
+            "md5": "6ae15dccbb54c8c16320f5d60c3f07cd",
+            "objectName": "LJINlN",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20798,
+            "name": "mov_general_cidol-atbm-3-009_1.usm",
+            "size": 16303264,
+            "state": "ADD",
+            "md5": "f48eff9a9e84bae3295e7fd8190d0320",
+            "objectName": "NEbCss",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20799,
+            "name": "img_general_music_jacket_all-atbm-011.png",
+            "size": 1702923,
+            "state": "ADD",
+            "md5": "d09fedf63438311fc9e3bb1c45da2cec",
+            "objectName": "bj0T9h",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20800,
+            "name": "sud_music_general_all-011-atbm_game.mp3",
+            "size": 1537924,
+            "state": "ADD",
+            "md5": "2b50733a6d0bda56afc6c9b2628c63f0",
+            "objectName": "UykdlF",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20801,
+            "name": "mov_general_gasha_live_i_card-skin-atbm-3-009-result.usm",
+            "size": 1987552,
+            "state": "ADD",
+            "md5": "6b37a83e0a08f6529f82c84dcae4b86b",
+            "objectName": "qMCEO6",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20802,
+            "name": "sud_vo_system_kcna-cstm-0118_01.acb",
+            "size": 82304,
+            "state": "ADD",
+            "md5": "96c593ae0ace4d6ea4c3d38ca1897054",
+            "objectName": "9SBksz",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20803,
+            "name": "sud_music_general_all-011-atbm_game.awb",
+            "size": 2822244,
+            "state": "ADD",
+            "md5": "4dd2d7455f49f7339a408afcb6379f49",
+            "objectName": "MSm5xb",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20804,
+            "name": "sud_music_general_all-011-atbm_game.acb",
+            "size": 10752,
+            "state": "ADD",
+            "md5": "e3569bd8ddca5a2d96a403d7d708dc1b",
+            "objectName": "YvXO9s",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20805,
+            "name": "mov_general_cidol-atbm-3-009_1-loop.usm",
+            "size": 16303264,
+            "state": "ADD",
+            "md5": "d7a77af39eac553b6475cafdca23d431",
+            "objectName": "gnxfah",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20806,
+            "name": "sud_vo_system_atbm-cstm-0118_01.acb",
+            "size": 85408,
+            "state": "ADD",
+            "md5": "feacfc7781e3cee05e95eb1c9ccedbbc",
+            "objectName": "N7tDKq",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20807,
+            "name": "mov_general_cidol-atbm-3-009_1-loop-gasha.usm",
+            "size": 5929728,
+            "state": "ADD",
+            "md5": "ad5259b8d52953a7a2999a3ea58bf771",
+            "objectName": "z9pYt4",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20808,
+            "name": "sud_vo_system_kcna-cstm-0118_02.acb",
+            "size": 71072,
+            "state": "ADD",
+            "md5": "692d528c71991c471078d84443e5969f",
+            "objectName": "Ubzw8x",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20809,
+            "name": "sud_vo_system_kllj-cstm-0118_02.acb",
+            "size": 56416,
+            "state": "ADD",
+            "md5": "6eb362c4c29ebd87320c450c59665f8f",
+            "objectName": "CJ8Mze",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20810,
+            "name": "mov_general_cidol-atbm-3-009_1-gasha.usm",
+            "size": 661888,
+            "state": "ADD",
+            "md5": "9940c454c67f9cf55d1618ef2549d6f9",
+            "objectName": "ru83yL",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20811,
+            "name": "sud_vo_system_kllj-cstm-0118_01.acb",
+            "size": 75168,
+            "state": "ADD",
+            "md5": "59f5136009b7766f5a05b3bde5e6d2da",
+            "objectName": "QvjbbK",
+            "uploadVersionId": 705100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
