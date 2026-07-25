@@ -151,7 +151,7 @@ def do_update(path: Path) -> bool:
     m_remote.export(path / "v0000.json", force_overwrite=True)
     asyncio.run(_export_diff_manifests(path, list(range(1, rev_remote))))
 
-    rebuild_log(m_remote)
+    # rebuild_log(m_remote)
 
     return True
 
