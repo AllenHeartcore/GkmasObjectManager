@@ -1,0 +1,180 @@
+{
+    "revision": [
+        28,
+        26
+    ],
+    "assetBundleList": [
+        {
+            "id": 23800,
+            "name": "img_notice_information_birthday-kllj-2026-large",
+            "size": 954932,
+            "crc": 2991591361,
+            "state": "UPDATE",
+            "md5": "170028f843c2052560ff13a3765a1bb7",
+            "objectName": "hlpxg4",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23804,
+            "name": "img_gasha_banner_gasha-00950-pickup-002-select-s",
+            "size": 79855,
+            "crc": 2173462490,
+            "state": "ADD",
+            "md5": "e872f2c5b6be93d9f3435d8507674335",
+            "objectName": "V2Nxr6",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23805,
+            "name": "img_general_meishi_base_all-live-03-thumb",
+            "size": 46067,
+            "crc": 2352988181,
+            "state": "ADD",
+            "md5": "86a7b00850b385b9c82c7a94c9313999",
+            "objectName": "t1IWl8",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23806,
+            "name": "img_general_meishi_base_all-live-03-full",
+            "size": 2257424,
+            "crc": 2942129761,
+            "state": "ADD",
+            "md5": "9ff4952e6d29dff683b629eebcd035f8",
+            "objectName": "NzA6LN",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23807,
+            "name": "img_notice_notice-list_campaign_iwsf2026-present-meishi-banner-03-large",
+            "size": 734428,
+            "crc": 2047653824,
+            "state": "ADD",
+            "md5": "0a4994a9b8a4ba6df722f1f0e6998c6b",
+            "objectName": "wiFk7i",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23808,
+            "name": "img_notice_gasha_gasha-00950-pickup-002-banner-01-large",
+            "size": 982204,
+            "crc": 2950790513,
+            "state": "ADD",
+            "md5": "8011d26e411b57f0536460d43f34b411",
+            "objectName": "ntFUZy",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23809,
+            "name": "img_general_meishi_base_all-live-04-thumb",
+            "size": 46052,
+            "crc": 513973892,
+            "state": "ADD",
+            "md5": "fcf135254d29f1d1c4c572722cd9e2b1",
+            "objectName": "b3IoVc",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23810,
+            "name": "img_general_gasha_bg_gasha_gasha-00950-pickup-002",
+            "size": 1215900,
+            "crc": 3316846020,
+            "state": "ADD",
+            "md5": "69fdcea42b601ffeaab5ed4e4efc235e",
+            "objectName": "TUXt5Z",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23811,
+            "name": "img_general_meishi_base_all-live-04-full",
+            "size": 2191538,
+            "crc": 2230389293,
+            "state": "ADD",
+            "md5": "76f03814f08106c60efb7ba30c58e787",
+            "objectName": "Lk0yyW",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23812,
+            "name": "img_notice_notice-list_campaign_iwsf2026-present-meishi-banner-02-large",
+            "size": 767445,
+            "crc": 2676614029,
+            "state": "ADD",
+            "md5": "83bda325388e8525915b36188377d77e",
+            "objectName": "kU8Ey7",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23813,
+            "name": "img_general_home_gasha_gasha-00950-pickup-002",
+            "size": 40239,
+            "crc": 1338639521,
+            "state": "ADD",
+            "md5": "bedde2c1eeb8b49f02d9a58dffba25b3",
+            "objectName": "gxU4p8",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23814,
+            "name": "img_general_meishi_base_all-live-05-full",
+            "size": 2232016,
+            "crc": 2176301771,
+            "state": "ADD",
+            "md5": "ec449d484789a8b4abfe59637aaa9b8a",
+            "objectName": "slJ2mH",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23815,
+            "name": "img_general_meishi_base_all-live-05-thumb",
+            "size": 46125,
+            "crc": 2040936014,
+            "state": "ADD",
+            "md5": "e565d882d42ce357aad68dd61324cecc",
+            "objectName": "0GDpRL",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23816,
+            "name": "img_gasha_banner_gasha-00950-pickup-002-logo",
+            "size": 32330,
+            "crc": 1870523270,
+            "state": "ADD",
+            "md5": "06cf7c982b901b4cba3ac1756154c8ad",
+            "objectName": "EAfqhT",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23817,
+            "name": "img_notice_gasha_gasha-00950-pickup-002",
+            "size": 3058768,
+            "crc": 9149802,
+            "state": "ADD",
+            "md5": "d06909a832efaff43c4ae3501b362d2f",
+            "objectName": "XilCWL",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23818,
+            "name": "img_notice_notice-list_campaign_iwsf2026-present-meishi-banner-01-large",
+            "size": 819352,
+            "crc": 3639853445,
+            "state": "ADD",
+            "md5": "3be2d3795e61ed098a758d7d8ed76dfa",
+            "objectName": "s7sXxn",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 23819,
+            "name": "img_gasha_banner_gasha-00950-pickup-002-select-m",
+            "size": 158657,
+            "crc": 3020996761,
+            "state": "ADD",
+            "md5": "a79575129b7708988cfd6a056ef0a938",
+            "objectName": "idsNRS",
+            "uploadVersionId": 705100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
