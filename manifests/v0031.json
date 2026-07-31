@@ -1,0 +1,19 @@
+{
+    "revision": [
+        32,
+        31
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 21255,
+            "name": "mov_general_media_birthday-live-2026-kcna.usm",
+            "size": 1041426624,
+            "state": "ADD",
+            "md5": "3339cbbdc3cbbac1ea63f93061f4646c",
+            "objectName": "c8bCXq",
+            "uploadVersionId": 705100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

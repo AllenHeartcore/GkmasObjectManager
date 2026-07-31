@@ -1,6 +1,6 @@
 {
     "revision": [
-        30,
+        32,
         21
     ],
     "assetBundleList": [
@@ -5177,6 +5177,16 @@
             "md5": "f3b14bc6f3d6b9139be00bb71c64a5eb",
             "objectName": "BMgOQu",
             "uploadVersionId": 705100
+        },
+        {
+            "id": 23944,
+            "name": "img_general_media_birthday-live-2026-kcna",
+            "size": 2466034,
+            "crc": 851451358,
+            "state": "ADD",
+            "md5": "ddc4ff4498cb352c56546716b6e1741b",
+            "objectName": "0jN90W",
+            "uploadVersionId": 705100
         }
     ],
     "resourceList": [
@@ -9426,6 +9436,15 @@
             "state": "ADD",
             "md5": "546b3ad0e4f35104124111b37ef91adc",
             "objectName": "2PaaPP",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21255,
+            "name": "mov_general_media_birthday-live-2026-kcna.usm",
+            "size": 1041426624,
+            "state": "ADD",
+            "md5": "3339cbbdc3cbbac1ea63f93061f4646c",
+            "objectName": "c8bCXq",
             "uploadVersionId": 705100
         }
     ],
