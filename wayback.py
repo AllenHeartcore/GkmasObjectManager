@@ -138,16 +138,17 @@ class WaybackMachine:
     def __contains__(self, key: str) -> bool:
         return key in self.assetbundles or key in self.resources
 
-    def search(self, criterion: str, ascending: bool = True) -> list[WaybackEntry]:
+    def search(self, *criteria: str, ascending: bool = True) -> list[WaybackEntry]:
         matches = filter(
-            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            lambda s: re.match("|".join(criteria), s.name, flags=re.IGNORECASE)
+            is not None,
             list(self),
         )
         return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
     @nocache
     def download_old_revisions(self, *criteria: str, **kwargs):
-        entries = self.search("|".join(criteria))
+        entries = self.search(*criteria)
         asyncio.run(self._dispatch(entries, **kwargs))
 
     async def _dispatch(self, entries: list[WaybackEntry], **kwargs):

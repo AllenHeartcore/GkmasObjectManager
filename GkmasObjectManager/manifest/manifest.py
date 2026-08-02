@@ -42,8 +42,8 @@ class GkmasManifest:
     Methods:
         export(path: str | Path) -> None:
             Exports the manifest as ProtoDB, JSON, and/or CSV to the specified path.
-        search(criterion: str) -> list:
-            Searches the manifest for objects with names *fully* matching the specified criterion.
+        search(*criteria: str) -> list:
+            Searches the manifest for objects with names *fully* matching the specified criteria.
         download(
             *criteria: str,
             path: str | Path = DEFAULT_DOWNLOAD_PATH,
@@ -280,21 +280,22 @@ class GkmasManifest:
 
     def search(
         self,
-        criterion: str,
+        *criteria: str,
         by_name: bool = True,
         ascending: bool = True,
     ) -> list[ObjectClass]:
         """
-        Searches the manifest for objects matching the specified criterion.
+        Searches the manifest for objects matching the specified criteria.
         Returns a list of objects.
 
         Args:
-            criterion (str): Regex pattern of object names.
+            *criteria (str): Regex patterns of object names.
         """
 
         # This will be called by frontend; we instantiate here to make ID's visible.
         matches = filter(
-            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            lambda s: re.match("|".join(criteria), s.name, flags=re.IGNORECASE)
+            is not None,
             list(self),
         )
         return sorted(
@@ -326,7 +327,7 @@ class GkmasManifest:
             )
             return
 
-        objects = self.search("|".join(criteria))
+        objects = self.search(*criteria)
 
         if not objects:
             logger.warning("No objects matched the criteria, aborted")
