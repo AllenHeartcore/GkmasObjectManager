@@ -13,7 +13,7 @@ from ..rich import Logger
 from ..utils import _json_dump
 from .listing import GkmasObjectList
 from .octodb_pb2 import dict2pdbytes
-from .revision import GkmasManifestRevision
+from .versioning import GkmasManifestVersion
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -27,7 +27,7 @@ class GkmasManifest:
     A GKMAS manifest, containing info about assetbundles and resources.
 
     Attributes:
-        revision (GkmasManifestRevision): Manifest revision this-diff-base (see revision.py).
+        version (GkmasManifestVersion): Manifest version this-diff-base (see versioning.py).
         assetbundles (GkmasObjectList): List of assetbundle *info dictionaries*.
         resources (GkmasObjectList): List of resource *info dictionaries*.
         urlformat (str): URL format for downloading assetbundles/resources.
@@ -51,7 +51,7 @@ class GkmasManifest:
         download_all(**kwargs) -> None
     """
 
-    revision: GkmasManifestRevision
+    version: GkmasManifestVersion
     assetbundles: GkmasObjectList
     resources: GkmasObjectList
     urlformat: str
@@ -80,7 +80,7 @@ class GkmasManifest:
             revision = (revision[0], base_revision)  # proceed anyway
 
         try:  # instantiate from JSON
-            self.revision = GkmasManifestRevision(*revision)
+            self.revision = GkmasManifestVersion(*revision)
             self.assetbundles = GkmasObjectList(
                 jdict.get("assetBundleList", []),  # might be empty in recent diffs
                 GkmasAssetBundle,

@@ -1,12 +1,57 @@
 """
-revision.py
+versioning.py
 Version control for GkmasManifest.
 """
 
+# Terminology: Version = (Era, Revision) pair
 
-class GkmasManifestRevision:
+from ..const import GKMAS_VERSION
+
+
+class EraRevPair:
     """
-    A GKMAS manifest revision, useful for version control at creating/applying diffs.
+    A pair of Era-Revision values, used in version control.
+
+    Attributes:
+        era (int): The Era value, or `GKMAS_VERSION` when making API calls.
+            Documents API changes (previously 205000, now 705100).
+            The protobuf field `uploadVersionId` also takes this value.
+            Thought about taking the word "generation" from the protobuf field,
+                but in IDOLY PRIDE this field becomes a 16-digit timestamp.
+        rev (int): The Revision value, as represented in the ProtoDB.
+    """
+
+    era: int
+    rev: int
+
+    def __init__(self, rev: int, era: int = GKMAS_VERSION):
+        assert rev > 0, "'rev' must be positive."
+        assert era > 0, "'era' must be positive."
+        self.era = era
+        self.rev = rev
+
+    def __repr__(self) -> str:
+        return f"<EraRevPair {self}>"
+
+    def __str__(self) -> str:
+        return f"v{self.era}:{self.rev}"
+
+    def __eq__(self, other: "EraRevPair") -> bool:
+        return self.era == other.era and self.rev == other.rev
+
+    def __ne__(self, other: "EraRevPair") -> bool:
+        return not self.__eq__(other)
+
+    def __lt__(self, other: "EraRevPair") -> bool:
+        return self.era < other.era or (self.era == other.era and self.rev < other.rev)
+
+    def __gt__(self, other: "EraRevPair") -> bool:
+        return self.era > other.era or (self.era == other.era and self.rev > other.rev)
+
+
+class GkmasManifestVersion:
+    """
+    A GKMAS manifest version, used in version control at creating/applying diffs.
 
     Attributes:
         this (int): The revision number of this manifest,
@@ -29,7 +74,7 @@ class GkmasManifestRevision:
         self.base = base
 
     def __repr__(self) -> str:
-        return f"<GkmasManifestRevision {self}>"
+        return f"<GkmasManifestVersion {self}>"
 
     def __str__(self) -> str:
         if self.base == 0:
@@ -48,16 +93,16 @@ class GkmasManifestRevision:
         else:
             return (self.this, self.base)
 
-    def __eq__(self, other: "GkmasManifestRevision") -> bool:
+    def __eq__(self, other: "GkmasManifestVersion") -> bool:
         return self.this == other.this and self.base == other.base
 
-    def __ne__(self, other: "GkmasManifestRevision") -> bool:
+    def __ne__(self, other: "GkmasManifestVersion") -> bool:
         return not self.__eq__(other)
 
     # No comparison magic methods; things are starting to get ambiguous at this point.
     # We are primarily concerned with the *difference* between revisions.
 
-    def __sub__(self, other: "GkmasManifestRevision") -> "GkmasManifestRevision":
+    def __sub__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """
         Returns the difference between two revisions.
         Cases where base = 0 is regarded as the "empty base" and processed at instantiation.
@@ -80,14 +125,14 @@ class GkmasManifestRevision:
             assert (
                 self.base < other.base
             ), "'Base' revision of subtrahend (other) must be newer."
-            return GkmasManifestRevision(other.base, self.base)
+            return GkmasManifestVersion(other.base, self.base)
         else:
             assert (
                 self.this > other.this
             ), "'This' revision of minuend (self) must be newer."
-            return GkmasManifestRevision(self.this, other.this)
+            return GkmasManifestVersion(self.this, other.this)
 
-    def __add__(self, other: "GkmasManifestRevision") -> "GkmasManifestRevision":
+    def __add__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """
         Returns the sum of two revisions.
         Requires self.this == other.base to be valid.
@@ -98,4 +143,4 @@ class GkmasManifestRevision:
         ), "Cannot add revisions with identical 'this' revision."
         a, b = (self, other) if self.this < other.this else (other, self)
         assert a.this == b.base, "Revisions not comparable."
-        return GkmasManifestRevision(b.this, a.base)
+        return GkmasManifestVersion(b.this, a.base)
