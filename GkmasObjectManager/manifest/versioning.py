@@ -25,9 +25,9 @@ class EraRevPair:
     rev: int
 
     def __init__(self, rev: int, era: int = GKMAS_VERSION):
-        assert rev > 0, "'rev' must be positive."
-        assert era > 0, "'era' must be positive."
-        self.era = era
+        assert era > 0, "Era must be positive."
+        assert rev >= 0, "Revision must be non-negative."
+        self.era = era if rev > 0 else 0  # empty case (0, 0) should be the smallest
         self.rev = rev
 
     def __repr__(self) -> str:
@@ -51,36 +51,48 @@ class EraRevPair:
 
 class GkmasManifestVersion:
     """
-    A GKMAS manifest version, used in version control at creating/applying diffs.
+    A GKMAS manifest version, useful for creating/applying diffs.
 
     Attributes:
-        this (int): The version number of this manifest,
+        this (EraRevPair): The version of this manifest,
             as represented in the ProtoDB.
-        base (int): The version number of the base manifest,
+        base (EraRevPair): The version of the base manifest,
             *inferred* at API call in fetch() and unused in load().
             base = 0 indicates a complete manifest of 'this' version
             (which is not necessarily the case if manifest is loaded from a file),
             while base > 0 indicates a diff to be applied to the base manifest.
     """
 
-    this: int
-    base: int
+    this: EraRevPair
+    base: EraRevPair
 
-    def __init__(self, this: int, base: int = 0):
-        assert this > 0, "'this' version number must be positive."
-        assert base >= 0, "'base' version number must be non-negative."
-        assert this > base, "'this' version must be newer than 'base'."
-        self.this = this
-        self.base = base
+    def __init__(self, this: int | EraRevPair, base: int | EraRevPair = 0):
+
+        # __sub__ or __add__ calls this constructor with EraRevPair objects
+        if isinstance(this, EraRevPair):
+            assert isinstance(
+                base, EraRevPair
+            ), "'this' and 'base' must be of the same type."
+            this, base = this.rev, base.rev
+            return
+
+        assert isinstance(base, int), "'this' and 'base' must be of the same type."
+        assert this > 0, "'this' revision number must be positive."
+        assert base >= 0, "'base' revision number must be non-negative."
+        assert this > base, "'this' revision must be newer than 'base'."
+        self.this = EraRevPair(this)
+        self.base = EraRevPair(base)  # base = 0 is inherently handled
+        # 'era' is never overridden except when fetching old manifests,
+        # which case should be handled in manifest/__init__.py
 
     def __repr__(self) -> str:
         return f"<GkmasManifestVersion {self}>"
 
     def __str__(self) -> str:
-        if self.base == 0:
-            return f"v{self.this}"
+        if self.base.rev == 0:
+            return f"{self.this}"
         else:
-            return f"v{self.this}-diff-v{self.base}"
+            return f"{self.this}-diff-{self.base}"
 
     @property
     def canon_repr(self) -> int | tuple[int, int]:
@@ -88,10 +100,10 @@ class GkmasManifestVersion:
         [INTERNAL] Returns the "canonical" representation of the version,
         either as an integer or a tuple. Used in manifest export.
         """
-        if self.base == 0:
-            return self.this
+        if self.base.rev == 0:
+            return self.this.rev
         else:
-            return (self.this, self.base)
+            return (self.this.rev, self.base.rev)
 
     def __eq__(self, other: "GkmasManifestVersion") -> bool:
         return self.this == other.this and self.base == other.base
@@ -101,17 +113,16 @@ class GkmasManifestVersion:
 
     # No comparison magic methods; things are starting to get ambiguous at this point.
     # We are primarily concerned with the *difference* between versions.
+    # All operations below are handled by the overridden methods in EraRevPair.
 
     def __sub__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """
         Returns the difference between two versions.
         Cases where base = 0 is regarded as the "empty base" and processed at instantiation.
 
-                               | self.base < other.base | self.base = other.base | self.base > other.base
-        -----------------------+------------------------|------------------------|------------------------
-        self.this < other.this |        INVALID         |        INVALID         |        INVALID
-        self.this = other.this | other.base - self.base |        INVALID         |        INVALID
-        self.this > other.this |        INVALID         | self.this - other.this |        INVALID
+        Valid cases:
+            - (self.this = other.this) and (self.base < other.base) => returns (other.base - self.base)
+            - (self.this > other.this) and (self.base = other.base) => returns (self.this - other.this)
         """
 
         assert (
