@@ -54,11 +54,11 @@ class GkmasManifestVersion:
     A GKMAS manifest version, used in version control at creating/applying diffs.
 
     Attributes:
-        this (int): The revision number of this manifest,
+        this (int): The version number of this manifest,
             as represented in the ProtoDB.
-        base (int): The revision number of the base manifest,
+        base (int): The version number of the base manifest,
             *inferred* at API call in fetch() and unused in load().
-            base = 0 indicates a complete manifest of 'this' revision
+            base = 0 indicates a complete manifest of 'this' version
             (which is not necessarily the case if manifest is loaded from a file),
             while base > 0 indicates a diff to be applied to the base manifest.
     """
@@ -67,9 +67,9 @@ class GkmasManifestVersion:
     base: int
 
     def __init__(self, this: int, base: int = 0):
-        assert this > 0, "'this' revision number must be positive."
-        assert base >= 0, "'base' revision number must be non-negative."
-        assert this > base, "'this' revision must be newer than 'base'."
+        assert this > 0, "'this' version number must be positive."
+        assert base >= 0, "'base' version number must be non-negative."
+        assert this > base, "'this' version must be newer than 'base'."
         self.this = this
         self.base = base
 
@@ -85,7 +85,7 @@ class GkmasManifestVersion:
     @property
     def canon_repr(self) -> int | tuple[int, int]:
         """
-        [INTERNAL] Returns the "canonical" representation of the revision,
+        [INTERNAL] Returns the "canonical" representation of the version,
         either as an integer or a tuple. Used in manifest export.
         """
         if self.base == 0:
@@ -100,11 +100,11 @@ class GkmasManifestVersion:
         return not self.__eq__(other)
 
     # No comparison magic methods; things are starting to get ambiguous at this point.
-    # We are primarily concerned with the *difference* between revisions.
+    # We are primarily concerned with the *difference* between versions.
 
     def __sub__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """
-        Returns the difference between two revisions.
+        Returns the difference between two versions.
         Cases where base = 0 is regarded as the "empty base" and processed at instantiation.
 
                                | self.base < other.base | self.base = other.base | self.base > other.base
@@ -116,31 +116,31 @@ class GkmasManifestVersion:
 
         assert (
             self.this == other.this or self.base == other.base
-        ), "Comparable revisions must have either the same 'this' or 'base'."
+        ), "Comparable versions must have either the same 'this' or 'base'."
         assert (
             self.this != other.this or self.base != other.base
-        ), "Revisions are identical."  # or should we return None?
+        ), "Versions are identical."  # or should we return None?
 
         if self.this == other.this:
             assert (
                 self.base < other.base
-            ), "'Base' revision of subtrahend (other) must be newer."
+            ), "'Base' version of subtrahend (other) must be newer."
             return GkmasManifestVersion(other.base, self.base)
         else:
             assert (
                 self.this > other.this
-            ), "'This' revision of minuend (self) must be newer."
+            ), "'This' version of minuend (self) must be newer."
             return GkmasManifestVersion(self.this, other.this)
 
     def __add__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """
-        Returns the sum of two revisions.
+        Returns the sum of two versions.
         Requires self.this == other.base to be valid.
         """
 
         assert (
             self.this != other.this
-        ), "Cannot add revisions with identical 'this' revision."
+        ), "Cannot add versions with identical 'this' version."
         a, b = (self, other) if self.this < other.this else (other, self)
-        assert a.this == b.base, "Revisions not comparable."
+        assert a.this == b.base, "Versions not comparable."
         return GkmasManifestVersion(b.this, a.base)
