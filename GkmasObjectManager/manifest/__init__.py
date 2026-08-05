@@ -28,18 +28,18 @@ from .octodb_pb2 import pdbytes2dict
 
 
 def fetch(
-    this_revision: int = -1,
+    target_version: int = -1,
     base_revision: int = 0,
     _use_local_commits_log: bool = False,
 ) -> GkmasManifest:
     """
-    Requests an online manifest by the specified revision.
+    Requests an online manifest by the specified version.
     Algorithm courtesy of github.com/DreamGallery/HatsuboshiToolkit
 
     Args:
-        this_revision (int): The revision number of the manifest to fetch.
+        target_version (int): The version of the manifest to fetch.
             Defaults to -1 (latest).
-            Older revisions will be fetched from the commit history
+            Older versions will be fetched from the commit history
             of **this repository**, instead of the game server.
         base_revision (int): The "base" revision number of the manifest.
             Defaults to 0 (standalone latest).
@@ -52,24 +52,24 @@ def fetch(
     #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
-    if this_revision != -1:
+    if target_version != -1:
 
         if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
             commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
         else:
             commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
 
-        if str(this_revision) not in commits:
-            raise ValueError(f"Manifest revision {this_revision} not found in history.")
+        if str(target_version) not in commits:
+            raise ValueError(f"Manifest version {target_version} not found in history.")
         url = WAYBACK_MANIFEST_URL_TEMPLATE.format(
-            hash=commits[str(this_revision)],
+            hash=commits[str(target_version)],
             revision=base_revision,
         )
 
         manifest = GkmasManifest(_rget(url).json(), base_revision)
         assert (
-            manifest.revision.canon_repr == int(this_revision) % 1000
-        ), "Manifest revision mismatch with commit history record."
+            manifest.version.canon_repr == int(target_version) % 1000
+        ), "Manifest version mismatch with commit history record."
         return manifest
 
     url = urljoin(GKMAS_API_URL, str(base_revision))

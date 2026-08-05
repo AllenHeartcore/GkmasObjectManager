@@ -38,7 +38,7 @@ sort_dict = lambda d: dict(sorted(d.items(), key=lambda x: x[0]))
 def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
 
     manifest = fetch(rev, _use_local_commits_log=True)
-    manifest.revision.this = rev
+    manifest.version.this = rev
     prog.update(1)
     return manifest
 
@@ -67,21 +67,21 @@ def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
     for obj in manifest.assetbundles:
         log["assetBundleList"][append_unity_suffix(obj.name)].append(
-            _sanitize_canon_repr(obj.canon_repr, manifest.revision.this)
+            _sanitize_canon_repr(obj.canon_repr, manifest.version.this)
         )
 
     for obj in manifest.resources:
         log["resourceList"][obj.name].append(
-            _sanitize_canon_repr(obj.canon_repr, manifest.revision.this)
+            _sanitize_canon_repr(obj.canon_repr, manifest.version.this)
         )
 
 
 def rebuild_log(latest_manifest: GkmasManifest):
     print("Rebuilding wayback log...")
-    latest_manifest.revision.this += 7051000000
+    latest_manifest.version.this += 7051000000
 
     log = {
-        "latest_revision": latest_manifest.revision.canon_repr,
+        "latest_version": latest_manifest.version.canon_repr,
         "assetBundleList": defaultdict(list),
         "resourceList": defaultdict(list),
         "urlFormat": latest_manifest.urlformat,
@@ -90,21 +90,21 @@ def rebuild_log(latest_manifest: GkmasManifest):
     is_incremental = Path(WAYBACK_OBJECTS_LOG_LOCAL).exists()
 
     if not is_incremental:
-        old_revision = -1
+        old_version = -1
     else:
         old_log = _json_load(WAYBACK_OBJECTS_LOG_LOCAL)
-        old_revision = int(old_log["latest_revision"])
-        if old_revision >= latest_manifest.revision.this:
+        old_version = int(old_log["latest_version"])
+        if old_version >= latest_manifest.version.this:
             return  # already up-to-date
         log["assetBundleList"] = defaultdict(list, old_log["assetBundleList"])
         log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    revs = sorted([int(k) for k in commits.keys() if int(k) >= old_revision])
-    # Manifest #old_revision must still be fetched for diff
+    revs = sorted([int(k) for k in commits.keys() if int(k) >= old_version])
+    # Manifest #old_version must still be fetched for diff
 
     manifests = asyncio.run(_fetch_old_manifests(revs))
-    if manifests[-1].revision == latest_manifest.revision:
+    if manifests[-1].version == latest_manifest.version:
         manifests.pop()  # remove the last duplicate
     manifests.append(latest_manifest)
 
@@ -121,7 +121,7 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
 
 def _export_diff_manifest(path: Path, rev: int) -> None:
-    fetch(base_revision=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
+    fetch(base_version=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
 
 
 async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
@@ -132,12 +132,12 @@ async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
 
 
 def do_update(path: Path) -> bool:
-    """Check for manifest update from server and optionally update all diff revisions."""
+    """Check for manifest update from server and optionally update all diff versions."""
     print(f"Checking for manifest update...")
 
     m_remote = fetch()
-    rev_remote = m_remote.revision.canon_repr
-    rev_local = int((path / "LATEST_REVISION").read_text())
+    rev_remote = m_remote.version.canon_repr
+    rev_local = int((path / "LATEST_VERSION").read_text())
 
     if rev_remote == rev_local:
         print("No update available.")
@@ -145,8 +145,8 @@ def do_update(path: Path) -> bool:
 
     # Only write to file after sanity check;
     # this number is used to construct commit message in workflow.
-    print(f"Found new manifest revision: {rev_remote} (local: {rev_local})")
-    (path / "LATEST_REVISION").write_text(str(rev_remote))
+    print(f"Found new manifest version: {rev_remote} (local: {rev_local})")
+    (path / "LATEST_VERSION").write_text(str(rev_remote))
 
     m_remote.export(path / "v0000.json", force_overwrite=True)
     asyncio.run(_export_diff_manifests(path, list(range(1, rev_remote))))
@@ -175,7 +175,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--record-commit-hash",
         type=str,
-        help='record a new commit hash for a revision (requires "<revision>|<commit_hash>" format)',
+        help='record a new commit hash for a version (requires "<version>|<commit_hash>" format)',
     )
     args = parser.parse_args()
 
