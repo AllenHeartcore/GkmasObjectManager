@@ -35,26 +35,25 @@ from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 sort_dict = lambda d: dict(sorted(d.items(), key=lambda x: x[0]))
 
 
-def _fetch_old_manifest(rev: int, prog: tqdm) -> GkmasManifest:
+def _fetch_old_manifest(ver: str, prog: tqdm) -> GkmasManifest:
 
-    manifest = fetch(rev, _use_local_commits_log=True)
-    manifest.version.this = rev
+    manifest = fetch(ver, _use_local_commits_log=True)
     prog.update(1)
     return manifest
 
 
-async def _fetch_old_manifests(revs: list[int]) -> list[GkmasManifest]:
+async def _fetch_old_manifests(vers: list[str]) -> list[GkmasManifest]:
 
-    with tqdm(total=len(revs), desc="Fetching historical manifests") as prog:
+    with tqdm(total=len(vers), desc="Fetching historical manifests") as prog:
         return await asyncio.gather(
-            *[asyncio.to_thread(_fetch_old_manifest, rev, prog) for rev in revs]
+            *[asyncio.to_thread(_fetch_old_manifest, ver, prog) for ver in vers]
         )
 
 
-def _sanitize_canon_repr(canon_repr: dict, rev: int) -> str:
+def _sanitize_canon_repr(canon_repr: dict, ver: str) -> str:
     return "|".join(
         [
-            f"{rev:010d}",
+            ver,
             canon_repr["objectName"],
             canon_repr["md5"],
             str(canon_repr["size"]),
@@ -100,10 +99,10 @@ def rebuild_log(latest_manifest: GkmasManifest):
         log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    revs = sorted([int(k) for k in commits.keys() if int(k) >= old_version])
+    vers = sorted([int(k) for k in commits.keys() if int(k) >= old_version])
     # Manifest #old_version must still be fetched for diff
 
-    manifests = asyncio.run(_fetch_old_manifests(revs))
+    manifests = asyncio.run(_fetch_old_manifests(vers))
     if manifests[-1].version == latest_manifest.version:
         manifests.pop()  # remove the last duplicate
     manifests.append(latest_manifest)
@@ -121,7 +120,7 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
 
 def _export_diff_manifest(path: Path, rev: int) -> None:
-    fetch(base_version=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
+    fetch(base_revision=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
 
 
 async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
@@ -136,33 +135,33 @@ def do_update(path: Path) -> bool:
     print(f"Checking for manifest update...")
 
     m_remote = fetch()
-    rev_remote = m_remote.version.canon_repr
-    rev_local = int((path / "LATEST_VERSION").read_text())
+    ver_remote = m_remote.version.canon_repr
+    ver_local = int((path / "LATEST_VERSION").read_text())
 
-    if rev_remote == rev_local:
+    if ver_remote == ver_local:
         print("No update available.")
         return False
 
     # Only write to file after sanity check;
     # this number is used to construct commit message in workflow.
-    print(f"Found new manifest version: {rev_remote} (local: {rev_local})")
-    (path / "LATEST_VERSION").write_text(str(rev_remote))
+    print(f"Found new manifest version: {ver_remote} (local: {ver_local})")
+    (path / "LATEST_VERSION").write_text(str(ver_remote))
 
     m_remote.export(path / "v0000.json", force_overwrite=True)
-    asyncio.run(_export_diff_manifests(path, list(range(1, rev_remote))))
+    asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote))))
 
     # rebuild_log(m_remote)
 
     return True
 
 
-def record_commit_hash(rev_hash: str) -> bool:
+def record_commit_hash(ver_hash: str) -> bool:
     """Record a new commit hash from the last manifest update into wayback_commits.json."""
 
-    rev, commit_hash = rev_hash.split("|")
+    ver, commit_hash = ver_hash.split("|")
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    commits[rev] = commit_hash
+    commits[ver] = commit_hash
     commits = sort_dict({int(k): v for k, v in commits.items()})
     _json_dump(commits, WAYBACK_COMMITS_LOG_LOCAL)
 
