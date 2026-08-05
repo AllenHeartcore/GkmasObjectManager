@@ -1,4 +1,4 @@
-root: "gkmas_namecard_kit_{revision}"
+root: "gkmas_namecard_kit_{version}"
 
 global-kwargs:
     categorize: false

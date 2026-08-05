@@ -33,13 +33,13 @@ class WaybackEntry:
         self.name = name
         self.history = []
         for entry in history:
-            rev, objectName, md5, size = entry.split("|")
+            ver, objectName, md5, size = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
             self.history.append(
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": f"{stem}__v{rev}{ext}",
+                        "name": f"{stem}__v{ver.replace(':', '_')}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),

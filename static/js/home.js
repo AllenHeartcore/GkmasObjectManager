@@ -3,7 +3,7 @@ const WALLPAPER_REGEX_PATTERN =
 const NUM_FEATURED_SAMPLES = 24;
 
 function populateHomepageContainers(data) {
-    $("#homeMetadataRevision").text(data.revision);
+    $("#homeMetadataVersion").text(data.revision);
     $("#homeMetadataAbCount").text(data.assetBundleList.length);
     $("#homeMetadataResCount").text(data.resourceList.length);
 

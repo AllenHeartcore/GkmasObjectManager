@@ -199,7 +199,7 @@ if __name__ == "__main__":
     if args.output == "":
         args.output = "".join(
             [
-                f"sovits_dataset_v{m.revision.canon_repr}",
+                f"sovits_dataset_v{m.version.canon_repr}",
                 f"_{args.character}",
                 "_captioned" if args.caption else "",
                 f".{args.format}" if args.merge else ".zip",

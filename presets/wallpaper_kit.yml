@@ -1,4 +1,4 @@
-root: "gkmas_wallpaper_kit_{revision}"
+root: "gkmas_wallpaper_kit_{version}"
 
 global-kwargs:
     categorize: false

@@ -350,7 +350,7 @@ class GkmasManifest:
             preset = yaml.safe_load(f)
 
         root = preset.get("root", DEFAULT_DOWNLOAD_PATH)
-        root = root.replace("{revision}", f"v{self.revision.canon_repr}")
+        root = root.replace("{version}", f"v{self.version.canon_repr}")
 
         global_kwargs = preset.get("global-kwargs", {})
         proto_instrs = preset.get("instructions", [])
