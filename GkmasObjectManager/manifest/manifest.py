@@ -20,7 +20,7 @@ from ..rich import Logger
 from ..utils import _json_dump, append_unity_suffix, nocache
 from .listing import GkmasObjectList
 from .octodb_pb2 import dict2pdbytes
-from .revision import GkmasManifestRevision
+from .revision import GkmasManifestVersion
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 
@@ -34,7 +34,7 @@ class GkmasManifest:
     A GKMAS manifest, containing info about assetbundles and resources.
 
     Attributes:
-        revision (GkmasManifestRevision): Manifest revision this-diff-base (see revision.py).
+        version (GkmasManifestVersion): Manifest version this-diff-base (see revision.py).
         assetbundles (GkmasObjectList): List of assetbundle *info dictionaries*.
         resources (GkmasObjectList): List of resource *info dictionaries*.
         urlformat (str): URL format for downloading assetbundles/resources.
@@ -58,7 +58,7 @@ class GkmasManifest:
         download_all(**kwargs) -> None
     """
 
-    revision: GkmasManifestRevision
+    version: GkmasManifestVersion
     assetbundles: GkmasObjectList
     resources: GkmasObjectList
     urlformat: str
@@ -77,37 +77,40 @@ class GkmasManifest:
         """
 
         revision = jdict["revision"]  # not jdict.get() to enforce presence
+        if isinstance(revision, GkmasManifestVersion):
+            # instantiate from diff, skip type conversion
+            self.version = revision
+            self.assetbundles = jdict["assetBundleList"]  # won't be missing since ...
+            self.resources = jdict["resourceList"]  # this is constructed internally
+            self.urlformat = jdict["urlFormat"]
+            return
+
         if isinstance(revision, int):
             revision = (revision, 0)
-        if base_revision != 0:  # leave negative base handling to the Revision class
+        if base_revision != 0:  # leave negative base handling to the Version class
             if base_revision != revision[1] != 0:  # equivalent to a 2-AND
                 logger.warning(
                     f"Overriding detected base revision v{revision[1]} with specified v{base_revision}."
                 )
             revision = (revision[0], base_revision)  # proceed anyway
 
-        try:  # instantiate from JSON
-            self.revision = GkmasManifestRevision(*revision)
-            self.assetbundles = GkmasObjectList(
-                jdict.get("assetBundleList", []),  # might be empty in recent diffs
-                GkmasAssetBundle,
-                jdict["urlFormat"],
-            )
-            self.resources = GkmasObjectList(
-                jdict.get("resourceList", []),  # same as above ^
-                GkmasResource,
-                jdict["urlFormat"],
-            )
-        except TypeError:  # instantiate from diff, skip type conversion
-            self.revision = jdict["revision"]
-            self.assetbundles = jdict["assetBundleList"]  # won't be missing since ...
-            self.resources = jdict["resourceList"]  # this is constructed internally
-
+        # instantiate from JSON
+        self.version = GkmasManifestVersion(*revision)
+        self.assetbundles = GkmasObjectList(
+            jdict.get("assetBundleList", []),  # might be empty in recent diffs
+            GkmasAssetBundle,
+            jdict["urlFormat"],
+        )
+        self.resources = GkmasObjectList(
+            jdict.get("resourceList", []),  # same as above ^
+            GkmasResource,
+            jdict["urlFormat"],
+        )
         self.urlformat = jdict["urlFormat"]
         # 'jdict' is then discarded and losslessly reconstructed at export
 
     def __repr__(self) -> str:
-        return f"<GkmasManifest revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
+        return f"<GkmasManifest version {self.version} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
     def __getitem__(self, key: str) -> ObjectClass:
         try:
@@ -132,7 +135,7 @@ class GkmasManifest:
     def __sub__(self, other: "GkmasManifest") -> "GkmasManifest":
         return GkmasManifest(
             {  # this is not a standard JSON dict, more like named arguments
-                "revision": self.revision - other.revision,  # handles sanity check
+                "revision": self.version - other.version,  # handles sanity check
                 "assetBundleList": self.assetbundles - other.assetbundles,
                 "resourceList": self.resources - other.resources,
                 "urlFormat": self.urlformat,
@@ -141,13 +144,13 @@ class GkmasManifest:
         )
 
     def __add__(self, other: "GkmasManifest") -> "GkmasManifest":
-        new_revision = self.revision + other.revision
+        new_version = self.version + other.version
         a, b = (
-            (self, other) if new_revision.this == other.revision.this else (other, self)
+            (self, other) if new_version.this == other.version.this else (other, self)
         )  # 'b' must be newer; this matters in list addition
         return GkmasManifest(
             {
-                "revision": new_revision,
+                "revision": new_version,
                 "assetBundleList": a.assetbundles + b.assetbundles,
                 "resourceList": a.resources + b.resources,
                 "urlFormat": b.urlformat,
@@ -160,7 +163,7 @@ class GkmasManifest:
         [INTERNAL] Returns the JSON-compatible "canonical" representation of the manifest.
         """
         return {
-            "revision": self.revision.canon_repr,
+            "revision": self.version.canon_repr,
             "assetBundleList": self.assetbundles.canon_repr,
             "resourceList": self.resources.canon_repr,
             "urlFormat": self.urlformat,

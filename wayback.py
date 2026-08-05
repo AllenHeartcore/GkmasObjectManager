@@ -11,6 +11,7 @@ from typing import Optional
 from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
+from GkmasObjectManager.manifest.revision import GkmasManifestVersion, str2version
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.utils import _json_load, append_unity_suffix, nocache
 
@@ -32,21 +33,16 @@ class WaybackEntry:
         self.name = name
         self.history = []
         for entry in history:
-            rev, objectName, md5, size, dependencies = entry.split("|")
+            rev, objectName, md5, size = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
             self.history.append(
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": f"{stem}__v{int(rev):04d}{ext}",
+                        "name": f"{stem}__v{rev}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
-                        "dependencies": (
-                            list(map(int, dependencies.split(",")))
-                            if dependencies
-                            else []
-                        ),
                     },
                     url_template,
                     _deobf_key=self.name,
@@ -54,7 +50,7 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        return f"<WaybackEntry '{self.name}' with {len(self.history)} revisions>"
+        return f"<WaybackEntry '{self.name}' with {len(self.history)} versions>"
 
 
 class WaybackEntryList:
@@ -101,13 +97,13 @@ class WaybackEntryList:
 
 class WaybackMachine:
 
-    revision: int
+    version: GkmasManifestVersion
     assetbundles: WaybackEntryList
     resources: WaybackEntryList
 
     def __init__(self):
         log = _json_load(WAYBACK_OBJECTS_LOG_REMOTE)
-        self.revision = log["latest_revision"]
+        self.version = str2version(log["latest_version"])
         self.assetbundles = WaybackEntryList(
             log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
         )
@@ -116,7 +112,7 @@ class WaybackMachine:
         )
 
     def __repr__(self) -> str:
-        return f"<WaybackMachine revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
+        return f"<WaybackMachine version {self.version} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
     def __getitem__(self, key: str) -> WaybackEntry:
         if key in self.assetbundles:
@@ -147,7 +143,7 @@ class WaybackMachine:
         return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
     @nocache
-    def download_old_revisions(self, *criteria: str, **kwargs):
+    def download_old_versions(self, *criteria: str, **kwargs):
         entries = self.search(*criteria)
         asyncio.run(self._dispatch(entries, **kwargs))
 
