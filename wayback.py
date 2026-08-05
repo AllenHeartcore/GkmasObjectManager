@@ -11,6 +11,7 @@ from typing import Optional
 from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
+from GkmasObjectManager.manifest.versioning import GkmasManifestVersion
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.utils import _json_load, append_unity_suffix
 
@@ -54,7 +55,7 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        return f"<WaybackEntry '{self.name}' with {len(self.history)} revisions>"
+        return f"<WaybackEntry '{self.name}' with {len(self.history)} versions>"
 
 
 class WaybackEntryList:
@@ -101,13 +102,13 @@ class WaybackEntryList:
 
 class WaybackMachine:
 
-    revision: int
+    version: GkmasManifestVersion
     assetbundles: WaybackEntryList
     resources: WaybackEntryList
 
     def __init__(self):
         log = _json_load(WAYBACK_OBJECTS_LOG_REMOTE)
-        self.revision = log["latest_revision"]
+        self.version = GkmasManifestVersion(log["latest_version"])
         self.assetbundles = WaybackEntryList(
             log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
         )
@@ -116,7 +117,7 @@ class WaybackMachine:
         )
 
     def __repr__(self) -> str:
-        return f"<WaybackMachine revision {self.revision} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
+        return f"<WaybackMachine version {self.version} with {len(self.assetbundles)} assetbundles and {len(self.resources)} resources>"
 
     def __getitem__(self, key: str) -> WaybackEntry:
         if key in self.assetbundles:
@@ -145,7 +146,7 @@ class WaybackMachine:
         )
         return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
-    def download_old_revisions(self, *criteria: str, **kwargs):
+    def download_old_versions(self, *criteria: str, **kwargs):
         entries = self.search("|".join(criteria))
         asyncio.run(self._dispatch(entries, **kwargs))
 

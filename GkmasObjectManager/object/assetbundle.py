@@ -37,7 +37,7 @@ class GkmasAssetBundle(GkmasResource):
                 {o} will be replaced with self.objectName.
         """
         #   _deobf_key (str): Key for header deobfuscation.
-        #       Exclusively used in wayback interface where self.name is appended with version number.
+        #       Exclusively used in wayback interface where self.name is appended with version.
         #       NOT FOR GENERAL USE.
 
         super().__init__(info, url_template)
