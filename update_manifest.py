@@ -17,6 +17,7 @@ from GkmasObjectManager.const import (
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_OBJECTS_LOG_LOCAL,
 )
+from GkmasObjectManager.manifest.versioning import str2version
 from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 
 # FUNCTION HIERARCHY:
@@ -77,10 +78,9 @@ def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
 def rebuild_log(latest_manifest: GkmasManifest):
     print("Rebuilding wayback log...")
-    latest_manifest.version.this += 7051000000
 
     log = {
-        "latest_version": latest_manifest.version.canon_repr,
+        "latest_version": str(latest_manifest.version),
         "assetBundleList": defaultdict(list),
         "resourceList": defaultdict(list),
         "urlFormat": latest_manifest.urlformat,
@@ -132,11 +132,11 @@ async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
 
 def do_update(path: Path) -> bool:
     """Check for manifest update from server and optionally update all diff versions."""
-    print(f"Checking for manifest update...")
+    print("Checking for manifest update...")
 
     m_remote = fetch()
-    ver_remote = m_remote.version.canon_repr
-    ver_local = int((path / "LATEST_VERSION").read_text())
+    ver_remote = m_remote.version
+    ver_local = str2version((path / "LATEST_VERSION").read_text())
 
     if ver_remote == ver_local:
         print("No update available.")
@@ -148,9 +148,9 @@ def do_update(path: Path) -> bool:
     (path / "LATEST_VERSION").write_text(str(ver_remote))
 
     m_remote.export(path / "v0000.json", force_overwrite=True)
-    asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote))))
+    asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote.this.rev))))
 
-    # rebuild_log(m_remote)
+    rebuild_log(m_remote)
 
     return True
 

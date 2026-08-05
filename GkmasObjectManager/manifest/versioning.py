@@ -73,7 +73,7 @@ class GkmasManifestVersion:
             assert isinstance(
                 base, EraRevPair
             ), "'this' and 'base' must be of the same type."
-            this, base = this.rev, base.rev
+            self.this, self.base = this, base
             return
 
         assert isinstance(base, int), "'this' and 'base' must be of the same type."
@@ -155,3 +155,23 @@ class GkmasManifestVersion:
         a, b = (self, other) if self.this < other.this else (other, self)
         assert a.this == b.base, "Versions not comparable."
         return GkmasManifestVersion(b.this, a.base)
+
+
+def str2erp(s: str) -> EraRevPair:
+    """
+    Converts a string representation of an Era-Revision pair to an EraRevPair object.
+    """
+    era, rev = map(int, s.split(":"))
+    return EraRevPair(rev, era)
+
+
+def str2version(s: str) -> GkmasManifestVersion:
+    """
+    Converts a string representation of a manifest version to a GkmasManifestVersion object.
+    """
+    if "-diff-" in s:
+        this, base = map(str2erp, s.split("-diff-"))
+        return GkmasManifestVersion(this, base)
+    else:
+        return GkmasManifestVersion(str2erp(s), EraRevPair(0))
+        # we end up circumventing our own same-type assertion... bruh
