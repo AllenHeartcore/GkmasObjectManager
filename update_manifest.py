@@ -58,7 +58,6 @@ def _sanitize_canon_repr(canon_repr: dict, ver: GkmasManifestVersion) -> str:
             canon_repr["objectName"],
             canon_repr["md5"],
             str(canon_repr["size"]),
-            ",".join(map(str, canon_repr.get("dependencies", []))),
         ]
     )
 
