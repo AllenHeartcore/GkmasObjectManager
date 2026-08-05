@@ -17,7 +17,7 @@ from GkmasObjectManager.const import (
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_OBJECTS_LOG_LOCAL,
 )
-from GkmasObjectManager.manifest.versioning import str2version
+from GkmasObjectManager.manifest.versioning import GkmasManifestVersion, str2version
 from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 
 # FUNCTION HIERARCHY:
@@ -51,10 +51,10 @@ async def _fetch_old_manifests(vers: list[str]) -> list[GkmasManifest]:
         )
 
 
-def _sanitize_canon_repr(canon_repr: dict, ver: str) -> str:
+def _sanitize_canon_repr(canon_repr: dict, ver: GkmasManifestVersion) -> str:
     return "|".join(
         [
-            ver,
+            str(ver),
             canon_repr["objectName"],
             canon_repr["md5"],
             str(canon_repr["size"]),
@@ -67,20 +67,21 @@ def _append_log(log: dict, manifest: GkmasManifest) -> None:
 
     for obj in manifest.assetbundles:
         log["assetBundleList"][append_unity_suffix(obj.name)].append(
-            _sanitize_canon_repr(obj.canon_repr, manifest.version.this)
+            _sanitize_canon_repr(obj.canon_repr, manifest.version)
         )
 
     for obj in manifest.resources:
         log["resourceList"][obj.name].append(
-            _sanitize_canon_repr(obj.canon_repr, manifest.version.this)
+            _sanitize_canon_repr(obj.canon_repr, manifest.version)
         )
 
 
 def rebuild_log(latest_manifest: GkmasManifest):
     print("Rebuilding wayback log...")
 
+    new_version = latest_manifest.version
     log = {
-        "latest_version": str(latest_manifest.version),
+        "latest_version": str(new_version),
         "assetBundleList": defaultdict(list),
         "resourceList": defaultdict(list),
         "urlFormat": latest_manifest.urlformat,
@@ -89,21 +90,23 @@ def rebuild_log(latest_manifest: GkmasManifest):
     is_incremental = Path(WAYBACK_OBJECTS_LOG_LOCAL).exists()
 
     if not is_incremental:
-        old_version = -1
+        old_version = GkmasManifestVersion(0)  # empty base
     else:
         old_log = _json_load(WAYBACK_OBJECTS_LOG_LOCAL)
-        old_version = int(old_log["latest_version"])
-        if old_version >= latest_manifest.version.this:
+        old_version = str2version(old_log["latest_version"])
+        if not old_version < new_version:  # pylint doesn't like implicit >=
             return  # already up-to-date
         log["assetBundleList"] = defaultdict(list, old_log["assetBundleList"])
         log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    vers = sorted([int(k) for k in commits.keys() if int(k) >= old_version])
-    # Manifest #old_version must still be fetched for diff
+    vers = map(str2version, commits.keys())
+    vers = filter(lambda v: not v < old_version, vers)
+    # Manifest #old_version (equal case) must still be fetched for diff
+    vers = list(map(str, sorted(vers)))
 
     manifests = asyncio.run(_fetch_old_manifests(vers))
-    if manifests[-1].version == latest_manifest.version:
+    if manifests[-1].version == new_version:
         manifests.pop()  # remove the last duplicate
     manifests.append(latest_manifest)
 

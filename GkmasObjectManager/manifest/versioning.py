@@ -111,9 +111,15 @@ class GkmasManifestVersion:
     def __ne__(self, other: "GkmasManifestVersion") -> bool:
         return not self.__eq__(other)
 
-    # No comparison magic methods; things are starting to get ambiguous at this point.
-    # We are primarily concerned with the *difference* between versions.
-    # All operations below are handled by the overridden methods in EraRevPair.
+    def __lt__(self, other: "GkmasManifestVersion") -> bool:
+        return self.this < other.this or (
+            self.this == other.this and self.base < other.base
+        )
+
+    def __gt__(self, other: "GkmasManifestVersion") -> bool:
+        return self.this > other.this or (
+            self.this == other.this and self.base > other.base
+        )
 
     def __sub__(self, other: "GkmasManifestVersion") -> "GkmasManifestVersion":
         """

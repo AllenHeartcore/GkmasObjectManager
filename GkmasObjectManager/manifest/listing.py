@@ -80,12 +80,12 @@ class GkmasObjectList:
         canon_reprs = []
         for entry in self:
             this_repr = entry.canon_repr
-            try:
-                other_repr = other[entry.name].canon_repr
-            except KeyError:
+            if entry.name not in other:
                 canon_reprs.append(this_repr)
             else:
-                if this_repr != other_repr:
+                other_repr = other[entry.name].canon_repr
+                if this_repr["md5"] != other_repr["md5"]:
+                    # practically the sole cross-era anchor
                     canon_reprs.append(this_repr)
         return GkmasObjectList(canon_reprs, self.base_class, self.url_template)
 
