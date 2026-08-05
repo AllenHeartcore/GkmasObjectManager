@@ -89,9 +89,7 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     is_incremental = Path(WAYBACK_OBJECTS_LOG_LOCAL).exists()
 
-    if not is_incremental:
-        old_version = GkmasManifestVersion(0)  # empty base
-    else:
+    if is_incremental:
         old_log = _json_load(WAYBACK_OBJECTS_LOG_LOCAL)
         old_version = str2version(old_log["latest_version"])
         if not old_version < new_version:  # pylint doesn't like implicit >=
@@ -101,8 +99,9 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     vers = map(str2version, commits.keys())
-    vers = filter(lambda v: not v < old_version, vers)
-    # Manifest #old_version (equal case) must still be fetched for diff
+    if is_incremental:
+        vers = filter(lambda v: not v < old_version, vers)
+        # Manifest #old_version (equal case) must still be fetched for diff
     vers = list(map(str, sorted(vers)))
 
     manifests = asyncio.run(_fetch_old_manifests(vers))

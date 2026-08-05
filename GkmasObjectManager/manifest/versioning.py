@@ -34,7 +34,7 @@ class EraRevPair:
         return f"<EraRevPair {self}>"
 
     def __str__(self) -> str:
-        return f"v{self.era}:{self.rev}"
+        return f"{self.era}:{self.rev:04d}"
 
     def __eq__(self, other: "EraRevPair") -> bool:
         return self.era == other.era and self.rev == other.rev
