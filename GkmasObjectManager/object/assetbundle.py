@@ -3,7 +3,7 @@ assetbundle.py
 Unity asset bundle downloading, deobfuscation, and media extraction.
 """
 
-from ..utils import remove_unity_suffix
+from ..utils import append_unity_suffix, remove_unity_suffix
 from .resource import GkmasResource
 
 
@@ -41,7 +41,7 @@ class GkmasAssetBundle(GkmasResource):
         #       NOT FOR GENERAL USE.
 
         super().__init__(info, url_template)
-        self.name += ".unity3d"
+        self.name = append_unity_suffix(self.name)
         self._idname = f"AB[{self.id:05}] '{self.name}'"
         self._deobf_key = _deobf_key or self.name
         # need to re-instantiate since self._idname has changed
