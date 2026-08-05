@@ -70,6 +70,14 @@ class GkmasManifest:
         """
 
         revision = jdict["revision"]  # not jdict.get() to enforce presence
+        if isinstance(revision, GkmasManifestVersion):
+            # instantiate from diff, skip type conversion
+            self.version = revision
+            self.assetbundles = jdict["assetBundleList"]  # won't be missing since ...
+            self.resources = jdict["resourceList"]  # this is constructed internally
+            self.urlformat = jdict["urlFormat"]
+            return
+
         if isinstance(revision, int):
             revision = (revision, 0)
         if base_revision != 0:  # leave negative base handling to the Version class
@@ -79,23 +87,18 @@ class GkmasManifest:
                 )
             revision = (revision[0], base_revision)  # proceed anyway
 
-        try:  # instantiate from JSON
-            self.version = GkmasManifestVersion(*revision)
-            self.assetbundles = GkmasObjectList(
-                jdict.get("assetBundleList", []),  # might be empty in recent diffs
-                GkmasAssetBundle,
-                jdict["urlFormat"],
-            )
-            self.resources = GkmasObjectList(
-                jdict.get("resourceList", []),  # same as above ^
-                GkmasResource,
-                jdict["urlFormat"],
-            )
-        except TypeError:  # instantiate from diff, skip type conversion
-            self.version = jdict["version"]
-            self.assetbundles = jdict["assetBundleList"]  # won't be missing since ...
-            self.resources = jdict["resourceList"]  # this is constructed internally
-
+        # instantiate from JSON
+        self.version = GkmasManifestVersion(*revision)
+        self.assetbundles = GkmasObjectList(
+            jdict.get("assetBundleList", []),  # might be empty in recent diffs
+            GkmasAssetBundle,
+            jdict["urlFormat"],
+        )
+        self.resources = GkmasObjectList(
+            jdict.get("resourceList", []),  # same as above ^
+            GkmasResource,
+            jdict["urlFormat"],
+        )
         self.urlformat = jdict["urlFormat"]
         # 'jdict' is then discarded and losslessly reconstructed at export
 
