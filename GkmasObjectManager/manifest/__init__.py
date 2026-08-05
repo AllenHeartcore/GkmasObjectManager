@@ -16,6 +16,7 @@ from ..const import (
     GKMAS_OCTOCACHE_IV,
     GKMAS_OCTOCACHE_KEY,
     GKMAS_ONLINEPDB_KEY,
+    GKMAS_VERSION,
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_COMMITS_LOG_REMOTE,
     WAYBACK_MANIFEST_URL_TEMPLATE,
@@ -28,7 +29,7 @@ from .octodb_pb2 import pdbytes2dict
 
 
 def fetch(
-    target_version: int = -1,
+    target_version: int | str = 0,
     base_revision: int = 0,
     _use_local_commits_log: bool = False,
 ) -> GkmasManifest:
@@ -37,8 +38,10 @@ def fetch(
     Algorithm courtesy of github.com/DreamGallery/HatsuboshiToolkit
 
     Args:
-        target_version (int): The version of the manifest to fetch.
-            Defaults to -1 (latest).
+        target_version (int | str): The version of the manifest to fetch.
+            Defaults to 0 (latest).
+            String versions take the form of "<era>:<revision>",
+            and previous eras must be explicitly specified.
             Older versions will be fetched from the commit history
             of **this repository**, instead of the game server.
         base_revision (int): The "base" revision number of the manifest.
@@ -52,24 +55,32 @@ def fetch(
     #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
-    if target_version != -1:
+    if target_version != 0:
 
         if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
             commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
         else:
             commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
 
-        if str(target_version) not in commits:
-            raise ValueError(f"Manifest version {target_version} not found in history.")
+        if isinstance(target_version, int) or target_version.isdigit():
+            era, rev = GKMAS_VERSION, int(target_version)
+            _target = f"{era}:{rev}"
+        else:
+            _target = target_version
+            era, rev = map(int, _target.split(":"))
+
+        if str(_target) not in commits:
+            raise ValueError(f"Manifest version {_target} not found in history.")
         url = WAYBACK_MANIFEST_URL_TEMPLATE.format(
-            hash=commits[str(target_version)],
+            hash=commits[str(_target)],
             revision=base_revision,
         )
 
         manifest = GkmasManifest(_rget(url).json(), base_revision)
         assert (
-            manifest.version.canon_repr == int(target_version) % 1000
+            manifest.version.this.rev == rev
         ), "Manifest version mismatch with commit history record."
+        manifest.version.this.era = era  # manual override
         return manifest
 
     url = urljoin(GKMAS_API_URL, str(base_revision))
