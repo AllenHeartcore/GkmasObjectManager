@@ -11,7 +11,7 @@ from typing import Optional
 from rich.progress import BarColumn, Progress, TextColumn
 
 from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
-from GkmasObjectManager.manifest.revision import GkmasManifestVersion, str2version
+from GkmasObjectManager.manifest.versioning import GkmasManifestVersion, str2version
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.utils import _json_load, append_unity_suffix, nocache
 

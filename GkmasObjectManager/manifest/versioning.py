@@ -1,5 +1,5 @@
 """
-revision.py
+versioning.py
 Version control for GkmasManifest.
 """
 

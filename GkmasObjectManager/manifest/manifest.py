@@ -20,7 +20,7 @@ from ..rich import Logger
 from ..utils import _json_dump, append_unity_suffix, nocache
 from .listing import GkmasObjectList
 from .octodb_pb2 import dict2pdbytes
-from .revision import GkmasManifestVersion
+from .versioning import GkmasManifestVersion
 
 ObjectClass = GkmasAssetBundle | GkmasResource
 

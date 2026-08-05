@@ -25,7 +25,7 @@ from ..utils import _json_load, _rget
 from .decrypt import AESCBCDecryptor
 from .manifest import GkmasManifest
 from .octodb_pb2 import pdbytes2dict
-from .revision import GkmasManifestVersion, str2version
+from .versioning import GkmasManifestVersion, str2version
 
 
 def fetch(
