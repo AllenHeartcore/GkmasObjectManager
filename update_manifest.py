@@ -54,7 +54,7 @@ async def _fetch_old_manifests(vers: list[str]) -> list[GkmasManifest]:
 def _sanitize_canon_repr(canon_repr: dict, ver: GkmasManifestVersion) -> str:
     return "|".join(
         [
-            str(ver),
+            str(ver.this),
             canon_repr["objectName"],
             canon_repr["md5"],
             str(canon_repr["size"]),
