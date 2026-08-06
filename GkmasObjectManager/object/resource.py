@@ -47,7 +47,6 @@ class GkmasResource:
     md5: str
 
     _fields: list[str]
-    _idname: str
     _url: str
     _deobf_key: str
     _media: Optional[GkmasDummyMedia] = None
@@ -69,14 +68,11 @@ class GkmasResource:
         for field in self._fields:
             setattr(self, field, info[field])
 
-        self._idname = f"RS[{self.id:05}] '{self.name}'"
         self._url = url_template.format(o=self.objectName)
-
-        # placeholder for download progress reporter
-        self._reporter = ProgressReporter(title=self._idname, total=self.size)
+        self._reporter = ProgressReporter(title=self.name, total=self.size)
 
     def __repr__(self) -> str:
-        return f"<GkmasResource {self._idname}>"
+        return f'<GkmasResource "{self.name}">'
 
     @property
     def canon_repr(self) -> dict:

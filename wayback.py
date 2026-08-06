@@ -50,7 +50,7 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        return f"<WaybackEntry '{self.name}' with {len(self.history)} versions>"
+        return f'<WaybackEntry "{self.name}" with {len(self.history)} versions>'
 
 
 class WaybackEntryList:

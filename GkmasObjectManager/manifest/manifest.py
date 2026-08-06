@@ -452,7 +452,7 @@ class GkmasManifest:
                 asyncio.to_thread(
                     obj.download,
                     progress=progress,
-                    task_id=progress.add_task(obj._idname, visible=False),
+                    task_id=progress.add_task(obj.name, visible=False),
                     **kw,
                     **kwargs,  # if not empty, broadcast to all tasks
                 )
