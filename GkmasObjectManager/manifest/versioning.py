@@ -70,18 +70,18 @@ class GkmasManifestVersion:
 
         # __sub__ or __add__ calls this constructor with EraRevPair objects
         if isinstance(this, EraRevPair):
-            assert isinstance(
-                base, EraRevPair
-            ), "'this' and 'base' must be of the same type."
-            self.this, self.base = this, base
-            return
+            if not isinstance(base, EraRevPair):
+                raise TypeError("'this' and 'base' must be of the same type.")
+        else:
+            if not isinstance(base, int):
+                raise TypeError("'this' and 'base' must be of the same type.")
+            this = EraRevPair(this)
+            base = EraRevPair(base)  # base = 0 is inherently handled
 
-        assert isinstance(base, int), "'this' and 'base' must be of the same type."
-        assert this > 0, "'this' revision number must be positive."
-        assert base >= 0, "'base' revision number must be non-negative."
+        assert this.rev > 0, "'this' revision number must be positive."
+        assert base.rev >= 0, "'base' revision number must be non-negative."
         assert this > base, "'this' revision must be newer than 'base'."
-        self.this = EraRevPair(this)
-        self.base = EraRevPair(base)  # base = 0 is inherently handled
+        self.this, self.base = this, base
         # 'era' is never overridden except when fetching old manifests,
         # which case should be handled in manifest/__init__.py
 

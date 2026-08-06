@@ -133,6 +133,8 @@ class GkmasManifest:
         # could also try self[key]
 
     def __sub__(self, other: "GkmasManifest") -> "GkmasManifest":
+        if self.version.this.era != other.version.this.era:
+            logger.warning("Performing cross-era manifest diff, IDs are meaningless.")
         return GkmasManifest(
             {  # this is not a standard JSON dict, more like named arguments
                 "revision": self.version - other.version,  # handles sanity check
@@ -144,6 +146,8 @@ class GkmasManifest:
         )
 
     def __add__(self, other: "GkmasManifest") -> "GkmasManifest":
+        if self.version.this.era != other.version.this.era:
+            logger.warning("Performing cross-era manifest patch, IDs are meaningless.")
         new_version = self.version + other.version
         a, b = (
             (self, other) if new_version.this == other.version.this else (other, self)

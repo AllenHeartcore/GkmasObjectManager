@@ -92,8 +92,8 @@ class GkmasObjectList:
     def __add__(self, other: "GkmasObjectList") -> "GkmasObjectList":
         # 'other' is assumed to be newer, since version is not accessible here
         assert self.base_class == other.base_class
-        mapped = {entry["id"]: entry for entry in self.canon_repr}
-        mapped.update({entry["id"]: entry for entry in other.canon_repr})  # hack
+        mapped = {entry["name"]: entry for entry in self.canon_repr}
+        mapped.update({entry["name"]: entry for entry in other.canon_repr})  # hack
         return GkmasObjectList(
             list(mapped.values()), self.base_class, self.url_template
         )
