@@ -90,7 +90,7 @@ class GkmasManifest:
         if base_revision != 0:  # leave negative base handling to the Version class
             if base_revision != revision[1] != 0:  # equivalent to a 2-AND
                 logger.warning(
-                    f"Overriding detected base revision v{revision[1]} with specified v{base_revision}."
+                    f"Overriding detected base revision rev{revision[1]} with specified rev{base_revision}."
                 )
             revision = (revision[0], base_revision)  # proceed anyway
 
@@ -350,7 +350,7 @@ class GkmasManifest:
             preset = yaml.safe_load(f)
 
         root = preset.get("root", DEFAULT_DOWNLOAD_PATH)
-        root = root.replace("{version}", f"v{self.version.canon_repr}")
+        root = root.replace("{version}", f"rev{self.version.canon_repr}")
 
         global_kwargs = preset.get("global-kwargs", {})
         proto_instrs = preset.get("instructions", [])
