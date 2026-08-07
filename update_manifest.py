@@ -163,8 +163,7 @@ def record_commit_hash(ver_hash: str) -> bool:
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     commits[ver] = commit_hash
-    commits = sort_dict({int(k): v for k, v in commits.items()})
-    _json_dump(commits, WAYBACK_COMMITS_LOG_LOCAL)
+    _json_dump(sort_dict(commits), WAYBACK_COMMITS_LOG_LOCAL)
 
     return True
 
