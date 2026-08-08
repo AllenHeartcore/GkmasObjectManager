@@ -13,9 +13,11 @@ from google.protobuf.message import DecodeError
 from ..const import (
     GKMAS_API_HEADER,
     GKMAS_API_URL,
+    GKMAS_API_URL_PC,
     GKMAS_OCTOCACHE_IV,
     GKMAS_OCTOCACHE_KEY,
     GKMAS_ONLINEPDB_KEY,
+    GKMAS_ONLINEPDB_KEY_PC,
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_COMMITS_LOG_REMOTE,
     WAYBACK_MANIFEST_URL_TEMPLATE,
@@ -31,6 +33,7 @@ from .versioning import GkmasManifestVersion, str2version
 def fetch(
     target_version: int | str = 0,
     base_revision: int = 0,
+    pc: bool = False,
     _use_local_commits_log: bool = False,
 ) -> GkmasManifest:
     """
@@ -48,6 +51,8 @@ def fetch(
             Defaults to 0 (standalone latest).
             This API return the *difference* between the specified base
             revision and the latest.
+        pc (bool): Whether to use the PC manifest API.
+            Defaults to False (mobile).
     """
     #   _use_local_commits_log (bool): Whether to use the local "commits log".
     #       Defaults to False.
@@ -56,9 +61,11 @@ def fetch(
     #       NOT FOR GENERAL USE.
 
     if target_version == 0:  # fetch from server
-        url = urljoin(GKMAS_API_URL, str(base_revision))
+        url = urljoin(GKMAS_API_URL_PC if pc else GKMAS_API_URL, str(base_revision))
         enc = _rget(url, headers=GKMAS_API_HEADER).content
-        dec = AESCBCDecryptor(GKMAS_ONLINEPDB_KEY, enc[:16]).process(enc[16:])
+        dec = AESCBCDecryptor(
+            GKMAS_ONLINEPDB_KEY_PC if pc else GKMAS_ONLINEPDB_KEY, enc[:16]
+        ).process(enc[16:])
         return GkmasManifest(pdbytes2dict(dec), base_revision)
 
     if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
