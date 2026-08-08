@@ -1,0 +1,865 @@
+{
+    "revision": [
+        33,
+        31
+    ],
+    "assetBundleList": [
+        {
+            "id": 23993,
+            "name": "img_general_item_gacha-ticket-970-skinidol-003",
+            "size": 11344,
+            "crc": 3229430179,
+            "state": "ADD",
+            "md5": "7f62233646328859f51911d0119bbbe0",
+            "objectName": "ZwiCQz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23994,
+            "name": "img_general_item_gacha-ticket-970-skinidol-004",
+            "size": 11408,
+            "crc": 3956220588,
+            "state": "ADD",
+            "md5": "3cb256961a29350931541e06051e349c",
+            "objectName": "NODvB9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23995,
+            "name": "img_general_item_selection-ticket-006-stepup-skin",
+            "size": 15510,
+            "crc": 3139333038,
+            "state": "ADD",
+            "md5": "1a3dd5bd1c80b79da79aebcd931549c9",
+            "objectName": "WMQefu",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23996,
+            "name": "img_general_home_gasha_gasha-00970-pickup-002",
+            "size": 15910,
+            "crc": 1133861296,
+            "state": "ADD",
+            "md5": "56a62e5ac9f23dcc8c4d3ff389b8b134",
+            "objectName": "VD4cVI",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23997,
+            "name": "img_gasha_banner_gasha-00970-ticket-001-select-m",
+            "size": 40195,
+            "crc": 2218286870,
+            "state": "ADD",
+            "md5": "f66364e44f3a746a92c4ab5195c7a8c5",
+            "objectName": "jOiRF4",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23998,
+            "name": "img_gasha_banner_gasha-00970-wednesday-001-select-s",
+            "size": 29097,
+            "crc": 81412895,
+            "state": "ADD",
+            "md5": "72306971d2bb07f07f21e6ed612cc973",
+            "objectName": "hlmKN0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 23999,
+            "name": "img_gasha_banner_gasha-00970-ticket-001-logo",
+            "size": 9436,
+            "crc": 72882481,
+            "state": "ADD",
+            "md5": "346dbeabc03803b5e0617ec9dded9d95",
+            "objectName": "UxQP4j",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24000,
+            "name": "img_notice_notice-list_dearness-event_atbm-001",
+            "size": 122294,
+            "crc": 951954483,
+            "state": "ADD",
+            "md5": "28a158f29f191c79a5013788b0eda2ae",
+            "objectName": "uY6ozB",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24001,
+            "name": "img_notice_campaign_produce_week-012",
+            "size": 119166,
+            "crc": 991991741,
+            "state": "ADD",
+            "md5": "e50491ee5e34ec520b25e678caf8c62f",
+            "objectName": "uwxDVh",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24002,
+            "name": "img_notice_gasha_skillcard-skin-002",
+            "size": 370407,
+            "crc": 491639531,
+            "state": "ADD",
+            "md5": "b68c89c57f78830dc7f7c06af493a046",
+            "objectName": "ahVqpA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24003,
+            "name": "img_notice_campaign_level-limit-rank7-04",
+            "size": 421266,
+            "crc": 3079963045,
+            "state": "ADD",
+            "md5": "2d8ae602dd8c9922b9aa8022ffd92813",
+            "objectName": "e2rhIT",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24004,
+            "name": "img_gasha_banner_gasha-00970-ticket-002-select-s",
+            "size": 29535,
+            "crc": 2772076083,
+            "state": "ADD",
+            "md5": "3e6abb3e3ffca4d47bc65adb59f17a0f",
+            "objectName": "31Eg0d",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24005,
+            "name": "img_gasha_banner_gasha-00970-ticket-001-select-s",
+            "size": 29305,
+            "crc": 3815105008,
+            "state": "ADD",
+            "md5": "2d764d332ca8a4c76389720e121abde1",
+            "objectName": "yuWQv3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24006,
+            "name": "img_general_skillcard_ido-3_070_mid-hrnm-01",
+            "size": 31282,
+            "crc": 3630802045,
+            "state": "ADD",
+            "md5": "d2f575f0d7dd51591a8056dc2c351c07",
+            "objectName": "NRtErN",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24007,
+            "name": "img_gasha_banner_gasha-00970-ticket-004-logo",
+            "size": 9922,
+            "crc": 2322474132,
+            "state": "ADD",
+            "md5": "57b041101304d295a07c8812825d3c2c",
+            "objectName": "MWGsqB",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24008,
+            "name": "img_mov_general_gasha_bg_idol_cidol-ssmk-3-001-ssmk-01",
+            "size": 763538,
+            "crc": 2732399144,
+            "state": "ADD",
+            "md5": "d955e22796eda71a3e8f312c954736d6",
+            "objectName": "LR2MHY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24009,
+            "name": "img_gasha_banner_gasha-00970-ticket-004-select-m",
+            "size": 40335,
+            "crc": 2012367304,
+            "state": "ADD",
+            "md5": "592a73c3f8f105f27d1d214a06cb2bf1",
+            "objectName": "25NRdi",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24010,
+            "name": "img_gasha_banner_gasha-00970-ticket-002-logo",
+            "size": 9406,
+            "crc": 3619815744,
+            "state": "ADD",
+            "md5": "05587d4171b4cdef3a293ba8500d14f0",
+            "objectName": "G0C7Fg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24011,
+            "name": "img_notice_gasha_gasha-00970pickup-002-banner-01-large-pre",
+            "size": 99049,
+            "crc": 519443109,
+            "state": "ADD",
+            "md5": "52805c5529b7d5288627325bb85eda5b",
+            "objectName": "TCEDUL",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24012,
+            "name": "img_notice_gasha_gasha-00970pickup-001-banner-01-large-pre",
+            "size": 101444,
+            "crc": 3308128477,
+            "state": "ADD",
+            "md5": "7b56fb4b28b9869478a5ce352a14ee6a",
+            "objectName": "gmQio3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24013,
+            "name": "img_gasha_banner_gasha-00970-pickup-001-select-m",
+            "size": 56526,
+            "crc": 1652778117,
+            "state": "ADD",
+            "md5": "a0b0feec6fe23467f99ef64872e8932a",
+            "objectName": "rCfxjW",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24014,
+            "name": "img_gasha_text_gasha-00970-stepup-001",
+            "size": 30188,
+            "crc": 103797457,
+            "state": "ADD",
+            "md5": "6ee5500978fe47a3b873788ea5481850",
+            "objectName": "zJU9g5",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24015,
+            "name": "img_general_gasha_bg_gasha-00970-stepup-001",
+            "size": 248276,
+            "crc": 1814741471,
+            "state": "ADD",
+            "md5": "3f0bc8d58c41add0b3b1563842c1e7b4",
+            "objectName": "GQTciZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24016,
+            "name": "img_gasha_banner_gasha-00970-ticket-003-select-m",
+            "size": 41188,
+            "crc": 3920403046,
+            "state": "ADD",
+            "md5": "21e22e846d34ae0bcec3a96d4c2c4039",
+            "objectName": "6asJYY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24017,
+            "name": "img_general_item_gacha-ticket-970-skinidol-002",
+            "size": 11382,
+            "crc": 2393338342,
+            "state": "ADD",
+            "md5": "45560f03ecd7f13da45941ced70eaf5e",
+            "objectName": "YXDGCV",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24018,
+            "name": "img_notice_gasha_gasha-00970-pickup-002",
+            "size": 391007,
+            "crc": 2111436910,
+            "state": "ADD",
+            "md5": "607a4acea771cfcd4121f35190657cce",
+            "objectName": "ASmtGk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24019,
+            "name": "img_notice_gasha_skillcard-skin-001",
+            "size": 428745,
+            "crc": 3804521691,
+            "state": "ADD",
+            "md5": "6a96620b84fc00a8a403482fcf782bdd",
+            "objectName": "ymypq1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24020,
+            "name": "img_general_gasha_bg_gasha_wednesday-007",
+            "size": 560768,
+            "crc": 2559964777,
+            "state": "ADD",
+            "md5": "74615782ae2b8894dfdf5a750b964e0d",
+            "objectName": "1IBHH3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24021,
+            "name": "img_general_item_gacha-ticket-970-skinidol-001",
+            "size": 11493,
+            "crc": 3136057588,
+            "state": "ADD",
+            "md5": "af6d3604af0561a66e3625a9e1c7ac42",
+            "objectName": "xQhbE3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24022,
+            "name": "img_notice_gasha_gasha-00970-pickup-001",
+            "size": 398562,
+            "crc": 1624071096,
+            "state": "ADD",
+            "md5": "f71aa57072cd7ae2dc47d0aedd479612",
+            "objectName": "RILmQK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24023,
+            "name": "img_gasha_stepup_gasha-00970-stepup-001-step-002",
+            "size": 8020,
+            "crc": 3824689281,
+            "state": "ADD",
+            "md5": "5847a7ab80863bf4639b5d328bc0200b",
+            "objectName": "BhxRb0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24024,
+            "name": "img_gasha_banner_gasha-00970-ticket-004-select-s",
+            "size": 28364,
+            "crc": 1178258572,
+            "state": "ADD",
+            "md5": "3916c87f6d261321dce3da8f86b9f983",
+            "objectName": "XdVztc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24025,
+            "name": "img_mov_general_gasha_bg_idol_cidol-kllj-3-001-kllj-01",
+            "size": 751947,
+            "crc": 2940846644,
+            "state": "ADD",
+            "md5": "1c385f5863064e34bea24c6816a5df4e",
+            "objectName": "UUZ2in",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24026,
+            "name": "img_general_home_campaign_summer-001-02",
+            "size": 16414,
+            "crc": 3588996263,
+            "state": "ADD",
+            "md5": "724a29bba69b991f097c2afbd74705f2",
+            "objectName": "Uv2Tbu",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24027,
+            "name": "img_gasha_banner_gasha-00970-pickup-001-select-s",
+            "size": 29473,
+            "crc": 3087532879,
+            "state": "ADD",
+            "md5": "b1828d95c141178ac6a4cb8b8ef57169",
+            "objectName": "Y433Vk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24028,
+            "name": "img_general_home_gasha_gasha-00970-stepup-001",
+            "size": 15952,
+            "crc": 2044947137,
+            "state": "ADD",
+            "md5": "342ceac9edae7c732193c31a3a760c88",
+            "objectName": "zhHAqF",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24029,
+            "name": "img_gasha_banner_gasha-00970-stepup-001-select-m",
+            "size": 57286,
+            "crc": 2633110687,
+            "state": "ADD",
+            "md5": "faa769d731edbb6cbb38848dc1cef91f",
+            "objectName": "62DvQl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24030,
+            "name": "img_gasha_stepup_gasha-00970-stepup-001-step-001",
+            "size": 6818,
+            "crc": 498125370,
+            "state": "ADD",
+            "md5": "cea5ce26da0c3049c3e585e368d4ac08",
+            "objectName": "K8YEnO",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24031,
+            "name": "img_notice_notice-list_pr_atbm-second-single-atbm-third-single",
+            "size": 420990,
+            "crc": 3825549136,
+            "state": "ADD",
+            "md5": "07abce7a24b3e0d0583fbf612dcfbf56",
+            "objectName": "FeySZ0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24032,
+            "name": "img_mov_general_gasha_bg_idol_cidol-hrnm-3-001-hrnm-01",
+            "size": 759188,
+            "crc": 29466065,
+            "state": "ADD",
+            "md5": "a924c52e685bbfcf510d605633cefb91",
+            "objectName": "YzZIN8",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24033,
+            "name": "img_general_home_campaign_summer-001-01",
+            "size": 16182,
+            "crc": 4010726961,
+            "state": "ADD",
+            "md5": "a537237623b2a0704324f0208bfa30da",
+            "objectName": "uwDc0h",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24034,
+            "name": "img_gasha_banner_gasha-00970-stepup-001-select-s",
+            "size": 29303,
+            "crc": 4203222762,
+            "state": "ADD",
+            "md5": "24e64344bdd65dcfd425d7aa09ea6935",
+            "objectName": "aXzAC9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24035,
+            "name": "img_general_item_commu-dearness-key-atbm",
+            "size": 17360,
+            "crc": 1409922139,
+            "state": "ADD",
+            "md5": "d83ee10aec53aff38f5bb37664991ae9",
+            "objectName": "X0ltCq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24036,
+            "name": "img_gasha_banner_gasha-00970-pickup-001-logo",
+            "size": 9545,
+            "crc": 3901927330,
+            "state": "ADD",
+            "md5": "018919f75c3c6d1c0de5d28f235bc7d3",
+            "objectName": "xDoFAX",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24037,
+            "name": "img_general_skillcard_ido-3_069_mid-ssmk-01",
+            "size": 31074,
+            "crc": 2120726569,
+            "state": "ADD",
+            "md5": "1c1895c450a9f3fd83ed7e2db7c84226",
+            "objectName": "Pzk9Px",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24038,
+            "name": "img_gasha_banner_gasha-00970-stepup-001-logo",
+            "size": 10995,
+            "crc": 272034631,
+            "state": "ADD",
+            "md5": "26446724f912fa831cb705b0634b9895",
+            "objectName": "RSU7by",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24039,
+            "name": "img_notice_notice-list_information_level-limit-rank7-04",
+            "size": 112464,
+            "crc": 316359230,
+            "state": "ADD",
+            "md5": "9910a7499c30a2faa84e319411683fe3",
+            "objectName": "nRrDcd",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24040,
+            "name": "img_general_item_selection-ticket-007",
+            "size": 14797,
+            "crc": 714281000,
+            "state": "ADD",
+            "md5": "393562657aaf6f58f23f89f7711b22f3",
+            "objectName": "F9kztq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24041,
+            "name": "img_gasha_banner_gasha-00970-pickup-002-logo",
+            "size": 9796,
+            "crc": 3702378265,
+            "state": "ADD",
+            "md5": "8634d99c6978f1887b00244dfb55f7de",
+            "objectName": "mFa0yF",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24042,
+            "name": "img_notice_gasha_gasha-00970-stepup-001-banner-01-large-pre",
+            "size": 111800,
+            "crc": 932013592,
+            "state": "ADD",
+            "md5": "4f538e2a3ae5631e14bd2cbc52881ea9",
+            "objectName": "sbtdLJ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24043,
+            "name": "img_general_comic4_0156-thumb",
+            "size": 24675,
+            "crc": 174172355,
+            "state": "ADD",
+            "md5": "5566ddff10c80f554dd3a822735b2a14",
+            "objectName": "uwxjJE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24044,
+            "name": "img_mov_general_gasha_bg_idol_cidol-fktn-3-002-fktn-01",
+            "size": 710941,
+            "crc": 2298726290,
+            "state": "ADD",
+            "md5": "881f6aec9d8b576e485eca5894ae1899",
+            "objectName": "sjSgRg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24045,
+            "name": "img_gasha_stepup_gasha-00970-stepup-001-step-003",
+            "size": 7868,
+            "crc": 3495009960,
+            "state": "ADD",
+            "md5": "0e29f58971b0a44ac935d818e7772ea9",
+            "objectName": "fEddgj",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24046,
+            "name": "img_general_item_gacha-coin-common-001",
+            "size": 20562,
+            "crc": 38500063,
+            "state": "ADD",
+            "md5": "54e30e15e629865cfd9a74622a274ee8",
+            "objectName": "42uKK9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24047,
+            "name": "img_notice_notice-list_campaign_summer-001",
+            "size": 102856,
+            "crc": 3800617457,
+            "state": "ADD",
+            "md5": "c28f6985b1d01808d7e92452113451a4",
+            "objectName": "7EGFyx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24048,
+            "name": "img_notice_gasha_gasha-00970pickup-002-banner-01-large",
+            "size": 98932,
+            "crc": 1498861450,
+            "state": "ADD",
+            "md5": "c35f095934f28aa3494d10173457c70c",
+            "objectName": "UO6Tst",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24049,
+            "name": "img_gasha_banner_gasha-00970-wednesday-001-logo",
+            "size": 9503,
+            "crc": 763593402,
+            "state": "ADD",
+            "md5": "40cb08f6c016060f2d98037c0ba3394a",
+            "objectName": "iHRHdY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24050,
+            "name": "img_general_skillcard_ido-3_074_mid-kllj-01",
+            "size": 31282,
+            "crc": 433223343,
+            "state": "ADD",
+            "md5": "b7fc1c414288fb6b4c81e5f5a41ca087",
+            "objectName": "HUwvUN",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24051,
+            "name": "img_gasha_banner_gasha-00970-wednesday-001-select-m",
+            "size": 51447,
+            "crc": 3495603191,
+            "state": "ADD",
+            "md5": "7b18315e350ccb3047f724f86cc73dcb",
+            "objectName": "0MEvoi",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24052,
+            "name": "img_gasha_banner_gasha-00970-ticket-002-select-m",
+            "size": 40716,
+            "crc": 3532237122,
+            "state": "ADD",
+            "md5": "fea3ae8743931a2df74a237f43d75e07",
+            "objectName": "hAHVUE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24053,
+            "name": "img_notice_gasha_gasha-00970-stepup-001-banner-01-large",
+            "size": 111700,
+            "crc": 3443272701,
+            "state": "ADD",
+            "md5": "7a69ba8b9725ffd8f3800347f0a6e279",
+            "objectName": "sA0fwl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24054,
+            "name": "img_gasha_banner_gasha-00970-pickup-002-select-s",
+            "size": 29018,
+            "crc": 3340602519,
+            "state": "ADD",
+            "md5": "7334c55db8d23d71efb54974484b78df",
+            "objectName": "KeLoWk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24055,
+            "name": "img_general_skillcard_ido-3_073_mid-fktn-01",
+            "size": 31082,
+            "crc": 3261427429,
+            "state": "ADD",
+            "md5": "44c91156dc623763851a53cd2268bad6",
+            "objectName": "NCtPQR",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24056,
+            "name": "img_gasha_banner_gasha-00970-ticket-003-select-s",
+            "size": 29029,
+            "crc": 1370630054,
+            "state": "ADD",
+            "md5": "7deb6899dc8c72566bab1409a6494641",
+            "objectName": "ReCmTP",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24057,
+            "name": "img_general_home_gasha_gasha-00970-pickup-001",
+            "size": 15904,
+            "crc": 2722514557,
+            "state": "ADD",
+            "md5": "d18ff94174a83f08c0c050d74fe3bb83",
+            "objectName": "h56M6t",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24058,
+            "name": "img_gasha_banner_gasha-00970-ticket-003-logo",
+            "size": 9934,
+            "crc": 3713416529,
+            "state": "ADD",
+            "md5": "a4790574a18d077f23bcac7e08834122",
+            "objectName": "DJYxna",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24059,
+            "name": "img_notice_gasha_gasha-00970pickup-001-banner-01-large",
+            "size": 101465,
+            "crc": 2638214806,
+            "state": "ADD",
+            "md5": "9be8989867552538dcb26064cac177ba",
+            "objectName": "fx42U9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24060,
+            "name": "img_general_shop_coin-gasha_summer-001",
+            "size": 97634,
+            "crc": 2052454133,
+            "state": "ADD",
+            "md5": "8823f8da773fc74fc1ac1c93311a61c8",
+            "objectName": "B6OgLt",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24061,
+            "name": "img_gasha_banner_gasha-00970-pickup-002-select-m",
+            "size": 56003,
+            "crc": 1081006128,
+            "state": "ADD",
+            "md5": "3cc0330c0b66dd2c4917f2897e975e72",
+            "objectName": "3RYLwI",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24062,
+            "name": "img_general_comic4_0156",
+            "size": 236157,
+            "crc": 675765216,
+            "state": "ADD",
+            "md5": "85c981fed29ae001580ccfb952d723ac",
+            "objectName": "qugkO6",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24063,
+            "name": "img_notice_gasha_gasha-00970-stepup-001",
+            "size": 422530,
+            "crc": 2400985069,
+            "state": "ADD",
+            "md5": "1035143b0a5f3224e192ed4341fe0e6f",
+            "objectName": "xnSvHp",
+            "uploadVersionId": 205100
+        }
+    ],
+    "resourceList": [
+        {
+            "id": 21256,
+            "name": "mov_p-card-skin_ido-3_070_mid-hrnm-01_skillcard-thumb.usm",
+            "size": 3253600,
+            "state": "ADD",
+            "md5": "db2e9b40435c62b89cd79d8d264a624d",
+            "objectName": "Lup7i3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21257,
+            "name": "sud_vo_system_cidol-ssmk-3-001_idol_details-03.acb",
+            "size": 81664,
+            "state": "ADD",
+            "md5": "48c5b7bc72a2a160d3b2c10994a8fe74",
+            "objectName": "y2A8dM",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21258,
+            "name": "sud_vo_system_cidol-hrnm-3-001_idol_details-03.acb",
+            "size": 73824,
+            "state": "ADD",
+            "md5": "fd3f04fb1740e0db76cf1e15519f87d2",
+            "objectName": "fiInY2",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21259,
+            "name": "mov_p-card-skin_ido-3_073_mid-fktn-01_skillcard-thumb.usm",
+            "size": 3289536,
+            "state": "ADD",
+            "md5": "e39b513e1803c1da05d975fbf975c215",
+            "objectName": "ERTVGb",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21260,
+            "name": "mov_general_gasha_bg_idol_cidol-fktn-3-002-fktn-01.usm",
+            "size": 29210368,
+            "state": "ADD",
+            "md5": "10f8decc98c9d2b5017535cec4c23830",
+            "objectName": "0qO87R",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21261,
+            "name": "mov_general_gasha_bg_idol_cidol-ssmk-3-001-ssmk-01.usm",
+            "size": 29212128,
+            "state": "ADD",
+            "md5": "cb3a56ae4d81cf30b6b7f81a61f8f856",
+            "objectName": "R3EHfZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21262,
+            "name": "mov_p-card-skin_ido-3_069_mid-ssmk-01_skillcard.usm",
+            "size": 2166848,
+            "state": "ADD",
+            "md5": "16786c4be3ed8ff225ee19adeaac5ef4",
+            "objectName": "q6diGY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21263,
+            "name": "mov_p-card-skin_ido-3_074_mid-kllj-01_skillcard-thumb.usm",
+            "size": 3248704,
+            "state": "ADD",
+            "md5": "d9319c8bf8d53b1f3e53049582c35336",
+            "objectName": "5Pkp1t",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21264,
+            "name": "mov_p-card-skin_ido-3_070_mid-hrnm-01_skillcard.usm",
+            "size": 2102784,
+            "state": "ADD",
+            "md5": "2133bcbb8e1a9c1c4419b24745a4c256",
+            "objectName": "WAQ3Y0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21265,
+            "name": "sud_vo_system_cidol-kllj-3-001_idol_details-03.acb",
+            "size": 54400,
+            "state": "ADD",
+            "md5": "00de3ffd7436d3d601d477f3d4732aac",
+            "objectName": "dKCAh5",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21266,
+            "name": "mov_general_gasha_bg_idol_cidol-kllj-3-001-kllj-01.usm",
+            "size": 26519520,
+            "state": "ADD",
+            "md5": "8c62e094a25802ba32372faa5094a136",
+            "objectName": "3Gi1oH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21267,
+            "name": "mov_p-card-skin_ido-3_069_mid-ssmk-01_skillcard-thumb.usm",
+            "size": 3218976,
+            "state": "ADD",
+            "md5": "f3d5927b4385439c6de7137a03d6fa1b",
+            "objectName": "u7wisE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21268,
+            "name": "mov_general_gasha_bg_idol_cidol-hrnm-3-001-hrnm-01.usm",
+            "size": 30438848,
+            "state": "ADD",
+            "md5": "4ecc6eac4b09743e231f0d161b5ecf3f",
+            "objectName": "7NUnw9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21269,
+            "name": "mov_p-card-skin_ido-3_074_mid-kllj-01_skillcard.usm",
+            "size": 2090112,
+            "state": "ADD",
+            "md5": "5c0f8d8684f7971e78706f7d96140b5c",
+            "objectName": "kvUGXQ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21270,
+            "name": "sud_vo_system_cidol-fktn-3-002_idol_details-03.acb",
+            "size": 70752,
+            "state": "ADD",
+            "md5": "55b7112232e6f5a85a389cd02acc8871",
+            "objectName": "7mc0JH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21271,
+            "name": "mov_p-card-skin_ido-3_073_mid-fktn-01_skillcard.usm",
+            "size": 2172288,
+            "state": "ADD",
+            "md5": "fb4a9545449f94333e6c54a2c13882fb",
+            "objectName": "f5YpYY",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
