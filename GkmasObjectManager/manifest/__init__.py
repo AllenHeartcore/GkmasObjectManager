@@ -19,8 +19,11 @@ from ..const import (
     GKMAS_ONLINEPDB_KEY,
     GKMAS_ONLINEPDB_KEY_PC,
     WAYBACK_COMMITS_LOG_LOCAL,
+    WAYBACK_COMMITS_LOG_LOCAL_PC,
     WAYBACK_COMMITS_LOG_REMOTE,
+    WAYBACK_COMMITS_LOG_REMOTE_PC,
     WAYBACK_MANIFEST_URL_TEMPLATE,
+    WAYBACK_MANIFEST_URL_TEMPLATE_PC,
     PathArgtype,
 )
 from ..utils import _json_load, _rget
@@ -60,6 +63,10 @@ def fetch(
     #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
+    WCL = WAYBACK_COMMITS_LOG_LOCAL_PC if pc else WAYBACK_COMMITS_LOG_LOCAL
+    WCR = WAYBACK_COMMITS_LOG_REMOTE_PC if pc else WAYBACK_COMMITS_LOG_REMOTE
+    WMUT = WAYBACK_MANIFEST_URL_TEMPLATE_PC if pc else WAYBACK_MANIFEST_URL_TEMPLATE
+
     if target_version == 0:  # fetch from server
         url = urljoin(GKMAS_API_URL_PC if pc else GKMAS_API_URL, str(base_revision))
         enc = _rget(url, headers=GKMAS_API_HEADER).content
@@ -68,10 +75,10 @@ def fetch(
         ).process(enc[16:])
         return GkmasManifest(pdbytes2dict(dec), base_revision, pc=pc)
 
-    if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
-        commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
+    if _use_local_commits_log and Path(WCL).is_file():
+        commits = _json_load(WCL)
     else:
-        commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
+        commits = _json_load(WCR)
 
     _target = GkmasManifestVersion(
         int(target_version)
@@ -81,9 +88,7 @@ def fetch(
 
     if str(_target) not in commits:
         raise ValueError(f"Manifest version {_target} not found in history.")
-    url = WAYBACK_MANIFEST_URL_TEMPLATE.format(
-        hash=commits[str(_target)], revision=base_revision
-    )
+    url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
 
     # we don't pass in pc=pc since the era will be overridden anyway
     manifest = GkmasManifest(_rget(url).json(), base_revision)

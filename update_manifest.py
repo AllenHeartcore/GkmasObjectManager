@@ -15,7 +15,9 @@ from tqdm import tqdm
 from GkmasObjectManager import GkmasManifest, fetch
 from GkmasObjectManager.const import (
     WAYBACK_COMMITS_LOG_LOCAL,
+    WAYBACK_COMMITS_LOG_LOCAL_PC,
     WAYBACK_OBJECTS_LOG_LOCAL,
+    WAYBACK_OBJECTS_LOG_LOCAL_PC,
 )
 from GkmasObjectManager.manifest.versioning import GkmasManifestVersion
 from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
@@ -75,7 +77,7 @@ def _append_log(log: dict, manifest: GkmasManifest) -> None:
         )
 
 
-def rebuild_log(latest_manifest: GkmasManifest):
+def rebuild_log(latest_manifest: GkmasManifest, pc: bool = False):
     print("Rebuilding wayback log...")
 
     new_version = latest_manifest.version
@@ -86,17 +88,19 @@ def rebuild_log(latest_manifest: GkmasManifest):
         "urlFormat": latest_manifest.urlformat,
     }
 
-    is_incremental = Path(WAYBACK_OBJECTS_LOG_LOCAL).exists()
+    WCL = WAYBACK_COMMITS_LOG_LOCAL_PC if pc else WAYBACK_COMMITS_LOG_LOCAL
+    WOL = WAYBACK_OBJECTS_LOG_LOCAL_PC if pc else WAYBACK_OBJECTS_LOG_LOCAL
+    is_incremental = Path(WOL).exists()
 
     if is_incremental:
-        old_log = _json_load(WAYBACK_OBJECTS_LOG_LOCAL)
+        old_log = _json_load(WOL)
         old_version = GkmasManifestVersion(old_log["latest_version"])
         if not old_version < new_version:  # pylint doesn't like implicit >=
             return  # already up-to-date
         log["assetBundleList"] = defaultdict(list, old_log["assetBundleList"])
         log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
-    commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
+    commits = _json_load(WCL)
     vers = map(GkmasManifestVersion, commits.keys())
     if is_incremental:
         vers = filter(lambda v: not v < old_version, vers)
@@ -117,7 +121,7 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     log["assetBundleList"] = sort_dict(log["assetBundleList"])
     log["resourceList"] = sort_dict(log["resourceList"])
-    _json_dump(log, WAYBACK_OBJECTS_LOG_LOCAL)
+    _json_dump(log, WOL)
 
 
 def _export_diff_manifest(path: Path, rev: int, pc: bool) -> None:
@@ -153,7 +157,7 @@ def do_update(path: Path, pc: bool = False) -> bool:
     m_remote.export(path / "v0000.json", force_overwrite=True)
     asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote.this.rev)), pc))
 
-    rebuild_log(m_remote)
+    rebuild_log(m_remote, pc=pc)
 
     return True
 
@@ -163,9 +167,10 @@ def record_commit_hash(ver_hash: str) -> bool:
 
     ver, commit_hash = ver_hash.split("|")
 
-    commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
+    WCL = WAYBACK_COMMITS_LOG_LOCAL_PC if pc else WAYBACK_COMMITS_LOG_LOCAL
+    commits = _json_load(WCL)
     commits[ver] = commit_hash
-    _json_dump(sort_dict(commits), WAYBACK_COMMITS_LOG_LOCAL)
+    _json_dump(sort_dict(commits), WCL)
 
     return True
 

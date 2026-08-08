@@ -38,13 +38,26 @@ GKMAS_OCTOCACHE_IV = md5sum("LvAUtf+tnz".encode("utf-8"))
 REPO_OBJECT_URL_TEMPLATE = "https://raw.githubusercontent.com/AllenHeartcore/GkmasObjectManager/{branch}/{path}"
 MANIFEST_UPDATE_BRANCH = "manifest-update"
 WAYBACK_COMMITS_LOG_LOCAL = "wayback_commits.json"
-WAYBACK_COMMITS_LOG_REMOTE = REPO_OBJECT_URL_TEMPLATE.format(
-    branch=MANIFEST_UPDATE_BRANCH, path=WAYBACK_COMMITS_LOG_LOCAL
-)
 WAYBACK_OBJECTS_LOG_LOCAL = "wayback_objects.json"
-WAYBACK_OBJECTS_LOG_REMOTE = REPO_OBJECT_URL_TEMPLATE.format(
-    branch=MANIFEST_UPDATE_BRANCH, path=WAYBACK_OBJECTS_LOG_LOCAL
-)
-WAYBACK_MANIFEST_URL_TEMPLATE = REPO_OBJECT_URL_TEMPLATE.format(
-    branch="{hash}", path="manifests/v{revision:04d}.json"
+WAYBACK_COMMITS_LOG_LOCAL_PC = "wayback_commits_pc.json"
+WAYBACK_OBJECTS_LOG_LOCAL_PC = "wayback_objects_pc.json"
+(
+    WAYBACK_COMMITS_LOG_REMOTE,
+    WAYBACK_OBJECTS_LOG_REMOTE,
+    WAYBACK_COMMITS_LOG_REMOTE_PC,
+    WAYBACK_OBJECTS_LOG_REMOTE_PC,
+    WAYBACK_MANIFEST_URL_TEMPLATE,
+    WAYBACK_MANIFEST_URL_TEMPLATE_PC,
+) = map(
+    lambda path: REPO_OBJECT_URL_TEMPLATE.format(
+        branch=MANIFEST_UPDATE_BRANCH, path=path
+    ),
+    (
+        WAYBACK_COMMITS_LOG_LOCAL,
+        WAYBACK_OBJECTS_LOG_LOCAL,
+        WAYBACK_COMMITS_LOG_LOCAL_PC,
+        WAYBACK_OBJECTS_LOG_LOCAL_PC,
+        "manifests/v{revision:04d}.json",
+        "manifests_pc/v{revision:04d}.json",
+    ),
 )

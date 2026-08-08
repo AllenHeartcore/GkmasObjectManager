@@ -10,7 +10,10 @@ from typing import Optional
 
 from rich.progress import BarColumn, Progress, TextColumn
 
-from GkmasObjectManager.const import WAYBACK_OBJECTS_LOG_REMOTE
+from GkmasObjectManager.const import (
+    WAYBACK_OBJECTS_LOG_REMOTE,
+    WAYBACK_OBJECTS_LOG_REMOTE_PC,
+)
 from GkmasObjectManager.manifest.versioning import GkmasManifestVersion
 from GkmasObjectManager.object import GkmasAssetBundle, GkmasResource
 from GkmasObjectManager.utils import _json_load, append_unity_suffix
@@ -101,8 +104,9 @@ class WaybackMachine:
     assetbundles: WaybackEntryList
     resources: WaybackEntryList
 
-    def __init__(self):
-        log = _json_load(WAYBACK_OBJECTS_LOG_REMOTE)
+    def __init__(self, pc: bool = False):
+        WOR = WAYBACK_OBJECTS_LOG_REMOTE_PC if pc else WAYBACK_OBJECTS_LOG_REMOTE
+        log = _json_load(WOR)
         self.version = GkmasManifestVersion(log["latest_version"])
         self.assetbundles = WaybackEntryList(
             log["assetBundleList"], GkmasAssetBundle, log["urlFormat"]
