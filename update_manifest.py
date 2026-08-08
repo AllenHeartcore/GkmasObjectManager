@@ -162,7 +162,7 @@ def do_update(path: Path, pc: bool = False) -> bool:
     return True
 
 
-def record_commit_hash(ver_hash: str) -> bool:
+def record_commit_hash(ver_hash: str, pc: bool = False) -> bool:
     """Record a new commit hash from the last manifest update into wayback_commits.json."""
 
     ver, commit_hash = ver_hash.split("|")
@@ -183,10 +183,15 @@ if __name__ == "__main__":
         type=str,
         help='record a new commit hash for a version (requires "<version>|<commit_hash>" format)',
     )
+    parser.add_argument(
+        "--pc",
+        action="store_true",
+        help="record commit hash for PC manifest; exclusively used with --record-commit-hash",
+    )
     args = parser.parse_args()
 
     if args.record_commit_hash:
-        sys.exit(not record_commit_hash(args.record_commit_hash))
+        sys.exit(not record_commit_hash(args.record_commit_hash, pc=args.pc))
 
     HAS_UPDATE = do_update(Path("manifests"))
     HAS_UPDATE_PC = do_update(Path("manifests_pc"), pc=True)

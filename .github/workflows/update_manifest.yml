@@ -60,6 +60,7 @@ jobs:
                   VERSION="$(cat manifests/LATEST_VERSION)"
                   COMMIT_HASH="$(git rev-parse --verify HEAD)"
                   python update_manifest.py --record-commit-hash "$VERSION|$COMMIT_HASH"
+                  python update_manifest.py --record-commit-hash "$VERSION_PC|$COMMIT_HASH" --pc
 
             - name: Commit wayback changes
               if: steps.run_script.outputs.exit_code == 0

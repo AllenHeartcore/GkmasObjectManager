@@ -75,17 +75,13 @@ def fetch(
         ).process(enc[16:])
         return GkmasManifest(pdbytes2dict(dec), base_revision, pc=pc)
 
-    if _use_local_commits_log and Path(WCL).is_file():
-        commits = _json_load(WCL)
-    else:
-        commits = _json_load(WCR)
-
     _target = GkmasManifestVersion(
         int(target_version)
         if isinstance(target_version, int) or target_version.isdigit()
         else target_version
     )
 
+    commits = _json_load(WCL if _use_local_commits_log and Path(WCL).is_file() else WCR)
     if str(_target) not in commits:
         raise ValueError(f"Manifest version {_target} not found in history.")
     url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
