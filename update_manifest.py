@@ -120,22 +120,24 @@ def rebuild_log(latest_manifest: GkmasManifest):
     _json_dump(log, WAYBACK_OBJECTS_LOG_LOCAL)
 
 
-def _export_diff_manifest(path: Path, rev: int) -> None:
-    fetch(base_revision=rev).export(path / f"v{rev:04}.json", force_overwrite=True)
-
-
-async def _export_diff_manifests(path: Path, revs: list[int]) -> None:
-
-    await asyncio.gather(
-        *[asyncio.to_thread(_export_diff_manifest, path, rev) for rev in revs]
+def _export_diff_manifest(path: Path, rev: int, pc: bool) -> None:
+    fetch(base_revision=rev, pc=pc).export(
+        path / f"v{rev:04}.json", force_overwrite=True
     )
 
 
-def do_update(path: Path) -> bool:
-    """Check for manifest update from server and optionally update all diff versions."""
-    print("Checking for manifest update...")
+async def _export_diff_manifests(path: Path, revs: list[int], pc: bool) -> None:
 
-    m_remote = fetch()
+    await asyncio.gather(
+        *[asyncio.to_thread(_export_diff_manifest, path, rev, pc) for rev in revs]
+    )
+
+
+def do_update(path: Path, pc: bool = False) -> bool:
+    """Check for manifest update from server and optionally update all diff versions."""
+    print(f"Checking for {'PC' if pc else 'mobile'} manifest update...")
+
+    m_remote = fetch(pc=pc)
     ver_remote = m_remote.version
     ver_local = str2version((path / "LATEST_VERSION").read_text())
 
@@ -149,7 +151,7 @@ def do_update(path: Path) -> bool:
     (path / "LATEST_VERSION").write_text(str(ver_remote))
 
     m_remote.export(path / "v0000.json", force_overwrite=True)
-    asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote.this.rev))))
+    asyncio.run(_export_diff_manifests(path, list(range(1, ver_remote.this.rev)), pc))
 
     rebuild_log(m_remote)
 
@@ -182,4 +184,5 @@ if __name__ == "__main__":
         sys.exit(not record_commit_hash(args.record_commit_hash))
 
     HAS_UPDATE = do_update(Path("manifests"))
-    sys.exit(not (HAS_UPDATE))
+    HAS_UPDATE_PC = do_update(Path("manifests_pc"), pc=True)
+    sys.exit(not (HAS_UPDATE or HAS_UPDATE_PC))  # avoids short-circuiting
