@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from google.protobuf.message import DecodeError
+from requests.exceptions import HTTPError
 
 from ..const import (
     GKMAS_API_HEADER,
@@ -86,8 +87,17 @@ def fetch(
         raise ValueError(f"Manifest version {_target} not found in history.")
     url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
 
-    # we don't pass in pc=pc since the era will be overridden anyway
-    manifest = GkmasManifest(_rget(url).json(), base_revision)
+    try:
+        # we don't pass in pc=pc since the era will be overridden anyway
+        manifest = GkmasManifest(_rget(url).json(), base_revision)
+    except HTTPError as e:
+        if not pc:
+            raise e
+        # v705100:0014 - 705100:0034 are known to appear in the mobile location
+        WMUT = WAYBACK_MANIFEST_URL_TEMPLATE
+        url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
+        manifest = GkmasManifest(_rget(url).json(), base_revision)
+
     assert (
         manifest.version.this.rev == _target.this.rev
     ), "Manifest version mismatch with commit history record."
