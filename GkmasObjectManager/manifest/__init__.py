@@ -64,6 +64,10 @@ def fetch(
     #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
+    if isinstance(target_version, str) and target_version.startswith("705"):
+        # probably a PC manifest; for convenience, since gom.fetch() is user-facing
+        pc = True  # HARDCODED
+
     WCL = WAYBACK_COMMITS_LOG_LOCAL_PC if pc else WAYBACK_COMMITS_LOG_LOCAL
     WCR = WAYBACK_COMMITS_LOG_REMOTE_PC if pc else WAYBACK_COMMITS_LOG_REMOTE
     WMUT = WAYBACK_MANIFEST_URL_TEMPLATE_PC if pc else WAYBACK_MANIFEST_URL_TEMPLATE
@@ -94,7 +98,7 @@ def fetch(
         if not pc:
             raise e
         # v705100:0014 - 705100:0034 are known to appear in the mobile location
-        WMUT = WAYBACK_MANIFEST_URL_TEMPLATE
+        WMUT = WAYBACK_MANIFEST_URL_TEMPLATE  # HARDCODED
         url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
         manifest = GkmasManifest(_rget(url).json(), base_revision)
 
