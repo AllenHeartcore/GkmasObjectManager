@@ -23,7 +23,7 @@ class EraRevPair:
     era: int
     rev: int
 
-    def __init__(self, rev: int, era: int):
+    def __init__(self, era: int, rev: int):
         assert era > 0 or rev == 0, "Era must be positive."
         assert rev >= 0, "Revision must be non-negative."
         self.era = era if rev > 0 else 0  # empty case (0, 0) should be the smallest
@@ -67,23 +67,49 @@ class GkmasManifestVersion:
     this: EraRevPair
     base: EraRevPair
 
+    @staticmethod
+    def str2erp(s: str) -> EraRevPair:
+        """
+        Converts a string representation of an Era-Revision pair to an EraRevPair object.
+        """
+        era, rev = map(int, s.split(":"))
+        return EraRevPair(era, rev)
+
     def __init__(
         self,
-        this: int | EraRevPair,
-        base: int | EraRevPair = 0,
+        this: int | str | EraRevPair,
+        base: int | str | EraRevPair = 0,
         pc: bool = False,
     ):
-
         # __sub__ or __add__ calls this constructor with EraRevPair objects
-        if isinstance(this, EraRevPair):
-            if not isinstance(base, EraRevPair):
-                raise TypeError("'this' and 'base' must be of the same type.")
-        else:
-            if not isinstance(base, int):
-                raise TypeError("'this' and 'base' must be of the same type.")
-            this = EraRevPair(this, GKMAS_VERSION_PC if pc else GKMAS_VERSION)
-            base = EraRevPair(base, GKMAS_VERSION_PC if pc else GKMAS_VERSION)
+        # also GMV's constructor is intentionally tolerant, while ERP's is strict
+        # Valid forms:
+        #   - GMV(454)
+        #   - GMV(257, pc=True)
+        #   - GMV("205100:0033")
+        #   - GMV("705100:0030-diff-705100:0027")
+        #   - GMV(EraRevPair(705100, 24), EraRevPair(705100, 21))
+
+        if isinstance(this, str):
+            if "-diff-" in this:
+                assert base == 0, "Base is already specified in 'this' string."
+                this, base = this.split("-diff-")
+            else:
+                base = "0:0"  # circumventing our own same-type assertion... bruh
+
+        if not type(this) == type(base):
+            raise TypeError("'this' and 'base' must be of the same type.")
+
+        if isinstance(this, int):
+            era = GKMAS_VERSION_PC if pc else GKMAS_VERSION
+            this, base = map(lambda rev: EraRevPair(era, rev), (this, base))
             # base = 0 is inherently handled
+        elif isinstance(this, str):
+            this, base = map(self.str2erp, (this, base))
+        elif isinstance(this, EraRevPair):
+            pass  # already in the correct form
+        else:
+            raise TypeError("Unsupported type for GMV constructor.")
 
         assert this.rev > 0, "'this' revision number must be positive."
         assert base.rev >= 0, "'base' revision number must be non-negative."
@@ -168,23 +194,3 @@ class GkmasManifestVersion:
         a, b = (self, other) if self.this < other.this else (other, self)
         assert a.this == b.base, "Versions not comparable."
         return GkmasManifestVersion(b.this, a.base)
-
-
-def str2erp(s: str) -> EraRevPair:
-    """
-    Converts a string representation of an Era-Revision pair to an EraRevPair object.
-    """
-    era, rev = map(int, s.split(":"))
-    return EraRevPair(rev, era)
-
-
-def str2version(s: str) -> GkmasManifestVersion:
-    """
-    Converts a string representation of a manifest version to a GkmasManifestVersion object.
-    """
-    if "-diff-" in s:
-        this, base = map(str2erp, s.split("-diff-"))
-        return GkmasManifestVersion(this, base)
-    else:
-        return GkmasManifestVersion(str2erp(s), EraRevPair(0, 0))
-        # we end up circumventing our own same-type assertion... bruh

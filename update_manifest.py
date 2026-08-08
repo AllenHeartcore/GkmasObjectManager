@@ -17,7 +17,7 @@ from GkmasObjectManager.const import (
     WAYBACK_COMMITS_LOG_LOCAL,
     WAYBACK_OBJECTS_LOG_LOCAL,
 )
-from GkmasObjectManager.manifest.versioning import GkmasManifestVersion, str2version
+from GkmasObjectManager.manifest.versioning import GkmasManifestVersion
 from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 
 # FUNCTION HIERARCHY:
@@ -90,14 +90,14 @@ def rebuild_log(latest_manifest: GkmasManifest):
 
     if is_incremental:
         old_log = _json_load(WAYBACK_OBJECTS_LOG_LOCAL)
-        old_version = str2version(old_log["latest_version"])
+        old_version = GkmasManifestVersion(old_log["latest_version"])
         if not old_version < new_version:  # pylint doesn't like implicit >=
             return  # already up-to-date
         log["assetBundleList"] = defaultdict(list, old_log["assetBundleList"])
         log["resourceList"] = defaultdict(list, old_log["resourceList"])
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    vers = map(str2version, commits.keys())
+    vers = map(GkmasManifestVersion, commits.keys())
     if is_incremental:
         vers = filter(lambda v: not v < old_version, vers)
         # Manifest #old_version (equal case) must still be fetched for diff
@@ -139,7 +139,7 @@ def do_update(path: Path, pc: bool = False) -> bool:
 
     m_remote = fetch(pc=pc)
     ver_remote = m_remote.version
-    ver_local = str2version((path / "LATEST_VERSION").read_text())
+    ver_local = GkmasManifestVersion((path / "LATEST_VERSION").read_text())
 
     if ver_remote == ver_local:
         print("No update available.")

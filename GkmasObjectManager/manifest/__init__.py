@@ -27,7 +27,7 @@ from ..utils import _json_load, _rget
 from .decrypt import AESCBCDecryptor
 from .manifest import GkmasManifest
 from .octodb_pb2 import pdbytes2dict
-from .versioning import GkmasManifestVersion, str2version
+from .versioning import GkmasManifestVersion
 
 
 def fetch(
@@ -73,10 +73,11 @@ def fetch(
     else:
         commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
 
-    if isinstance(target_version, int) or target_version.isdigit():
-        _target = GkmasManifestVersion(int(target_version))
-    else:
-        _target = str2version(target_version)
+    _target = GkmasManifestVersion(
+        int(target_version)
+        if isinstance(target_version, int) or target_version.isdigit()
+        else target_version
+    )
 
     if str(_target) not in commits:
         raise ValueError(f"Manifest version {_target} not found in history.")
