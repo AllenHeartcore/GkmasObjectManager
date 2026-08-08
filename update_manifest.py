@@ -165,14 +165,14 @@ def do_update(path: Path, pc: bool = False) -> bool:
 def record_commit_hash(ver_hash: str) -> bool:
     """Record a new commit hash from the last manifest update into wayback_commits.json."""
 
-    ver, commit_hash = ver_hash.split("|")
+    ver, ver_pc, commit_hash = ver_hash.split("|")
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
     commits[ver] = commit_hash
     _json_dump(sort_dict(commits), WAYBACK_COMMITS_LOG_LOCAL)
 
     commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL_PC)
-    commits[ver] = commit_hash
+    commits[ver_pc] = commit_hash
     _json_dump(sort_dict(commits), WAYBACK_COMMITS_LOG_LOCAL_PC)
 
     return True
@@ -184,7 +184,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--record-commit-hash",
         type=str,
-        help='record a new commit hash for a version (requires "<version>|<commit_hash>" format)',
+        help='record a new commit hash for a version (requires "<version>|<version_pc>|<commit_hash>" format)',
     )
     args = parser.parse_args()
 
