@@ -82,6 +82,8 @@ def fetch(
         manifest.version.this.rev == _target.this.rev
     ), "Manifest version mismatch with commit history record."
     manifest.version.this.era = _target.this.era  # manual override
+    if manifest.version.base.rev:
+        manifest.version.base.era = _target.this.era  # tricky!
     return manifest
 
 

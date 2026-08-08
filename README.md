@@ -10,8 +10,8 @@ Request API & decryption algorithms borrowed from [HatsuboshiToolkit](https://gi
 
 ## Features
 
-- Fetch, decrypt, deserialize, and export manifest as ProtoDB, JSON, or CSV
-- Differentiate between / add (apply patch to) manifest revisions
+- Fetch, decrypt, deserialize, and export manifest as ProtoDB or JSON
+- Differentiate between / add (apply patch to) manifest versions
 - Download and deobfuscate assetbundles and resources in parallel
 - Media conversion plugins for Texture2D, AudioClip audio, AWB audio, and USM video
 
@@ -48,7 +48,7 @@ m.download_preset("presets/namecard_kit.yml")
 - `manifest.decrypt.AESCBCDecryptor` - Manifest decryption
 - `manifest.octodb_pb2.Database` - ProtoDB deserialization
 - `manifest.manifest.GkmasManifest` - **ENTRY POINT**
-    - `manifest.revision.GkmasManifestRevision` - Manifest revision management
+  - `manifest.versioning.GkmasManifestVersion` - Manifest version management
     - `manifest.listing.GkmasObjectList` - Object listing and indexing
         - `object.resource.GkmasResource` - Non-Unity object
             - `media.dummy.GkmasDummyMedia` - Base class for media conversion plugins

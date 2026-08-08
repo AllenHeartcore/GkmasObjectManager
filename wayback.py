@@ -33,13 +33,13 @@ class WaybackEntry:
         self.name = name
         self.history = []
         for entry in history:
-            rev, objectName, md5, size = entry.split("|")
+            ver, objectName, md5, size = entry.split("|")
             stem, ext = Path(self.name).stem, Path(self.name).suffix
             self.history.append(
                 base_class(
                     {
                         "id": -1,  # stripped when building wayback log for compatibility
-                        "name": f"{stem}__v{rev}{ext}",
+                        "name": f"{stem}__v{ver.replace(':', '_')}{ext}",
                         "objectName": objectName,
                         "md5": md5,
                         "size": int(size),
@@ -50,7 +50,7 @@ class WaybackEntry:
             )
 
     def __repr__(self) -> str:
-        return f"<WaybackEntry '{self.name}' with {len(self.history)} versions>"
+        return f'<WaybackEntry "{self.name}" with {len(self.history)} versions>'
 
 
 class WaybackEntryList:
@@ -134,15 +134,16 @@ class WaybackMachine:
     def __contains__(self, key: str) -> bool:
         return key in self.assetbundles or key in self.resources
 
-    def search(self, criterion: str, ascending: bool = True) -> list[WaybackEntry]:
+    def search(self, *criteria: str, ascending: bool = True) -> list[WaybackEntry]:
         matches = filter(
-            lambda s: re.match(criterion, s.name, flags=re.IGNORECASE) is not None,
+            lambda s: re.match("|".join(criteria), s.name, flags=re.IGNORECASE)
+            is not None,
             list(self),
         )
         return sorted(matches, key=lambda x: x.name, reverse=not ascending)
 
     def download_old_versions(self, *criteria: str, **kwargs):
-        entries = self.search("|".join(criteria))
+        entries = self.search(*criteria)
         asyncio.run(self._dispatch(entries, **kwargs))
 
     async def _dispatch(self, entries: list[WaybackEntry], **kwargs):

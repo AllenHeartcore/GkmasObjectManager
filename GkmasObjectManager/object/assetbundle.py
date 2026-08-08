@@ -42,12 +42,11 @@ class GkmasAssetBundle(GkmasResource):
 
         super().__init__(info, url_template)
         self.name = append_unity_suffix(self.name)
-        self._idname = f"AB[{self.id:05}] '{self.name}'"
         self._deobf_key = _deobf_key or self.name
-        # need to re-instantiate since self._idname has changed
+        # need to re-instantiate since self.name has changed
 
     def __repr__(self) -> str:
-        return f"<GkmasAssetBundle {self._idname}>"
+        return f'<GkmasAssetBundle "{self.name}">'
 
     @property
     def canon_repr(self) -> dict:

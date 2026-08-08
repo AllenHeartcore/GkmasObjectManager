@@ -35,8 +35,8 @@ class GkmasManifest:
     Methods:
         export(path: str | Path) -> None:
             Exports the manifest as ProtoDB and/or JSON to the specified path.
-        search(criterion: str) -> list:
-            Searches the manifest for objects with names *fully* matching the specified criterion.
+        search(*criteria: str) -> list:
+            Searches the manifest for objects with names *fully* matching the specified criteria.
         download(
             *criteria: str,
             path: str | Path = DEFAULT_DOWNLOAD_PATH,
@@ -83,7 +83,7 @@ class GkmasManifest:
         if base_revision != 0:  # leave negative base handling to the Version class
             if base_revision != revision[1] != 0:  # equivalent to a 2-AND
                 logger.warning(
-                    f"Overriding detected base revision v{revision[1]} with specified v{base_revision}."
+                    f"Overriding detected base revision rev{revision[1]} with specified rev{base_revision}."
                 )
             revision = (revision[0], base_revision)  # proceed anyway
 
@@ -126,6 +126,8 @@ class GkmasManifest:
         # could also try self[key]
 
     def __sub__(self, other: "GkmasManifest") -> "GkmasManifest":
+        if self.version.this.era != other.version.this.era:
+            logger.warning("Performing cross-era manifest diff, IDs are meaningless.")
         return GkmasManifest(
             {  # this is not a standard JSON dict, more like named arguments
                 "revision": self.version - other.version,  # handles sanity check
@@ -137,6 +139,8 @@ class GkmasManifest:
         )
 
     def __add__(self, other: "GkmasManifest") -> "GkmasManifest":
+        if self.version.this.era != other.version.this.era:
+            logger.warning("Performing cross-era manifest patch, IDs are meaningless.")
         new_version = self.version + other.version
         a, b = (
             (self, other) if new_version.this == other.version.this else (other, self)
