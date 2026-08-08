@@ -46,8 +46,6 @@ WAYBACK_OBJECTS_LOG_LOCAL_PC = "wayback_objects_pc.json"
     WAYBACK_OBJECTS_LOG_REMOTE,
     WAYBACK_COMMITS_LOG_REMOTE_PC,
     WAYBACK_OBJECTS_LOG_REMOTE_PC,
-    WAYBACK_MANIFEST_URL_TEMPLATE,
-    WAYBACK_MANIFEST_URL_TEMPLATE_PC,
 ) = map(
     lambda path: REPO_OBJECT_URL_TEMPLATE.format(
         branch=MANIFEST_UPDATE_BRANCH, path=path
@@ -57,6 +55,14 @@ WAYBACK_OBJECTS_LOG_LOCAL_PC = "wayback_objects_pc.json"
         WAYBACK_OBJECTS_LOG_LOCAL,
         WAYBACK_COMMITS_LOG_LOCAL_PC,
         WAYBACK_OBJECTS_LOG_LOCAL_PC,
+    ),
+)
+(
+    WAYBACK_MANIFEST_URL_TEMPLATE,
+    WAYBACK_MANIFEST_URL_TEMPLATE_PC,
+) = map(
+    lambda path: REPO_OBJECT_URL_TEMPLATE.format(branch="{hash}", path=path),
+    (
         "manifests/v{revision:04d}.json",
         "manifests_pc/v{revision:04d}.json",
     ),
