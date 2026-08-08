@@ -48,22 +48,25 @@ jobs:
               run: |
                   git config user.name "GitHub Actions"
                   git config user.email ""
-                  git add manifests/
+                  git add manifests/ manifests_pc/
                   VERSION="$(cat manifests/LATEST_VERSION)"
-                  git commit -m "Update mobile manifest to version v$VERSION"
+                  VERSION_PC="$(cat manifests_pc/LATEST_VERSION)"
+                  git commit -m "Update mobile manifest to v$VERSION and PC to v$VERSION_PC"
                   git push origin manifest-update
 
             - name: Record commit hash
               if: steps.run_script.outputs.exit_code == 0
               run: |
                   VERSION="$(cat manifests/LATEST_VERSION)"
+                  VERSION_PC="$(cat manifests_pc/LATEST_VERSION)"
                   COMMIT_HASH="$(git rev-parse --verify HEAD)"
-                  python update_manifest.py --record-commit-hash "$VERSION|$COMMIT_HASH"
+                  python update_manifest.py --record-commit-hash "$VERSION|$VERSION_PC|$COMMIT_HASH"
 
             - name: Commit wayback changes
               if: steps.run_script.outputs.exit_code == 0
               run: |
                   git add wayback_commits.json wayback_objects.json
                   VERSION="$(cat manifests/LATEST_VERSION)"
-                  git commit -m "Rebuild wayback index for manifest version v$VERSION"
+                  VERSION_PC="$(cat manifests_pc/LATEST_VERSION)"
+                  git commit -m "Rebuild wayback index for mobile manifest v$VERSION and PC v$VERSION_PC"
                   git push origin manifest-update

@@ -9,28 +9,35 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from google.protobuf.message import DecodeError
+from requests.exceptions import HTTPError
 
 from ..const import (
     GKMAS_API_HEADER,
     GKMAS_API_URL,
+    GKMAS_API_URL_PC,
     GKMAS_OCTOCACHE_IV,
     GKMAS_OCTOCACHE_KEY,
     GKMAS_ONLINEPDB_KEY,
+    GKMAS_ONLINEPDB_KEY_PC,
     WAYBACK_COMMITS_LOG_LOCAL,
+    WAYBACK_COMMITS_LOG_LOCAL_PC,
     WAYBACK_COMMITS_LOG_REMOTE,
+    WAYBACK_COMMITS_LOG_REMOTE_PC,
     WAYBACK_MANIFEST_URL_TEMPLATE,
+    WAYBACK_MANIFEST_URL_TEMPLATE_PC,
     PathArgtype,
 )
 from ..utils import _json_load, _rget
 from .decrypt import AESCBCDecryptor
 from .manifest import GkmasManifest
 from .octodb_pb2 import pdbytes2dict
-from .versioning import GkmasManifestVersion, str2version
+from .versioning import GkmasManifestVersion
 
 
 def fetch(
     target_version: int | str = 0,
     base_revision: int = 0,
+    pc: bool = False,
     _use_local_commits_log: bool = False,
 ) -> GkmasManifest:
     """
@@ -48,6 +55,8 @@ def fetch(
             Defaults to 0 (standalone latest).
             This API return the *difference* between the specified base
             revision and the latest.
+        pc (bool): Whether to use the PC manifest API.
+            Defaults to False (mobile).
     """
     #   _use_local_commits_log (bool): Whether to use the local "commits log".
     #       Defaults to False.
@@ -55,29 +64,44 @@ def fetch(
     #       Exclusively used in rebuilding "objects log" before remote "commits log" is updated.
     #       NOT FOR GENERAL USE.
 
+    if isinstance(target_version, str) and target_version.startswith("705"):
+        # probably a PC manifest; for convenience, since gom.fetch() is user-facing
+        pc = True  # HARDCODED
+
+    WCL = WAYBACK_COMMITS_LOG_LOCAL_PC if pc else WAYBACK_COMMITS_LOG_LOCAL
+    WCR = WAYBACK_COMMITS_LOG_REMOTE_PC if pc else WAYBACK_COMMITS_LOG_REMOTE
+    WMUT = WAYBACK_MANIFEST_URL_TEMPLATE_PC if pc else WAYBACK_MANIFEST_URL_TEMPLATE
+
     if target_version == 0:  # fetch from server
-        url = urljoin(GKMAS_API_URL, str(base_revision))
+        url = urljoin(GKMAS_API_URL_PC if pc else GKMAS_API_URL, str(base_revision))
         enc = _rget(url, headers=GKMAS_API_HEADER).content
-        dec = AESCBCDecryptor(GKMAS_ONLINEPDB_KEY, enc[:16]).process(enc[16:])
-        return GkmasManifest(pdbytes2dict(dec), base_revision)
+        dec = AESCBCDecryptor(
+            GKMAS_ONLINEPDB_KEY_PC if pc else GKMAS_ONLINEPDB_KEY, enc[:16]
+        ).process(enc[16:])
+        return GkmasManifest(pdbytes2dict(dec), base_revision, pc=pc)
 
-    if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
-        commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
-    else:
-        commits = _json_load(WAYBACK_COMMITS_LOG_REMOTE)
-
-    if isinstance(target_version, int) or target_version.isdigit():
-        _target = GkmasManifestVersion(int(target_version))
-    else:
-        _target = str2version(target_version)
-
-    if str(_target) not in commits:
-        raise ValueError(f"Manifest version {_target} not found in history.")
-    url = WAYBACK_MANIFEST_URL_TEMPLATE.format(
-        hash=commits[str(_target)], revision=base_revision
+    _target = GkmasManifestVersion(
+        int(target_version)
+        if isinstance(target_version, int) or target_version.isdigit()
+        else target_version
     )
 
-    manifest = GkmasManifest(_rget(url).json(), base_revision)
+    commits = _json_load(WCL if _use_local_commits_log and Path(WCL).is_file() else WCR)
+    if str(_target) not in commits:
+        raise ValueError(f"Manifest version {_target} not found in history.")
+    url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
+
+    try:
+        # we don't pass in pc=pc since the era will be overridden anyway
+        manifest = GkmasManifest(_rget(url).json(), base_revision)
+    except HTTPError as e:
+        if not pc:
+            raise e
+        # v705100:0014 - 705100:0034 are known to appear in the mobile location
+        WMUT = WAYBACK_MANIFEST_URL_TEMPLATE  # HARDCODED
+        url = WMUT.format(hash=commits[str(_target)], revision=base_revision)
+        manifest = GkmasManifest(_rget(url).json(), base_revision)
+
     assert (
         manifest.version.this.rev == _target.this.rev
     ), "Manifest version mismatch with commit history record."
@@ -87,7 +111,7 @@ def fetch(
     return manifest
 
 
-def load(src: PathArgtype, base_revision: int = 0) -> GkmasManifest:
+def load(src: PathArgtype, base_revision: int = 0, pc: bool = False) -> GkmasManifest:
     """
     Initializes a manifest from the given offline source.
     The protobuf referred to can be either encrypted or not.
@@ -102,15 +126,19 @@ def load(src: PathArgtype, base_revision: int = 0) -> GkmasManifest:
         base_revision (int) = 0: The revision number of the base manifest.
             **Must be manually specified if loading a diff generated
             by GkmasObjectManager older than or equal to v0.4-beta.**
+        pc (bool): Whether we're initializing a PC manifest.
+            Defaults to False (mobile).
     """
 
     try:
-        return GkmasManifest(_json_load(src), base_revision)
+        return GkmasManifest(_json_load(src), base_revision, pc=pc)
 
     except JSONDecodeError:
         enc = Path(src).read_bytes()
         try:
-            return GkmasManifest(pdbytes2dict(enc), base_revision)
+            return GkmasManifest(pdbytes2dict(enc), base_revision, pc=pc)
         except DecodeError:
             dec = AESCBCDecryptor(GKMAS_OCTOCACHE_KEY, GKMAS_OCTOCACHE_IV).process(enc)
-            return GkmasManifest(pdbytes2dict(dec[16:]), base_revision)  # trim md5 hash
+            return GkmasManifest(
+                pdbytes2dict(dec[16:]), base_revision, pc=pc
+            )  # trim md5 hash

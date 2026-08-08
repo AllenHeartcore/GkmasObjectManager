@@ -34,7 +34,7 @@ class GkmasManifest:
     A GKMAS manifest, containing info about assetbundles and resources.
 
     Attributes:
-        version (GkmasManifestVersion): Manifest version this-diff-base (see revision.py).
+        version (GkmasManifestVersion): Manifest version this-diff-base (see versioning.py).
         assetbundles (GkmasObjectList): List of assetbundle *info dictionaries*.
         resources (GkmasObjectList): List of resource *info dictionaries*.
         urlformat (str): URL format for downloading assetbundles/resources.
@@ -63,7 +63,7 @@ class GkmasManifest:
     resources: GkmasObjectList
     urlformat: str
 
-    def __init__(self, jdict: dict, base_revision: int = 0):
+    def __init__(self, jdict: dict, base_revision: int = 0, pc: bool = False):
         """
         [INTERNAL] Initializes a manifest from the given JSON dictionary.
 
@@ -74,6 +74,9 @@ class GkmasManifest:
             base_revision (int) = 0: The revision number of the base manifest.
                 Manually specified when loading a diff, at which case
                 a warning of conflict is raised if jdict['revision'] is already a tuple.
+            pc (bool): Whether we're initializing a PC manifest.
+                Defaults to False (mobile).
+                Solely affects the era of manifest version.
         """
 
         revision = jdict["revision"]  # not jdict.get() to enforce presence
@@ -95,7 +98,7 @@ class GkmasManifest:
             revision = (revision[0], base_revision)  # proceed anyway
 
         # instantiate from JSON
-        self.version = GkmasManifestVersion(*revision)
+        self.version = GkmasManifestVersion(*revision, pc=pc)
         self.assetbundles = GkmasObjectList(
             jdict.get("assetBundleList", []),  # might be empty in recent diffs
             GkmasAssetBundle,
