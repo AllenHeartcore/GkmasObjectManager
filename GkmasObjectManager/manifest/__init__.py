@@ -66,7 +66,7 @@ def fetch(
         dec = AESCBCDecryptor(
             GKMAS_ONLINEPDB_KEY_PC if pc else GKMAS_ONLINEPDB_KEY, enc[:16]
         ).process(enc[16:])
-        return GkmasManifest(pdbytes2dict(dec), base_revision)
+        return GkmasManifest(pdbytes2dict(dec), base_revision, pc=pc)
 
     if _use_local_commits_log and Path(WAYBACK_COMMITS_LOG_LOCAL).is_file():
         commits = _json_load(WAYBACK_COMMITS_LOG_LOCAL)
@@ -84,6 +84,7 @@ def fetch(
         hash=commits[str(_target)], revision=base_revision
     )
 
+    # we don't pass in pc=pc since the era will be overridden anyway
     manifest = GkmasManifest(_rget(url).json(), base_revision)
     assert (
         manifest.version.this.rev == _target.this.rev
@@ -94,7 +95,7 @@ def fetch(
     return manifest
 
 
-def load(src: PathArgtype, base_revision: int = 0) -> GkmasManifest:
+def load(src: PathArgtype, base_revision: int = 0, pc: bool = False) -> GkmasManifest:
     """
     Initializes a manifest from the given offline source.
     The protobuf referred to can be either encrypted or not.
@@ -109,15 +110,19 @@ def load(src: PathArgtype, base_revision: int = 0) -> GkmasManifest:
         base_revision (int) = 0: The revision number of the base manifest.
             **Must be manually specified if loading a diff generated
             by GkmasObjectManager older than or equal to v0.4-beta.**
+        pc (bool): Whether we're initializing a PC manifest.
+            Defaults to False (mobile).
     """
 
     try:
-        return GkmasManifest(_json_load(src), base_revision)
+        return GkmasManifest(_json_load(src), base_revision, pc=pc)
 
     except JSONDecodeError:
         enc = Path(src).read_bytes()
         try:
-            return GkmasManifest(pdbytes2dict(enc), base_revision)
+            return GkmasManifest(pdbytes2dict(enc), base_revision, pc=pc)
         except DecodeError:
             dec = AESCBCDecryptor(GKMAS_OCTOCACHE_KEY, GKMAS_OCTOCACHE_IV).process(enc)
-            return GkmasManifest(pdbytes2dict(dec[16:]), base_revision)  # trim md5 hash
+            return GkmasManifest(
+                pdbytes2dict(dec[16:]), base_revision, pc=pc
+            )  # trim md5 hash

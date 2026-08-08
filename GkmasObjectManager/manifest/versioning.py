@@ -5,7 +5,7 @@ Version control for GkmasManifest.
 
 # Terminology: Version = (Era, Revision) pair
 
-from ..const import GKMAS_VERSION
+from ..const import GKMAS_VERSION, GKMAS_VERSION_PC
 
 
 class EraRevPair:
@@ -13,8 +13,7 @@ class EraRevPair:
     A pair of Era-Revision values, used in version control.
 
     Attributes:
-        era (int): The Era value, or `GKMAS_VERSION` when making API calls.
-            Documents API changes (previously 205000, now 705100).
+        era (int): The Era value. Documents API changes.
             The protobuf field `uploadVersionId` also takes this value.
             Thought about taking the word "generation" from the protobuf field,
                 but in IDOLY PRIDE this field becomes a 16-digit timestamp.
@@ -24,8 +23,8 @@ class EraRevPair:
     era: int
     rev: int
 
-    def __init__(self, rev: int, era: int = GKMAS_VERSION):
-        assert era > 0, "Era must be positive."
+    def __init__(self, rev: int, era: int):
+        assert era > 0 or rev == 0, "Era must be positive."
         assert rev >= 0, "Revision must be non-negative."
         self.era = era if rev > 0 else 0  # empty case (0, 0) should be the smallest
         self.rev = rev
@@ -61,12 +60,19 @@ class GkmasManifestVersion:
             base = 0 indicates a complete manifest of 'this' version
             (which is not necessarily the case if manifest is loaded from a file),
             while base > 0 indicates a diff to be applied to the base manifest.
+        pc (bool): Whether we're initializing a PC manifest version.
+            Defaults to False (mobile).
     """
 
     this: EraRevPair
     base: EraRevPair
 
-    def __init__(self, this: int | EraRevPair, base: int | EraRevPair = 0):
+    def __init__(
+        self,
+        this: int | EraRevPair,
+        base: int | EraRevPair = 0,
+        pc: bool = False,
+    ):
 
         # __sub__ or __add__ calls this constructor with EraRevPair objects
         if isinstance(this, EraRevPair):
@@ -75,8 +81,9 @@ class GkmasManifestVersion:
         else:
             if not isinstance(base, int):
                 raise TypeError("'this' and 'base' must be of the same type.")
-            this = EraRevPair(this)
-            base = EraRevPair(base)  # base = 0 is inherently handled
+            this = EraRevPair(this, GKMAS_VERSION_PC if pc else GKMAS_VERSION)
+            base = EraRevPair(base, GKMAS_VERSION_PC if pc else GKMAS_VERSION)
+            # base = 0 is inherently handled
 
         assert this.rev > 0, "'this' revision number must be positive."
         assert base.rev >= 0, "'base' revision number must be non-negative."
@@ -179,5 +186,5 @@ def str2version(s: str) -> GkmasManifestVersion:
         this, base = map(str2erp, s.split("-diff-"))
         return GkmasManifestVersion(this, base)
     else:
-        return GkmasManifestVersion(str2erp(s), EraRevPair(0))
+        return GkmasManifestVersion(str2erp(s), EraRevPair(0, 0))
         # we end up circumventing our own same-type assertion... bruh
