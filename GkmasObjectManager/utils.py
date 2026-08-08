@@ -62,7 +62,7 @@ def remove_unity_suffix(name: str) -> str:
 
 def append_unity_suffix(name: str) -> str:
     """Appends the '.unity3d' suffix to a name, if not already present."""
-    return name if name.endswith(UNITY_SUFFIX) else name + UNITY_SUFFIX
+    return name if name.endswith(UNITY_SUFFIX) or "." in name else name + UNITY_SUFFIX
 
 
 def nocache(func) -> Callable:
