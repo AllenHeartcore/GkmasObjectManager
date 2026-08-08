@@ -38,18 +38,18 @@ from GkmasObjectManager.utils import _json_dump, _json_load, append_unity_suffix
 sort_dict = lambda d: dict(sorted(d.items(), key=lambda x: x[0]))
 
 
-def _fetch_old_manifest(ver: str, prog: tqdm) -> GkmasManifest:
+def _fetch_old_manifest(ver: str, pc: bool, prog: tqdm) -> GkmasManifest:
 
-    manifest = fetch(ver, _use_local_commits_log=True)
+    manifest = fetch(ver, pc=pc, _use_local_commits_log=True)
     prog.update(1)
     return manifest
 
 
-async def _fetch_old_manifests(vers: list[str]) -> list[GkmasManifest]:
+async def _fetch_old_manifests(vers: list[str], pc: bool) -> list[GkmasManifest]:
 
     with tqdm(total=len(vers), desc="Fetching historical manifests") as prog:
         return await asyncio.gather(
-            *[asyncio.to_thread(_fetch_old_manifest, ver, prog) for ver in vers]
+            *[asyncio.to_thread(_fetch_old_manifest, ver, pc, prog) for ver in vers]
         )
 
 
@@ -107,7 +107,7 @@ def rebuild_log(latest_manifest: GkmasManifest, pc: bool = False):
         # Manifest #old_version (equal case) must still be fetched for diff
     vers = list(map(str, sorted(vers)))
 
-    manifests = asyncio.run(_fetch_old_manifests(vers))
+    manifests = asyncio.run(_fetch_old_manifests(vers, pc))
     if manifests[-1].version == new_version:
         manifests.pop()  # remove the last duplicate
     manifests.append(latest_manifest)
