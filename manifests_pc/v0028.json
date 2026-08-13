@@ -1,6 +1,6 @@
 {
     "revision": [
-        36,
+        37,
         28
     ],
     "assetBundleList": [
@@ -3363,6 +3363,16 @@
             "state": "ADD",
             "md5": "0469cf9c96bdb39a5653ed59c652969c",
             "objectName": "vO4uw4",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24142,
+            "name": "img_notice_campaign_summer-001",
+            "size": 2231058,
+            "crc": 2351287593,
+            "state": "ADD",
+            "md5": "b4a9adaad6772d1e8ae5c0570878bbf5",
+            "objectName": "URyFaX",
             "uploadVersionId": 705100
         }
     ],

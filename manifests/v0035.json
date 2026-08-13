@@ -1,0 +1,20 @@
+{
+    "revision": [
+        36,
+        35
+    ],
+    "assetBundleList": [
+        {
+            "id": 24190,
+            "name": "img_notice_campaign_summer-001",
+            "size": 327833,
+            "crc": 4069001761,
+            "state": "ADD",
+            "md5": "f38952525de24b2e78aa458cb444016c",
+            "objectName": "W9nBUH",
+            "uploadVersionId": 205100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

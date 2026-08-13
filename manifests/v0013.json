@@ -1,6 +1,6 @@
 {
     "revision": [
-        35,
+        36,
         13
     ],
     "assetBundleList": [
@@ -8841,6 +8841,16 @@
             "state": "ADD",
             "md5": "dae7e26edd3e293f479ece7fd2c8ce34",
             "objectName": "Hu324W",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24190,
+            "name": "img_notice_campaign_summer-001",
+            "size": 327833,
+            "crc": 4069001761,
+            "state": "ADD",
+            "md5": "f38952525de24b2e78aa458cb444016c",
+            "objectName": "W9nBUH",
             "uploadVersionId": 205100
         }
     ],
