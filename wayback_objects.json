@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0033",
+    "latest_version": "205100:0035",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -5778,6 +5778,9 @@
             "205000:0338|gUlEHW|c8771621803da08cf0b31094a5cbd910|51536",
             "205100:0033|QvAQCa|80d443cede8cf9b1e1f4d2ab0efeefde|51370"
         ],
+        "img_cos_atbm-cstm-0051_body.unity3d": [
+            "205100:0035|cQNj5l|f6178eeb725cd2291fc0a02bdf25cc15|26727"
+        ],
         "img_cos_atbm-cstm-0053_body.unity3d": [
             "205000:0365|naxspq|9c32cdfa7ec72000d4760a6eb548d3e4|42081",
             "205100:0033|RM6les|abce09a9bdb22083b03c46ee141c45e9|41957"
@@ -5786,6 +5789,15 @@
             "205000:0365|OeuRci|ae4f02b4299af8bd9b8b1b16227cf9c8|42726",
             "205100:0033|WYgbH0|139ea86650adbcc6a6e31a49546c4c4e|42665"
         ],
+        "img_cos_atbm-cstm-0063_body.unity3d": [
+            "205100:0035|Hu324W|dae7e26edd3e293f479ece7fd2c8ce34|30440"
+        ],
+        "img_cos_atbm-cstm-0065_body.unity3d": [
+            "205100:0035|slrsNu|518e6ebe04c163a87259c60d13e6f600|33891"
+        ],
+        "img_cos_atbm-cstm-0067_body.unity3d": [
+            "205100:0035|BXWMKC|f1b73fb37bc5324ae60e88ae8181f70b|39312"
+        ],
         "img_cos_atbm-cstm-0072_body.unity3d": [
             "205000:0365|vKQj2O|97fe270f6befee2327dadba65ea2a2bf|56982",
             "205100:0033|Z8tAHS|929c9919974e29ad97ad58578fcf5543|56774"
@@ -5793,6 +5805,9 @@
         "img_cos_atbm-cstm-0073_body.unity3d": [
             "205000:0365|c6YO30|a99bd236e1b8a91424af5d9a08f5bf6e|57049",
             "205100:0033|Jf37M1|53071090584cf103b014b3ee15a96115|56890"
+        ],
+        "img_cos_atbm-cstm-0075_body.unity3d": [
+            "205100:0035|Dzqu8D|c3761a8fd2c08de7a5becf855e3cfcb3|33826"
         ],
         "img_cos_atbm-cstm-0076_body.unity3d": [
             "205000:0419|YUD9mw|6fbc0cdbca9e983d53354da4d3349bb8|40597",
@@ -5816,6 +5831,9 @@
         ],
         "img_cos_atbm-cstm-0118_body.unity3d": [
             "205100:0033|MeoIap|81e0629a3a5b61f28977a6fc4ef9bd8e|35329"
+        ],
+        "img_cos_atbm-cstm-0119_body.unity3d": [
+            "205100:0035|iIsM2r|09129723d95423c422feb8b3b4a77046|35778"
         ],
         "img_cos_atbm-cstm-0128_body.unity3d": [
             "205000:0390|zaVwaZ|4256ac59a5548a4437b858c2deccfa61|40503",
@@ -5989,6 +6007,12 @@
         "img_cos_costume_head_atbm-cstm-0054_head.unity3d": [
             "205000:0365|MHER9F|ceb18b7cba62c15a2423b0be01583a31|31198",
             "205100:0033|DM0bGM|5930d047c81fb2e3f04380ff5fdee57d|30927"
+        ],
+        "img_cos_costume_head_atbm-cstm-0063_head.unity3d": [
+            "205100:0035|lJiW6Z|7d4ebdf5840fe72992512e2d60586463|32384"
+        ],
+        "img_cos_costume_head_atbm-cstm-0065_head.unity3d": [
+            "205100:0035|I2SzZh|e0d6559de7412a26fc9bc7237a31736e|31191"
         ],
         "img_cos_costume_head_atbm-cstm-0072_head.unity3d": [
             "205000:0365|9RkeRo|099447809af7759135331f2963deb5a9|36129",
@@ -11411,6 +11435,15 @@
         ],
         "img_gasha_banner_gasha-00970-wednesday-001-select-s.unity3d": [
             "205100:0033|hlmKN0|72306971d2bb07f07f21e6ed612cc973|29097"
+        ],
+        "img_gasha_banner_gasha-00975-select-pickup-001-logo.unity3d": [
+            "205100:0035|ruv90l|890839c6fa27875d3fba8196ded7d388|10622"
+        ],
+        "img_gasha_banner_gasha-00975-select-pickup-001-select-m.unity3d": [
+            "205100:0035|ouorPm|41094b7818ddedd3506064bbc1a08e0e|50521"
+        ],
+        "img_gasha_banner_gasha-00975-select-pickup-001-select-s.unity3d": [
+            "205100:0035|V7VOCG|88327da62c7991bae9aef00020c276eb|27189"
         ],
         "img_gasha_banner_gasha-200limit-select-pickup-001-logo.unity3d": [
             "205000:0365|JSPXGf|e9c44f61ef7c2ef6b7943118e01d4957|13623",
@@ -18082,6 +18115,186 @@
             "205000:0338|ihb37v|78bb44b0ef5e658a23ab29b680492c40|9734",
             "205100:0033|fti6az|cca3e725d5c27ba64173a1e599b841f5|9660"
         ],
+        "img_general_cidol-atbm-3-001_0-full.unity3d": [
+            "205100:0035|7LowMH|445324dbb4248d3240f1c59602aeebbe|659492"
+        ],
+        "img_general_cidol-atbm-3-001_0-thumb-gasha.unity3d": [
+            "205100:0035|NeOj5D|29be15ad8408a2bb6f694ecd13db7cd7|41989"
+        ],
+        "img_general_cidol-atbm-3-001_0-thumb-landscape-large.unity3d": [
+            "205100:0035|JMOOsu|f9e15be7092d0aee54e1eae6c5277011|569245"
+        ],
+        "img_general_cidol-atbm-3-001_0-thumb-landscape.unity3d": [
+            "205100:0035|wpUJ34|962b10377343cc59fdf5b7faabaaea1e|16242"
+        ],
+        "img_general_cidol-atbm-3-001_0-thumb-portrait.unity3d": [
+            "205100:0035|yQx8de|ce35bc56c48cfd99a30b651882ab5970|27695"
+        ],
+        "img_general_cidol-atbm-3-001_0-thumb-square.unity3d": [
+            "205100:0035|Tp3ZWG|423f24c5c0e0a37e3ad1ec195e5e3d25|9504"
+        ],
+        "img_general_cidol-atbm-3-001_1-full.unity3d": [
+            "205100:0035|hrfrOO|2a56ba6d21d46102a3e0b1fc37383373|659487"
+        ],
+        "img_general_cidol-atbm-3-001_1-thumb-gasha.unity3d": [
+            "205100:0035|oqAtjl|3deb306977b66895adf972bed830e55f|46381"
+        ],
+        "img_general_cidol-atbm-3-001_1-thumb-landscape-large.unity3d": [
+            "205100:0035|h5qqpY|6fe27eb987e69a413330b839e90d8344|673783"
+        ],
+        "img_general_cidol-atbm-3-001_1-thumb-landscape.unity3d": [
+            "205100:0035|Ys5LBu|9ba4b4354206c029fa3c5bf2e590b445|16383"
+        ],
+        "img_general_cidol-atbm-3-001_1-thumb-portrait.unity3d": [
+            "205100:0035|W4b7IC|9c118c0ea759c111a4705ac9214cc3b5|29553"
+        ],
+        "img_general_cidol-atbm-3-001_1-thumb-square.unity3d": [
+            "205100:0035|CjG3Sj|9d9b82a2941cfe76c122a05069bf7a3a|9570"
+        ],
+        "img_general_cidol-atbm-3-002_0-full.unity3d": [
+            "205100:0035|A2kCF6|ed4a29ec0e2f752736d42d270c003965|843298"
+        ],
+        "img_general_cidol-atbm-3-002_0-thumb-gasha.unity3d": [
+            "205100:0035|Kp9Oyc|1dc1c224cf7dd7d39d02c3245c5fd296|49660"
+        ],
+        "img_general_cidol-atbm-3-002_0-thumb-landscape-large.unity3d": [
+            "205100:0035|YW3t41|13f22d11f4b4464f261245ac8b603086|802325"
+        ],
+        "img_general_cidol-atbm-3-002_0-thumb-landscape.unity3d": [
+            "205100:0035|kRrrbX|69079f9f5f8c9c7df9b9b2e644f50808|16998"
+        ],
+        "img_general_cidol-atbm-3-002_0-thumb-portrait.unity3d": [
+            "205100:0035|YYtdoX|05d74cd411ef0962855140701dda4bb8|30595"
+        ],
+        "img_general_cidol-atbm-3-002_0-thumb-square.unity3d": [
+            "205100:0035|u6WQjX|82d47ce1ec79b50989fb437a39d53159|9639"
+        ],
+        "img_general_cidol-atbm-3-002_1-full.unity3d": [
+            "205100:0035|27A47O|6a52f9f78ece7eb89a75d8bc9b1afc34|843290"
+        ],
+        "img_general_cidol-atbm-3-002_1-thumb-gasha.unity3d": [
+            "205100:0035|k9i584|150aaa0175fe808e9e1152515e322e2a|50591"
+        ],
+        "img_general_cidol-atbm-3-002_1-thumb-landscape-large.unity3d": [
+            "205100:0035|AbNWhk|bab9c2812606e7d7124bdb61b514d926|854958"
+        ],
+        "img_general_cidol-atbm-3-002_1-thumb-landscape.unity3d": [
+            "205100:0035|iIza4E|67b579d813ce5087adc912e75a4cf86a|17044"
+        ],
+        "img_general_cidol-atbm-3-002_1-thumb-portrait.unity3d": [
+            "205100:0035|gQKH1s|c13410bd6fd3edbeaa257f50c70a4386|31042"
+        ],
+        "img_general_cidol-atbm-3-002_1-thumb-square.unity3d": [
+            "205100:0035|bBi3B1|6b3e3802c5fab4c11fcb04cfdc3a23da|9651"
+        ],
+        "img_general_cidol-atbm-3-003_0-full.unity3d": [
+            "205100:0035|F8hkkL|9ee57bf19f0aecf57a70d528d4de7b3a|852488"
+        ],
+        "img_general_cidol-atbm-3-003_0-thumb-gasha.unity3d": [
+            "205100:0035|DIiblv|df5d19b086eb452468cd92cfd81b0a23|48348"
+        ],
+        "img_general_cidol-atbm-3-003_0-thumb-landscape-large.unity3d": [
+            "205100:0035|ou0TLc|d45a139db98edf1e587024d913768d66|812326"
+        ],
+        "img_general_cidol-atbm-3-003_0-thumb-landscape.unity3d": [
+            "205100:0035|Mv8Tvq|a6a03bb61c6dbc315d7ae1408e3d20cf|17044"
+        ],
+        "img_general_cidol-atbm-3-003_0-thumb-portrait.unity3d": [
+            "205100:0035|w5o0dO|826f8dfbaa0f701315c31bdaa8ce5d16|30672"
+        ],
+        "img_general_cidol-atbm-3-003_0-thumb-square.unity3d": [
+            "205100:0035|9ggkml|b8a2bf0f390af145d45c61f148ab9c00|9611"
+        ],
+        "img_general_cidol-atbm-3-003_1-full.unity3d": [
+            "205100:0035|7Tm6CH|8b0a3193648fa059282b9052c3160720|852484"
+        ],
+        "img_general_cidol-atbm-3-003_1-thumb-gasha.unity3d": [
+            "205100:0035|tRKgiM|45b94100a77716331d91181611f82fad|50261"
+        ],
+        "img_general_cidol-atbm-3-003_1-thumb-landscape-large.unity3d": [
+            "205100:0035|2DtGi2|4a8ec89a726812abc575e3116e52bd87|855018"
+        ],
+        "img_general_cidol-atbm-3-003_1-thumb-landscape.unity3d": [
+            "205100:0035|0X4lnD|57ae9d355ea62dfbece9388f798752d1|17058"
+        ],
+        "img_general_cidol-atbm-3-003_1-thumb-portrait.unity3d": [
+            "205100:0035|kVZcP8|1fc0e31e0ca01e9efb5c164fb2659edd|31012"
+        ],
+        "img_general_cidol-atbm-3-003_1-thumb-square.unity3d": [
+            "205100:0035|ulPkwx|452ee71c60f98123480b0e7e896c264b|9641"
+        ],
+        "img_general_cidol-atbm-3-004_0-full.unity3d": [
+            "205100:0035|KaUBN3|0a475db56d2ad72e1fc1b4377b143b2d|771186"
+        ],
+        "img_general_cidol-atbm-3-004_0-thumb-gasha.unity3d": [
+            "205100:0035|Q1R32f|9611ccf14f8c877bba549fc1d60005e0|48302"
+        ],
+        "img_general_cidol-atbm-3-004_0-thumb-landscape-large.unity3d": [
+            "205100:0035|HIUXrH|0838d94fc751070e4f5955fc78be1300|737136"
+        ],
+        "img_general_cidol-atbm-3-004_0-thumb-landscape.unity3d": [
+            "205100:0035|bTGCYt|ebc548f482de8913d24342f5e08c0829|16890"
+        ],
+        "img_general_cidol-atbm-3-004_0-thumb-portrait.unity3d": [
+            "205100:0035|8edZWa|d31a1a0476de2f9b95fbbcf553c0a7e1|30308"
+        ],
+        "img_general_cidol-atbm-3-004_0-thumb-square.unity3d": [
+            "205100:0035|lOjBVw|6395983ebf37cf4a1bb3ffc486366745|9608"
+        ],
+        "img_general_cidol-atbm-3-004_1-full.unity3d": [
+            "205100:0035|fM9frC|322a1f9fcc8163b84b5ce087e3118eba|771186"
+        ],
+        "img_general_cidol-atbm-3-004_1-thumb-gasha.unity3d": [
+            "205100:0035|YJD5nE|96722183e41abef39373e2f7ce1153ca|49755"
+        ],
+        "img_general_cidol-atbm-3-004_1-thumb-landscape-large.unity3d": [
+            "205100:0035|CJPOd2|7eaaf8e29981949887bc3719cf0ae099|782250"
+        ],
+        "img_general_cidol-atbm-3-004_1-thumb-landscape.unity3d": [
+            "205100:0035|FcSIAz|e1912314fafa85ea6cc75ff84d445cfd|16932"
+        ],
+        "img_general_cidol-atbm-3-004_1-thumb-portrait.unity3d": [
+            "205100:0035|3QP5gA|d77f639ddfe616955cfcf26a7911fb02|30711"
+        ],
+        "img_general_cidol-atbm-3-004_1-thumb-square.unity3d": [
+            "205100:0035|7xBi8l|cb2dc413dc5e2b71ceed111ec55e5b5f|9641"
+        ],
+        "img_general_cidol-atbm-3-005_0-full.unity3d": [
+            "205100:0035|ai4JcS|8c0a1acc34dfbede1d2f39fd998d605c|612639"
+        ],
+        "img_general_cidol-atbm-3-005_0-thumb-gasha.unity3d": [
+            "205100:0035|6WbHRJ|543ab18cfc0ae5ee03974d47790f6124|43998"
+        ],
+        "img_general_cidol-atbm-3-005_0-thumb-landscape-large.unity3d": [
+            "205100:0035|UexjTL|34803a7fdd613d75f0cc517a5ed59bf7|485542"
+        ],
+        "img_general_cidol-atbm-3-005_0-thumb-landscape.unity3d": [
+            "205100:0035|rS5z9q|f58a52aeb3f705d4a1f5b9a77aba02ac|15163"
+        ],
+        "img_general_cidol-atbm-3-005_0-thumb-portrait.unity3d": [
+            "205100:0035|xXxfZ3|34d170025eb07644cd83555eeedaed58|26536"
+        ],
+        "img_general_cidol-atbm-3-005_0-thumb-square.unity3d": [
+            "205100:0035|PBuwUY|2689067fa2dde16c1a36c7556d1bd0c3|8877"
+        ],
+        "img_general_cidol-atbm-3-005_1-full.unity3d": [
+            "205100:0035|kNbWQ2|426a7d314c34e33a0dd5a58ac9e681c7|612640"
+        ],
+        "img_general_cidol-atbm-3-005_1-thumb-gasha.unity3d": [
+            "205100:0035|NSr9hn|f660ce408593ad5aef4e2ff1449ef7e8|46102"
+        ],
+        "img_general_cidol-atbm-3-005_1-thumb-landscape-large.unity3d": [
+            "205100:0035|GWVz8P|d38754aa96b958980fe79b49b973fb16|604343"
+        ],
+        "img_general_cidol-atbm-3-005_1-thumb-landscape.unity3d": [
+            "205100:0035|ydydkI|f9c7865c2ace0642cf63ca6fa4ccb9b0|15783"
+        ],
+        "img_general_cidol-atbm-3-005_1-thumb-portrait.unity3d": [
+            "205100:0035|HdfLep|003cb18a1c01b29a3058c364bd13f460|28357"
+        ],
+        "img_general_cidol-atbm-3-005_1-thumb-square.unity3d": [
+            "205100:0035|wyHGCf|a5d46fe2fd6e373568df6098cd5895da|9234"
+        ],
         "img_general_cidol-atbm-3-006_0-full.unity3d": [
             "205000:0419|io2Zc8|e6d4bbe5d04b34c9cce735a63f6d3ac7|860969",
             "205100:0033|xuPCEK|a6e394cd316c62ef047cca4be1949518|853956"
@@ -18175,6 +18388,42 @@
         "img_general_cidol-atbm-3-007_1-thumb-square.unity3d": [
             "205000:0422|ybT5gE|9cc0084b0669786b3b53ccfffa2af169|9662",
             "205100:0033|OMgMAM|917a9e075d84c848b035d0e7dc5f2af1|9584"
+        ],
+        "img_general_cidol-atbm-3-008_0-full.unity3d": [
+            "205100:0035|NwKnaJ|b9eef1c286793bef8e1d16c64ad15765|657117"
+        ],
+        "img_general_cidol-atbm-3-008_0-thumb-gasha.unity3d": [
+            "205100:0035|t31O0h|59174edfb73e9825f05ade857a8c3934|49609"
+        ],
+        "img_general_cidol-atbm-3-008_0-thumb-landscape-large.unity3d": [
+            "205100:0035|oU0tmp|de0d144a47040ce15b938af7bce5162b|599039"
+        ],
+        "img_general_cidol-atbm-3-008_0-thumb-landscape.unity3d": [
+            "205100:0035|9tGvMQ|ab15dbec2844f2c1a5e15e01e5b68696|16330"
+        ],
+        "img_general_cidol-atbm-3-008_0-thumb-portrait.unity3d": [
+            "205100:0035|yEgXKA|51d523b7b81735ff685b39c05feeed95|29742"
+        ],
+        "img_general_cidol-atbm-3-008_0-thumb-square.unity3d": [
+            "205100:0035|pxwfgm|dfe12f8502af0e05d9afd495f3173441|9524"
+        ],
+        "img_general_cidol-atbm-3-008_1-full.unity3d": [
+            "205100:0035|tj3pvg|2ed9d729823bca88a138c8dc5a8fed44|657108"
+        ],
+        "img_general_cidol-atbm-3-008_1-thumb-gasha.unity3d": [
+            "205100:0035|2d5TqF|f5f4e67c55c661da35f7b22cd3f45583|50326"
+        ],
+        "img_general_cidol-atbm-3-008_1-thumb-landscape-large.unity3d": [
+            "205100:0035|rVwVz1|3457149887fa8b3a00e4b940f5d5144f|768639"
+        ],
+        "img_general_cidol-atbm-3-008_1-thumb-landscape.unity3d": [
+            "205100:0035|tZEeK5|c250d5df3660ea5f80803fd3ccdf5a3f|16913"
+        ],
+        "img_general_cidol-atbm-3-008_1-thumb-portrait.unity3d": [
+            "205100:0035|hCm5io|bfd1ba6d1a335e8d3967ef318794b956|30236"
+        ],
+        "img_general_cidol-atbm-3-008_1-thumb-square.unity3d": [
+            "205100:0035|JS8BXp|646d6cce7e9b168477d0a04c9fe50c38|9573"
         ],
         "img_general_cidol-atbm-3-009_0-full.unity3d": [
             "205100:0033|czINtd|f812d7466dbd19978d81bd7fb8aca3c4|923325"
@@ -31003,6 +31252,12 @@
         "img_general_comic4_0156.unity3d": [
             "205100:0033|qugkO6|85c981fed29ae001580ccfb952d723ac|236157"
         ],
+        "img_general_comic4_0157-thumb.unity3d": [
+            "205100:0035|ACa91O|cf540b55f07ee2a209521946e06d1af9|26674"
+        ],
+        "img_general_comic4_0157.unity3d": [
+            "205100:0035|jQotim|fc14fbb6e4dddea0aeacc4f2ee85b041|247349"
+        ],
         "img_general_comic4_radio-0000-thumb.unity3d": [
             "205000:0262|lqqLLT|7570d8148e4bb32aeed23854d23a2a58|25613",
             "205100:0033|OZdd1N|37746b0f7e3fc9f60203d86e1c2e422f|25401"
@@ -37133,6 +37388,9 @@
         "img_general_home_gasha_gasha-00970-stepup-001.unity3d": [
             "205100:0033|zhHAqF|342ceac9edae7c732193c31a3a760c88|15952"
         ],
+        "img_general_home_gasha_gasha-00975-select-pickup-001.unity3d": [
+            "205100:0035|AghLx4|49afab1f86d8179576440c2d115c598d|14299"
+        ],
         "img_general_home_gasha_gasha-200limit-select-pickup-001.unity3d": [
             "205000:0365|pcbpHC|a8621ee92e0d05e60137a96d18590aa4|15826",
             "205100:0033|Ib9mJZ|b3d2beab8b3cfed63d93429154d48612|15748"
@@ -43218,6 +43476,24 @@
         "img_general_live_music-all-atbm-002_true-end.unity3d": [
             "205000:0365|sprYYY|8c8366942b01b256261dd8ff8386007c|231540",
             "205100:0033|0Z4r9q|c82a53b53aee2c2d2dd281122f0d2b79|230932"
+        ],
+        "img_general_live_music-all-atbm-003_true-end.unity3d": [
+            "205100:0035|uO2TFh|78e844b582d00dab2ff1d15789fc7e64|232553"
+        ],
+        "img_general_live_music-all-atbm-004_true-end.unity3d": [
+            "205100:0035|AoCeUM|179057709fa2251bb836074512aa2c80|224169"
+        ],
+        "img_general_live_music-all-atbm-005_true-end.unity3d": [
+            "205100:0035|TcC9IM|1bc8ec082b2db8e8a7ee3e8e7eb69b58|226107"
+        ],
+        "img_general_live_music-all-atbm-006_true-end.unity3d": [
+            "205100:0035|pabHmX|7430fde64307de8ab539a70b5d4bcf6a|226725"
+        ],
+        "img_general_live_music-all-atbm-007_true-end.unity3d": [
+            "205100:0035|tiCEDX|cece0f226468bb070065cdb0620a6cd9|203994"
+        ],
+        "img_general_live_music-all-atbm-008_true-end.unity3d": [
+            "205100:0035|FT39he|b9e34072642465a2fd5b54932a26b7f3|216544"
         ],
         "img_general_live_music-all-atbm-009_true-end.unity3d": [
             "205000:0419|czuqUh|bfea86d8c22183c61f71f02ca75ff2c8|228395",
@@ -53337,6 +53613,24 @@
         "img_general_music_jacket_all-atbm-002.unity3d": [
             "205000:0365|c5y8lr|aaa36dafb961ded1ed3fa5c09f69d76f|404750",
             "205100:0033|5DJrMp|0623c0532fc53735669aef3c9e1791ae|401780"
+        ],
+        "img_general_music_jacket_all-atbm-003.unity3d": [
+            "205100:0035|J6l1wY|0e9e4eccf0d79eeea2b7b69941161efa|324478"
+        ],
+        "img_general_music_jacket_all-atbm-004.unity3d": [
+            "205100:0035|cLtSoc|35132d15f8d224723ca3e3c1581d51be|424881"
+        ],
+        "img_general_music_jacket_all-atbm-005.unity3d": [
+            "205100:0035|n5NX08|9ff63981fdde3bef4ef5a807a9e639b3|425763"
+        ],
+        "img_general_music_jacket_all-atbm-006.unity3d": [
+            "205100:0035|VU5hBB|d1dbfc506625b7bba325715dedbb5fd1|408207"
+        ],
+        "img_general_music_jacket_all-atbm-007.unity3d": [
+            "205100:0035|h50iPL|c5d5ad1a9f9147009cca110749e60e69|309136"
+        ],
+        "img_general_music_jacket_all-atbm-008.unity3d": [
+            "205100:0035|0IZzZ7|6798ad76f75dcef03dee640d14d1bd96|362632"
         ],
         "img_general_music_jacket_all-atbm-009.unity3d": [
             "205000:0419|5eyPnb|6601af0d8e47c7bc93140d7a35172450|415867",
@@ -70064,6 +70358,21 @@
             "205000:0338|Fm7FFP|4eb48658cc0dd4eebce8ad6e6389ab56|785208",
             "205100:0033|5DOvkX|4df12547916852935f078ea35d2207ef|782679"
         ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-001.unity3d": [
+            "205100:0035|fKpBe7|2414ac6032e46870e6e547681d103dd1|759854"
+        ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-002.unity3d": [
+            "205100:0035|yHpkQd|6015842821cc07c2852c74f7a19dc567|831545"
+        ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-003.unity3d": [
+            "205100:0035|eTdULt|80f175291988a007043ec4df1e45922c|745838"
+        ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-004.unity3d": [
+            "205100:0035|hkoDto|9725e397d99e2541d92175e1cb370a2b|852974"
+        ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-005.unity3d": [
+            "205100:0035|O3nlek|241e70970a5daaef0c0263f34bf6187e|799201"
+        ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-006.unity3d": [
             "205000:0419|ssX6TH|a9b8aea1ad4aceb20bcc4592616fbfe2|856245",
             "205100:0033|O6CjvR|102dbc914dddb5e00d97a95fd9a80998|853182"
@@ -70071,6 +70380,9 @@
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-007.unity3d": [
             "205000:0422|S9bcJe|a5201c5ef4ff4731fb0d0a68a09a828c|807812",
             "205100:0033|r81TdX|316676d5686901d4c1147b1f227abf29|804793"
+        ],
+        "img_mov_general_gasha_bg_idol_cidol-atbm-3-008.unity3d": [
+            "205100:0035|CJpjkV|c1db2a6bbd168d1d0168b56c3b3fa5a0|788484"
         ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-009.unity3d": [
             "205100:0033|Pb3YV6|5d7a26efb00ace904f1958813d8425fe|856885"
@@ -73944,6 +74256,15 @@
         ],
         "img_notice_gasha_gasha-00970pickup-002-banner-01-large.unity3d": [
             "205100:0033|UO6Tst|c35f095934f28aa3494d10173457c70c|98932"
+        ],
+        "img_notice_gasha_gasha-00975-select-pickup-001-banner-01-large-pre.unity3d": [
+            "205100:0035|aL67AW|df7b564371cfafe73727c5c0c0b4c510|99983"
+        ],
+        "img_notice_gasha_gasha-00975-select-pickup-001-banner-01-large.unity3d": [
+            "205100:0035|J6PfkO|596a6137f32af70f31b166a2ad33c94c|100014"
+        ],
+        "img_notice_gasha_gasha-00975-select-pickup-001.unity3d": [
+            "205100:0035|pZOVN7|6368ee7d4177455193faf4c5549cad02|407486"
         ],
         "img_notice_gasha_gasha-200limit-select-pickup-001-banner-01-large-pre.unity3d": [
             "205000:0361|X2mXZD|ac58241e0be6e33a4a87eaa5bc31be60|108965",
@@ -78309,6 +78630,9 @@
             "205000:0338|Amf3Zu|d7bc02facf8af9d0e014a6c397069504|3751933",
             "205100:0033|h3VCV9|902a2535f7d2a8749f9e5d2d94371973|3680464"
         ],
+        "mdl_chr_atbm-cstm-0051_body.unity3d": [
+            "205100:0035|mZyh1w|6c288aeb91b649a177f216c460c00d10|4565741"
+        ],
         "mdl_chr_atbm-cstm-0053_body.unity3d": [
             "205000:0365|LHyFvD|0a63eaf12a6c7516e40aa05bc413103c|7967457",
             "205100:0033|ONEBLm|0e05084b4116b6a5009f9126c59aa24f|7917742"
@@ -78324,6 +78648,21 @@
         "mdl_chr_atbm-cstm-0054_hair.unity3d": [
             "205000:0365|4LrZCG|69d502e15ce8cfa4f4a3a25d8776bd85|3547473",
             "205100:0033|sfW8ly|e8eb5529c2c0dd2e5f762b4fc6ce11cc|3482077"
+        ],
+        "mdl_chr_atbm-cstm-0063_body.unity3d": [
+            "205100:0035|aIdEMq|9d69a3d0d9fae4dfccd0fcfcfcb9d2cf|5477297"
+        ],
+        "mdl_chr_atbm-cstm-0063_hair.unity3d": [
+            "205100:0035|qObwMw|71972027dce84d9d0eee3b2c36285078|3607775"
+        ],
+        "mdl_chr_atbm-cstm-0065_body.unity3d": [
+            "205100:0035|mUKOc7|610cd76a9fd2cc6c5c14c709d58b5860|6971750"
+        ],
+        "mdl_chr_atbm-cstm-0065_face.unity3d": [
+            "205100:0035|w9zrbJ|f14ee2d4ebc616fbe2eba6624d68ccfa|609534"
+        ],
+        "mdl_chr_atbm-cstm-0067_body.unity3d": [
+            "205100:0035|1fyClS|cf71061ad03aa9311ab6b797b22214c0|6762592"
         ],
         "mdl_chr_atbm-cstm-0069_body.unity3d": [
             "205000:0338|HoCxp1|32ee791560c12eeadd8026d31a7b48a3|4341603",
@@ -78344,6 +78683,9 @@
         "mdl_chr_atbm-cstm-0073_hair.unity3d": [
             "205000:0365|rsTTrw|b400fc2d9e8a758c02f45a9e00738117|3746598",
             "205100:0033|o5U9Vl|001bb32b77ac95c9fbe01e17f108cb97|3673083"
+        ],
+        "mdl_chr_atbm-cstm-0075_body.unity3d": [
+            "205100:0035|hmWoOB|1d4f40afa811a72744c34f9f9d490deb|5709591"
         ],
         "mdl_chr_atbm-cstm-0076_body.unity3d": [
             "205000:0419|aDbQ6L|20a4c030e528d897d8785e8676c0f4ab|6763442",
@@ -78394,6 +78736,9 @@
         ],
         "mdl_chr_atbm-cstm-0118_body.unity3d": [
             "205100:0033|VP0eC5|b7eac185eb4388875463bb17141cddc6|6127122"
+        ],
+        "mdl_chr_atbm-cstm-0119_body.unity3d": [
+            "205100:0035|skNSxP|b109a077e103e96f5223ac25e24e4d60|7162811"
         ],
         "mdl_chr_atbm-cstm-0128_body.unity3d": [
             "205000:0390|1ptyxT|24a7f3b2865a9544f6193fd103520ce9|8094018",
@@ -83185,6 +83530,9 @@
             "205000:0338|uyuvBm|2bfee94ca2b3c1246941dc263593c269|8864",
             "205100:0033|VfPbBr|5590967ff063eb6305498d6d18ea975d|8782"
         ],
+        "mef_mat_chr_atbm_ehl-move-002.unity3d": [
+            "205100:0035|EPu9Bm|d3a46336170c2f25c69707d75162a1dc|8825"
+        ],
         "mef_mat_chr_atbm_ehl-nohighlight-001.unity3d": [
             "205000:0338|LecDGt|4cea02645252e58b2c18ec860646cbb4|2905",
             "205100:0033|VtKhFZ|b2fc416bebc429960634e98489805458|2846"
@@ -83524,6 +83872,12 @@
         "mef_pfb_chr_atbm_eye-glow-001_r.unity3d": [
             "205000:0338|P4yRPt|2d8c6c861a73c83f14f7740f3aa35652|334950",
             "205100:0033|AZfNrg|681ed2baff8154effa947e95027fa4db|330733"
+        ],
+        "mef_pfb_chr_atbm_eye-shiromaru-001_l.unity3d": [
+            "205100:0035|43gBGJ|e654c9f89654b64ba2e8866c3fb2dc06|66117"
+        ],
+        "mef_pfb_chr_atbm_eye-shiromaru-001_r.unity3d": [
+            "205100:0035|FdopmP|5dd840c88be07f6f50523423acb0d24f|66109"
         ],
         "mef_pfb_chr_atbm_head-gaan-001.unity3d": [
             "205000:0338|ZytYcL|48c1d8f14eee8f736cab27ef96904e69|72341",
@@ -91444,6 +91798,12 @@
             "205000:0365|KYomQC|3339dd8616037e43b4af938b51eb17a0|2335309",
             "205100:0033|3wDVfg|087a85b1f5d528462a07dc1cb2cd69f0|2335299"
         ],
+        "mot_live_chr_atbm_all-003_00_in.unity3d": [
+            "205100:0035|PCXl5m|7659d23b1571c87ae1397dc2b993a9de|2503558"
+        ],
+        "mot_live_chr_atbm_all-008_00_in.unity3d": [
+            "205100:0035|xHr3lI|69eb4387958886511e1ad8ad258f48d6|1946219"
+        ],
         "mot_live_chr_atbm_atbm-001-normal-001_00_in.unity3d": [
             "205000:0338|d9FxLT|0d2586c56560551ebc6331a355208a4b|1342480",
             "205100:0033|MWnvy8|9ee6e9a0408a99caaf81e68a96b2cf22|1340318"
@@ -93643,6 +94003,9 @@
         "sud_music_live_all-003-amao_true-001.unity3d": [
             "205000:0081|Mu7pCw|4d3eed4e67f12b811c9b74b161ec0197|2368875"
         ],
+        "sud_music_live_all-003-atbm_true-001.unity3d": [
+            "205100:0035|wsLft0|2f9e94820dab1e550be315cfb14db8c1|2310583"
+        ],
         "sud_music_live_all-003-fktn_true-001.unity3d": [
             "205000:0081|2hf4c3|ad9ecd060641b104d7cc7e920867b769|2371488"
         ],
@@ -93678,6 +94041,9 @@
         ],
         "sud_music_live_all-004-amao_true-001.unity3d": [
             "205000:0081|svezHd|5ff69cdbb07ce9c5b3805d750083d42e|2254974"
+        ],
+        "sud_music_live_all-004-atbm_true-001.unity3d": [
+            "205100:0035|7av6jH|6220a9dec1161d5b68f8d2cdb2688a00|2174753"
         ],
         "sud_music_live_all-004-fktn_true-001.unity3d": [
             "205000:0081|FjjNi4|79b3052f6409f4bd74aa3284ce76ef4a|2240780"
@@ -93715,6 +94081,9 @@
         "sud_music_live_all-005-amao_true-001.unity3d": [
             "205000:0103|KzMBnm|54cee98d579a22b7ebceddc775993053|1793586"
         ],
+        "sud_music_live_all-005-atbm_true-001.unity3d": [
+            "205100:0035|rzCECH|6ce35699fdcd98eee8535b7ce2f26d18|1749738"
+        ],
         "sud_music_live_all-005-fktn_true-001.unity3d": [
             "205000:0091|U1wQLS|f2aa2a42e7ceb1711383f297ea2b3d74|1785311"
         ],
@@ -93750,6 +94119,9 @@
         ],
         "sud_music_live_all-006-amao_true-001.unity3d": [
             "205000:0137|drgH3t|c0726bbe2d41ac42267a752a9efa3afb|2146820"
+        ],
+        "sud_music_live_all-006-atbm_true-001.unity3d": [
+            "205100:0035|zTDWXi|304db5220055935866b545008ed38930|2102911"
         ],
         "sud_music_live_all-006-fktn_true-001.unity3d": [
             "205000:0137|PJWIOP|c50327d24717e07a246bfe555e0fa4ef|2133673"
@@ -93787,6 +94159,9 @@
         "sud_music_live_all-007-amao_true-001.unity3d": [
             "205000:0181|XK39Fz|02cfc075d524ee079da3cebf7e3a62a4|1755000"
         ],
+        "sud_music_live_all-007-atbm_true-001.unity3d": [
+            "205100:0035|z2FHFD|a06c2cf3af494b4e90a17a49416cca3a|1725240"
+        ],
         "sud_music_live_all-007-fktn_true-001.unity3d": [
             "205000:0181|R4m54V|0b09b310e7385254d34aa9302ed0fed8|1752022"
         ],
@@ -93822,6 +94197,9 @@
         ],
         "sud_music_live_all-008-amao_true-001.unity3d": [
             "205000:0237|epBJkv|7175f3e1e89a859111b49d2b9f3683e7|2266984"
+        ],
+        "sud_music_live_all-008-atbm_true-001.unity3d": [
+            "205100:0035|uvcV5d|4a63b9c1814ce8203dcc7ab4f18301c6|2231318"
         ],
         "sud_music_live_all-008-fktn_true-001.unity3d": [
             "205000:0237|5G9OvJ|f4d0583b0bbc70d992cab9c25dbd03cf|2241041"
@@ -94241,7 +94619,8 @@
             "205000:0338|NZUg4K|4098565a84c2c86bc1b2c36e0aaa141d|2875680"
         ],
         "sud_music_live_atbm-004-atbm_true-001.unity3d": [
-            "205100:0033|7mIaVM|e34f47aa52fdf8147c11c2cf6e89b015|2854166"
+            "205100:0033|7mIaVM|e34f47aa52fdf8147c11c2cf6e89b015|2854166",
+            "205100:0035|8X90hr|7d2fb5be9167c6e1da6e04c4f75980e0|2845399"
         ],
         "sud_music_live_fktn-001-fktn_normal-001.unity3d": [
             "205000:0025|Vs4FIG|0338a4e6b6d14f45da7c78b12794f3cd|1512311"
@@ -107616,6 +107995,24 @@
         "img_general_music_jacket_all-atbm-002.png": [
             "205000:0365|UTXZls|85b7e2defebf2751621b81863a306d33|1427128"
         ],
+        "img_general_music_jacket_all-atbm-003.png": [
+            "205100:0035|CnrmhF|ae1e724c1c72c68fadfb3dd51cbded16|1044842"
+        ],
+        "img_general_music_jacket_all-atbm-004.png": [
+            "205100:0035|YZPS2N|68345260b7f5456ee30a76634b11b164|1428157"
+        ],
+        "img_general_music_jacket_all-atbm-005.png": [
+            "205100:0035|PH7K1q|a3a38f6942f1b6f2556d71cb6aaa77d7|1586598"
+        ],
+        "img_general_music_jacket_all-atbm-006.png": [
+            "205100:0035|ZNCDzi|114dd008c28995314302574e61a3631a|1432769"
+        ],
+        "img_general_music_jacket_all-atbm-007.png": [
+            "205100:0035|vMvCqH|6e7566907d9c73ce64cd797e31d23446|941339"
+        ],
+        "img_general_music_jacket_all-atbm-008.png": [
+            "205100:0035|fFwaEx|72bff87de864202ccf6965c20298b6db|1128954"
+        ],
         "img_general_music_jacket_all-atbm-009.png": [
             "205000:0419|4DQNRo|0d928d0169bb4fac9dbe91ddaf471477|1429448"
         ],
@@ -108974,6 +109371,66 @@
         "mov_general_cidol-atbm-3-000_1.usm": [
             "205000:0338|LHUPHg|cd2ab27b58ce0ef12e59e7400143ef33|12042144"
         ],
+        "mov_general_cidol-atbm-3-001_1-gasha.usm": [
+            "205100:0035|b4PA47|07ef31f454bbf2c01ed78aaf224fac7a|662368"
+        ],
+        "mov_general_cidol-atbm-3-001_1-loop-gasha.usm": [
+            "205100:0035|DJFved|af2d4e4bb5bcb4f911d143c94dd4034c|5773952"
+        ],
+        "mov_general_cidol-atbm-3-001_1-loop.usm": [
+            "205100:0035|02Bm8i|63f8bd6377509ad48ed7b1aab1f30f0a|11606784"
+        ],
+        "mov_general_cidol-atbm-3-001_1.usm": [
+            "205100:0035|CUpmiw|5ddfbdcfc21c8e0d62c907ed31c7e1d0|11606784"
+        ],
+        "mov_general_cidol-atbm-3-002_1-gasha.usm": [
+            "205100:0035|9EglYt|53dd8d4c5e0a9dc6819bd9cc6ae7ed6b|661632"
+        ],
+        "mov_general_cidol-atbm-3-002_1-loop-gasha.usm": [
+            "205100:0035|sggv5E|4542776bc8edf1740a74ec88f6a67754|5838208"
+        ],
+        "mov_general_cidol-atbm-3-002_1-loop.usm": [
+            "205100:0035|N3TE1N|f4419def9a5e3c8e3a7c1fe813de9dc8|12051392"
+        ],
+        "mov_general_cidol-atbm-3-002_1.usm": [
+            "205100:0035|zyPlXd|3d0a3b6d3d6eed3eb5aed72aaeebb800|12051392"
+        ],
+        "mov_general_cidol-atbm-3-003_1-gasha.usm": [
+            "205100:0035|OsxypH|b914fc7a07d8164fe9d784fdb1bfe993|685120"
+        ],
+        "mov_general_cidol-atbm-3-003_1-loop-gasha.usm": [
+            "205100:0035|qskzpz|a5bb9f4020e2b943049fb6c19a82e948|5871072"
+        ],
+        "mov_general_cidol-atbm-3-003_1-loop.usm": [
+            "205100:0035|g5yS0G|cef26f5fcc3089dbca18697dc7d5224c|13465024"
+        ],
+        "mov_general_cidol-atbm-3-003_1.usm": [
+            "205100:0035|nGtV5I|a249cfd64a89deec70b35b03a869edff|13465024"
+        ],
+        "mov_general_cidol-atbm-3-004_1-gasha.usm": [
+            "205100:0035|b2Wd30|510ea3ae3deadfeacbecdae59b069465|652928"
+        ],
+        "mov_general_cidol-atbm-3-004_1-loop-gasha.usm": [
+            "205100:0035|G8doqC|e444fbdc3b61057f21d31204cb1b9327|5781984"
+        ],
+        "mov_general_cidol-atbm-3-004_1-loop.usm": [
+            "205100:0035|K0UbHC|632faf945cc2623056478f9fc59f2754|12844160"
+        ],
+        "mov_general_cidol-atbm-3-004_1.usm": [
+            "205100:0035|cMVOhh|1ef2ef8b64fef4dd7b0ca9088913f185|12844160"
+        ],
+        "mov_general_cidol-atbm-3-005_1-gasha.usm": [
+            "205100:0035|uTcCKv|fe93fd844bcf1638543859fad21b12ff|703936"
+        ],
+        "mov_general_cidol-atbm-3-005_1-loop-gasha.usm": [
+            "205100:0035|jy70pI|c01741521c42e07239cf964569d59705|5728480"
+        ],
+        "mov_general_cidol-atbm-3-005_1-loop.usm": [
+            "205100:0035|Y1kYhO|03f6c9e1eec2b48ba60a3f16c8fa5ec4|11231296"
+        ],
+        "mov_general_cidol-atbm-3-005_1.usm": [
+            "205100:0035|AldZqm|bd8b23ebe96a234eb916d8c18d5ae578|11231296"
+        ],
         "mov_general_cidol-atbm-3-006_1-gasha.usm": [
             "205000:0419|gTdV0Z|c45e67c9f7a435fbccf703d492809f2f|642272"
         ],
@@ -108997,6 +109454,18 @@
         ],
         "mov_general_cidol-atbm-3-007_1.usm": [
             "205000:0422|RjQgL6|3eeb7ea2ddc739b333f45b3d8e5047aa|12274016"
+        ],
+        "mov_general_cidol-atbm-3-008_1-gasha.usm": [
+            "205100:0035|6AsARK|50435fdd930372d285d4026210893357|685760"
+        ],
+        "mov_general_cidol-atbm-3-008_1-loop-gasha.usm": [
+            "205100:0035|pN9mDa|79ba53f6ada912da408b9af6133d6ffa|5794944"
+        ],
+        "mov_general_cidol-atbm-3-008_1-loop.usm": [
+            "205100:0035|XtoPSP|f55bb2e70dc5daf47235d3c7b09e115e|15213888"
+        ],
+        "mov_general_cidol-atbm-3-008_1.usm": [
+            "205100:0035|XUF6e5|28c39919379bda7dfdf66ddf851e7912|15213888"
         ],
         "mov_general_cidol-atbm-3-009_1-gasha.usm": [
             "205100:0033|SX23nE|9940c454c67f9cf55d1618ef2549d6f9|661888"
@@ -111465,11 +111934,29 @@
         "mov_general_gasha_bg_idol_cidol-atbm-3-000.usm": [
             "205000:0338|9Mk1WA|7de4872606ec80b65bffe7405ffbc946|23904256"
         ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-001.usm": [
+            "205100:0035|VyMWgW|772d860a3fe9422a9936252aadbb86e5|23798784"
+        ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-002.usm": [
+            "205100:0035|Zcu3ki|a533a715c73820922f5d59fae4c7d115|21987168"
+        ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-003.usm": [
+            "205100:0035|iKm3bW|419905feeee3beda25ff46242b701cf5|20312128"
+        ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-004.usm": [
+            "205100:0035|uYN6CA|e3f7c2d0daf97cccec67a8720e0fbbe2|22647968"
+        ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-005.usm": [
+            "205100:0035|m0nbnk|60b7267cc03699302e4700b32d9a3501|20637920"
+        ],
         "mov_general_gasha_bg_idol_cidol-atbm-3-006.usm": [
             "205000:0419|HaB1KE|9c0deb7cd3d7ab2600a96d06fa625e05|22898624"
         ],
         "mov_general_gasha_bg_idol_cidol-atbm-3-007.usm": [
             "205000:0422|I6VFiJ|c089ad44ca98e92ea4387a03d263c485|18631200"
+        ],
+        "mov_general_gasha_bg_idol_cidol-atbm-3-008.usm": [
+            "205100:0035|JaKSaD|4481ea728feb8b967278b9c952ee947d|26728576"
         ],
         "mov_general_gasha_bg_idol_cidol-atbm-3-009.usm": [
             "205100:0033|Y7jOz2|92d98ced9c34c4d2fd2fc00cd618a8e8|19059168"
@@ -112374,11 +112861,29 @@
         "mov_general_gasha_live_i_card-skin-atbm-3-000-result.usm": [
             "205000:0338|87ggTs|d9d03eb2727e01b9b8dc89dc2359dd52|2024800"
         ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-001-result.usm": [
+            "205100:0035|2Zaj5b|ce1cc465a4a4201a3394189ffd998b9f|2013056"
+        ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-002-result.usm": [
+            "205100:0035|XFLQ2K|de9422a933d4a84edd30189b79e348a2|2011360"
+        ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-003-result.usm": [
+            "205100:0035|dbhJbD|17643159ef43b7b45b398ef3b698744a|2010688"
+        ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-004-result.usm": [
+            "205100:0035|v0G1lP|01be6f9a882945cbaa77644d2f02888d|1952640"
+        ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-005-result.usm": [
+            "205100:0035|BZ8Nck|f83dccaa6eee9aceab5d601738f5ddd8|2009440"
+        ],
         "mov_general_gasha_live_i_card-skin-atbm-3-006-result.usm": [
             "205000:0419|cjxlzv|ae501f9dd1aab898fde9b9db2072d6a9|1934752"
         ],
         "mov_general_gasha_live_i_card-skin-atbm-3-007-result.usm": [
             "205000:0422|4QAmkN|7b0ebfec7590d0eb3540619f57732ee4|1991296"
+        ],
+        "mov_general_gasha_live_i_card-skin-atbm-3-008-result.usm": [
+            "205100:0035|P0sdZA|3a522baeba02d8d367df6fb96399cbb7|2038240"
         ],
         "mov_general_gasha_live_i_card-skin-atbm-3-009-result.usm": [
             "205100:0033|Wpb7Jh|6b37a83e0a08f6529f82c84dcae4b86b|1987552"
@@ -115140,6 +115645,15 @@
             "205000:0081|oqiH3Q|2ca16330e29f12fcd2861ac2a3740a73|1774903",
             "205000:0109|qL8unI|66f8e55637611f9e1c58aa01da2ad04c|1774899"
         ],
+        "sud_music_general_all-003-atbm_game.acb": [
+            "205100:0035|UKnQM2|ae36131026c42a14f6d538473c3227dd|10752"
+        ],
+        "sud_music_general_all-003-atbm_game.awb": [
+            "205100:0035|gzHXJg|c0d6794e5afc0ee085e2963f0f5dae6b|3256678"
+        ],
+        "sud_music_general_all-003-atbm_game.mp3": [
+            "205100:0035|Lg5GUc|a2b60b83e8d0ab01c74c128f099a4721|1774489"
+        ],
         "sud_music_general_all-003-fktn_game.acb": [
             "205000:0081|hRJrgv|8dc77cbce2359e839b04f508bc8a963e|10720"
         ],
@@ -115267,6 +115781,15 @@
             "205000:0081|ctoDFI|367243f19f841d993ada693e4ec6785d|1572923",
             "205000:0109|iP8hAg|718eb6ea56a199f590f1eccf3aee2823|1572923"
         ],
+        "sud_music_general_all-004-atbm_game.acb": [
+            "205100:0035|BFUjGv|95f13e3af39bf6d877978f83a45217a7|10752"
+        ],
+        "sud_music_general_all-004-atbm_game.awb": [
+            "205100:0035|3tf5Zh|5cee1727b2727f33d1deee17504188f8|2884988"
+        ],
+        "sud_music_general_all-004-atbm_game.mp3": [
+            "205100:0035|V7WCVn|67a159f0d497f67eb1939fb9c0b6037e|1572197"
+        ],
         "sud_music_general_all-004-fktn_game.acb": [
             "205000:0081|NaqlZf|46cb6b0c7466fbab37c698faa50bd385|10720"
         ],
@@ -115393,6 +115916,15 @@
         "sud_music_general_all-005-amao_game.mp3": [
             "205000:0103|XjWtFp|116c475e6fe179115d87723e6e597d76|1290679"
         ],
+        "sud_music_general_all-005-atbm_game.acb": [
+            "205100:0035|t0LdFC|7c9ea52972d85e678d66d4d13cebf7b0|10752"
+        ],
+        "sud_music_general_all-005-atbm_game.awb": [
+            "205100:0035|bksN3Y|6af1fa986052254828450ab9027c0aa7|2368032"
+        ],
+        "sud_music_general_all-005-atbm_game.mp3": [
+            "205100:0035|XusBe5|dee595d22487e74d18aef26d9387ac47|1290493"
+        ],
         "sud_music_general_all-005-fktn_game.acb": [
             "205000:0091|K1MJbK|ca20706fe8a484b0fba7f81a4a8fefc0|10720"
         ],
@@ -115509,6 +116041,15 @@
         ],
         "sud_music_general_all-006-amao_game.mp3": [
             "205000:0137|x4jtbG|6df623c6adaaab01352c53cd102b6f30|1328876"
+        ],
+        "sud_music_general_all-006-atbm_game.acb": [
+            "205100:0035|lAoMUa|db16b6c8283bc1de6fc49acbee8f61e5|10752"
+        ],
+        "sud_music_general_all-006-atbm_game.awb": [
+            "205100:0035|2bweiK|661be01b396bff1d257d967d4346ca3b|2498294"
+        ],
+        "sud_music_general_all-006-atbm_game.mp3": [
+            "205100:0035|StieuQ|decb13521ffa6b0aefe65a785e33dcc1|1361546"
         ],
         "sud_music_general_all-006-fktn_game.acb": [
             "205000:0137|677uSO|e8e36ff5d4a32d5df404da0eab5e24b2|10720"
@@ -115627,6 +116168,15 @@
         "sud_music_general_all-007-amao_game.mp3": [
             "205000:0181|qDT0Sy|73e49dca151cc8bdbff27ab0b57849a3|1362381"
         ],
+        "sud_music_general_all-007-atbm_game.acb": [
+            "205100:0035|P0125F|87af0910c01403fa6f0486f2cbb4e986|10752"
+        ],
+        "sud_music_general_all-007-atbm_game.awb": [
+            "205100:0035|EKdlGX|99efaed9cc7cc0a87102422fc7f4accd|2499658"
+        ],
+        "sud_music_general_all-007-atbm_game.mp3": [
+            "205100:0035|hyc3vz|a390d826bd7f286220296047223b403e|1362382"
+        ],
         "sud_music_general_all-007-fktn_game.acb": [
             "205000:0181|P3sOAY|dfe983fef48edd4b158e05799876210b|10720"
         ],
@@ -115743,6 +116293,15 @@
         ],
         "sud_music_general_all-008-amao_game.mp3": [
             "205000:0237|VnMRTc|15c249299344cbbf57e680e99c28ca8a|1766252"
+        ],
+        "sud_music_general_all-008-atbm_game.acb": [
+            "205100:0035|hBNrB0|cf8fa4439aa690ab52fcfe24df4eb6fb|10752"
+        ],
+        "sud_music_general_all-008-atbm_game.awb": [
+            "205100:0035|IYkCop|6ba57dfa13fd5f0d573bdc4c58fd4daa|3528114"
+        ],
+        "sud_music_general_all-008-atbm_game.mp3": [
+            "205100:0035|gL5DZi|13c45c2281e128135910f496831b7749|1766253"
         ],
         "sud_music_general_all-008-fktn_game.acb": [
             "205000:0237|cLALtB|a80a29d5a284008e83d1e0f4b4cd752c|10720"
@@ -132340,11 +132899,35 @@
         "sud_vo_system_atbm-cstm-0000_02.acb": [
             "205000:0338|JXWd5z|e5568d9ccc953778808c30143aba1314|71392"
         ],
+        "sud_vo_system_atbm-cstm-0051_01.acb": [
+            "205100:0035|lRdixm|4d811886cb92788d332ff764744afef2|47200"
+        ],
+        "sud_vo_system_atbm-cstm-0051_02.acb": [
+            "205100:0035|WCjWpb|d941769bc2920e4dfe1a10f389b3df27|69024"
+        ],
         "sud_vo_system_atbm-cstm-0053_01.acb": [
             "205000:0365|99ZTLv|3c69ef0499bf62d66eefe71b72b02b25|88128"
         ],
         "sud_vo_system_atbm-cstm-0053_02.acb": [
             "205000:0365|4yVbvh|6783a50dda39cd858d3859f7cc7eade2|84704"
+        ],
+        "sud_vo_system_atbm-cstm-0063_01.acb": [
+            "205100:0035|NS8WqO|04adebb0fd6853d36acbd2a78844b82e|60832"
+        ],
+        "sud_vo_system_atbm-cstm-0063_02.acb": [
+            "205100:0035|WE36Ak|4becfeae273448853896d6ea3122b81d|91520"
+        ],
+        "sud_vo_system_atbm-cstm-0065_01.acb": [
+            "205100:0035|Yt7urH|08deb26a64501cfdeb481e0c8dd2c9b4|93216"
+        ],
+        "sud_vo_system_atbm-cstm-0065_02.acb": [
+            "205100:0035|Ov0xbp|f4c3a7d19999e5e6f3adf8e0c8776e52|54688"
+        ],
+        "sud_vo_system_atbm-cstm-0067_01.acb": [
+            "205100:0035|75CGsl|450b5609af01ba677f717f0af1d286a6|86784"
+        ],
+        "sud_vo_system_atbm-cstm-0067_02.acb": [
+            "205100:0035|BgviFR|4989385aef1ce0b6dfb6e4878f774149|68032"
         ],
         "sud_vo_system_atbm-cstm-0069_01.acb": [
             "205000:0338|yUVifz|9871b55d9f951bf77798f69b496ae084|72096"
@@ -132363,6 +132946,12 @@
         ],
         "sud_vo_system_atbm-cstm-0073_02.acb": [
             "205000:0365|PnMR4o|62270462d4303b2f43cd07972acb434d|72096"
+        ],
+        "sud_vo_system_atbm-cstm-0075_01.acb": [
+            "205100:0035|YHFABi|3a4babd4a7541d69fac8e2c61f2d7afc|76864"
+        ],
+        "sud_vo_system_atbm-cstm-0075_02.acb": [
+            "205100:0035|CQpfaM|0cbbd44ffe4a3faa18fbc25def15ad31|68672"
         ],
         "sud_vo_system_atbm-cstm-0076_01.acb": [
             "205000:0419|70WkYZ|af415e31e0b15141c45b76d1b5aa53dc|65952"
@@ -132399,6 +132988,12 @@
         ],
         "sud_vo_system_atbm-cstm-0118_02.acb": [
             "205100:0033|4umOlI|6ae15dccbb54c8c16320f5d60c3f07cd|90880"
+        ],
+        "sud_vo_system_atbm-cstm-0119_01.acb": [
+            "205100:0035|tYnglN|54568caeee14c7bceebbbadd44884ed2|65984"
+        ],
+        "sud_vo_system_atbm-cstm-0119_02.acb": [
+            "205100:0035|uUhuVW|54ea22ad9a36988536c26fe3abd199f4|55072"
         ],
         "sud_vo_system_atbm-cstm-0128_01.acb": [
             "205000:0390|CMDADa|1f995bba7621497cbccb397b8c6a847e|72128"
@@ -133631,6 +134226,51 @@
         "sud_vo_system_cidol-atbm-3-000_produce_start-01.acb": [
             "205000:0338|7h5huQ|3da3a143e5b9674028255c37cead93d0|37984"
         ],
+        "sud_vo_system_cidol-atbm-3-001_home_cmmn-01.acb": [
+            "205100:0035|cLRdpG|d50171f44c0d657a379a215d168cc767|96288"
+        ],
+        "sud_vo_system_cidol-atbm-3-001_home_cmmn-02.acb": [
+            "205100:0035|L9wHOS|907f9d08eee95cf7d4e157b482fbe8fe|71392"
+        ],
+        "sud_vo_system_cidol-atbm-3-001_home_cmmn-03.acb": [
+            "205100:0035|jJdYG7|3e91d30b28a71ce94936e934038fdbcc|78240"
+        ],
+        "sud_vo_system_cidol-atbm-3-002_home_cmmn-01.acb": [
+            "205100:0035|yGmHFk|fb713a4129a670e8e4badb6bed562167|81312"
+        ],
+        "sud_vo_system_cidol-atbm-3-002_home_cmmn-02.acb": [
+            "205100:0035|DcEQ93|e06b8082f94e23a0bf902dcf6b31c75f|81984"
+        ],
+        "sud_vo_system_cidol-atbm-3-002_home_cmmn-03.acb": [
+            "205100:0035|gD2MKk|6e8076b43d6f7321a02c215b17367cd1|89152"
+        ],
+        "sud_vo_system_cidol-atbm-3-003_home_cmmn-01.acb": [
+            "205100:0035|hul9ME|7c5908540aa57b6e86c20657c9c019d3|65600"
+        ],
+        "sud_vo_system_cidol-atbm-3-003_home_cmmn-02.acb": [
+            "205100:0035|V4tieP|64593d8d9ea8ea6e8a851261a8aaf63a|76192"
+        ],
+        "sud_vo_system_cidol-atbm-3-003_home_cmmn-03.acb": [
+            "205100:0035|Cm0Qdy|86ffb88afea89eefc03398f79e35180a|93920"
+        ],
+        "sud_vo_system_cidol-atbm-3-004_home_cmmn-01.acb": [
+            "205100:0035|YYUv5n|262e353de8fcd771b3439e5f25481fc7|68704"
+        ],
+        "sud_vo_system_cidol-atbm-3-004_home_cmmn-02.acb": [
+            "205100:0035|OUV63a|72e441e19656f2651d352c9eb40feb5a|97344"
+        ],
+        "sud_vo_system_cidol-atbm-3-004_home_cmmn-03.acb": [
+            "205100:0035|ufoyH3|6eef475c816e47a8ffd5a3ba3a25c55b|84064"
+        ],
+        "sud_vo_system_cidol-atbm-3-005_home_cmmn-01.acb": [
+            "205100:0035|1pSa2G|da2135f3d4e70e9d564fd8ecf424dd6a|78240"
+        ],
+        "sud_vo_system_cidol-atbm-3-005_home_cmmn-02.acb": [
+            "205100:0035|AQ3NmQ|c66b64f8b67fe3cf39bfccde60021504|98336"
+        ],
+        "sud_vo_system_cidol-atbm-3-005_home_cmmn-03.acb": [
+            "205100:0035|jzYTx0|dab257f048ccceec12d6069c3bd8de72|79264"
+        ],
         "sud_vo_system_cidol-atbm-3-006_home_cmmn-01.acb": [
             "205000:0419|fG9IHN|966e9618ef7ad0471110ecca1356018a|70400"
         ],
@@ -133648,6 +134288,15 @@
         ],
         "sud_vo_system_cidol-atbm-3-007_home_cmmn-03.acb": [
             "205000:0422|E786l8|6d50c74ffc5174b792b1740ed060f214|86432"
+        ],
+        "sud_vo_system_cidol-atbm-3-008_home_cmmn-01.acb": [
+            "205100:0035|7UEy8N|24a585d69affe7a9f88a71f755b78b43|70080"
+        ],
+        "sud_vo_system_cidol-atbm-3-008_home_cmmn-02.acb": [
+            "205100:0035|PJg2tv|213b5fd0c17828cd99b124abc99a26da|90208"
+        ],
+        "sud_vo_system_cidol-atbm-3-008_home_cmmn-03.acb": [
+            "205100:0035|ZmaZkS|3152fda93319841d0cf140c9ba8f0670|82016"
         ],
         "sud_vo_system_cidol-atbm-3-009_home_cmmn-01.acb": [
             "205100:0033|AZrWJb|979cb3465769de90a630e9a1b1d3d459|89184"
