@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0035",
+    "latest_version": "205100:0036",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -71956,6 +71956,9 @@
         "img_notice_campaign_store-no1-release-14.unity3d": [
             "205000:0444|oC4I7E|cf13706cbb8930c10d1d78b38ff6f0d7|372468",
             "205100:0033|bIzxEr|6fef6924f9c2edd9a72ce66c9bec800d|365382"
+        ],
+        "img_notice_campaign_summer-001.unity3d": [
+            "205100:0036|W9nBUH|f38952525de24b2e78aa458cb444016c|327833"
         ],
         "img_notice_cidol_cidol-fktn-3-001-0.unity3d": [
             "205000:0081|kauRRM|091e7913f4fc6cedf8e0caea13bae438|138052",
