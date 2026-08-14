@@ -1,7 +1,7 @@
 {
     "revision": [
         38,
-        35
+        36
     ],
     "assetBundleList": [
         {
@@ -51,16 +51,6 @@
             "state": "UPDATE",
             "md5": "4627c6ac9dca5123bea14bd5a03a9a6f",
             "objectName": "wMQifp",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 24190,
-            "name": "img_notice_campaign_summer-001",
-            "size": 327833,
-            "crc": 4069001761,
-            "state": "ADD",
-            "md5": "f38952525de24b2e78aa458cb444016c",
-            "objectName": "W9nBUH",
             "uploadVersionId": 205100
         },
         {
