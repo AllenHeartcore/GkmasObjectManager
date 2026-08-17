@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0038",
+    "latest_version": "205100:0039",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -11567,6 +11567,12 @@
         ],
         "img_gasha_banner_gasha-00980-free-10-009-logo.unity3d": [
             "205100:0038|JdEQ7H|738733abaf960dbe9bc686ac1ede1186|12239"
+        ],
+        "img_gasha_banner_gasha-00980-free-10-009-select-m.unity3d": [
+            "205100:0039|ZhmLJR|667ff5f2ef6ecee792980692771d47c3|55224"
+        ],
+        "img_gasha_banner_gasha-00980-free-10-009-select-s.unity3d": [
+            "205100:0039|3ZPRWi|75296ab2b4f12597adbd0a01aa791f62|29629"
         ],
         "img_gasha_banner_gasha-00980-pickup-001-logo.unity3d": [
             "205100:0038|BUy3Xa|cd390f3cf6a8d2db0dd9e75c0c428ba1|9540"
@@ -36854,6 +36860,9 @@
         "img_general_gasha_bg_gasha_gasha-free-10-008.unity3d": [
             "205100:0033|cl2wZB|8327f8fb478285279d069a187b70a289|548485"
         ],
+        "img_general_gasha_bg_gasha_gasha-free-10-009.unity3d": [
+            "205100:0039|Xa4GIT|9c25c11ffdb46a91932f83e9146b1e20|653067"
+        ],
         "img_general_gasha_bg_gasha_idol-ssr-half-anniversary.unity3d": [
             "205000:0129|HNTFo5|573818e1b27e58f1650ea1269c99ad66|643239",
             "205100:0033|4cFxom|1f0161417bf1266e859d1ed42a512044|627190"
@@ -38106,6 +38115,9 @@
         "img_general_home_gasha_gasha-free-10-007.unity3d": [
             "205000:0424|wEw4BM|b80ba88593dd36146e6088dd9a5d619e|15824",
             "205100:0033|tVYKVg|7b1020c8c381a77e708dfef2017199dc|15745"
+        ],
+        "img_general_home_gasha_gasha-free-10-009.unity3d": [
+            "205100:0039|Q9hFI9|2145700e12f10fcc29e95cecf79feb4d|15777"
         ],
         "img_general_home_gasha_ssr_10-banner-01.unity3d": [
             "205000:0025|BkGpmE|75f12b9f8cb77aaddbccee30a64d322c|13167",
@@ -71159,7 +71171,8 @@
             "205100:0033|rBhau7|6c94d9b93ab5cc653d4c3005a1e9b2fd|857838"
         ],
         "img_mov_general_gasha_bg_idol_cidol-amao-3-021.unity3d": [
-            "205100:0038|s8Gsm9|cf1bb5bef6c31355738360de08fef2c8|701145"
+            "205100:0038|s8Gsm9|cf1bb5bef6c31355738360de08fef2c8|701145",
+            "205100:0039|XUyB8m|5f39ab555f75fe022a37196bbbc5acd0|713508"
         ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-000.unity3d": [
             "205000:0338|Fm7FFP|4eb48658cc0dd4eebce8ad6e6389ab56|785208",
@@ -71206,7 +71219,8 @@
             "205100:0033|DEggwR|765df09d68c5a5e7c93fd91f8478b213|858081"
         ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-017.unity3d": [
-            "205100:0038|uRoaDR|3934eea68a953d8361d7761c0b7896bf|746307"
+            "205100:0038|uRoaDR|3934eea68a953d8361d7761c0b7896bf|746307",
+            "205100:0039|QtPHXJ|7509456dafb52360b1a27a54db677814|767452"
         ],
         "img_mov_general_gasha_bg_idol_cidol-atbm-3-018.unity3d": [
             "205100:0033|ouzDTV|e38539378e2e85243ea05d228a4f9d56|534842"
@@ -71283,7 +71297,8 @@
             "205100:0033|Vo0vC7|e61cb7f4ac4cc2bdc7ac3b3a58a4b28a|786613"
         ],
         "img_mov_general_gasha_bg_idol_cidol-fktn-3-021.unity3d": [
-            "205100:0038|NpRYb8|dd6a12f22107c3c125724a69bce3b5eb|755856"
+            "205100:0038|NpRYb8|dd6a12f22107c3c125724a69bce3b5eb|755856",
+            "205100:0039|oLzbkZ|453185467d4e3cefb08e8ed886c69408|738363"
         ],
         "img_mov_general_gasha_bg_idol_cidol-hmsz-3-000.unity3d": [
             "205000:0242|OsyYJy|4c1121dae4c078651e30287f40e01fe9|770012",
@@ -71871,7 +71886,8 @@
             "205100:0033|hnIwtj|3976b7108449c76816f25aac8dc8b673|862797"
         ],
         "img_mov_general_gasha_bg_idol_cidol-shro-3-021.unity3d": [
-            "205100:0038|NbrG9t|4da814d4e6a17b74bc8db7b225a6acaa|740622"
+            "205100:0038|NbrG9t|4da814d4e6a17b74bc8db7b225a6acaa|740622",
+            "205100:0039|ROhZVr|e2f2d9efb820fcc1c94c42ed49661a32|733251"
         ],
         "img_mov_general_gasha_bg_idol_cidol-ssmk-3-000.unity3d": [
             "205000:0025|WFChNU|a2508c2607bb42f8af6f7b8b380b7b82|644322",
@@ -71945,7 +71961,8 @@
             "205100:0033|VWwl2J|964e360824144252b8674d2bbd9e4b62|872506"
         ],
         "img_mov_general_gasha_bg_idol_cidol-ssmk-3-021.unity3d": [
-            "205100:0038|HxrkdZ|c478d3911459db42bce1810ff0d50b32|757988"
+            "205100:0038|HxrkdZ|c478d3911459db42bce1810ff0d50b32|757988",
+            "205100:0039|oEvAy5|41b475417c537f072e29cd823047f362|755579"
         ],
         "img_mov_general_gasha_bg_idol_cidol-ttmr-3-000.unity3d": [
             "205000:0025|circJ4|1a206142f98442b5ae33d2c51232bb78|211496",
@@ -75249,6 +75266,15 @@
             "205000:0424|C9derB|75e6f5d76b1463156e49a41a4f9da6f1|454588",
             "205100:0033|7uRPBA|65532bd3dbf88d98a951f4f8660e3dde|452486"
         ],
+        "img_notice_gasha_gasha-free-10-009-banner-pre.unity3d": [
+            "205100:0039|rvk50x|63801d14b3a38dd6902c53d76c9561cd|114218"
+        ],
+        "img_notice_gasha_gasha-free-10-009-banner.unity3d": [
+            "205100:0039|tm1hcW|fbef4008a21d98be87d88d0f0740eeef|115982"
+        ],
+        "img_notice_gasha_gasha-free-10-009.unity3d": [
+            "205100:0039|naGoq3|a7ab2f6cc049d770753e10992baa0fd7|467198"
+        ],
         "img_notice_gasha_gasha-free-10-pre-001-banner.unity3d": [
             "205000:0089|OsMeyX|2db2aa2cbe0b12f93fd2605927527f6e|99557",
             "205100:0033|jEEkFt|89b0ddd7e7befe9c8c4262f28ff9e8d5|99067"
@@ -77049,6 +77075,9 @@
         ],
         "img_notice_photo_photo-004.unity3d": [
             "205100:0038|u2OMfY|d8859a01aab307642e127e2a5bbdc6b5|319939"
+        ],
+        "img_notice_pr_jewel-mountain-division-campaign.unity3d": [
+            "205100:0039|6yzOaX|6676e04af08c5ebfd871010433f069e8|360015"
         ],
         "img_notice_pr_mystery-geme-003.unity3d": [
             "205000:0390|ImzCGN|162a31b1e12bf2e411c3971b31df2d0e|415754",
