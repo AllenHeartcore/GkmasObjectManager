@@ -1,6 +1,6 @@
 {
     "revision": [
-        39,
+        40,
         26
     ],
     "assetBundleList": [
@@ -4565,11 +4565,11 @@
         {
             "id": 24235,
             "name": "img_mov_general_gasha_bg_idol_cidol-atbm-3-017",
-            "size": 1939105,
-            "crc": 1447424255,
-            "state": "ADD",
-            "md5": "facad5375c183c10700ff09c0abc8aca",
-            "objectName": "QBiKj4",
+            "size": 2011662,
+            "crc": 3973108311,
+            "state": "UPDATE",
+            "md5": "2ccb0ecee01a92fce0d28c7dbebc7f46",
+            "objectName": "gpZus0",
             "uploadVersionId": 705100
         },
         {
@@ -5641,11 +5641,11 @@
         {
             "id": 24334,
             "name": "img_mov_general_gasha_bg_idol_cidol-ssmk-3-021",
-            "size": 2030223,
-            "crc": 2587961025,
-            "state": "ADD",
-            "md5": "1ad75a7eb88a3e40a705fb34899fa3ab",
-            "objectName": "6HbEUw",
+            "size": 2011838,
+            "crc": 3232697141,
+            "state": "UPDATE",
+            "md5": "ab5e00a2eec0a6eaff2f162333005400",
+            "objectName": "SP7Wul",
             "uploadVersionId": 705100
         },
         {
@@ -5728,11 +5728,11 @@
         {
             "id": 24342,
             "name": "img_mov_general_gasha_bg_idol_cidol-fktn-3-021",
-            "size": 1993893,
-            "crc": 1018561584,
-            "state": "ADD",
-            "md5": "4c8f8a3c6eb7bfc4ae454abc82ba17d1",
-            "objectName": "HOiHtx",
+            "size": 1939998,
+            "crc": 2190808491,
+            "state": "UPDATE",
+            "md5": "b72d9d7b227786024123924c06fbba89",
+            "objectName": "kJlfSF",
             "uploadVersionId": 705100
         },
         {
@@ -6750,11 +6750,11 @@
         {
             "id": 24439,
             "name": "img_mov_general_gasha_bg_idol_cidol-shro-3-021",
-            "size": 1941952,
-            "crc": 429131025,
-            "state": "ADD",
-            "md5": "330fd4e3f924e824b0de5b0300a6bd47",
-            "objectName": "NVMmaZ",
+            "size": 1917818,
+            "crc": 1498241799,
+            "state": "UPDATE",
+            "md5": "362a1342e01edf35c230f4a6d4b001d0",
+            "objectName": "RME2RD",
             "uploadVersionId": 705100
         },
         {
@@ -7089,11 +7089,11 @@
         {
             "id": 24472,
             "name": "img_mov_general_gasha_bg_idol_cidol-amao-3-021",
-            "size": 1812687,
-            "crc": 1098961529,
-            "state": "ADD",
-            "md5": "60bb0db4c0ef08cd526f7750ab9deb93",
-            "objectName": "V4xrI8",
+            "size": 1830093,
+            "crc": 1034183544,
+            "state": "UPDATE",
+            "md5": "b7c6b24ee0f7f7945c139c829522dee6",
+            "objectName": "gaR0gO",
             "uploadVersionId": 705100
         },
         {
@@ -7540,6 +7540,86 @@
             "state": "ADD",
             "md5": "b33769be71e6f81120429ec98cf0a534",
             "objectName": "digRKl",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24516,
+            "name": "img_general_home_gasha_gasha-free-10-009",
+            "size": 41589,
+            "crc": 1636030343,
+            "state": "ADD",
+            "md5": "c7bb71e50bd65aec596d1514b54900f0",
+            "objectName": "5uT8cW",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24517,
+            "name": "img_notice_gasha_gasha-free-10-009-banner",
+            "size": 831594,
+            "crc": 568409518,
+            "state": "ADD",
+            "md5": "9126b20c8182af3692150bf885f8a1cc",
+            "objectName": "Dc2wlc",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24518,
+            "name": "img_notice_gasha_gasha-free-10-009-banner-pre",
+            "size": 786957,
+            "crc": 536874776,
+            "state": "ADD",
+            "md5": "9dc711803b9b3094a053e042aabf560c",
+            "objectName": "WpgtTC",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24519,
+            "name": "img_gasha_banner_gasha-00980-free-10-009-select-m",
+            "size": 153883,
+            "crc": 3780219161,
+            "state": "ADD",
+            "md5": "65e816b542ef158430a04796ad20a419",
+            "objectName": "0iKFLI",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24520,
+            "name": "img_notice_gasha_gasha-free-10-009",
+            "size": 3718756,
+            "crc": 1323028939,
+            "state": "ADD",
+            "md5": "3f2682a1701e1e519d0bc7566e3880d4",
+            "objectName": "DQpwPU",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24521,
+            "name": "img_gasha_banner_gasha-00980-free-10-009-select-s",
+            "size": 81842,
+            "crc": 3464028168,
+            "state": "ADD",
+            "md5": "894da9085564c97658f7d51ab5e4cad5",
+            "objectName": "ZKPNn6",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24522,
+            "name": "img_notice_pr_jewel-mountain-division-campaign",
+            "size": 2402167,
+            "crc": 31583866,
+            "state": "ADD",
+            "md5": "5f5cfda758544a50a063be379c2c5321",
+            "objectName": "9NrXPk",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24523,
+            "name": "img_general_gasha_bg_gasha_gasha-free-10-009",
+            "size": 1775376,
+            "crc": 2617397906,
+            "state": "ADD",
+            "md5": "3f3367d9fcadc0829b1412a97bfb618f",
+            "objectName": "oRV376",
             "uploadVersionId": 705100
         }
     ],
