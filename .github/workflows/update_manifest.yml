@@ -65,7 +65,7 @@ jobs:
             - name: Commit wayback changes
               if: steps.run_script.outputs.exit_code == 0
               run: |
-                  git add wayback_commits.json wayback_objects.json
+                  git add wayback_commits.json wayback_commits_pc.json wayback_objects.json wayback_objects_pc.json
                   VERSION="$(cat manifests/LATEST_VERSION)"
                   VERSION_PC="$(cat manifests_pc/LATEST_VERSION)"
                   git commit -m "Rebuild wayback index for mobile manifest v$VERSION and PC v$VERSION_PC"
