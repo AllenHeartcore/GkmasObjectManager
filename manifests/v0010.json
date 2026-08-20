@@ -1,6 +1,6 @@
 {
     "revision": [
-        40,
+        42,
         10
     ],
     "assetBundleList": [
@@ -17187,6 +17187,46 @@
             "md5": "a4d39c0b0b5a6ac2abf99e87fc255f3c",
             "objectName": "6cbaII",
             "uploadVersionId": 205100
+        },
+        {
+            "id": 24580,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-logo",
+            "size": 9522,
+            "crc": 1184848261,
+            "state": "ADD",
+            "md5": "665366aad70ff181f6bb91664d58a0e2",
+            "objectName": "3u1j41",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24581,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-select-m",
+            "size": 50438,
+            "crc": 2335484958,
+            "state": "ADD",
+            "md5": "5d07143d8d0bfc9f228aeb2f4b588b36",
+            "objectName": "QqLivg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24582,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-select-s",
+            "size": 28969,
+            "crc": 1450941841,
+            "state": "ADD",
+            "md5": "0cd66f78463c7dfba74c05ed501715a2",
+            "objectName": "adz7iA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24583,
+            "name": "img_general_gasha_bg_gasha_wednesday-008",
+            "size": 534333,
+            "crc": 2829842175,
+            "state": "ADD",
+            "md5": "2bb9e3b83cf830226a11f38ed906f1ca",
+            "objectName": "aVzOwv",
+            "uploadVersionId": 205100
         }
     ],
     "resourceList": [
@@ -23745,10 +23785,10 @@
         {
             "id": 21193,
             "name": "adv_dear_atbm_022.txt",
-            "size": 306793,
-            "state": "ADD",
-            "md5": "58e0cc096cce1b3b99bc1c0dbf4072a0",
-            "objectName": "Y63Swg",
+            "size": 308278,
+            "state": "UPDATE",
+            "md5": "40375473d5d0a24d2d38bcf21541de24",
+            "objectName": "gP3Mhc",
             "uploadVersionId": 205100
         },
         {

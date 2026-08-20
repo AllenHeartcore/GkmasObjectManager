@@ -1,6 +1,6 @@
 {
     "revision": [
-        41,
+        43,
         20
     ],
     "assetBundleList": [
@@ -11366,6 +11366,46 @@
             "md5": "e4016680aed46a642ef21b2c4f8806ea",
             "objectName": "6lL0Tc",
             "uploadVersionId": 705100
+        },
+        {
+            "id": 24532,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-select-m",
+            "size": 133185,
+            "crc": 524104154,
+            "state": "ADD",
+            "md5": "b1588441c00c83ef6d5ad71ee125551b",
+            "objectName": "02yATE",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24533,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-select-s",
+            "size": 77580,
+            "crc": 465288043,
+            "state": "ADD",
+            "md5": "36966d970a34269f6a97928fbaf5091a",
+            "objectName": "OKzlpA",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24534,
+            "name": "img_general_gasha_bg_gasha_wednesday-008",
+            "size": 1292322,
+            "crc": 2927762266,
+            "state": "ADD",
+            "md5": "df8a863aea0870001ab09804a8e49738",
+            "objectName": "78tnKJ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24535,
+            "name": "img_gasha_banner_gasha-00990-wednesday-001-logo",
+            "size": 21506,
+            "crc": 627386193,
+            "state": "ADD",
+            "md5": "0eb900fb7a61c221e54b10155822b1d9",
+            "objectName": "poeU1m",
+            "uploadVersionId": 705100
         }
     ],
     "resourceList": [
@@ -15251,10 +15291,10 @@
         {
             "id": 21207,
             "name": "adv_dear_atbm_022.txt",
-            "size": 306793,
-            "state": "ADD",
-            "md5": "58e0cc096cce1b3b99bc1c0dbf4072a0",
-            "objectName": "5PFqhp",
+            "size": 308278,
+            "state": "UPDATE",
+            "md5": "40375473d5d0a24d2d38bcf21541de24",
+            "objectName": "fd76cD",
             "uploadVersionId": 705100
         },
         {

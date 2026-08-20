@@ -1,0 +1,19 @@
+{
+    "revision": [
+        42,
+        41
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 21193,
+            "name": "adv_dear_atbm_022.txt",
+            "size": 308278,
+            "state": "UPDATE",
+            "md5": "40375473d5d0a24d2d38bcf21541de24",
+            "objectName": "gP3Mhc",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
