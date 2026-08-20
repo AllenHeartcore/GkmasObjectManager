@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0041",
+    "latest_version": "705100:0043",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -11374,6 +11374,15 @@
         ],
         "img_gasha_banner_gasha-00980-ticket-login-001-select-s.unity3d": [
             "705100:0039|lHtSe1|086b24145a8d594f16738c8473346c3b|79183"
+        ],
+        "img_gasha_banner_gasha-00990-wednesday-001-logo.unity3d": [
+            "705100:0043|poeU1m|0eb900fb7a61c221e54b10155822b1d9|21506"
+        ],
+        "img_gasha_banner_gasha-00990-wednesday-001-select-m.unity3d": [
+            "705100:0043|02yATE|b1588441c00c83ef6d5ad71ee125551b|133185"
+        ],
+        "img_gasha_banner_gasha-00990-wednesday-001-select-s.unity3d": [
+            "705100:0043|OKzlpA|36966d970a34269f6a97928fbaf5091a|77580"
         ],
         "img_gasha_banner_gasha-200limit-select-pickup-001-logo.unity3d": [
             "705000:0168|P84CoG|2e90b1eed16083097f7215c9996e6180|33363",
@@ -36567,6 +36576,9 @@
         ],
         "img_general_gasha_bg_gasha_wednesday-007.unity3d": [
             "705100:0034|NHKVmc|fdeddd21a5ca967557383119b4e23dc0|1405783"
+        ],
+        "img_general_gasha_bg_gasha_wednesday-008.unity3d": [
+            "705100:0043|78tnKJ|df8a863aea0870001ab09804a8e49738|1292322"
         ],
         "img_general_gasha_fullname_amao.unity3d": [
             "705000:0009|mrjEFq|d1f82e0f8d7c5f23f698b6bea4571115|52450",
@@ -99347,7 +99359,8 @@
             "705100:0030|sBgPgF|53beae4dadb0b4ed7e7368c6cf25f168|612514"
         ],
         "adv_dear_atbm_022.txt": [
-            "705100:0030|5PFqhp|58e0cc096cce1b3b99bc1c0dbf4072a0|306793"
+            "705100:0030|5PFqhp|58e0cc096cce1b3b99bc1c0dbf4072a0|306793",
+            "705100:0043|fd76cD|40375473d5d0a24d2d38bcf21541de24|308278"
         ],
         "adv_dear_atbm_023.txt": [
             "705100:0030|PaCLvy|0aabfec98e7a7560fae5b3a07e0ea8e3|448006"
