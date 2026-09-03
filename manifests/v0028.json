@@ -1,6 +1,6 @@
 {
     "revision": [
-        46,
+        48,
         28
     ],
     "assetBundleList": [
@@ -7874,11 +7874,11 @@
         {
             "id": 24695,
             "name": "img_tutorial_event_tour_tour-006-01",
-            "size": 427614,
-            "crc": 1928474053,
-            "state": "ADD",
-            "md5": "99b19541b7f7a7035a11505eb13e2caf",
-            "objectName": "r1Nc3s",
+            "size": 427608,
+            "crc": 564596166,
+            "state": "UPDATE",
+            "md5": "03783684f2499e8a77e3f9fb8e0e5f8c",
+            "objectName": "GAPflq",
             "uploadVersionId": 205100
         },
         {
@@ -7924,11 +7924,11 @@
         {
             "id": 24700,
             "name": "img_tutorial_event_tour_tour-006-07",
-            "size": 219638,
-            "crc": 3533427167,
-            "state": "ADD",
-            "md5": "57c3f7969f1f6e443522a1ddf7daf763",
-            "objectName": "VP3STY",
+            "size": 219644,
+            "crc": 4115231231,
+            "state": "UPDATE",
+            "md5": "8724a5e07d5b2429a73624190a914c42",
+            "objectName": "L0hpoM",
             "uploadVersionId": 205100
         },
         {
@@ -8225,10 +8225,10 @@
             "id": 24724,
             "name": "img_tutorial_event_tour_tour-006-05",
             "size": 172765,
-            "crc": 1976546286,
-            "state": "ADD",
-            "md5": "68aa820f5544e6d23d92595ad0d7943e",
-            "objectName": "RtA6Ww",
+            "crc": 3321330551,
+            "state": "UPDATE",
+            "md5": "6b84355da74c30c6429a95867b2e802a",
+            "objectName": "2PvJfv",
             "uploadVersionId": 205100
         },
         {
@@ -8794,11 +8794,11 @@
         {
             "id": 24775,
             "name": "img_tutorial_event_tour_tour-006-02",
-            "size": 222922,
-            "crc": 2205915128,
-            "state": "ADD",
-            "md5": "29946ac1f525d5ced6cce2211d86649a",
-            "objectName": "pZ0cao",
+            "size": 222766,
+            "crc": 2232611919,
+            "state": "UPDATE",
+            "md5": "4f5c2288bd774af87ab556f6d50021bd",
+            "objectName": "x5ksoX",
             "uploadVersionId": 205100
         },
         {
@@ -9231,11 +9231,11 @@
         {
             "id": 24815,
             "name": "img_tutorial_event_tour_tour-006-06",
-            "size": 223015,
-            "crc": 399341352,
-            "state": "ADD",
-            "md5": "b130831b0a2584fea1c37bbeadf6d976",
-            "objectName": "9pzzhx",
+            "size": 223014,
+            "crc": 3579026530,
+            "state": "UPDATE",
+            "md5": "e6c23c3a0dee20a7e110d7af55f5bf15",
+            "objectName": "Q2JYEz",
             "uploadVersionId": 205100
         },
         {
@@ -9316,6 +9316,16 @@
             "state": "ADD",
             "md5": "680cedd700541611bdd1ae469d7cb742",
             "objectName": "kF8K6u",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 24824,
+            "name": "img_general_cidol-kcna-3-018_0-full",
+            "size": 791627,
+            "crc": 1039375063,
+            "state": "ADD",
+            "md5": "ba569d38c8248508c4cd0a4df52aac1f",
+            "objectName": "xKGmTp",
             "uploadVersionId": 205100
         }
     ],
@@ -15114,6 +15124,24 @@
             "state": "ADD",
             "md5": "784be48796e44b0bca03d52242dfb9f7",
             "objectName": "3u8PD0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21810,
+            "name": "sud_bgm_adv_inst-all-015.acb",
+            "size": 11328,
+            "state": "ADD",
+            "md5": "ad10d3e94ec302f8122dd9ebb5f489dd",
+            "objectName": "2D1SRc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21811,
+            "name": "sud_bgm_adv_inst-all-015.awb",
+            "size": 3129826,
+            "state": "ADD",
+            "md5": "89ba277b4c52fdc3e4ad5ec4f8a9a53e",
+            "objectName": "UP781n",
             "uploadVersionId": 205100
         }
     ],

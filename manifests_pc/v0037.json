@@ -1,6 +1,6 @@
 {
     "revision": [
-        47,
+        49,
         37
     ],
     "assetBundleList": [
@@ -6488,11 +6488,11 @@
         {
             "id": 24703,
             "name": "img_tutorial_event_tour_tour-006-02",
-            "size": 634385,
-            "crc": 2533692481,
-            "state": "ADD",
-            "md5": "6d5cd40228f48216bc920d871cf79e4d",
-            "objectName": "ghujmT",
+            "size": 633998,
+            "crc": 3452165258,
+            "state": "UPDATE",
+            "md5": "2bfcddc39b254c2b38542c5c7a141033",
+            "objectName": "xNSuPC",
             "uploadVersionId": 705100
         },
         {
@@ -7274,6 +7274,16 @@
             "state": "ADD",
             "md5": "95dc1cbd7f0eeab139cd47db9d788c6c",
             "objectName": "h1qpzy",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24776,
+            "name": "img_general_cidol-kcna-3-018_0-full",
+            "size": 2213112,
+            "crc": 3280428260,
+            "state": "ADD",
+            "md5": "0f6b57817eac058148152800f0e07fc7",
+            "objectName": "0Z0bDp",
             "uploadVersionId": 705100
         }
     ],
@@ -11335,6 +11345,24 @@
             "state": "ADD",
             "md5": "edf2854d9690b2c70753f5464fc77a11",
             "objectName": "sFDmET",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21810,
+            "name": "sud_bgm_adv_inst-all-015.acb",
+            "size": 11328,
+            "state": "ADD",
+            "md5": "ad10d3e94ec302f8122dd9ebb5f489dd",
+            "objectName": "JIyr1y",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21811,
+            "name": "sud_bgm_adv_inst-all-015.awb",
+            "size": 3129826,
+            "state": "ADD",
+            "md5": "89ba277b4c52fdc3e4ad5ec4f8a9a53e",
+            "objectName": "6evaQy",
             "uploadVersionId": 705100
         }
     ],

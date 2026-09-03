@@ -1,0 +1,28 @@
+{
+    "revision": [
+        49,
+        48
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 21810,
+            "name": "sud_bgm_adv_inst-all-015.acb",
+            "size": 11328,
+            "state": "ADD",
+            "md5": "ad10d3e94ec302f8122dd9ebb5f489dd",
+            "objectName": "JIyr1y",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21811,
+            "name": "sud_bgm_adv_inst-all-015.awb",
+            "size": 3129826,
+            "state": "ADD",
+            "md5": "89ba277b4c52fdc3e4ad5ec4f8a9a53e",
+            "objectName": "6evaQy",
+            "uploadVersionId": 705100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
