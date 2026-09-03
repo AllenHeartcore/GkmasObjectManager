@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0047",
+    "latest_version": "705100:0049",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -26164,6 +26164,9 @@
         "img_general_cidol-kcna-3-017_1-thumb-square.unity3d": [
             "705000:0194|wLa9HB|6d7cfb71869bf8bfa4c6398d51a8684d|23012",
             "705100:0014|GcMhj0|b8b069ba2c41e93877587238fe1b4c97|22987"
+        ],
+        "img_general_cidol-kcna-3-018_0-full.unity3d": [
+            "705100:0049|0Z0bDp|0f6b57817eac058148152800f0e07fc7|2213112"
         ],
         "img_general_cidol-kcna-3-018_0-thumb-gasha.unity3d": [
             "705100:0047|MTsO43|9ef176d3cf882b650eb2039ad79be352|136547"
@@ -78667,7 +78670,8 @@
             "705100:0047|ZHhajJ|8419f90cdcbe1af4fc0c15af93736178|1174606"
         ],
         "img_tutorial_event_tour_tour-006-02.unity3d": [
-            "705100:0047|ghujmT|6d5cd40228f48216bc920d871cf79e4d|634385"
+            "705100:0047|ghujmT|6d5cd40228f48216bc920d871cf79e4d|634385",
+            "705100:0049|xNSuPC|2bfcddc39b254c2b38542c5c7a141033|633998"
         ],
         "img_tutorial_event_tour_tour-006-03.unity3d": [
             "705100:0047|cLYpOc|489f14d23961652d3a33bb8e8de686c5|500860"
@@ -115523,6 +115527,12 @@
             "705000:0068|gLMXaZ|afdc543d22c8f8a8fc033625b2cad8ff|3158470",
             "705000:0076|79DMbI|2bf52cceba7bdc39a3a8f131b531e2ab|2877486",
             "705000:0194|HPDQws|ddb14e2dd8e02092d7ca61030199b299|2987288"
+        ],
+        "sud_bgm_adv_inst-all-015.acb": [
+            "705100:0049|JIyr1y|ad10d3e94ec302f8122dd9ebb5f489dd|11328"
+        ],
+        "sud_bgm_adv_inst-all-015.awb": [
+            "705100:0049|6evaQy|89ba277b4c52fdc3e4ad5ec4f8a9a53e|3129826"
         ],
         "sud_bgm_adv_inst-all-016.acb": [
             "705000:0239|inMuKj|e0b52a76c1d2ecbde6f8931a12e74dbe|10688"

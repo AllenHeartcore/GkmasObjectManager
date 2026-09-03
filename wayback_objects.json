@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0046",
+    "latest_version": "205100:0048",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -26481,6 +26481,9 @@
         "img_general_cidol-kcna-3-017_1-thumb-square.unity3d": [
             "205000:0390|mxODdk|32cf24902ad150bed89339c79056a2c1|9588",
             "205100:0033|c0VXt8|ca46e7a44811f2e97746e8b47de9117b|9514"
+        ],
+        "img_general_cidol-kcna-3-018_0-full.unity3d": [
+            "205100:0048|xKGmTp|ba569d38c8248508c4cd0a4df52aac1f|791627"
         ],
         "img_general_cidol-kcna-3-018_0-thumb-gasha.unity3d": [
             "205100:0046|b2LE6m|65aca310d973dc7098b0ebbc3b85ed2e|50220"
@@ -79284,10 +79287,12 @@
             "205100:0033|gwSz3j|a2ba1d91149d03677266078b9cf7fe8d|163079"
         ],
         "img_tutorial_event_tour_tour-006-01.unity3d": [
-            "205100:0046|r1Nc3s|99b19541b7f7a7035a11505eb13e2caf|427614"
+            "205100:0046|r1Nc3s|99b19541b7f7a7035a11505eb13e2caf|427614",
+            "205100:0048|GAPflq|03783684f2499e8a77e3f9fb8e0e5f8c|427608"
         ],
         "img_tutorial_event_tour_tour-006-02.unity3d": [
-            "205100:0046|pZ0cao|29946ac1f525d5ced6cce2211d86649a|222922"
+            "205100:0046|pZ0cao|29946ac1f525d5ced6cce2211d86649a|222922",
+            "205100:0048|x5ksoX|4f5c2288bd774af87ab556f6d50021bd|222766"
         ],
         "img_tutorial_event_tour_tour-006-03.unity3d": [
             "205100:0046|BGcqbS|c331bca6a2ee67ad826e5d1ca249976d|178276"
@@ -79296,13 +79301,16 @@
             "205100:0046|Y8HrPq|3feba752d38fd96d09e567708050f2d3|188884"
         ],
         "img_tutorial_event_tour_tour-006-05.unity3d": [
-            "205100:0046|RtA6Ww|68aa820f5544e6d23d92595ad0d7943e|172765"
+            "205100:0046|RtA6Ww|68aa820f5544e6d23d92595ad0d7943e|172765",
+            "205100:0048|2PvJfv|6b84355da74c30c6429a95867b2e802a|172765"
         ],
         "img_tutorial_event_tour_tour-006-06.unity3d": [
-            "205100:0046|9pzzhx|b130831b0a2584fea1c37bbeadf6d976|223015"
+            "205100:0046|9pzzhx|b130831b0a2584fea1c37bbeadf6d976|223015",
+            "205100:0048|Q2JYEz|e6c23c3a0dee20a7e110d7af55f5bf15|223014"
         ],
         "img_tutorial_event_tour_tour-006-07.unity3d": [
-            "205100:0046|VP3STY|57c3f7969f1f6e443522a1ddf7daf763|219638"
+            "205100:0046|VP3STY|57c3f7969f1f6e443522a1ddf7daf763|219638",
+            "205100:0048|L0hpoM|8724a5e07d5b2429a73624190a914c42|219644"
         ],
         "img_tutorial_first-idolselect_001-fktn.unity3d": [
             "205000:0025|yqfflQ|3c2d4d6da9650da245b19e6f9353db36|34823",
@@ -116605,6 +116613,12 @@
             "205000:0265|DzUNCY|afdc543d22c8f8a8fc033625b2cad8ff|3158470",
             "205000:0273|wp6Ouf|2bf52cceba7bdc39a3a8f131b531e2ab|2877486",
             "205000:0390|iibhdE|ddb14e2dd8e02092d7ca61030199b299|2987288"
+        ],
+        "sud_bgm_adv_inst-all-015.acb": [
+            "205100:0048|2D1SRc|ad10d3e94ec302f8122dd9ebb5f489dd|11328"
+        ],
+        "sud_bgm_adv_inst-all-015.awb": [
+            "205100:0048|UP781n|89ba277b4c52fdc3e4ad5ec4f8a9a53e|3129826"
         ],
         "sud_bgm_adv_inst-all-016.acb": [
             "205000:0436|0DMIRC|e0b52a76c1d2ecbde6f8931a12e74dbe|10688"
