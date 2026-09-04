@@ -1,0 +1,20 @@
+{
+    "revision": [
+        50,
+        49
+    ],
+    "assetBundleList": [
+        {
+            "id": 24700,
+            "name": "img_tutorial_event_tour_tour-006-07",
+            "size": 221521,
+            "crc": 1214976323,
+            "state": "UPDATE",
+            "md5": "0e2d981d8d112e307a50c65453e2ca7a",
+            "objectName": "LnocNk",
+            "uploadVersionId": 205100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

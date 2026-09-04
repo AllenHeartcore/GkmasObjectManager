@@ -1,6 +1,6 @@
 {
     "revision": [
-        49,
+        51,
         2
     ],
     "assetBundleList": [
@@ -261033,11 +261033,11 @@
         {
             "id": 24661,
             "name": "img_tutorial_event_tour_tour-006-07",
-            "size": 627133,
-            "crc": 352901280,
-            "state": "ADD",
-            "md5": "8844e8d9e0be91bd034ebb43b13584c6",
-            "objectName": "wU2sX0",
+            "size": 629431,
+            "crc": 3028985778,
+            "state": "UPDATE",
+            "md5": "6134b91ac073d73123fd60bd7c8c7fe9",
+            "objectName": "0nS1YS",
             "uploadVersionId": 705100
         },
         {
@@ -262299,6 +262299,96 @@
             "state": "ADD",
             "md5": "0f6b57817eac058148152800f0e07fc7",
             "objectName": "0Z0bDp",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24777,
+            "name": "img_general_meishi_base_all-live-07-thumb",
+            "size": 46840,
+            "crc": 2417229479,
+            "state": "ADD",
+            "md5": "9a597b63196cf3164e11743f605eeda0",
+            "objectName": "UQrb2p",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24778,
+            "name": "img_notice_gasha_gasha-01000-ssr-idol-001-banner-01-large",
+            "size": 983971,
+            "crc": 3323852137,
+            "state": "ADD",
+            "md5": "7c0054ee51318b17edfa3c689890da73",
+            "objectName": "ee67Zh",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24779,
+            "name": "img_gasha_banner_gasha-01000-ssr-idol-001-select-s",
+            "size": 80851,
+            "crc": 2282896689,
+            "state": "ADD",
+            "md5": "6776abe31fdca9c72aa873d72cf31fa2",
+            "objectName": "EwAWCj",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24780,
+            "name": "img_general_gasha_bg_gasha_livetour-shirube-hukuoka-001",
+            "size": 1608943,
+            "crc": 877139656,
+            "state": "ADD",
+            "md5": "03f0f8a44beab877947abe1f39fb2519",
+            "objectName": "lppMnW",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24781,
+            "name": "img_general_home_gasha_gasha-01000-ssr-idol-001",
+            "size": 43542,
+            "crc": 1397520868,
+            "state": "ADD",
+            "md5": "dd79b3700f527fbb835e3c5021460c12",
+            "objectName": "UGM9kb",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24782,
+            "name": "img_general_meishi_base_all-live-07-full",
+            "size": 2460251,
+            "crc": 699824027,
+            "state": "ADD",
+            "md5": "f5a517b028b84f28d15ceca8215cba13",
+            "objectName": "4pVmMA",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24783,
+            "name": "img_gasha_banner_gasha-01000-ssr-idol-001-select-m",
+            "size": 162682,
+            "crc": 3247535632,
+            "state": "ADD",
+            "md5": "1595cdb3324ddfc9be986c75aab00ec4",
+            "objectName": "SS0hSN",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24784,
+            "name": "img_notice_gasha_gasha-01000-ssr-idol-001",
+            "size": 3286900,
+            "crc": 3858847666,
+            "state": "ADD",
+            "md5": "1c31af1bc35f15eb8098b84f8ca4c0a0",
+            "objectName": "sk5KXn",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 24785,
+            "name": "img_gasha_banner_gasha-01000-ssr-idol-001-logo",
+            "size": 17227,
+            "crc": 1263240823,
+            "state": "ADD",
+            "md5": "408d56bcae2fcf6ff0645447cd39da32",
+            "objectName": "Vp2CfC",
             "uploadVersionId": 705100
         }
     ],
