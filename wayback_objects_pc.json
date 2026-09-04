@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0049",
+    "latest_version": "705100:0051",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -11476,6 +11476,15 @@
         ],
         "img_gasha_banner_gasha-01000-pickup-001-select-s.unity3d": [
             "705100:0047|uaaLE7|8382d3a6e0aa1a953ea961f95315fdc8|73031"
+        ],
+        "img_gasha_banner_gasha-01000-ssr-idol-001-logo.unity3d": [
+            "705100:0051|Vp2CfC|408d56bcae2fcf6ff0645447cd39da32|17227"
+        ],
+        "img_gasha_banner_gasha-01000-ssr-idol-001-select-m.unity3d": [
+            "705100:0051|SS0hSN|1595cdb3324ddfc9be986c75aab00ec4|162682"
+        ],
+        "img_gasha_banner_gasha-01000-ssr-idol-001-select-s.unity3d": [
+            "705100:0051|EwAWCj|6776abe31fdca9c72aa873d72cf31fa2|80851"
         ],
         "img_gasha_banner_gasha-01000-wednesday-001-logo.unity3d": [
             "705100:0047|XXOxop|48d6a2154bd14b6238d2928c3356b0a2|21506"
@@ -36928,6 +36937,9 @@
         "img_general_gasha_bg_gasha_livetour-shirube-hukui-001.unity3d": [
             "705100:0039|KXOuRC|21cd7eeeeefa3d9adcf49049a15ba15c|1502414"
         ],
+        "img_general_gasha_bg_gasha_livetour-shirube-hukuoka-001.unity3d": [
+            "705100:0051|lppMnW|03f0f8a44beab877947abe1f39fb2519|1608943"
+        ],
         "img_general_gasha_bg_gasha_ssr-idol-1-point-5-anniversary.unity3d": [
             "705000:0141|LgWTt1|1d6167463b2cd9133f2c02460f37b412|1736716",
             "705000:0142|guWc40|266ddfa70a8be3c6a0f8419c631698d1|1734986",
@@ -38153,6 +38165,9 @@
         ],
         "img_general_home_gasha_gasha-01000-pickup-001.unity3d": [
             "705100:0047|s0z2bq|a35b93436f2fcc760411d706fbe9e93c|31648"
+        ],
+        "img_general_home_gasha_gasha-01000-ssr-idol-001.unity3d": [
+            "705100:0051|UGM9kb|dd79b3700f527fbb835e3c5021460c12|43542"
         ],
         "img_general_home_gasha_gasha-200limit-select-pickup-001.unity3d": [
             "705000:0168|O5RNTj|02a5ac121f5a18399c40c2743b719540|41702",
@@ -45826,6 +45841,12 @@
         ],
         "img_general_meishi_base_all-live-06-thumb.unity3d": [
             "705100:0041|rRlyKs|9c13ad4d26b044e446ba934819ebd61c|46868"
+        ],
+        "img_general_meishi_base_all-live-07-full.unity3d": [
+            "705100:0051|4pVmMA|f5a517b028b84f28d15ceca8215cba13|2460251"
+        ],
+        "img_general_meishi_base_all-live-07-thumb.unity3d": [
+            "705100:0051|UQrb2p|9a597b63196cf3164e11743f605eeda0|46840"
         ],
         "img_general_meishi_base_amao-001-full.unity3d": [
             "705000:0009|QamP0s|dd03df5a245384e714f72137a3ce40d2|1548230",
@@ -75255,6 +75276,12 @@
         "img_notice_gasha_gasha-01000-pickup-001.unity3d": [
             "705100:0047|GWqf17|f94267ebe241a87f1556e313785b2d84|2237612"
         ],
+        "img_notice_gasha_gasha-01000-ssr-idol-001-banner-01-large.unity3d": [
+            "705100:0051|ee67Zh|7c0054ee51318b17edfa3c689890da73|983971"
+        ],
+        "img_notice_gasha_gasha-01000-ssr-idol-001.unity3d": [
+            "705100:0051|sk5KXn|1c31af1bc35f15eb8098b84f8ca4c0a0|3286900"
+        ],
         "img_notice_gasha_gasha-200limit-select-pickup-001-banner-01-large-pre.unity3d": [
             "705000:0164|9HoRTm|769ce3420a9783b2632f35187b19435f|640301",
             "705100:0014|cKIOgU|6aa9d7a8eb1a70f77250c29e14a6f703|640224"
@@ -78686,7 +78713,8 @@
             "705100:0047|uDDaZq|618336e92ff0ccef41acc299421bddda|640276"
         ],
         "img_tutorial_event_tour_tour-006-07.unity3d": [
-            "705100:0047|wU2sX0|8844e8d9e0be91bd034ebb43b13584c6|627133"
+            "705100:0047|wU2sX0|8844e8d9e0be91bd034ebb43b13584c6|627133",
+            "705100:0051|0nS1YS|6134b91ac073d73123fd60bd7c8c7fe9|629431"
         ],
         "img_tutorial_first-idolselect_001-fktn.unity3d": [
             "705000:0009|DKks63|a805dc6cdd84ab2fc007e5293a24feea|81444",
