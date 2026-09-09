@@ -1,9 +1,60 @@
 {
     "revision": [
-        52,
+        53,
         51
     ],
-    "assetBundleList": [],
+    "assetBundleList": [
+        {
+            "id": 25117,
+            "name": "img_notice_event_event-panel-mission-006_01",
+            "size": 371813,
+            "crc": 4228264269,
+            "state": "UPDATE",
+            "md5": "fb18b4970966d2676bc0a4a4cfdea856",
+            "objectName": "2pLh0L",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25185,
+            "name": "img_notice_event_event-panel-mission-009_01",
+            "size": 334746,
+            "crc": 3721811845,
+            "state": "UPDATE",
+            "md5": "efab33b28a8f7a09d300c7ffbc916d12",
+            "objectName": "0IKApM",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25254,
+            "name": "img_notice_event_event-panel-mission-007_01",
+            "size": 389626,
+            "crc": 3815676220,
+            "state": "UPDATE",
+            "md5": "2fd44a9aad734c534d74e50e9d5b4718",
+            "objectName": "JQhjPd",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25509,
+            "name": "img_notice_campaign_produce_week-013",
+            "size": 119285,
+            "crc": 3750780908,
+            "state": "ADD",
+            "md5": "66c9dd29712c3f50380b1e65038bdc2a",
+            "objectName": "EuU1cH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25510,
+            "name": "img_notice_notice-list_campaign_produce-week-013",
+            "size": 73937,
+            "crc": 2908822810,
+            "state": "ADD",
+            "md5": "3c1f3595c37c8d697ac58ef2c0deadc8",
+            "objectName": "2I0FLQ",
+            "uploadVersionId": 205100
+        }
+    ],
     "resourceList": [
         {
             "id": 5847,

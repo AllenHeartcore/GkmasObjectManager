@@ -1,6 +1,6 @@
 {
     "revision": [
-        53,
+        54,
         28
     ],
     "assetBundleList": [
@@ -14879,11 +14879,11 @@
         {
             "id": 24881,
             "name": "img_notice_event_event-panel-mission-009_01",
-            "size": 1601393,
-            "crc": 3333007680,
-            "state": "ADD",
-            "md5": "4da9f5652c7a80b51b2ce11c716a7ab2",
-            "objectName": "qpaXCJ",
+            "size": 1601536,
+            "crc": 1468908598,
+            "state": "UPDATE",
+            "md5": "365bc54bce80cf8a69286c272c71df3d",
+            "objectName": "RM9VOG",
             "uploadVersionId": 705100
         },
         {
@@ -15209,11 +15209,11 @@
         {
             "id": 24914,
             "name": "img_notice_event_event-panel-mission-007_01",
-            "size": 1949235,
-            "crc": 3979781269,
-            "state": "ADD",
-            "md5": "cfec1fb8226ce8b16e82b1a01d588ba6",
-            "objectName": "7zOAP5",
+            "size": 1951272,
+            "crc": 983698647,
+            "state": "UPDATE",
+            "md5": "f09cdd6bfdc4f1c45fd9858dd5643602",
+            "objectName": "Z6SB8Q",
             "uploadVersionId": 705100
         },
         {
@@ -17352,11 +17352,11 @@
         {
             "id": 25128,
             "name": "img_notice_event_event-panel-mission-006_01",
-            "size": 1844821,
-            "crc": 34681079,
-            "state": "ADD",
-            "md5": "d6b751b04a100846b2c3c604ff6ae13b",
-            "objectName": "eiKFUg",
+            "size": 1846672,
+            "crc": 1393847051,
+            "state": "UPDATE",
+            "md5": "3d72aaac44032386a3e5668fc03864f1",
+            "objectName": "P0CNA3",
             "uploadVersionId": 705100
         },
         {
@@ -20751,6 +20751,26 @@
             "state": "ADD",
             "md5": "c6003a7acbb73e65bdee4f24937fa646",
             "objectName": "twvIve",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25461,
+            "name": "img_notice_campaign_produce_week-013",
+            "size": 523275,
+            "crc": 394217139,
+            "state": "ADD",
+            "md5": "cd267375b73adf870674dd08590fae6a",
+            "objectName": "lyfncv",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25462,
+            "name": "img_notice_notice-list_campaign_produce-week-013",
+            "size": 376162,
+            "crc": 616043548,
+            "state": "ADD",
+            "md5": "40b910e82ad28ae524d5440128cc0dcb",
+            "objectName": "jZdw5A",
             "uploadVersionId": 705100
         }
     ],
