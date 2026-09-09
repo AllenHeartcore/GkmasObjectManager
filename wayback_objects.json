@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0052",
+    "latest_version": "205100:0053",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -75278,6 +75278,9 @@
         "img_notice_campaign_produce_week-012.unity3d": [
             "205100:0033|uwxDVh|e50491ee5e34ec520b25e678caf8c62f|119166"
         ],
+        "img_notice_campaign_produce_week-013.unity3d": [
+            "205100:0053|EuU1cH|66c9dd29712c3f50380b1e65038bdc2a|119285"
+        ],
         "img_notice_campaign_producerranking-add-000.unity3d": [
             "205000:0316|XpGhk8|3a9da278c50e30d4be98d59440e9de3e|381012",
             "205000:0320|R8nGUB|de15ccf77ad613de554b47dfa9ef9a45|379231",
@@ -75684,21 +75687,24 @@
             "205100:0033|6JRobB|bb0d1c7282c35d14185a2d971cf1cacd|357895"
         ],
         "img_notice_event_event-panel-mission-006_01.unity3d": [
-            "205100:0052|NbIlvI|da4fc9effd17f57ece32d8ff1a1a8b45|371717"
+            "205100:0052|NbIlvI|da4fc9effd17f57ece32d8ff1a1a8b45|371717",
+            "205100:0053|2pLh0L|fb18b4970966d2676bc0a4a4cfdea856|371813"
         ],
         "img_notice_event_event-panel-mission-007.unity3d": [
             "205000:0365|XUIxmN|2303efb2d48776dcd0995bc267c69ae9|362975",
             "205100:0033|ATJ2F5|88922943cffece183a97a1dd18d835e7|358239"
         ],
         "img_notice_event_event-panel-mission-007_01.unity3d": [
-            "205100:0052|4LpgWN|8658582b9977ec00229ea8d59c27ee5a|390071"
+            "205100:0052|4LpgWN|8658582b9977ec00229ea8d59c27ee5a|390071",
+            "205100:0053|JQhjPd|2fd44a9aad734c534d74e50e9d5b4718|389626"
         ],
         "img_notice_event_event-panel-mission-009.unity3d": [
             "205000:0424|h9aHMD|0efd2060c22b93d177a8ba9b3dc193f9|335425",
             "205100:0033|w7HQNb|49f16c80c6bf073f0dba21aae5e347fd|330190"
         ],
         "img_notice_event_event-panel-mission-009_01.unity3d": [
-            "205100:0052|KmvhFj|69e34218b272622a7a21b3eea5fdd173|335539"
+            "205100:0052|KmvhFj|69e34218b272622a7a21b3eea5fdd173|335539",
+            "205100:0053|0IKApM|efab33b28a8f7a09d300c7ffbc916d12|334746"
         ],
         "img_notice_event_event-panel-mission-011.unity3d": [
             "205100:0033|KTcBwW|6b9f6818504a8602d297a871963498d9|344783"
@@ -78209,6 +78215,9 @@
         ],
         "img_notice_notice-list_campaign_produce-week-012.unity3d": [
             "205100:0033|hzgWj3|557e9fb93d162a1e61a5813cc298050a|73841"
+        ],
+        "img_notice_notice-list_campaign_produce-week-013.unity3d": [
+            "205100:0053|2I0FLQ|3c1f3595c37c8d697ac58ef2c0deadc8|73937"
         ],
         "img_notice_notice-list_campaign_produce3-00822-advance-banner-001.unity3d": [
             "205000:0414|VbcAPV|b689ed90758067b11fbb4a7cf2d5b57c|129086",
