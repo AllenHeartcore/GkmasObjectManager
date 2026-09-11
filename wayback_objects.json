@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0053",
+    "latest_version": "205100:0054",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -75341,6 +75341,9 @@
             "205000:0444|oC4I7E|cf13706cbb8930c10d1d78b38ff6f0d7|372468",
             "205100:0033|bIzxEr|6fef6924f9c2edd9a72ce66c9bec800d|365382"
         ],
+        "img_notice_campaign_store-no1-release-15.unity3d": [
+            "205100:0054|tOhxvD|0fe094d96071a75627c22101232370a9|162225"
+        ],
         "img_notice_campaign_summer-001.unity3d": [
             "205100:0036|W9nBUH|f38952525de24b2e78aa458cb444016c|327833"
         ],
@@ -78285,6 +78288,9 @@
         "img_notice_notice-list_campaign_store-no1-release-14.unity3d": [
             "205000:0444|XPJs0p|f5e27e0445d507e3655515f874484547|191413",
             "205100:0033|xMMfZ8|024fc816fb1117ed5f6346a9c33fa5c4|190657"
+        ],
+        "img_notice_notice-list_campaign_store-no1-release-15.unity3d": [
+            "205100:0054|oPqOiO|8097ae3eff1f09638327ada6104c28f0|280413"
         ],
         "img_notice_notice-list_campaign_summer-001-small.unity3d": [
             "205000:0081|e7BpNG|4610d10db62a492424e82a8d7d80543c|44500",
