@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0054",
+    "latest_version": "205100:0056",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -32457,6 +32457,12 @@
         ],
         "img_general_comic4_0163.unity3d": [
             "205100:0052|eSBeel|86a9b1df8ca4e4e69ebcf18277bab32a|230270"
+        ],
+        "img_general_comic4_0164-thumb.unity3d": [
+            "205100:0056|euogdS|b052da0b582255d61c3d571422785354|25993"
+        ],
+        "img_general_comic4_0164.unity3d": [
+            "205100:0056|luaHAM|d52b11d92db0bbb75e07e21f60092b2d|244156"
         ],
         "img_general_comic4_radio-0000-thumb.unity3d": [
             "205000:0262|lqqLLT|7570d8148e4bb32aeed23854d23a2a58|25613",
@@ -71755,6 +71761,12 @@
             "205000:0025|dV74e0|a44f8cf072244e7af7d5e5ef2e0ee8c2|458987",
             "205100:0033|nUFLIW|9f080ddf6c785cf42b4280da93c641c4|453649"
         ],
+        "img_general_ui_loading-bg_hif-activity.unity3d": [
+            "205100:0056|1Fq6pZ|a1d24eee87ddfeb5ff007b9c3f50e471|916730"
+        ],
+        "img_general_ui_loading-bg_hif-customize.unity3d": [
+            "205100:0056|WqGrZD|65cdd5cbd2571132d9dfc47703e274cb|883677"
+        ],
         "img_general_ui_loading-bg_hif-interval.unity3d": [
             "205000:0436|J1zvsm|efc524976916cd93f3628d3d730745cf|874548",
             "205100:0033|iulMQX|959b6fcdea695215423d9ab71490cd7d|854146"
@@ -71774,6 +71786,12 @@
         "img_general_ui_loading-bg_hif-lesson-vocal.unity3d": [
             "205000:0436|jegVW5|5c2f7938d3d1822773d3c586b8041784|924649",
             "205100:0033|Jm2HVT|22c6184450cd00c2095cfbbf76a8fac6|923468"
+        ],
+        "img_general_ui_loading-bg_hif-present.unity3d": [
+            "205100:0056|hsFVbs|41a7b84488f9e99070446e2051ea46f3|879179"
+        ],
+        "img_general_ui_loading-bg_hif-school.unity3d": [
+            "205100:0056|gYScH3|2aa49210c595e27cc478ac9d760df72c|923934"
         ],
         "img_general_ui_loading-bg_lesson-dance.unity3d": [
             "205000:0025|eBBb3j|004697405f721f6f403921461facf67e|825415",
@@ -80056,6 +80074,9 @@
             "205000:0025|6SB58n|e98462df892fb960950db3ddf8c26199|139270",
             "205100:0033|VgwgdS|48e3e25ac11721df0fb436bbaf3a7030|148565"
         ],
+        "img_notice_tips_skillcard-switch-01.unity3d": [
+            "205100:0056|qPvKlA|4f3ee7d4c3787940faf6fffb4ac0f72b|112369"
+        ],
         "img_notice_update_cmn-01.unity3d": [
             "205000:0118|QLGk6b|098833d96506125014a82f3c548abbd7|22010",
             "205100:0033|uLGzD0|fcfd3ceaf1c31fc25ffd1eb1f374a12e|21931"
@@ -81470,11 +81491,13 @@
         ],
         "img_tutorial_produce-card-switch_01.unity3d": [
             "205000:0365|cjBxoT|d1aabbdb97331fd3b2a5a93410abfd2a|162195",
-            "205100:0033|5cbsF8|7e3888c13291c2cc1f2b860d5b9af204|161279"
+            "205100:0033|5cbsF8|7e3888c13291c2cc1f2b860d5b9af204|161279",
+            "205100:0056|KlQKne|cf72cf119dad35467d8855eb3198aec2|163530"
         ],
         "img_tutorial_produce-card-switch_02.unity3d": [
             "205000:0365|cmRBIX|280ae880b314c3076ebce82e86e65e16|121189",
-            "205100:0033|J1hV7K|0091b9a8a864078fe6506053fc0ebeed|120456"
+            "205100:0033|J1hV7K|0091b9a8a864078fe6506053fc0ebeed|120456",
+            "205100:0056|D1Tono|ce9ced4cc53259843dde854782587430|120642"
         ],
         "img_tutorial_produce-carddelete_001.unity3d": [
             "205000:0025|poY47s|00758bf217ea24c05b4840adde10a2b5|127154",
@@ -103287,7 +103310,8 @@
             "205000:0371|K5UJQg|91c17c379d26163a2e43b3a9cdac38cc|329711"
         ],
         "adv_dear_fktn_028.txt": [
-            "205100:0052|WtpyN0|e18f1bb46f8eda4582e61505f44e1d31|266720"
+            "205100:0052|WtpyN0|e18f1bb46f8eda4582e61505f44e1d31|266720",
+            "205100:0056|G6UIPm|dbae223a55fbbec54fe6b0b8930f06d5|266720"
         ],
         "adv_dear_fktn_029.txt": [
             "205100:0052|j3zFq8|9c47324139c24b26cc4ae8fc822cb473|488658"
@@ -124850,7 +124874,8 @@
             "205000:0242|gIrFzb|49b0cbd74ff786b4f01375bfa69a4cc6|7078784",
             "205000:0365|1Sbai6|e3ed590d50b3e9893eacd93bc4f76ad2|7409280",
             "205000:0436|UDKUWY|60ea50490dbb15cffce4316e3e584301|8589600",
-            "205100:0033|jNFf8W|7bd409db1913999180197e762d98e0d4|8726400"
+            "205100:0033|jNFf8W|7bd409db1913999180197e762d98e0d4|8726400",
+            "205100:0056|DxrPhA|c2887a9e8180d9975722db04c75d7179|9069024"
         ],
         "sud_se_login.acb": [
             "205000:0137|RNPxXp|c79793e4018afd5e0bdfc3e502493562|102400"
