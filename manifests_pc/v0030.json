@@ -1,6 +1,6 @@
 {
     "revision": [
-        55,
+        57,
         30
     ],
     "assetBundleList": [
@@ -3350,6 +3350,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 17535,
+            "name": "img_tutorial_produce-card-switch_02",
+            "size": 354676,
+            "crc": 4130860967,
+            "state": "UPDATE",
+            "md5": "db1ada321500434ae49d4380aa72d327",
+            "objectName": "JF1n3I",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 17755,
             "name": "mdl_chr_hume-cstm-0010_hair",
             "size": 4664767,
@@ -3611,6 +3621,16 @@
             "state": "UPDATE",
             "md5": "f97ad7f29810af58dde0b440cc5758f7",
             "objectName": "aZkgw0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 22067,
+            "name": "img_tutorial_produce-card-switch_01",
+            "size": 471046,
+            "crc": 2845481795,
+            "state": "UPDATE",
+            "md5": "f63168ecb25bef19775ec8830bd642cb",
+            "objectName": "w193Nb",
             "uploadVersionId": 705100
         },
         {
@@ -19476,6 +19496,76 @@
             "md5": "8fbff002e076f89c29332c2dd6e078d8",
             "objectName": "B9GK2s",
             "uploadVersionId": 705100
+        },
+        {
+            "id": 25465,
+            "name": "img_notice_tips_skillcard-switch-01",
+            "size": 545604,
+            "crc": 4253615220,
+            "state": "ADD",
+            "md5": "de983c26d512e5a6e27c1658d3220845",
+            "objectName": "8F3rez",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25466,
+            "name": "img_general_ui_loading-bg_hif-customize",
+            "size": 2473776,
+            "crc": 3703376909,
+            "state": "ADD",
+            "md5": "e5c0f8380c47f7d76899a67b068046f2",
+            "objectName": "DmSAZv",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25467,
+            "name": "img_general_ui_loading-bg_hif-present",
+            "size": 2479275,
+            "crc": 2903329884,
+            "state": "ADD",
+            "md5": "7644bdc9098b9cdbbf8e0580df2693f0",
+            "objectName": "4h8hJr",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25468,
+            "name": "img_general_ui_loading-bg_hif-school",
+            "size": 2661619,
+            "crc": 1747832307,
+            "state": "ADD",
+            "md5": "011d62dd4e9212326d80113f812f2c61",
+            "objectName": "32T1cC",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25469,
+            "name": "img_general_comic4_0164",
+            "size": 499157,
+            "crc": 4252425257,
+            "state": "ADD",
+            "md5": "4eafec6f98d26664858612c3391aebbd",
+            "objectName": "TlzNAV",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25470,
+            "name": "img_general_ui_loading-bg_hif-activity",
+            "size": 2596055,
+            "crc": 3249336911,
+            "state": "ADD",
+            "md5": "627b9d91c0b1368c9d4e3faacace9014",
+            "objectName": "Jqm3I6",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25471,
+            "name": "img_general_comic4_0164-thumb",
+            "size": 50019,
+            "crc": 1522209690,
+            "state": "ADD",
+            "md5": "5030bcc5dc7749b252e03fa810ab308c",
+            "objectName": "Tyelpe",
+            "uploadVersionId": 705100
         }
     ],
     "resourceList": [
@@ -19513,6 +19603,15 @@
             "state": "UPDATE",
             "md5": "0819c52ae7aa38ae7548093adbddd1ef",
             "objectName": "pZFR4s",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 10953,
+            "name": "sud_se_lesson.acb",
+            "size": 9069024,
+            "state": "UPDATE",
+            "md5": "c2887a9e8180d9975722db04c75d7179",
+            "objectName": "WjP3BL",
             "uploadVersionId": 705100
         },
         {
@@ -25063,9 +25162,9 @@
             "id": 21870,
             "name": "adv_dear_fktn_028.txt",
             "size": 266720,
-            "state": "ADD",
-            "md5": "e18f1bb46f8eda4582e61505f44e1d31",
-            "objectName": "ODmvxS",
+            "state": "UPDATE",
+            "md5": "dbae223a55fbbec54fe6b0b8930f06d5",
+            "objectName": "5a0gn9",
             "uploadVersionId": 705100
         },
         {

@@ -1,0 +1,28 @@
+{
+    "revision": [
+        56,
+        55
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 10072,
+            "name": "sud_se_lesson.acb",
+            "size": 9069024,
+            "state": "UPDATE",
+            "md5": "c2887a9e8180d9975722db04c75d7179",
+            "objectName": "DxrPhA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 21823,
+            "name": "adv_dear_fktn_028.txt",
+            "size": 266720,
+            "state": "UPDATE",
+            "md5": "dbae223a55fbbec54fe6b0b8930f06d5",
+            "objectName": "G6UIPm",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
