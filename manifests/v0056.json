@@ -1,7 +1,7 @@
 {
     "revision": [
         57,
-        54
+        56
     ],
     "assetBundleList": [
         {
@@ -279,16 +279,6 @@
             "uploadVersionId": 205100
         },
         {
-            "id": 19888,
-            "name": "img_tutorial_produce-card-switch_01",
-            "size": 163530,
-            "crc": 3489187581,
-            "state": "UPDATE",
-            "md5": "cf72cf119dad35467d8855eb3198aec2",
-            "objectName": "KlQKne",
-            "uploadVersionId": 205100
-        },
-        {
             "id": 20081,
             "name": "mdl_chr_hski-cstm-0128_body",
             "size": 7822711,
@@ -299,16 +289,6 @@
             "state": "UPDATE",
             "md5": "5031cee631c7289eb052957c8203b625",
             "objectName": "4PilhR",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 20086,
-            "name": "img_tutorial_produce-card-switch_02",
-            "size": 120642,
-            "crc": 397089864,
-            "state": "UPDATE",
-            "md5": "ce9ced4cc53259843dde854782587430",
-            "objectName": "D1Tono",
             "uploadVersionId": 205100
         },
         {
@@ -433,76 +413,6 @@
             "uploadVersionId": 205100
         },
         {
-            "id": 25513,
-            "name": "img_general_comic4_0164",
-            "size": 244156,
-            "crc": 165788427,
-            "state": "ADD",
-            "md5": "d52b11d92db0bbb75e07e21f60092b2d",
-            "objectName": "luaHAM",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25514,
-            "name": "img_general_comic4_0164-thumb",
-            "size": 25993,
-            "crc": 1223322298,
-            "state": "ADD",
-            "md5": "b052da0b582255d61c3d571422785354",
-            "objectName": "euogdS",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25515,
-            "name": "img_notice_tips_skillcard-switch-01",
-            "size": 112369,
-            "crc": 3868844043,
-            "state": "ADD",
-            "md5": "4f3ee7d4c3787940faf6fffb4ac0f72b",
-            "objectName": "qPvKlA",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25516,
-            "name": "img_general_ui_loading-bg_hif-activity",
-            "size": 916730,
-            "crc": 3494244015,
-            "state": "ADD",
-            "md5": "a1d24eee87ddfeb5ff007b9c3f50e471",
-            "objectName": "1Fq6pZ",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25517,
-            "name": "img_general_ui_loading-bg_hif-customize",
-            "size": 883677,
-            "crc": 2560675526,
-            "state": "ADD",
-            "md5": "65cdd5cbd2571132d9dfc47703e274cb",
-            "objectName": "WqGrZD",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25518,
-            "name": "img_general_ui_loading-bg_hif-present",
-            "size": 879179,
-            "crc": 1500486317,
-            "state": "ADD",
-            "md5": "41a7b84488f9e99070446e2051ea46f3",
-            "objectName": "hsFVbs",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 25519,
-            "name": "img_general_ui_loading-bg_hif-school",
-            "size": 923934,
-            "crc": 2803731474,
-            "state": "ADD",
-            "md5": "2aa49210c595e27cc478ac9d760df72c",
-            "objectName": "gYScH3",
-            "uploadVersionId": 205100
-        },
-        {
             "id": 25520,
             "name": "img_general_event_dearness-event_014-banner",
             "size": 87675,
@@ -543,25 +453,6 @@
             "uploadVersionId": 205100
         }
     ],
-    "resourceList": [
-        {
-            "id": 10072,
-            "name": "sud_se_lesson.acb",
-            "size": 9069024,
-            "state": "UPDATE",
-            "md5": "c2887a9e8180d9975722db04c75d7179",
-            "objectName": "DxrPhA",
-            "uploadVersionId": 205100
-        },
-        {
-            "id": 21823,
-            "name": "adv_dear_fktn_028.txt",
-            "size": 266720,
-            "state": "UPDATE",
-            "md5": "dbae223a55fbbec54fe6b0b8930f06d5",
-            "objectName": "G6UIPm",
-            "uploadVersionId": 205100
-        }
-    ],
+    "resourceList": [],
     "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
 }

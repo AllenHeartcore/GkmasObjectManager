@@ -1,6 +1,6 @@
 {
     "revision": [
-        57,
+        58,
         19
     ],
     "assetBundleList": [
@@ -110,6 +110,16 @@
             "state": "UPDATE",
             "md5": "f6ff566d641546907da50d01ab8c9fa6",
             "objectName": "trOKn0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 1608,
+            "name": "actor-shader",
+            "size": 1652608,
+            "crc": 2556687557,
+            "state": "UPDATE",
+            "md5": "34833b3789f298d6124d202e84d9fbdd",
+            "objectName": "wkijk7",
             "uploadVersionId": 705100
         },
         {
@@ -3493,6 +3503,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 16081,
+            "name": "mdl_chr_jsna-cstm-0128_body",
+            "size": 10398371,
+            "crc": 2340513428,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "f154839c17e73490e03c6aad5702608d",
+            "objectName": "NJETtQ",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 16157,
             "name": "mdl_chr_hume-cstm-0110_hair",
             "size": 4534572,
@@ -3552,6 +3575,32 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 16525,
+            "name": "mdl_chr_ttmr-cstm-0048_body",
+            "size": 10545087,
+            "crc": 4179500396,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "e21c434bc66a241fd6c3aace67e4357a",
+            "objectName": "02uscG",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 16542,
+            "name": "mdl_chr_kcna-cstm-0033_body",
+            "size": 7529048,
+            "crc": 1861509462,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "95fa780e70c6387d819bef265a8f51a4",
+            "objectName": "HMOYVC",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 16552,
             "name": "mdl_chr_hume-spcs-0000_hair",
             "size": 4326059,
@@ -3565,6 +3614,32 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 16583,
+            "name": "mdl_chr_amao-cstm-0128_body",
+            "size": 10780393,
+            "crc": 2252300416,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "f64aab84f2dc413c1b243138b20c074a",
+            "objectName": "IczfQ2",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 16613,
+            "name": "mdl_chr_kllj-cstm-0128_body",
+            "size": 11045989,
+            "crc": 137979269,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "f3d8ad22c1b5036768bbc74b3e4ea1fa",
+            "objectName": "AuUt5x",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 16665,
             "name": "mdl_chr_amao-cstm-0035_body",
             "size": 10707835,
@@ -3575,6 +3650,19 @@
             "state": "UPDATE",
             "md5": "b8c00f8eaf0b7ececf88aed83f8344f1",
             "objectName": "obBLGw",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 16676,
+            "name": "mdl_chr_kllj-cstm-0000_body",
+            "size": 10599764,
+            "crc": 2649008988,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "d8728d33b55060dff8e3d6b45b02f969",
+            "objectName": "7PY7d7",
             "uploadVersionId": 705100
         },
         {
@@ -3663,6 +3751,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 17404,
+            "name": "img_tutorial_dearness_001",
+            "size": 442315,
+            "crc": 2353774844,
+            "state": "UPDATE",
+            "md5": "11219f4f774964380e012fc17f8dbb7b",
+            "objectName": "NdlHSR",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 17444,
             "name": "mot_lesson_chr_cmmn_cmmn-sp-star-da-fanservice-big-001_lp",
             "size": 111003,
@@ -3670,6 +3768,16 @@
             "state": "UPDATE",
             "md5": "19d8eec04c7e85b197047a4b90429226",
             "objectName": "ysRBVF",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 17479,
+            "name": "img_tutorial_dearness_003",
+            "size": 466149,
+            "crc": 770062593,
+            "state": "UPDATE",
+            "md5": "69640cdb6248220cbd451207c845ab6a",
+            "objectName": "e7jfhZ",
             "uploadVersionId": 705100
         },
         {
@@ -3742,6 +3850,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 17853,
+            "name": "img_tutorial_dearness_002",
+            "size": 476290,
+            "crc": 2229724116,
+            "state": "UPDATE",
+            "md5": "b8d13e596d2e40a6aa8c2fc9c77c4de7",
+            "objectName": "PSlOo3",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 17874,
             "name": "mot_lesson_chr_cmmn_cmmn-sp-param-vo-sing-a-001_in",
             "size": 89983,
@@ -3765,6 +3883,45 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 17988,
+            "name": "mdl_chr_hume-cstm-0128_body",
+            "size": 11031158,
+            "crc": 4032373504,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "03ea1baac816d5512b485ac1cd5a938b",
+            "objectName": "gy4IKg",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 18032,
+            "name": "mdl_chr_kcna-cstm-0034_body",
+            "size": 7439204,
+            "crc": 2228108941,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "219e50d38f2535bcfdbf79d80ba5ba78",
+            "objectName": "dyoRnd",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 18044,
+            "name": "mdl_chr_ttmr-cstm-0047_body",
+            "size": 10697486,
+            "crc": 3913714966,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "dadd44b82dcb33d7ffdf5e40db3808c2",
+            "objectName": "sZX7Zq",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 18100,
             "name": "mot_lesson_cmmn-sp-star-vo-fanservice-big-001_in_cam",
             "size": 36953,
@@ -3772,6 +3929,19 @@
             "state": "UPDATE",
             "md5": "9aa470718572846f0f1fd000586cf395",
             "objectName": "FzktYX",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 18329,
+            "name": "mdl_chr_kllj-cstm-0073_body",
+            "size": 10336175,
+            "crc": 387786678,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "cec69ea249f87bf96dbacd4a600eb2d0",
+            "objectName": "WV2ORH",
             "uploadVersionId": 705100
         },
         {
@@ -3808,6 +3978,32 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 18707,
+            "name": "mdl_chr_hmsz-cstm-0128_body",
+            "size": 10684077,
+            "crc": 314667918,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "a33244a5016d5ad6be8ef64c18c068ee",
+            "objectName": "f80uzX",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 18715,
+            "name": "mdl_chr_shro-casl-0002_body",
+            "size": 11186247,
+            "crc": 3665218520,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "395e0fcebb31619c05e6f73a7c28a0e1",
+            "objectName": "WwzO9P",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 18726,
             "name": "mot_lesson_cmmn-param-vo-practice-a-001_in_cam",
             "size": 20282,
@@ -3815,6 +4011,19 @@
             "state": "UPDATE",
             "md5": "777d68d42baaa225dcae085501f08133",
             "objectName": "8BI6wl",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 18866,
+            "name": "mdl_chr_ttmr-cstm-0128_body",
+            "size": 10756395,
+            "crc": 3941363361,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "fe83a29771cc06a2524ac60d0cba2727",
+            "objectName": "jzvRc8",
             "uploadVersionId": 705100
         },
         {
@@ -3838,6 +4047,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 18950,
+            "name": "img_help_dearness_002-help",
+            "size": 752467,
+            "crc": 2809962013,
+            "state": "UPDATE",
+            "md5": "7df48d5b62e87f38025dfe08711b271e",
+            "objectName": "vkkMMs",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 19068,
             "name": "mot_lesson_chr_cmmn_cmmn-sp-star-vo-fanservice-big-001_in",
             "size": 225752,
@@ -3858,6 +4077,19 @@
             "state": "UPDATE",
             "md5": "44a65887896539f4d19f2e4612406335",
             "objectName": "o4Ahgc",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 19131,
+            "name": "mdl_chr_shro-cstm-0128_body",
+            "size": 11010224,
+            "crc": 3432050389,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "ed407ffce0a77da8dbafd93b7853f323",
+            "objectName": "QGbNow",
             "uploadVersionId": 705100
         },
         {
@@ -3894,6 +4126,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 19216,
+            "name": "mdl_chr_fktn-cstm-0128_body",
+            "size": 11229783,
+            "crc": 3272601639,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "45f20e50c680d6dce7fab7cc135f6e0b",
+            "objectName": "sJkn2h",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 19239,
             "name": "mdl_chr_hume-hair-0003_hair",
             "size": 4463417,
@@ -3907,6 +4152,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 19486,
+            "name": "img_tutorial_dearness_004",
+            "size": 466149,
+            "crc": 3124321688,
+            "state": "UPDATE",
+            "md5": "62015fda1d42ed768a04c6cee598013b",
+            "objectName": "G2Wbmz",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 19596,
             "name": "mdl_chr_hume-cstm-0072_hair",
             "size": 4524677,
@@ -3917,6 +4172,19 @@
             "state": "UPDATE",
             "md5": "b7d19de03c344a98e09a2abec7161d64",
             "objectName": "6sqm19",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 19598,
+            "name": "mdl_chr_kcna-cstm-0128_body",
+            "size": 11144707,
+            "crc": 797486154,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "e7ccb18c6c1f4517da0f2eb234569f38",
+            "objectName": "xgP9eX",
             "uploadVersionId": 705100
         },
         {
@@ -3989,6 +4257,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 20449,
+            "name": "mdl_chr_hski-cstm-0128_body",
+            "size": 10385171,
+            "crc": 1521801008,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "146acf4b73a818f2da6a6c1151ce6470",
+            "objectName": "LJu6p6",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 20580,
             "name": "mdl_chr_hume-cstm-0100_hair",
             "size": 4534392,
@@ -4012,6 +4293,19 @@
             "state": "UPDATE",
             "md5": "86fc3d43157dd501ed36bae902157d06",
             "objectName": "7LDuVy",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 20707,
+            "name": "mdl_chr_fktn-cstm-0086_body",
+            "size": 10726223,
+            "crc": 886661265,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "7526c010f9bd7de46467f6b1b97e1f4f",
+            "objectName": "RjufBY",
             "uploadVersionId": 705100
         },
         {
@@ -4077,6 +4371,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 21077,
+            "name": "mdl_chr_fktn-cstm-0087_body",
+            "size": 9547602,
+            "crc": 2895099197,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "7c5dbc40a95544f98ecaea3cc86a2732",
+            "objectName": "0p1Jjg",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 21192,
             "name": "mot_lesson_cmmn-sp-star-da-fanservice-big-001_in_cam",
             "size": 34830,
@@ -4084,6 +4391,32 @@
             "state": "UPDATE",
             "md5": "2676d005bb0981fa5a31bd0381b9a016",
             "objectName": "vLdYbD",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21319,
+            "name": "mdl_chr_atbm-cstm-0128_body",
+            "size": 10831202,
+            "crc": 2408793353,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "1e547bad58136ec6c8cad28d1f7749cd",
+            "objectName": "kJwHwy",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21320,
+            "name": "mdl_chr_jsna-cstm-0012_body",
+            "size": 11238630,
+            "crc": 2080024452,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "33ca6d6cd6bde4b8d4044eef0bfaf58f",
+            "objectName": "gApkZP",
             "uploadVersionId": 705100
         },
         {
@@ -4110,6 +4443,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 21516,
+            "name": "mdl_chr_hrnm-cstm-0128_body",
+            "size": 10366592,
+            "crc": 158856587,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "77c5636cfb0368b37134b96d78e8f322",
+            "objectName": "Lirua9",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 21605,
             "name": "mdl_chr_amao-cstm-0093_body",
             "size": 13357370,
@@ -4123,6 +4469,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 21642,
+            "name": "mdl_chr_kllj-cstm-0110_body",
+            "size": 8882901,
+            "crc": 1390596926,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "ac1cbcb5d07f4ef82d2020847e886d72",
+            "objectName": "o8MKI2",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 21681,
             "name": "mot_aud_chr_kllj_unit-start-unit1-ssmk-001_in",
             "size": 124941,
@@ -4130,6 +4489,19 @@
             "state": "UPDATE",
             "md5": "4b5f67d7ad7267af37f2b6fd48c9309e",
             "objectName": "TLocid",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21755,
+            "name": "mdl_chr_jsna-cstm-0024_body",
+            "size": 11291505,
+            "crc": 2144236385,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "72fba5bbdafc6693e1042318a39a341f",
+            "objectName": "JtLH0T",
             "uploadVersionId": 705100
         },
         {
@@ -4225,6 +4597,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 22399,
+            "name": "img_help_dearness_001-help",
+            "size": 725254,
+            "crc": 2810088108,
+            "state": "UPDATE",
+            "md5": "c3d3a6dd78393621b74bda02c0b6468b",
+            "objectName": "PdH2Ic",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 22440,
             "name": "mot_lesson_chr_cmmn_cmmn-star-vi-fanservice-big-001_in",
             "size": 202552,
@@ -4278,6 +4660,19 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 22639,
+            "name": "mdl_chr_kllj-cstm-0072_body",
+            "size": 8656681,
+            "crc": 3975442438,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "a90dcc4271131007cbaffc891b9b0fc8",
+            "objectName": "c22URs",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 22715,
             "name": "mdl_chr_hume-hair-0004_hair",
             "size": 4757769,
@@ -4298,6 +4693,19 @@
             "state": "UPDATE",
             "md5": "490bd6ed68000647d9a74627f71756ad",
             "objectName": "OA0SV7",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 22864,
+            "name": "mdl_chr_ssmk-cstm-0128_body",
+            "size": 10660602,
+            "crc": 1891542156,
+            "dependencies": [
+                1608
+            ],
+            "state": "UPDATE",
+            "md5": "6fb160b22e22a2f4f81db29b6986b42b",
+            "objectName": "FRRwDv",
             "uploadVersionId": 705100
         },
         {
@@ -25022,6 +25430,46 @@
             "state": "ADD",
             "md5": "5030bcc5dc7749b252e03fa810ab308c",
             "objectName": "Tyelpe",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25472,
+            "name": "img_notice_notice-list_dearness-event_014",
+            "size": 499726,
+            "crc": 2217540867,
+            "state": "ADD",
+            "md5": "ddd3ed23e80726d824055fdf95c79d29",
+            "objectName": "XmCybx",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25473,
+            "name": "img_general_event_dearness-event_014-banner",
+            "size": 231862,
+            "crc": 2151819918,
+            "state": "ADD",
+            "md5": "bceb1831fe9f312b11533fe2ac74a2f5",
+            "objectName": "fhI6Hs",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25474,
+            "name": "img_general_comic_0025",
+            "size": 1091673,
+            "crc": 1930972122,
+            "state": "ADD",
+            "md5": "720688fe2f57d5d109610766e7c57bed",
+            "objectName": "L2bElD",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25475,
+            "name": "img_general_event_dearness-event_014-circle",
+            "size": 22395,
+            "crc": 325489493,
+            "state": "ADD",
+            "md5": "554e9fcdfa9a3a2bf4de5176cf269643",
+            "objectName": "Ra4WMg",
             "uploadVersionId": 705100
         }
     ],
