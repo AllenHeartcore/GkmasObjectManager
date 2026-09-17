@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0057",
+    "latest_version": "705100:0058",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -8,7 +8,8 @@
             "705000:0054|tmNTaj|171872716e55f4bed908e122be93cc83|1604190",
             "705000:0104|rhUYYm|eafe576228951168a85b986353b67a24|1622126",
             "705000:0194|Fy8CSN|de755e18e397af7d2b62c0b5d797502e|1536529",
-            "705100:0014|wOttCH|b72a3c9808a44df4a81445699dac3d1d|1535046"
+            "705100:0014|wOttCH|b72a3c9808a44df4a81445699dac3d1d|1535046",
+            "705100:0058|wkijk7|34833b3789f298d6124d202e84d9fbdd|1652608"
         ],
         "atbmgraphbreak.unity3d": [
             "705000:0206|fiam3c|edbd967261e5bda60b6cd786f5a1c45b|447084",
@@ -32232,6 +32233,9 @@
             "705000:0042|zDaQMT|371c037db80aada1c68de013a869f6c5|634839",
             "705100:0014|KTjy9Q|58314b83ad9dcf422bfb558c1dccf1c8|634794"
         ],
+        "img_general_comic_0025.unity3d": [
+            "705100:0058|L2bElD|720688fe2f57d5d109610766e7c57bed|1091673"
+        ],
         "img_general_commu_chapter-header_01-01.unity3d": [
             "705000:0009|tn6tmp|0949e14a31fb9a2e3d37a25d789000aa|970602",
             "705100:0014|LxlvNm|400ee59cc24614b2f6272ade30b2b780|970511"
@@ -35808,6 +35812,12 @@
         ],
         "img_general_event_dearness-event_013-circle.unity3d": [
             "705100:0030|ljnfKa|c8b0a05b33ebec064fb8b7e9f638473f|22669"
+        ],
+        "img_general_event_dearness-event_014-banner.unity3d": [
+            "705100:0058|fhI6Hs|bceb1831fe9f312b11533fe2ac74a2f5|231862"
+        ],
+        "img_general_event_dearness-event_014-circle.unity3d": [
+            "705100:0058|Ra4WMg|554e9fcdfa9a3a2bf4de5176cf269643|22395"
         ],
         "img_general_event_dearness_atbm-story-banner-01.unity3d": [
             "705000:0139|S2yBnE|7b3af4763b99098d6327fcb3e0a0050b|63398",
@@ -73093,11 +73103,13 @@
         "img_help_dearness_001-help.unity3d": [
             "705000:0068|7cnAxs|1fd12557c3ff037190a79ea43ce4f21e|764449",
             "705000:0202|9LvLAP|c8629bca03f47d73a6bcaaa627c59561|734061",
-            "705100:0014|M51mGZ|a60913a97b00be94d3d84c63993576b1|733980"
+            "705100:0014|M51mGZ|a60913a97b00be94d3d84c63993576b1|733980",
+            "705100:0058|PdH2Ic|c3d3a6dd78393621b74bda02c0b6468b|725254"
         ],
         "img_help_dearness_002-help.unity3d": [
             "705000:0068|F3ot66|1ce889a7331aa4b223ae8a96dfa3525e|722440",
-            "705100:0014|7jZ1ta|778eff3ea8fa46e42651c854f1266a61|722315"
+            "705100:0014|7jZ1ta|778eff3ea8fa46e42651c854f1266a61|722315",
+            "705100:0058|vkkMMs|7df48d5b62e87f38025dfe08711b271e|752467"
         ],
         "img_help_lesson-screen_001.unity3d": [
             "705000:0009|CGJfzA|88de45c439015ff0798ab84a255cdce7|1957008",
@@ -78315,6 +78327,9 @@
         "img_notice_notice-list_dearness-event_013.unity3d": [
             "705100:0030|F40RJA|9bb5c4dc61252cdad05a71c9aa111ecb|1144751"
         ],
+        "img_notice_notice-list_dearness-event_014.unity3d": [
+            "705100:0058|XmCybx|ddd3ed23e80726d824055fdf95c79d29|499726"
+        ],
         "img_notice_notice-list_dearness-event_amao-001.unity3d": [
             "705000:0134|qplpcW|75fe169dd715289b9dc3ceb459eb155d|1071837",
             "705100:0014|UiVF3h|951c1a54e917a6e71e42d9e2a2ad34bf|1071724"
@@ -80173,20 +80188,24 @@
         "img_tutorial_dearness_001.unity3d": [
             "705000:0068|yXub6p|3cbc68b04a6165148dc34797c9562e78|465666",
             "705000:0202|pTxb6o|7839c5567f6ffdfdde25dd367459453f|451620",
-            "705100:0014|ujMf8t|0bcd9ccce472a7d56996213b13e20264|451524"
+            "705100:0014|ujMf8t|0bcd9ccce472a7d56996213b13e20264|451524",
+            "705100:0058|NdlHSR|11219f4f774964380e012fc17f8dbb7b|442315"
         ],
         "img_tutorial_dearness_002.unity3d": [
             "705000:0068|CguFKo|dd45e1e959c58fa3f06e52bd6609d97c|402284",
             "705000:0202|dWHOfR|09d96a38a46433ea05276bb5de9cb6ba|507991",
-            "705100:0014|h3imu0|e052f5455b9b54b19982f0a37fc2e3cf|507929"
+            "705100:0014|h3imu0|e052f5455b9b54b19982f0a37fc2e3cf|507929",
+            "705100:0058|PSlOo3|b8d13e596d2e40a6aa8c2fc9c77c4de7|476290"
         ],
         "img_tutorial_dearness_003.unity3d": [
             "705000:0068|r0Wj4z|781329a13e98eeea0e77a3164bb03727|451764",
-            "705100:0014|pH1OMn|ad75ca2f9a7026f80162a0597a79a2d4|451647"
+            "705100:0014|pH1OMn|ad75ca2f9a7026f80162a0597a79a2d4|451647",
+            "705100:0058|e7jfhZ|69640cdb6248220cbd451207c845ab6a|466149"
         ],
         "img_tutorial_dearness_004.unity3d": [
             "705000:0068|3fZ1Gq|4d8ecb6ca7954ed92f35dda5b1f5e835|451764",
-            "705100:0014|qXLVNb|58ade992ba91db2239051761f94ed058|451647"
+            "705100:0014|qXLVNb|58ade992ba91db2239051761f94ed058|451647",
+            "705100:0058|G2Wbmz|62015fda1d42ed768a04c6cee598013b|466149"
         ],
         "img_tutorial_event_box-gasha-event-002_001.unity3d": [
             "705000:0009|pKV8qF|830168832c9244e9b8332d125c04a87f|1141234",
@@ -81859,7 +81878,8 @@
         ],
         "mdl_chr_amao-cstm-0128_body.unity3d": [
             "705000:0194|dpKHH7|4369910bcaca716c22c8ce645cefdce2|10785561",
-            "705100:0014|au0IDc|7a336eeb3399c21827579f108d03ac23|10780266"
+            "705100:0014|au0IDc|7a336eeb3399c21827579f108d03ac23|10780266",
+            "705100:0058|IczfQ2|f64aab84f2dc413c1b243138b20c074a|10780393"
         ],
         "mdl_chr_amao-cstm-0129_body.unity3d": [
             "705000:0257|ISeUSS|b64e50ba30d3f033215f423fa072fe3e|9659593",
@@ -82116,7 +82136,8 @@
         ],
         "mdl_chr_atbm-cstm-0128_body.unity3d": [
             "705000:0194|fbrmVJ|d7fe3075e180c05fc72447754ea9fa3d|10842103",
-            "705100:0014|1SdGyo|e1bcc1195fbf468d1f6808bccaf9b6f9|10831188"
+            "705100:0014|1SdGyo|e1bcc1195fbf468d1f6808bccaf9b6f9|10831188",
+            "705100:0058|kJwHwy|1e547bad58136ec6c8cad28d1f7749cd|10831202"
         ],
         "mdl_chr_atbm-cstm-0140_body.unity3d": [
             "705100:0014|UDrGGi|c277b812c238d3f7962dc5cbf61520f9|10817385"
@@ -82403,7 +82424,8 @@
         ],
         "mdl_chr_fktn-cstm-0086_body.unity3d": [
             "705000:0093|p1sKui|47506869ad1032155836d467dd6dd162|10730780",
-            "705100:0014|tOMJzm|fbf984438dd42eb120cacca2d61f084c|10725993"
+            "705100:0014|tOMJzm|fbf984438dd42eb120cacca2d61f084c|10725993",
+            "705100:0058|RjufBY|7526c010f9bd7de46467f6b1b97e1f4f|10726223"
         ],
         "mdl_chr_fktn-cstm-0086_hair.unity3d": [
             "705000:0093|Cpfv6Q|304f215069f264007888c6d23b457537|5063604",
@@ -82411,7 +82433,8 @@
         ],
         "mdl_chr_fktn-cstm-0087_body.unity3d": [
             "705000:0093|rj80E5|eb1cf842026bbca5788250c8e9574693|9542029",
-            "705100:0014|JV6ksz|02802095016ce68f2882d8cd2e17dca4|9547594"
+            "705100:0014|JV6ksz|02802095016ce68f2882d8cd2e17dca4|9547594",
+            "705100:0058|0p1Jjg|7c5dbc40a95544f98ecaea3cc86a2732|9547602"
         ],
         "mdl_chr_fktn-cstm-0087_hair.unity3d": [
             "705000:0093|KL5wuq|8a403e31b38a88c8b9b0c247962627aa|5079493",
@@ -82480,7 +82503,8 @@
         ],
         "mdl_chr_fktn-cstm-0128_body.unity3d": [
             "705000:0194|QeQkN1|5fd3b45bc85ea4e76db6257e2c2baf39|11224665",
-            "705100:0014|SgbcB4|74e6650794f21c071502607a650c98f9|11229739"
+            "705100:0014|SgbcB4|74e6650794f21c071502607a650c98f9|11229739",
+            "705100:0058|sJkn2h|45f20e50c680d6dce7fab7cc135f6e0b|11229783"
         ],
         "mdl_chr_fktn-cstm-0138_body.unity3d": [
             "705100:0014|hu90Pj|5bd50cd0020bd73ba8c289ea8083cd4f|13967816"
@@ -82788,7 +82812,8 @@
         ],
         "mdl_chr_hmsz-cstm-0128_body.unity3d": [
             "705000:0194|2FLDTY|dcdb63f05a12f6a92191c84ff598f478|10670160",
-            "705100:0014|fFMAya|5f49a586bfa5d648b40d19fd37956686|10684003"
+            "705100:0014|fFMAya|5f49a586bfa5d648b40d19fd37956686|10684003",
+            "705100:0058|f80uzX|a33244a5016d5ad6be8ef64c18c068ee|10684077"
         ],
         "mdl_chr_hmsz-cstm-0140_body.unity3d": [
             "705100:0014|PO1PuC|900500b35d9192dd9df4b4e0f4ae3a14|10805098"
@@ -83131,7 +83156,8 @@
         ],
         "mdl_chr_hrnm-cstm-0128_body.unity3d": [
             "705000:0194|42JuvI|9c2c5b62b4a73451be0f91289c632f66|10370944",
-            "705100:0014|OVM1r2|0899433710aaca1b4c74d64bfe68eeba|10366654"
+            "705100:0014|OVM1r2|0899433710aaca1b4c74d64bfe68eeba|10366654",
+            "705100:0058|Lirua9|77c5636cfb0368b37134b96d78e8f322|10366592"
         ],
         "mdl_chr_hrnm-cstm-0129_body.unity3d": [
             "705000:0257|IJwFZw|a07b8f3e093263971ca1ec5e4a558a8f|13331404",
@@ -83490,7 +83516,8 @@
         ],
         "mdl_chr_hski-cstm-0128_body.unity3d": [
             "705000:0194|FtVfJs|b1df39e761af5a1cebfbc09394512c53|10375705",
-            "705100:0014|yB7s2V|a31d79441bfa300ad172ea9bed127a5c|10385031"
+            "705100:0014|yB7s2V|a31d79441bfa300ad172ea9bed127a5c|10385031",
+            "705100:0058|LJu6p6|146acf4b73a818f2da6a6c1151ce6470|10385171"
         ],
         "mdl_chr_hski-cstm-0136_body.unity3d": [
             "705100:0028|SMo3z9|700e6dc041073e480f6387b59b66e214|9334966"
@@ -83846,7 +83873,8 @@
         ],
         "mdl_chr_hume-cstm-0128_body.unity3d": [
             "705000:0206|8Nmw7x|d8c9364c3794ac9d449410e1f3c3a10f|11025338",
-            "705100:0014|hwDr4J|e858200111263bc2a0432349c1b302c4|11031239"
+            "705100:0014|hwDr4J|e858200111263bc2a0432349c1b302c4|11031239",
+            "705100:0058|gy4IKg|03ea1baac816d5512b485ac1cd5a938b|11031158"
         ],
         "mdl_chr_hume-cstm-0138_body.unity3d": [
             "705100:0017|WzddQG|1f1da2133e9b0ca09ebd6497bc497b17|12522007"
@@ -83991,7 +84019,8 @@
         ],
         "mdl_chr_jsna-cstm-0012_body.unity3d": [
             "705000:0009|d8vitd|278880d4d5d5dec663f2e1604afea1d8|11248289",
-            "705100:0014|AOXJhu|b93b7d4f430d7a63e5d7b95615fbac73|11238501"
+            "705100:0014|AOXJhu|b93b7d4f430d7a63e5d7b95615fbac73|11238501",
+            "705100:0058|gApkZP|33ca6d6cd6bde4b8d4044eef0bfaf58f|11238630"
         ],
         "mdl_chr_jsna-cstm-0012_hair.unity3d": [
             "705000:0009|AuK19Y|1589e7cc3a074e074d2149e7b9684d58|6148730",
@@ -83999,7 +84028,8 @@
         ],
         "mdl_chr_jsna-cstm-0024_body.unity3d": [
             "705000:0009|ji3ToU|531e649e4962920315717943cf4de334|11281118",
-            "705100:0014|vxYkfT|42d367dee9cb54e222b37a31fc8baf19|11291501"
+            "705100:0014|vxYkfT|42d367dee9cb54e222b37a31fc8baf19|11291501",
+            "705100:0058|JtLH0T|72fba5bbdafc6693e1042318a39a341f|11291505"
         ],
         "mdl_chr_jsna-cstm-0024_hair.unity3d": [
             "705000:0009|vA8FyQ|96ac93ba5fe18adc7767323e275f11e7|6142625",
@@ -84196,7 +84226,8 @@
         ],
         "mdl_chr_jsna-cstm-0128_body.unity3d": [
             "705000:0206|13KfWx|9dc12d9e2f028f3dd46892d007dd6993|10393221",
-            "705100:0014|7a2HrE|a5f33ea9a750402b2e7266e2f0eabd48|10398296"
+            "705100:0014|7a2HrE|a5f33ea9a750402b2e7266e2f0eabd48|10398296",
+            "705100:0058|NJETtQ|f154839c17e73490e03c6aad5702608d|10398371"
         ],
         "mdl_chr_jsna-cstm-0136_body.unity3d": [
             "705100:0053|ppAxms|6bb73bd01632c298fae85b7a0dbe4b86|13398660"
@@ -84349,7 +84380,8 @@
         ],
         "mdl_chr_kcna-cstm-0033_body.unity3d": [
             "705000:0009|iQeawd|31e720311c4625331aa9ee41af8c4389|7524599",
-            "705100:0014|XWpxN9|fa3adb5b6a33afe59ebeecd0fff9b370|7528984"
+            "705100:0014|XWpxN9|fa3adb5b6a33afe59ebeecd0fff9b370|7528984",
+            "705100:0058|HMOYVC|95fa780e70c6387d819bef265a8f51a4|7529048"
         ],
         "mdl_chr_kcna-cstm-0033_hair.unity3d": [
             "705000:0009|NxBgMw|c1e1d19f8f3ab6452703b3fd37b684de|3907049",
@@ -84357,7 +84389,8 @@
         ],
         "mdl_chr_kcna-cstm-0034_body.unity3d": [
             "705000:0009|Q7XTYY|b68d0646a1f2332318a42fb22336b2a4|7445049",
-            "705100:0014|yIOHdG|35862824247ce509ab86ad36a23fa29e|7439124"
+            "705100:0014|yIOHdG|35862824247ce509ab86ad36a23fa29e|7439124",
+            "705100:0058|dyoRnd|219e50d38f2535bcfdbf79d80ba5ba78|7439204"
         ],
         "mdl_chr_kcna-cstm-0034_hair.unity3d": [
             "705000:0009|0xq52W|8c9accd624001664dff612c38ef880e0|3906324",
@@ -84508,7 +84541,8 @@
         ],
         "mdl_chr_kcna-cstm-0128_body.unity3d": [
             "705000:0194|ufEW3g|2f6524e97e7a3c2d532ccfbf7a18d115|11150519",
-            "705100:0014|8A34gL|c1bad9cadfd6c552a530db674b5b0391|11144747"
+            "705100:0014|8A34gL|c1bad9cadfd6c552a530db674b5b0391|11144747",
+            "705100:0058|xgP9eX|e7ccb18c6c1f4517da0f2eb234569f38|11144707"
         ],
         "mdl_chr_kcna-cstm-0131_body.unity3d": [
             "705000:0181|vf3R3O|d127fad5c392a520440f4c7bfadef5ec|11849447",
@@ -84648,7 +84682,8 @@
         ],
         "mdl_chr_kllj-cstm-0000_body.unity3d": [
             "705000:0009|aeSRuM|56a884dac94e452543069ba9cc9b2b2d|10594328",
-            "705100:0014|SRWNbh|f50b3d1862a1943535ba4e4c90d97d86|10599658"
+            "705100:0014|SRWNbh|f50b3d1862a1943535ba4e4c90d97d86|10599658",
+            "705100:0058|7PY7d7|d8728d33b55060dff8e3d6b45b02f969|10599764"
         ],
         "mdl_chr_kllj-cstm-0007_body.unity3d": [
             "705000:0009|nPXLQH|985b349019e99e1aae08a6ab3daff6f7|6211231",
@@ -84764,11 +84799,13 @@
         ],
         "mdl_chr_kllj-cstm-0072_body.unity3d": [
             "705000:0009|5N7u2p|10aabe8e4e7ca6bfd392639f489db3a5|8664718",
-            "705100:0014|03Fh0i|4ec99d4c404cd3150ab9f8eadf9b7525|8656704"
+            "705100:0014|03Fh0i|4ec99d4c404cd3150ab9f8eadf9b7525|8656704",
+            "705100:0058|c22URs|a90dcc4271131007cbaffc891b9b0fc8|8656681"
         ],
         "mdl_chr_kllj-cstm-0073_body.unity3d": [
             "705000:0009|5G9ecY|cc8d802d75b8b151921ccc3a05dd4ee7|10329775",
-            "705100:0014|bMQYmi|fff5e067e28364c0a276d1534fb86681|10336339"
+            "705100:0014|bMQYmi|fff5e067e28364c0a276d1534fb86681|10336339",
+            "705100:0058|WV2ORH|cec69ea249f87bf96dbacd4a600eb2d0|10336175"
         ],
         "mdl_chr_kllj-cstm-0075_body.unity3d": [
             "705000:0009|abcESW|b2ca5ba0e80580c280225d458c7cf433|7119393",
@@ -84807,7 +84844,8 @@
         ],
         "mdl_chr_kllj-cstm-0110_body.unity3d": [
             "705000:0014|YZzAmu|6a56028627192c70b0f4a0eb3a02b1c1|8888174",
-            "705100:0014|E9w3HR|a948f32a87a87a2bdb486b532ab75cb4|8882919"
+            "705100:0014|E9w3HR|a948f32a87a87a2bdb486b532ab75cb4|8882919",
+            "705100:0058|o8MKI2|ac1cbcb5d07f4ef82d2020847e886d72|8882901"
         ],
         "mdl_chr_kllj-cstm-0111_body.unity3d": [
             "705000:0084|o8xd8b|68e111c0a194a1defad7bc7a953bed68|6450874",
@@ -84848,7 +84886,8 @@
         ],
         "mdl_chr_kllj-cstm-0128_body.unity3d": [
             "705000:0194|ViI2Um|63eecffe4eb929c5b3ed821dd60b849c|11050178",
-            "705100:0014|8ukNxJ|7e92aed55063863659dc0dcb4c24776c|11046048"
+            "705100:0014|8ukNxJ|7e92aed55063863659dc0dcb4c24776c|11046048",
+            "705100:0058|AuUt5x|f3d8ad22c1b5036768bbc74b3e4ea1fa|11045989"
         ],
         "mdl_chr_kllj-cstm-0133_body.unity3d": [
             "705000:0210|RV4slw|8ca20f07b6f64b0f94c501881865646d|11759141",
@@ -85056,7 +85095,8 @@
         ],
         "mdl_chr_shro-casl-0002_body.unity3d": [
             "705000:0181|bS6yvX|340c326451e0940bbe038e1032bcee63|11185243",
-            "705100:0014|pPUxWb|6a01d1c1411ff516a395751ca819335a|11186209"
+            "705100:0014|pPUxWb|6a01d1c1411ff516a395751ca819335a|11186209",
+            "705100:0058|WwzO9P|395e0fcebb31619c05e6f73a7c28a0e1|11186247"
         ],
         "mdl_chr_shro-cstm-0000_body.unity3d": [
             "705000:0009|4RrDmt|c88d750be748808055303b2369e3bda0|8331776",
@@ -85248,7 +85288,8 @@
         ],
         "mdl_chr_shro-cstm-0128_body.unity3d": [
             "705000:0194|liFVCv|f672cc324660e88f7b2d124225b2315f|11006447",
-            "705100:0014|NaC5Jg|4e095ec9cad71d35700e15609313efb6|11010245"
+            "705100:0014|NaC5Jg|4e095ec9cad71d35700e15609313efb6|11010245",
+            "705100:0058|QGbNow|ed407ffce0a77da8dbafd93b7853f323|11010224"
         ],
         "mdl_chr_shro-cstm-0131_body.unity3d": [
             "705000:0181|mRqtuK|8061d5f2add952b8da8e254c6357126b|10333726",
@@ -85595,7 +85636,8 @@
         ],
         "mdl_chr_ssmk-cstm-0128_body.unity3d": [
             "705000:0194|SDwig4|432255d7607b5bfb3ce660cbaf10295d|10651921",
-            "705100:0014|3oTA2Q|95215817582f5905592d024e9e90a2cb|10660656"
+            "705100:0014|3oTA2Q|95215817582f5905592d024e9e90a2cb|10660656",
+            "705100:0058|FRRwDv|6fb160b22e22a2f4f81db29b6986b42b|10660602"
         ],
         "mdl_chr_ssmk-cstm-0133_body.unity3d": [
             "705000:0210|SKxjhj|35921fb6f59423ca1995194ec355fd34|10682344",
@@ -85827,7 +85869,8 @@
         ],
         "mdl_chr_ttmr-cstm-0047_body.unity3d": [
             "705000:0009|ObkanO|c7f16646dce11c8bd330909166720c7c|10703202",
-            "705100:0014|MCFO2W|bead64aa0b84d53d7beed4984a567f53|10697575"
+            "705100:0014|MCFO2W|bead64aa0b84d53d7beed4984a567f53|10697575",
+            "705100:0058|sZX7Zq|dadd44b82dcb33d7ffdf5e40db3808c2|10697486"
         ],
         "mdl_chr_ttmr-cstm-0047_face.unity3d": [
             "705000:0009|MweYD5|076b0569270db1937086a0e9c3393a16|529365",
@@ -85840,7 +85883,8 @@
         ],
         "mdl_chr_ttmr-cstm-0048_body.unity3d": [
             "705000:0009|74SmWp|1fbfbb88f36896b993792645df805783|10541375",
-            "705100:0014|6yeUqh|68776d917df4a5ebb6f757daf22712cc|10545007"
+            "705100:0014|6yeUqh|68776d917df4a5ebb6f757daf22712cc|10545007",
+            "705100:0058|02uscG|e21c434bc66a241fd6c3aace67e4357a|10545087"
         ],
         "mdl_chr_ttmr-cstm-0048_hair.unity3d": [
             "705000:0009|GVhBVG|f426cb857df13f253738f9aa1d4a3cc1|4329903",
@@ -86010,7 +86054,8 @@
         ],
         "mdl_chr_ttmr-cstm-0128_body.unity3d": [
             "705000:0194|t8jYwU|163a93666a9c3e6e909530de6796be7b|10752695",
-            "705100:0014|MIkK4b|f5fc5b035ab97d4513f31ffc754d0e72|10756501"
+            "705100:0014|MIkK4b|f5fc5b035ab97d4513f31ffc754d0e72|10756501",
+            "705100:0058|jzvRc8|fe83a29771cc06a2524ac60d0cba2727|10756395"
         ],
         "mdl_chr_ttmr-cstm-0136_body.unity3d": [
             "705000:0239|x7Vlrx|97a4e4dede8d4adeb35844a2fb7db160|10763175",
