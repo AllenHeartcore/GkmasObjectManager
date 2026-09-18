@@ -1,6 +1,6 @@
 {
     "revision": [
-        59,
+        61,
         15
     ],
     "assetBundleList": [
@@ -681,6 +681,39 @@
             "state": "UPDATE",
             "md5": "57b62f6cc89f3059323fdc56750da981",
             "objectName": "9pa8zx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 16328,
+            "name": "tln_live_unit-001",
+            "size": 20907373,
+            "crc": 3214764924,
+            "dependencies": [
+                323,
+                22391,
+                5964,
+                4937,
+                19278,
+                16227,
+                2685,
+                3563,
+                5976,
+                6855,
+                397,
+                675,
+                5678,
+                2146,
+                16628,
+                4350,
+                3260,
+                18169,
+                6641,
+                5960,
+                6293
+            ],
+            "state": "UPDATE",
+            "md5": "890596d42da352def2a1e8b841e7f1fb",
+            "objectName": "FdEmB3",
             "uploadVersionId": 205100
         },
         {
@@ -23161,6 +23194,1084 @@
             "md5": "ed26f9b1977cfd17612f94c7d73d98e5",
             "objectName": "RKhVlX",
             "uploadVersionId": 205100
+        },
+        {
+            "id": 25526,
+            "name": "img_mov_general_gasha_bg_support_csprt-3-0109",
+            "size": 793967,
+            "crc": 2320746936,
+            "state": "ADD",
+            "md5": "3dfe3330a1e0d721953536e0a5415f17",
+            "objectName": "SDYEF1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25527,
+            "name": "img_notice_event_research-event-008",
+            "size": 214748,
+            "crc": 2592819556,
+            "state": "ADD",
+            "md5": "e86286740b126bff7f09e65aba2c3da0",
+            "objectName": "uaLHyt",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25528,
+            "name": "img_gasha_banner_gasha-01018-wednesday-001-select-s",
+            "size": 28675,
+            "crc": 871761970,
+            "state": "ADD",
+            "md5": "1513f728106e9c5114e83e071a7e5ea8",
+            "objectName": "ftcXPk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25529,
+            "name": "img_general_comic4_0166",
+            "size": 215684,
+            "crc": 380953929,
+            "state": "ADD",
+            "md5": "27d347f614a60895a9f2d233cf01a634",
+            "objectName": "Y1lava",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25530,
+            "name": "mot_live_shro-006_in_layout",
+            "size": 9764,
+            "crc": 3183663367,
+            "state": "ADD",
+            "md5": "d70be3ce1905f66c68b9d37b6563d031",
+            "objectName": "NDiZTr",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25531,
+            "name": "img_general_meishi_base_all-live-08-thumb",
+            "size": 17717,
+            "crc": 1429750231,
+            "state": "ADD",
+            "md5": "a3f30505c3a95dc76ea9a9fe73f1451b",
+            "objectName": "6UkWar",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25532,
+            "name": "img_general_pitem_3-345",
+            "size": 15427,
+            "crc": 1200341652,
+            "state": "ADD",
+            "md5": "8902a4975e3bd2ecc3351a9a764b2132",
+            "objectName": "4AQ7UE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25533,
+            "name": "img_cos_shro-cstm-0154_body",
+            "size": 55830,
+            "crc": 3863960393,
+            "state": "ADD",
+            "md5": "a9ef930e5097d45a22968e848bbf937b",
+            "objectName": "zM25QC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25534,
+            "name": "img_tutorial_event_research_006-08",
+            "size": 155506,
+            "crc": 565001722,
+            "state": "ADD",
+            "md5": "5be3d22f47ae7de23b40e5927aceddcd",
+            "objectName": "LhQOmu",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25535,
+            "name": "img_general_cidol-shro-3-022_0-thumb-gasha",
+            "size": 49929,
+            "crc": 3512256126,
+            "state": "ADD",
+            "md5": "fde1bab1f6b7cc83bdc94b0cfa7007bb",
+            "objectName": "IHcWUF",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25536,
+            "name": "img_general_comic4_0166-thumb",
+            "size": 24749,
+            "crc": 3998758920,
+            "state": "ADD",
+            "md5": "04f1fb2922f5872c50dcad2eeeb2f806",
+            "objectName": "rTTQMl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25537,
+            "name": "sud_music_live_shro-006-shro_true-001",
+            "size": 2643493,
+            "crc": 2135843528,
+            "state": "ADD",
+            "md5": "c56cbaa63928affbc44dde10d96fc47a",
+            "objectName": "26ash0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25538,
+            "name": "img_general_meishi_base_all-live-08-full",
+            "size": 857516,
+            "crc": 3964590516,
+            "state": "ADD",
+            "md5": "3cfded8008d6489da11314e38cf62781",
+            "objectName": "kWa7Lm",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25539,
+            "name": "mdl_chr_shro-cstm-0154_hair",
+            "size": 4481561,
+            "crc": 2515400249,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "fa6e7224fc1438c70b2d8111292ff234",
+            "objectName": "lP7GBM",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25540,
+            "name": "img_general_comic4_0167",
+            "size": 237206,
+            "crc": 3291977230,
+            "state": "ADD",
+            "md5": "94deacd3b7a257f2b1c6a7db13277c05",
+            "objectName": "QrMavz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25541,
+            "name": "mdl_prp_shrokasad-normal-00_shrokasad",
+            "size": 2887928,
+            "crc": 3797565316,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "019db258fb422acbf6ff39927a1d162b",
+            "objectName": "4ioyGA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25542,
+            "name": "img_tutorial_event_research_003-08",
+            "size": 172175,
+            "crc": 145554121,
+            "state": "ADD",
+            "md5": "839665e8e52ada20f2e0e9d034bd53a9",
+            "objectName": "Mvb6J9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25543,
+            "name": "mdl_chr_shro-cstm-0153_face",
+            "size": 491645,
+            "crc": 2005846468,
+            "dependencies": [
+                523,
+                1547,
+                19064,
+                6641
+            ],
+            "state": "ADD",
+            "md5": "451091810b9a70f87387525e054dda14",
+            "objectName": "Y3jkIl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25544,
+            "name": "img_gasha_banner_gasha-01018-pickup-001-select-s",
+            "size": 29604,
+            "crc": 2464609812,
+            "state": "ADD",
+            "md5": "f50a3bdfcb167a7d8f6b78b3cfa16350",
+            "objectName": "hKrDgD",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25545,
+            "name": "img_gasha_banner_gasha-01018-ssr-idol-001-logo",
+            "size": 7277,
+            "crc": 3660055172,
+            "state": "ADD",
+            "md5": "a0b216d1cc61bd689be17860371e8758",
+            "objectName": "wLvFQs",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25546,
+            "name": "img_gasha_banner_gasha-01018-wednesday-001-select-m",
+            "size": 49155,
+            "crc": 3911188050,
+            "state": "ADD",
+            "md5": "d0bde4b17d04f538643924180840fa0e",
+            "objectName": "Pva5QW",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25547,
+            "name": "img_sd_shro_event01-03",
+            "size": 66464,
+            "crc": 1789539032,
+            "state": "ADD",
+            "md5": "cc7c3ae8c2c9d6d2bd7c3dd3bb8ea272",
+            "objectName": "vv47sa",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25548,
+            "name": "img_notice_event_trail-event-002-large",
+            "size": 52984,
+            "crc": 1851339473,
+            "state": "ADD",
+            "md5": "0d6bab0cb6ec7a9df655d5c0b8dead93",
+            "objectName": "QMV00M",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25549,
+            "name": "img_notice_event_trail-event-002",
+            "size": 195576,
+            "crc": 1704714531,
+            "state": "ADD",
+            "md5": "4eaf388736e57a6381ae23b804f3033e",
+            "objectName": "EBKXrN",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25550,
+            "name": "mdl_chr_shro-cstm-0154_face",
+            "size": 492202,
+            "crc": 571353907,
+            "dependencies": [
+                1547,
+                19064,
+                6641,
+                523
+            ],
+            "state": "ADD",
+            "md5": "cbfe3cedec5d662e97e1b458ab9fb2c6",
+            "objectName": "8MNhQc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25551,
+            "name": "img_general_cidol-shro-3-022_0-thumb-portrait",
+            "size": 30828,
+            "crc": 926339271,
+            "state": "ADD",
+            "md5": "07c4aed769efb29b517a85990eb77c0d",
+            "objectName": "ADwKEA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25552,
+            "name": "mog_live_chr_shro_shro-006_00_in",
+            "size": 2716933,
+            "crc": 1657922870,
+            "state": "ADD",
+            "md5": "7eed6ad22c5e42ac1f7454017b77653d",
+            "objectName": "x6Ir8S",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25553,
+            "name": "img_general_comic4_0165-thumb",
+            "size": 26813,
+            "crc": 2550964279,
+            "state": "ADD",
+            "md5": "897ef47758073f2ffc4798c91dc79c5a",
+            "objectName": "INk4o5",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25554,
+            "name": "img_general_event_trail_trail-event-002-logo",
+            "size": 16357,
+            "crc": 3068398929,
+            "state": "ADD",
+            "md5": "dcfadac1b935899df0ef729555c14b8e",
+            "objectName": "nYxBys",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25555,
+            "name": "img_general_home_gasha_gasha-01018-ssr-idol-001",
+            "size": 16497,
+            "crc": 1129575084,
+            "state": "ADD",
+            "md5": "21113f110a0fe593f3be007e0d5942aa",
+            "objectName": "U34RW6",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25556,
+            "name": "fbx_mdl_env_cmn-parts_live-shro006-00",
+            "size": 9531426,
+            "crc": 1857061067,
+            "dependencies": [
+                6641
+            ],
+            "state": "ADD",
+            "md5": "0e9430949fae64ab6e72f4f9f306670e",
+            "objectName": "asRbMK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25557,
+            "name": "img_general_cidol-shro-3-022_1-thumb-landscape-large",
+            "size": 758946,
+            "crc": 481486265,
+            "state": "ADD",
+            "md5": "41e62f74e5840f2a071aa8bd71093998",
+            "objectName": "7RQOnC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25558,
+            "name": "mot_all_chr_hume_facial-all-unique-yodare1_in",
+            "size": 9000,
+            "crc": 1857434727,
+            "dependencies": [
+                25605,
+                6641
+            ],
+            "state": "ADD",
+            "md5": "60a1efa2178d020cefdaf300ecde28c7",
+            "objectName": "DTuPdJ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25559,
+            "name": "img_general_gasha_bg_gasha_wednesday-010",
+            "size": 540018,
+            "crc": 1782729533,
+            "state": "ADD",
+            "md5": "4e6f4e69ebf3b471ac79d86ef42f0c33",
+            "objectName": "0YIQLm",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25560,
+            "name": "img_cos_costume_head_shro-cstm-0153_head",
+            "size": 35277,
+            "crc": 4255403918,
+            "state": "ADD",
+            "md5": "8e21a2b218399bb5c6b3ed4cbf13de1e",
+            "objectName": "wrEVnP",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25561,
+            "name": "img_tutorial_event_research_002-08",
+            "size": 223364,
+            "crc": 2493558295,
+            "state": "ADD",
+            "md5": "fe6456cceb0e688ac9467fceb3f58d0a",
+            "objectName": "zjidKa",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25562,
+            "name": "img_general_csprt-2-0080_full",
+            "size": 448685,
+            "crc": 3532845795,
+            "state": "ADD",
+            "md5": "45cefc3706d1ffe9a3084ec0edda25a3",
+            "objectName": "lcYaZs",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25563,
+            "name": "mdl_prp_shrokasaa-normal-00_shrokasaa",
+            "size": 2889017,
+            "crc": 2840562203,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "dafd4fa038b144551fdf0d4bd7d40d9f",
+            "objectName": "Q6urkk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25564,
+            "name": "mdl_chr_shro-cstm-0153_hair",
+            "size": 4498760,
+            "crc": 4119478587,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "de19a35518c880197ab6a86de4e949e3",
+            "objectName": "q61F3e",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25565,
+            "name": "mdl_prp_shrokasac-normal-00_shrokasac",
+            "size": 2890866,
+            "crc": 2870481323,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "220a5b6eedb43d4972c61abf69222d5f",
+            "objectName": "soDh8P",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25566,
+            "name": "img_general_cidol-shro-3-022_0-thumb-square",
+            "size": 9643,
+            "crc": 3071457839,
+            "state": "ADD",
+            "md5": "6775aba3d24d19fac1074d79b0e3d06d",
+            "objectName": "Q5eMsr",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25567,
+            "name": "img_general_comic4_0165",
+            "size": 231285,
+            "crc": 1057164465,
+            "state": "ADD",
+            "md5": "866c67ca83391ebed7bdacda45d258dc",
+            "objectName": "EDkek4",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25568,
+            "name": "img_gasha_banner_gasha-01018-ssr-idol-001-select-m",
+            "size": 57894,
+            "crc": 2575528183,
+            "state": "ADD",
+            "md5": "dd620b024152f2e6e5908a61455f6fd4",
+            "objectName": "ukA0zb",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25569,
+            "name": "mdl_chr_shro-cstm-0154_body",
+            "size": 9392903,
+            "crc": 910478875,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "1f122ffca0e312abe6dc050aa8f9bcde",
+            "objectName": "LJiuzn",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25570,
+            "name": "img_general_csprt-3-0109_thumb-square",
+            "size": 9656,
+            "crc": 2022254357,
+            "state": "ADD",
+            "md5": "5cb265d5e77129e54b343f895a0d9ee6",
+            "objectName": "E5YIS0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25571,
+            "name": "img_general_cidol-shro-3-022_1-thumb-gasha",
+            "size": 49455,
+            "crc": 1042999061,
+            "state": "ADD",
+            "md5": "4c675f8d63dca0e0c4ce3518452513a8",
+            "objectName": "Ylp6Aq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25572,
+            "name": "img_general_csprt-2-0080_thumb-landscape",
+            "size": 12831,
+            "crc": 3495460780,
+            "state": "ADD",
+            "md5": "b93aa100a9d486493b3efa75ec55d7e2",
+            "objectName": "OwlK7r",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25573,
+            "name": "img_general_event_trail_trail-event-002-banner",
+            "size": 50688,
+            "crc": 1137002476,
+            "state": "ADD",
+            "md5": "1fc5d3716dc97c6e7cab0c9442746d2c",
+            "objectName": "zBizXD",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25574,
+            "name": "img_sd_shro_event01-01",
+            "size": 50787,
+            "crc": 3492044493,
+            "state": "ADD",
+            "md5": "37395fe4c326cec7090124decf478e81",
+            "objectName": "jVcWk1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25575,
+            "name": "img_general_achievement_shro-3-022_004",
+            "size": 63278,
+            "crc": 2859693099,
+            "state": "ADD",
+            "md5": "c5c6b08a6c0113f3b3ff05c092bb481a",
+            "objectName": "JuIVjl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25576,
+            "name": "img_notice_gasha_gasha-01018-ssr-idol-001-banner-01-large",
+            "size": 113925,
+            "crc": 1193901172,
+            "state": "ADD",
+            "md5": "ef8dcadfd863f6d83b4b09b6c727ba6e",
+            "objectName": "TYdQK6",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25577,
+            "name": "img_general_cidol-shro-3-022_1-full",
+            "size": 839098,
+            "crc": 1351512440,
+            "state": "ADD",
+            "md5": "24df42c733595816b837f768efa4df20",
+            "objectName": "1PK7WM",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25578,
+            "name": "img_gasha_banner_gasha-01018-pickup-001-logo",
+            "size": 9643,
+            "crc": 2268468725,
+            "state": "ADD",
+            "md5": "417dc55768aef1cbbd1889714ae5b416",
+            "objectName": "WnrbIr",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25579,
+            "name": "env_3d_live_shro006-00-noon",
+            "size": 3177842,
+            "crc": 4117562295,
+            "dependencies": [
+                5786,
+                25556,
+                24399,
+                5387,
+                3260,
+                3437,
+                4937,
+                6641,
+                1407
+            ],
+            "state": "ADD",
+            "md5": "a091818c86b90ff49233774233e75466",
+            "objectName": "ROgyNg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25580,
+            "name": "img_general_live_music-char-shro-006_true-end",
+            "size": 199358,
+            "crc": 802219161,
+            "state": "ADD",
+            "md5": "bc187041774320f1b08ce5adb55a46cf",
+            "objectName": "lmFNW3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25581,
+            "name": "img_mov_general_gasha_bg_idol_cidol-shro-3-022",
+            "size": 663971,
+            "crc": 377672019,
+            "state": "ADD",
+            "md5": "9dcd6adf7e52cd996708f11c7971e549",
+            "objectName": "jVFvyG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25582,
+            "name": "img_general_csprt-3-0109_thumb-landscape",
+            "size": 17067,
+            "crc": 971839186,
+            "state": "ADD",
+            "md5": "927f1df43350fe034efff52e5f982450",
+            "objectName": "3LAeUZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25583,
+            "name": "img_gasha_banner_gasha-01018-wednesday-001-logo",
+            "size": 9503,
+            "crc": 1744434337,
+            "state": "ADD",
+            "md5": "be5bdc58d2dd9bb594649754800c1af2",
+            "objectName": "CM2823",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25584,
+            "name": "img_notice_gasha_gasha-01018-ssr-idol-001",
+            "size": 399077,
+            "crc": 3160481900,
+            "state": "ADD",
+            "md5": "c129aeba52d5a8ce72b5689db3da3b7c",
+            "objectName": "Yixo2H",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25585,
+            "name": "img_notice_gasha_gasha-01018-pickup-001-banner-01-large",
+            "size": 127819,
+            "crc": 1007484152,
+            "state": "ADD",
+            "md5": "e9dd35b188913e5aceeaec6516a3bd79",
+            "objectName": "YL4P9p",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25586,
+            "name": "img_general_cidol-shro-3-022_0-thumb-landscape-large",
+            "size": 772315,
+            "crc": 2528006691,
+            "state": "ADD",
+            "md5": "bc70ed39f5c1b549a169c0b5ebc2c736",
+            "objectName": "GV1Rlj",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25587,
+            "name": "mdl_prp_spoon-normal-01_spoon",
+            "size": 222796,
+            "crc": 2974541650,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "b72266611bd00f817e57d6561150a802",
+            "objectName": "0O3Mpu",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25588,
+            "name": "mdl_prp_shrokasab-normal-00_shrokasab",
+            "size": 2891386,
+            "crc": 3782115847,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "87a4a526d3ae6b03a91162181b6caf78",
+            "objectName": "Q9huln",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25589,
+            "name": "img_sd_shro_event01-00",
+            "size": 51372,
+            "crc": 2717605779,
+            "state": "ADD",
+            "md5": "2626fc94ceed92f556c69e7ec6484fcb",
+            "objectName": "4jPGj2",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25590,
+            "name": "img_general_home_gasha_gasha-01018-pickup-001",
+            "size": 16027,
+            "crc": 3273562569,
+            "state": "ADD",
+            "md5": "ba55dddd82ece70c99ff716e8bc3d5a2",
+            "objectName": "fg476T",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25591,
+            "name": "img_cos_costume_head_shro-cstm-0154_head",
+            "size": 35471,
+            "crc": 1887886933,
+            "state": "ADD",
+            "md5": "66bb165cf08399b70ee9ddfc6ea1301e",
+            "objectName": "0Acp1c",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25592,
+            "name": "img_general_pitem_2-134",
+            "size": 19375,
+            "crc": 1346091096,
+            "state": "ADD",
+            "md5": "d938b2b6c9e56eca70a18565d3f5e623",
+            "objectName": "VZr0Ji",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25593,
+            "name": "img_notice_gasha_gasha-01018-pickup-001",
+            "size": 468850,
+            "crc": 2868734167,
+            "state": "ADD",
+            "md5": "1871fea560c893be82632d10bb165996",
+            "objectName": "ZHq93X",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25594,
+            "name": "img_general_achievement_shro-3-022_001",
+            "size": 69261,
+            "crc": 630238329,
+            "state": "ADD",
+            "md5": "916f12c973b8ac8b172e5115274ac420",
+            "objectName": "QX4vN4",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25595,
+            "name": "img_general_cidol-shro-3-022_0-full",
+            "size": 870611,
+            "crc": 4206371528,
+            "state": "ADD",
+            "md5": "54f4a53b7e8507aa375328aa4ce1744f",
+            "objectName": "DFrLGt",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25596,
+            "name": "img_general_music_jacket_char-shro-006",
+            "size": 437807,
+            "crc": 2436186222,
+            "state": "ADD",
+            "md5": "1496ba12a99446a02be662febf3233f0",
+            "objectName": "CqggBy",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25597,
+            "name": "img_general_csprt-3-0109_full",
+            "size": 902554,
+            "crc": 3499377362,
+            "state": "ADD",
+            "md5": "fd8336742b2eff0cce8dfe9bbbd59452",
+            "objectName": "qM9Un7",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25598,
+            "name": "img_general_achievement_shro-3-022_006",
+            "size": 65855,
+            "crc": 546785035,
+            "state": "ADD",
+            "md5": "75f46c82152ad8fdb9743abc3a645044",
+            "objectName": "9AjNkQ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25599,
+            "name": "img_general_cidol-shro-3-022_1-thumb-landscape",
+            "size": 16897,
+            "crc": 344593594,
+            "state": "ADD",
+            "md5": "707e3f5475474016d94ef71e44a124d0",
+            "objectName": "T0B2JI",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25600,
+            "name": "img_general_skillcard_ido-3_245",
+            "size": 30900,
+            "crc": 2324639666,
+            "state": "ADD",
+            "md5": "e2959d4bf026b037a9e6bdbbc9b61b25",
+            "objectName": "wUOOsm",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25601,
+            "name": "img_cos_shro-cstm-0153_body",
+            "size": 55890,
+            "crc": 1565895303,
+            "state": "ADD",
+            "md5": "4e5bee0028993e18ed50a3bb0557e160",
+            "objectName": "rLItJE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25602,
+            "name": "img_general_home_event_trail-event-002",
+            "size": 10419,
+            "crc": 285925460,
+            "state": "ADD",
+            "md5": "301bbbc00948e0a4749bc859713830d9",
+            "objectName": "YmNs5w",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25603,
+            "name": "img_general_achievement_shro-3-022_005",
+            "size": 62658,
+            "crc": 3059405080,
+            "state": "ADD",
+            "md5": "52b46a413611b58ff5f1937fb869d9f7",
+            "objectName": "8wCi5j",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25604,
+            "name": "img_gasha_banner_gasha-01018-ssr-idol-001-select-s",
+            "size": 29768,
+            "crc": 1746919335,
+            "state": "ADD",
+            "md5": "5158332b176a7648a916a3fd04e69d0b",
+            "objectName": "Uc8K06",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25605,
+            "name": "mef_pfb_chr_hume_head-yodare-001",
+            "size": 67502,
+            "crc": 3572332298,
+            "dependencies": [
+                6641
+            ],
+            "state": "ADD",
+            "md5": "f524dd65449b830a89b95e8f2c2ec4fc",
+            "objectName": "S4YcBf",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25606,
+            "name": "img_gasha_banner_gasha-01018-pickup-001-select-m",
+            "size": 58636,
+            "crc": 4071381668,
+            "state": "ADD",
+            "md5": "359d9dadb42059d333cd4847afd06f21",
+            "objectName": "C8XeLz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25607,
+            "name": "eff_cav_mov_shro-006",
+            "size": 9159728,
+            "crc": 3303524695,
+            "state": "ADD",
+            "md5": "f6e3c2efb809fac63381ba5b0aeeb991",
+            "objectName": "qmZa9i",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25608,
+            "name": "img_general_achievement_shro-3-022_003",
+            "size": 74607,
+            "crc": 2638089377,
+            "state": "ADD",
+            "md5": "650f160769d8deb5eb4afc4445b09d27",
+            "objectName": "P060bW",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25609,
+            "name": "img_general_achievement_shro-3-022_002",
+            "size": 67577,
+            "crc": 683968487,
+            "state": "ADD",
+            "md5": "f0b714bac3f26fb83bae73ce27347252",
+            "objectName": "vrmJs1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25610,
+            "name": "mot_all_chr_kllj_facial-all-unique-shiromaru2_in",
+            "size": 9065,
+            "crc": 1359579682,
+            "dependencies": [
+                19826,
+                6641,
+                19651
+            ],
+            "state": "ADD",
+            "md5": "7280baee8a5d2878edd81e47135a408e",
+            "objectName": "fyuHlk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25611,
+            "name": "ttn_live_shro-006_01_atlas",
+            "size": 2215901,
+            "crc": 755668289,
+            "state": "ADD",
+            "md5": "2f0daaa74fd3f721843921330f479f88",
+            "objectName": "0YJdKK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25612,
+            "name": "img_general_cidol-shro-3-022_0-thumb-landscape",
+            "size": 17046,
+            "crc": 652388946,
+            "state": "ADD",
+            "md5": "b10ce3ca0997f7844ee7b0458d26287b",
+            "objectName": "WSm3OT",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25613,
+            "name": "img_general_cidol-shro-3-022_1-thumb-square",
+            "size": 9640,
+            "crc": 2939200023,
+            "state": "ADD",
+            "md5": "95aef6b82984e968a2b3423c05897a0f",
+            "objectName": "GvcFyj",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25614,
+            "name": "tln_live_shro-006",
+            "size": 4492092,
+            "crc": 1662101677,
+            "dependencies": [
+                523,
+                25552,
+                25541,
+                675,
+                3260,
+                25607,
+                25563,
+                2967,
+                4937,
+                25588,
+                25565,
+                1977,
+                6641,
+                25537,
+                25611,
+                25530
+            ],
+            "state": "ADD",
+            "md5": "f5656300e1739dc006a09a5c3a0ae3f0",
+            "objectName": "LFftME",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25615,
+            "name": "img_general_cidol-shro-3-022_1-thumb-portrait",
+            "size": 30497,
+            "crc": 2318153751,
+            "state": "ADD",
+            "md5": "a7c3ce1a1e1b99d14ea2591c89b91a76",
+            "objectName": "cAeeUP",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25616,
+            "name": "img_sd_shro_event01-02",
+            "size": 45695,
+            "crc": 2194150193,
+            "state": "ADD",
+            "md5": "dc69732fb234947d2ace396009afcbd9",
+            "objectName": "zYGtnG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25617,
+            "name": "img_general_skillcard_sup-3_252",
+            "size": 31264,
+            "crc": 1314259693,
+            "state": "ADD",
+            "md5": "682bd7de4ed1ae25099ccf77fc6511c2",
+            "objectName": "oPkncf",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25618,
+            "name": "mdl_chr_shro-cstm-0153_body",
+            "size": 9471770,
+            "crc": 4079639014,
+            "dependencies": [
+                523
+            ],
+            "state": "ADD",
+            "md5": "10690ea58e8d946fd48af7c22ecfa8cd",
+            "objectName": "nbXMAF",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25619,
+            "name": "env_2d_adv_other-city-library-00-noon",
+            "size": 913085,
+            "crc": 2509915831,
+            "dependencies": [
+                5786,
+                1109,
+                1407
+            ],
+            "state": "ADD",
+            "md5": "a536d056c491ae03135ca0bd6ff04d90",
+            "objectName": "0sNUkT",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25620,
+            "name": "img_general_event_trail_trail-event-002-circle",
+            "size": 7956,
+            "crc": 601083057,
+            "state": "ADD",
+            "md5": "b1b057410763c71100986da197de3a01",
+            "objectName": "WVl859",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25621,
+            "name": "img_general_gasha_bg_gasha_livetour-shirube-iwate-001",
+            "size": 519563,
+            "crc": 2540371999,
+            "state": "ADD",
+            "md5": "7a741871082d71a36d6587b7a4f4e068",
+            "objectName": "EkVojc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25622,
+            "name": "img_general_csprt-2-0080_thumb-square",
+            "size": 8984,
+            "crc": 2796573910,
+            "state": "ADD",
+            "md5": "a42b596583931455fdcd3d2ddc0f6501",
+            "objectName": "kWouNn",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25623,
+            "name": "img_general_comic4_0167-thumb",
+            "size": 27467,
+            "crc": 863066100,
+            "state": "ADD",
+            "md5": "d2871041a2a21a93d75c8f1c96f5fd59",
+            "objectName": "IAiGl8",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25624,
+            "name": "img_sd_shro_event01-04",
+            "size": 65828,
+            "crc": 3846182653,
+            "state": "ADD",
+            "md5": "a10aa2fb981ed4d263df14fac603bfca",
+            "objectName": "ZAW3OO",
+            "uploadVersionId": 205100
         }
     ],
     "resourceList": [
@@ -36212,6 +37323,546 @@
             "state": "ADD",
             "md5": "10dcdbcd4ae694d68d435334e062014c",
             "objectName": "r0rUg5",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22201,
+            "name": "mov_live_shro-006_03.usm",
+            "size": 3971232,
+            "state": "ADD",
+            "md5": "046c264f64e30b09ad90cd2fb591b068",
+            "objectName": "OPqZyz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22202,
+            "name": "mov_general_cidol-shro-3-022_1.usm",
+            "size": 16094272,
+            "state": "ADD",
+            "md5": "2f954174fb7a86f520fb5c6526446672",
+            "objectName": "P0JZeZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22203,
+            "name": "sud_music_general_shro-006-shro_game-inst.acb",
+            "size": 10752,
+            "state": "ADD",
+            "md5": "dda7c5f0fdf484e0857b93ff3bec1f2b",
+            "objectName": "fAjfGr",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22204,
+            "name": "mov_general_cidol-shro-3-022_1-loop.usm",
+            "size": 6670976,
+            "state": "ADD",
+            "md5": "5cf8cf43fa334dede10342b1b8787871",
+            "objectName": "yxviB2",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22205,
+            "name": "sud_vo_system_cidol-shro-3-022_idol_details-02.acb",
+            "size": 86784,
+            "state": "ADD",
+            "md5": "c01feca0925c9fda1b55caa3df2eeb79",
+            "objectName": "b9iwIQ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22206,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_schedule-03.acb",
+            "size": 92256,
+            "state": "ADD",
+            "md5": "45d1fba19cf91e24308655140e8d6f39",
+            "objectName": "Ws02NA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22207,
+            "name": "sud_vo_system_csprt-3-0109_02-shro.acb",
+            "size": 35968,
+            "state": "ADD",
+            "md5": "a4e0b70e4cc0612be249a7db380251b1",
+            "objectName": "JOqPOq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22208,
+            "name": "mov_live_shro-006_00.usm",
+            "size": 22714720,
+            "state": "ADD",
+            "md5": "d43385f66cd874795d5c7207551aa03c",
+            "objectName": "dwYUly",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22209,
+            "name": "sud_vo_system_cidol-shro-3-022_idol_potential-01.acb",
+            "size": 63584,
+            "state": "ADD",
+            "md5": "c2d277aeae0f31834261959be7872635",
+            "objectName": "39cVxx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22210,
+            "name": "sud_vo_adv_csprt-2-0080_02.acb",
+            "size": 1394720,
+            "state": "ADD",
+            "md5": "e9f02182a56fd4dd83bdcb461ef4f44a",
+            "objectName": "hwEW6p",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22211,
+            "name": "mov_live_shro-006_04.usm",
+            "size": 3661184,
+            "state": "ADD",
+            "md5": "3463b8647b03d307874a0d0a6e5ce549",
+            "objectName": "ZonebL",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22212,
+            "name": "sud_bgm_adv_inst-shro-006.acb",
+            "size": 11328,
+            "state": "ADD",
+            "md5": "a5f15ce84e3dc45cb25c2e6fc12f5abd",
+            "objectName": "qAFGAY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22213,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_start-01.acb",
+            "size": 78592,
+            "state": "ADD",
+            "md5": "18d111cf0a41724b81deecdd1d7ac98b",
+            "objectName": "o1IwKF",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22214,
+            "name": "sud_vo_system_csprt-2-0080_02-shro.acb",
+            "size": 78272,
+            "state": "ADD",
+            "md5": "2a1fc9012cfe9b3b923c9f02b782b447",
+            "objectName": "iuqY9z",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22215,
+            "name": "adv_csprt-3-0109_03.txt",
+            "size": 104236,
+            "state": "ADD",
+            "md5": "88bffd6b12f3e0edc699ca32d0c00190",
+            "objectName": "kJ8ubC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22216,
+            "name": "sud_vo_adv_csprt-2-0080_01.acb",
+            "size": 1539968,
+            "state": "ADD",
+            "md5": "b1b6db8f764228c2b3a3bf04a0ebe7ad",
+            "objectName": "SVL94b",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22217,
+            "name": "sud_music_general_shro-006-shro_game.mp3",
+            "size": 2271443,
+            "state": "ADD",
+            "md5": "0aa78a567cb5bc2cc3978a9f58b5fc84",
+            "objectName": "prqkwv",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22218,
+            "name": "sud_vo_adv_csprt-3-0109_01.acb",
+            "size": 1442112,
+            "state": "ADD",
+            "md5": "2e08b50c5ba20762ad0f26d383ea0b73",
+            "objectName": "m8TJeD",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22219,
+            "name": "sud_vo_system_csprt-2-0080_03-kllj.acb",
+            "size": 60512,
+            "state": "ADD",
+            "md5": "a2edacb5e1d35183943da5389b1e4e88",
+            "objectName": "nwjqiH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22220,
+            "name": "mov_live_shro-006_01.usm",
+            "size": 30999776,
+            "state": "ADD",
+            "md5": "cb4378b2b57d204e7db9de92d61e32c4",
+            "objectName": "VKQona",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22221,
+            "name": "adv_csprt-2-0080_02.txt",
+            "size": 83290,
+            "state": "ADD",
+            "md5": "b352677b859717eeb6aedfdbf4d36bcb",
+            "objectName": "mY4Puy",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22222,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_schedule-02.acb",
+            "size": 66336,
+            "state": "ADD",
+            "md5": "dbe430844ca5d3dd8521ce63560d0eea",
+            "objectName": "tpWxxP",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22223,
+            "name": "sud_vo_system_csprt-3-0109_03-shro.acb",
+            "size": 34624,
+            "state": "ADD",
+            "md5": "e3372381113ffed0be95b94414da1612",
+            "objectName": "0CUP0R",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22224,
+            "name": "sud_vo_adv_cidol-shro-3-022_02.acb",
+            "size": 1489568,
+            "state": "ADD",
+            "md5": "3f098dedf3e0866615d9ba7584f26aee",
+            "objectName": "gCbzyT",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22225,
+            "name": "sud_vo_system_cidol-shro-3-022_home_cmmn-03.acb",
+            "size": 101440,
+            "state": "ADD",
+            "md5": "36e6b3a575d84d58904b139407a4bd7f",
+            "objectName": "UMToUC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22226,
+            "name": "sud_vo_adv_csprt-3-0109_02.acb",
+            "size": 1070848,
+            "state": "ADD",
+            "md5": "dd261fc1e6514c2affc02107354f1b40",
+            "objectName": "TQG54y",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22227,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_skillcard-01.acb",
+            "size": 26112,
+            "state": "ADD",
+            "md5": "873e458e56fd9311cf980ecce0df7231",
+            "objectName": "UsJSBD",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22228,
+            "name": "sud_music_general_shro-006-shro_game.acb",
+            "size": 10752,
+            "state": "ADD",
+            "md5": "afc50113850668fcc49c21a47135b847",
+            "objectName": "PEbrWL",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22229,
+            "name": "mov_general_gasha_bg_idol_cidol-shro-3-022.usm",
+            "size": 26137280,
+            "state": "ADD",
+            "md5": "859df657706cbc039e836abbfc2954d1",
+            "objectName": "0MQknW",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22230,
+            "name": "mov_live_shro-006_06.usm",
+            "size": 3976000,
+            "state": "ADD",
+            "md5": "15f9d83a24a80892cb242fe12aceb469",
+            "objectName": "tP7yD9",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22231,
+            "name": "sud_vo_system_shro-cstm-0153_01.acb",
+            "size": 55744,
+            "state": "ADD",
+            "md5": "83150191ffd8cb82722779c957a4974d",
+            "objectName": "dpd0b0",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22232,
+            "name": "mov_general_gasha_live_i_card-skin-shro-3-022-result.usm",
+            "size": 2217472,
+            "state": "ADD",
+            "md5": "44eda0068ace3600e36112b434f39218",
+            "objectName": "tDuOVX",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22233,
+            "name": "sud_vo_adv_cidol-shro-3-022_01.acb",
+            "size": 1805600,
+            "state": "ADD",
+            "md5": "4f851178970d57d596a335eadf9daafb",
+            "objectName": "AYuAEj",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22234,
+            "name": "sud_music_general_shro-006-shro_game-inst.awb",
+            "size": 4168512,
+            "state": "ADD",
+            "md5": "6a43d9efc7afd8f608dac1def93faae8",
+            "objectName": "MUqmWx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22235,
+            "name": "mov_general_cidol-shro-3-022_1-loop-gasha.usm",
+            "size": 2493376,
+            "state": "ADD",
+            "md5": "440fd26c88e5c1e63a514fa43dabf425",
+            "objectName": "A1a77Z",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22236,
+            "name": "sud_music_general_shro-006-shro_game.awb",
+            "size": 4168512,
+            "state": "ADD",
+            "md5": "f4ef2435496c5466bfadb2e7f8339efb",
+            "objectName": "xNCdkT",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22237,
+            "name": "adv_csprt-3-0109_01.txt",
+            "size": 84869,
+            "state": "ADD",
+            "md5": "6aac2f166eaed185333b23bb36cbf1d8",
+            "objectName": "eaZFQZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22238,
+            "name": "adv_cidol-shro-3-022_03.txt",
+            "size": 135058,
+            "state": "ADD",
+            "md5": "62a55faf839ef2b6396baaeb6856eee2",
+            "objectName": "kTTLmO",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22239,
+            "name": "sud_vo_system_shro-cstm-0153_02.acb",
+            "size": 46880,
+            "state": "ADD",
+            "md5": "f505fa43629c3bdaa86497ef440b3981",
+            "objectName": "0UkAYS",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22240,
+            "name": "mov_live_shro-006_05.usm",
+            "size": 6219776,
+            "state": "ADD",
+            "md5": "2cf58b3551dd4b90a343e0b1606ac41a",
+            "objectName": "zwkujd",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22241,
+            "name": "sud_vo_system_csprt-3-0109_01-hume.acb",
+            "size": 72448,
+            "state": "ADD",
+            "md5": "07635845746e694ab73bd5d18c69dc54",
+            "objectName": "qC3rTS",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22242,
+            "name": "sud_vo_system_cidol-shro-3-022_home_cmmn-01.acb",
+            "size": 83040,
+            "state": "ADD",
+            "md5": "1183a26af24bceed7dd1c856b7d4d705",
+            "objectName": "Dl3iBR",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22243,
+            "name": "adv_cidol-shro-3-022_01.txt",
+            "size": 118023,
+            "state": "ADD",
+            "md5": "d864bb6935b82208ccf9fdf9e8812521",
+            "objectName": "EfuZzC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22244,
+            "name": "mov_general_cidol-shro-3-022_1-gasha.usm",
+            "size": 5137632,
+            "state": "ADD",
+            "md5": "24e0e82f4097621bc94d85bdd92a8bf1",
+            "objectName": "fiRAQw",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22245,
+            "name": "sud_vo_system_csprt-2-0080_01-kllj.acb",
+            "size": 88160,
+            "state": "ADD",
+            "md5": "a47507432abfdd0ad731f7cd55c5d814",
+            "objectName": "nf70tg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22246,
+            "name": "sud_vo_adv_csprt-3-0109_03.acb",
+            "size": 1311520,
+            "state": "ADD",
+            "md5": "f3f93ea216a2ea3106c4267e1190f29c",
+            "objectName": "BdibEN",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22247,
+            "name": "mov_live_shro-006_02.usm",
+            "size": 17582848,
+            "state": "ADD",
+            "md5": "953a9df78ea55ddc93e6cbc2d20fd980",
+            "objectName": "nLTD8x",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22248,
+            "name": "img_general_music_jacket_char-shro-006.png",
+            "size": 1699841,
+            "state": "ADD",
+            "md5": "713746a57c841fa2a17553bb544a966b",
+            "objectName": "xaxKgK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22249,
+            "name": "adv_csprt-2-0080_01.txt",
+            "size": 102986,
+            "state": "ADD",
+            "md5": "952dd27be88fbb72c221ef32ac8b00f2",
+            "objectName": "VcT6RB",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22250,
+            "name": "sud_bgm_adv_inst-shro-006.awb",
+            "size": 4536792,
+            "state": "ADD",
+            "md5": "95b65145e1472d56bfa2b7befcbaedb2",
+            "objectName": "OjEJpQ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22251,
+            "name": "sud_vo_system_cidol-shro-3-022_idol_details-01.acb",
+            "size": 45184,
+            "state": "ADD",
+            "md5": "af654d97281bc2ee1fe56c7ee223f773",
+            "objectName": "5ry72s",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22252,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_schedule-01.acb",
+            "size": 76544,
+            "state": "ADD",
+            "md5": "1ee9af7f18f0b7dcb8c0f4fde04ddb15",
+            "objectName": "3yV30V",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22253,
+            "name": "adv_cidol-shro-3-022_02.txt",
+            "size": 143543,
+            "state": "ADD",
+            "md5": "3284bf44aa24af7482d4841abb26dd30",
+            "objectName": "al5hnq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22254,
+            "name": "mov_live_shro-006_07.usm",
+            "size": 1280192,
+            "state": "ADD",
+            "md5": "25ac16b4eb25964ca5ad757036bf925a",
+            "objectName": "M9pf6y",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22255,
+            "name": "sud_vo_adv_cidol-shro-3-022_03.acb",
+            "size": 2122912,
+            "state": "ADD",
+            "md5": "bf16a3bf6482b6ca430093fa86375504",
+            "objectName": "NSwLEJ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22256,
+            "name": "sud_vo_system_cidol-shro-3-022_produce_schedule-04.acb",
+            "size": 76544,
+            "state": "ADD",
+            "md5": "2ab1255e966ad426ccfbee7bba5622b7",
+            "objectName": "EsN8jq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22257,
+            "name": "adv_csprt-3-0109_02.txt",
+            "size": 104787,
+            "state": "ADD",
+            "md5": "2ba2a8d13f959ed5826c12a5cdd948a2",
+            "objectName": "pzfJjz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22258,
+            "name": "mov_general_gasha_bg_support_csprt-3-0109.usm",
+            "size": 12632032,
+            "state": "ADD",
+            "md5": "e30313d2caef8c986f6c8e78c92de831",
+            "objectName": "hRjQwz",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22259,
+            "name": "sud_music_general_shro-006-shro_game-inst.mp3",
+            "size": 2271443,
+            "state": "ADD",
+            "md5": "96fa3d5414188fd7d36b158ad1cacedb",
+            "objectName": "2t9Rcq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22260,
+            "name": "sud_vo_system_cidol-shro-3-022_home_cmmn-02.acb",
+            "size": 104160,
+            "state": "ADD",
+            "md5": "3290cc0b3d12794d848ebdbdaa44d33d",
+            "objectName": "BITmXi",
             "uploadVersionId": 205100
         }
     ],
