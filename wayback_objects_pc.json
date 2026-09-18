@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0058",
+    "latest_version": "705100:0060",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -75944,6 +75944,9 @@
         "img_notice_event_trail-event-001.unity3d": [
             "705100:0045|2bBz9J|22fb1668622a511a4b89f007eeea2dcf|726971"
         ],
+        "img_notice_event_trail-event-002-large-pre.unity3d": [
+            "705100:0060|goQ8nK|8d6a94e55da868f1ba2d32e8991621e5|289849"
+        ],
         "img_notice_gasha-00020-pickup-001.unity3d": [
             "705000:0009|H6iEPU|cebd2c806b710de7d59fc12ffce1207a|2808785",
             "705100:0014|xWnF9X|a9a75030b8022dc6bc898bf39cc56ad5|2808659"
@@ -77578,6 +77581,9 @@
         ],
         "img_notice_gasha_gasha-01010-pickup-001.unity3d": [
             "705100:0053|sBuLnX|e1eb48c338cc25056ba93ee1641c9e68|2960205"
+        ],
+        "img_notice_gasha_gasha-01018-pickup-001-banner-01-large-pre.unity3d": [
+            "705100:0060|L7fPWM|367250a47a91f05773c49cd397b6c49a|994256"
         ],
         "img_notice_gasha_gasha-200limit-select-pickup-001-banner-01-large-pre.unity3d": [
             "705000:0164|9HoRTm|769ce3420a9783b2632f35187b19435f|640301",
@@ -118903,19 +118909,23 @@
         ],
         "sud_bgm_produce_3rd-final-produce-result-01.acb": [
             "705000:0239|jwPYOH|16b2b3af30dd2b4877506ec41fc16738|15104",
-            "705100:0028|tEd1SF|42d6b06486eecae6443c53e719bdb3bc|15104"
+            "705100:0028|tEd1SF|42d6b06486eecae6443c53e719bdb3bc|15104",
+            "705100:0060|llgLa9|16b2b3af30dd2b4877506ec41fc16738|15104"
         ],
         "sud_bgm_produce_3rd-final-produce-result-01.awb": [
             "705000:0239|86FvlH|6c95fa48912a4d2237147e46023e67a9|2597332",
-            "705100:0028|jdi7gU|97feac949c147335956bb41b2cfb6f38|2968334"
+            "705100:0028|jdi7gU|97feac949c147335956bb41b2cfb6f38|2968334",
+            "705100:0060|U1mPs2|6c95fa48912a4d2237147e46023e67a9|2597332"
         ],
         "sud_bgm_produce_3rd-final-produce-result-02.acb": [
             "705000:0239|chJ5ij|5d97e0539dc78227cba4044394086dd5|15104",
-            "705100:0028|Yz74p3|897a31792695da9011b69890fe28843c|15104"
+            "705100:0028|Yz74p3|897a31792695da9011b69890fe28843c|15104",
+            "705100:0060|DLpM29|5d97e0539dc78227cba4044394086dd5|15104"
         ],
         "sud_bgm_produce_3rd-final-produce-result-02.awb": [
             "705000:0239|AFBTkA|6ac21052a601b785fcd7bc7dfce44b2f|2124692",
-            "705100:0028|ZGCmmL|97feac949c147335956bb41b2cfb6f38|2968334"
+            "705100:0028|ZGCmmL|97feac949c147335956bb41b2cfb6f38|2968334",
+            "705100:0060|4NqXNr|6ac21052a601b785fcd7bc7dfce44b2f|2124692"
         ],
         "sud_bgm_produce_3rd-final-result-01.acb": [
             "705000:0239|yHQQxu|0a912a0961bdf0436f94027edd7b2a0c|15104"
@@ -119083,11 +119093,13 @@
         ],
         "sud_bgm_produce_3rd-selection-produce-result-01.acb": [
             "705000:0239|MZD5NJ|0466ad0ca3dcd651275908e9d246b8c6|15136",
-            "705100:0028|9OMdto|c3c502f73b115b0a6897e94e62077aa3|15136"
+            "705100:0028|9OMdto|c3c502f73b115b0a6897e94e62077aa3|15136",
+            "705100:0060|JabuTz|0466ad0ca3dcd651275908e9d246b8c6|15136"
         ],
         "sud_bgm_produce_3rd-selection-produce-result-01.awb": [
             "705000:0239|E3QP0d|0ee3833907eaeb98847813603ba4e10f|2222910",
-            "705100:0028|eYhwPD|e91608291675c30e75df909815d81f93|2574814"
+            "705100:0028|eYhwPD|e91608291675c30e75df909815d81f93|2574814",
+            "705100:0060|EKS8p0|0ee3833907eaeb98847813603ba4e10f|2222910"
         ],
         "sud_bgm_produce_3rd-selection-result-01.acb": [
             "705000:0239|EFlO2b|a8eccdb920afcab28b698b436fb384ce|15104"
