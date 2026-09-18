@@ -1,6 +1,6 @@
 {
     "revision": [
-        57,
+        59,
         37
     ],
     "assetBundleList": [
@@ -11109,6 +11109,26 @@
             "md5": "f3925ad954801db9942e16c508e44387",
             "objectName": "iGq4WG",
             "uploadVersionId": 205100
+        },
+        {
+            "id": 25524,
+            "name": "img_notice_gasha_gasha-01018-pickup-001-banner-01-large-pre",
+            "size": 127802,
+            "crc": 3084879909,
+            "state": "ADD",
+            "md5": "296056c35b2d9573d738b1c1095b454a",
+            "objectName": "EJYxLG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25525,
+            "name": "img_notice_event_trail-event-002-large-pre",
+            "size": 53842,
+            "crc": 4078105634,
+            "state": "ADD",
+            "md5": "ed26f9b1977cfd17612f94c7d73d98e5",
+            "objectName": "RKhVlX",
+            "uploadVersionId": 205100
         }
     ],
     "resourceList": [
@@ -11119,6 +11139,42 @@
             "state": "UPDATE",
             "md5": "3bc8528f96211fed0991c0d0d7f6d78a",
             "objectName": "JJBY4o",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 2917,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.awb",
+            "size": 2124692,
+            "state": "UPDATE",
+            "md5": "6ac21052a601b785fcd7bc7dfce44b2f",
+            "objectName": "6Xwj6L",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 2979,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.acb",
+            "size": 15136,
+            "state": "UPDATE",
+            "md5": "0466ad0ca3dcd651275908e9d246b8c6",
+            "objectName": "k66407",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 3261,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.awb",
+            "size": 2597332,
+            "state": "UPDATE",
+            "md5": "6c95fa48912a4d2237147e46023e67a9",
+            "objectName": "10Yezi",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 3769,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "16b2b3af30dd2b4877506ec41fc16738",
+            "objectName": "6gBVxb",
             "uploadVersionId": 205100
         },
         {
@@ -11137,6 +11193,24 @@
             "state": "UPDATE",
             "md5": "e81e198b07d3a1b632fda2e59475a040",
             "objectName": "UxSWOB",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 6054,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "5d97e0539dc78227cba4044394086dd5",
+            "objectName": "JbIeYa",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 6414,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.awb",
+            "size": 2222910,
+            "state": "UPDATE",
+            "md5": "0ee3833907eaeb98847813603ba4e10f",
+            "objectName": "n0WuED",
             "uploadVersionId": 205100
         },
         {

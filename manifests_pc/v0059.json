@@ -1,0 +1,64 @@
+{
+    "revision": [
+        60,
+        59
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 580,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "5d97e0539dc78227cba4044394086dd5",
+            "objectName": "DLpM29",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 755,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.acb",
+            "size": 15136,
+            "state": "UPDATE",
+            "md5": "0466ad0ca3dcd651275908e9d246b8c6",
+            "objectName": "JabuTz",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 1211,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.awb",
+            "size": 2222910,
+            "state": "UPDATE",
+            "md5": "0ee3833907eaeb98847813603ba4e10f",
+            "objectName": "EKS8p0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 1854,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "16b2b3af30dd2b4877506ec41fc16738",
+            "objectName": "llgLa9",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 2049,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.awb",
+            "size": 2597332,
+            "state": "UPDATE",
+            "md5": "6c95fa48912a4d2237147e46023e67a9",
+            "objectName": "U1mPs2",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 4633,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.awb",
+            "size": 2124692,
+            "state": "UPDATE",
+            "md5": "6ac21052a601b785fcd7bc7dfce44b2f",
+            "objectName": "4NqXNr",
+            "uploadVersionId": 705100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

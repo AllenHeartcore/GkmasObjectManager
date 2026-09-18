@@ -1,6 +1,6 @@
 {
     "revision": [
-        58,
+        60,
         50
     ],
     "assetBundleList": [
@@ -10610,9 +10610,74 @@
             "md5": "554e9fcdfa9a3a2bf4de5176cf269643",
             "objectName": "Ra4WMg",
             "uploadVersionId": 705100
+        },
+        {
+            "id": 25476,
+            "name": "img_notice_event_trail-event-002-large-pre",
+            "size": 289849,
+            "crc": 2575492430,
+            "state": "ADD",
+            "md5": "8d6a94e55da868f1ba2d32e8991621e5",
+            "objectName": "goQ8nK",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 25477,
+            "name": "img_notice_gasha_gasha-01018-pickup-001-banner-01-large-pre",
+            "size": 994256,
+            "crc": 3565204699,
+            "state": "ADD",
+            "md5": "367250a47a91f05773c49cd397b6c49a",
+            "objectName": "L7fPWM",
+            "uploadVersionId": 705100
         }
     ],
     "resourceList": [
+        {
+            "id": 580,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "5d97e0539dc78227cba4044394086dd5",
+            "objectName": "DLpM29",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 755,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.acb",
+            "size": 15136,
+            "state": "UPDATE",
+            "md5": "0466ad0ca3dcd651275908e9d246b8c6",
+            "objectName": "JabuTz",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 1211,
+            "name": "sud_bgm_produce_3rd-selection-produce-result-01.awb",
+            "size": 2222910,
+            "state": "UPDATE",
+            "md5": "0ee3833907eaeb98847813603ba4e10f",
+            "objectName": "EKS8p0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 1854,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.acb",
+            "size": 15104,
+            "state": "UPDATE",
+            "md5": "16b2b3af30dd2b4877506ec41fc16738",
+            "objectName": "llgLa9",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 2049,
+            "name": "sud_bgm_produce_3rd-final-produce-result-01.awb",
+            "size": 2597332,
+            "state": "UPDATE",
+            "md5": "6c95fa48912a4d2237147e46023e67a9",
+            "objectName": "U1mPs2",
+            "uploadVersionId": 705100
+        },
         {
             "id": 3730,
             "name": "adv_pstep_003_cmmn_after-lesson-param-03-c-03.txt",
@@ -10620,6 +10685,15 @@
             "state": "UPDATE",
             "md5": "e81e198b07d3a1b632fda2e59475a040",
             "objectName": "KlkcGz",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 4633,
+            "name": "sud_bgm_produce_3rd-final-produce-result-02.awb",
+            "size": 2124692,
+            "state": "UPDATE",
+            "md5": "6ac21052a601b785fcd7bc7dfce44b2f",
+            "objectName": "4NqXNr",
             "uploadVersionId": 705100
         },
         {
