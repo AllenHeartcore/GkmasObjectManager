@@ -1,9 +1,20 @@
 {
     "revision": [
-        62,
+        63,
         60
     ],
-    "assetBundleList": [],
+    "assetBundleList": [
+        {
+            "id": 25581,
+            "name": "img_mov_general_gasha_bg_idol_cidol-shro-3-022",
+            "size": 651430,
+            "crc": 3504730660,
+            "state": "UPDATE",
+            "md5": "cc8a6263ae63ec90f672e682b28ddeca",
+            "objectName": "65F1Ao",
+            "uploadVersionId": 205100
+        }
+    ],
     "resourceList": [
         {
             "id": 22201,
