@@ -1,6 +1,6 @@
 {
     "revision": [
-        61,
+        62,
         44
     ],
     "assetBundleList": [
@@ -15990,10 +15990,10 @@
         {
             "id": 22229,
             "name": "mov_general_gasha_bg_idol_cidol-shro-3-022.usm",
-            "size": 26137280,
-            "state": "ADD",
-            "md5": "859df657706cbc039e836abbfc2954d1",
-            "objectName": "0MQknW",
+            "size": 26145632,
+            "state": "UPDATE",
+            "md5": "021b90c9a2b19d1bf61d09a186245077",
+            "objectName": "RzljB5",
             "uploadVersionId": 205100
         },
         {

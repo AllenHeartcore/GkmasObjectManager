@@ -1,0 +1,19 @@
+{
+    "revision": [
+        62,
+        61
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 22229,
+            "name": "mov_general_gasha_bg_idol_cidol-shro-3-022.usm",
+            "size": 26145632,
+            "state": "UPDATE",
+            "md5": "021b90c9a2b19d1bf61d09a186245077",
+            "objectName": "RzljB5",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

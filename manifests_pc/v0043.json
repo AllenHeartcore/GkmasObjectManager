@@ -1,6 +1,6 @@
 {
     "revision": [
-        62,
+        64,
         43
     ],
     "assetBundleList": [
@@ -14490,11 +14490,11 @@
         {
             "id": 25539,
             "name": "img_mov_general_gasha_bg_idol_cidol-shro-3-022",
-            "size": 1730766,
-            "crc": 1424820100,
-            "state": "ADD",
-            "md5": "ea7f8d688ebdea396a0b67660cbaa6d7",
-            "objectName": "J5vXX1",
+            "size": 1703453,
+            "crc": 2621255235,
+            "state": "UPDATE",
+            "md5": "8064473abdd1d8a67b14f2fb2e800ec0",
+            "objectName": "3DKxo4",
             "uploadVersionId": 705100
         },
         {
@@ -20146,10 +20146,10 @@
         {
             "id": 22208,
             "name": "mov_general_gasha_bg_idol_cidol-shro-3-022.usm",
-            "size": 26137280,
-            "state": "ADD",
-            "md5": "859df657706cbc039e836abbfc2954d1",
-            "objectName": "7TiiD4",
+            "size": 26145632,
+            "state": "UPDATE",
+            "md5": "021b90c9a2b19d1bf61d09a186245077",
+            "objectName": "hGDsl3",
             "uploadVersionId": 705100
         },
         {
