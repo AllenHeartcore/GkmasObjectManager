@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0061",
+    "latest_version": "205100:0062",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -117494,7 +117494,8 @@
             "205100:0038|VIPbjK|a1791dc909c664f06484b05caa4cee86|20858400"
         ],
         "mov_general_gasha_bg_idol_cidol-shro-3-022.usm": [
-            "205100:0061|0MQknW|859df657706cbc039e836abbfc2954d1|26137280"
+            "205100:0061|0MQknW|859df657706cbc039e836abbfc2954d1|26137280",
+            "205100:0062|RzljB5|021b90c9a2b19d1bf61d09a186245077|26145632"
         ],
         "mov_general_gasha_bg_idol_cidol-ssmk-3-000.usm": [
             "205000:0265|LTcdM4|9dc17b4c080196beead7863dd15e1293|26512640"
