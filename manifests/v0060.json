@@ -1,6 +1,6 @@
 {
     "revision": [
-        65,
+        66,
         60
     ],
     "assetBundleList": [
@@ -485,11 +485,11 @@
         {
             "id": 25647,
             "name": "img_general_cidol-jsna-3-022_1-full",
-            "size": 570509,
-            "crc": 3628489608,
-            "state": "ADD",
-            "md5": "1da5fa028a59f316d356b816e092ec68",
-            "objectName": "DBend5",
+            "size": 578804,
+            "crc": 557216649,
+            "state": "UPDATE",
+            "md5": "22e34976cab97bda50c9f4c67ec642c6",
+            "objectName": "bRNTQL",
             "uploadVersionId": 205100
         },
         {
@@ -950,11 +950,11 @@
         {
             "id": 25692,
             "name": "img_general_cidol-jsna-3-022_0-full",
-            "size": 570518,
-            "crc": 1688504113,
-            "state": "ADD",
-            "md5": "4dd853a17f57b0faba7edafa3c9dc0a8",
-            "objectName": "FOjjV8",
+            "size": 578813,
+            "crc": 2647961392,
+            "state": "UPDATE",
+            "md5": "b37de3ed92a73922ab560e068c85bdf0",
+            "objectName": "NiHWUf",
             "uploadVersionId": 205100
         },
         {
@@ -1390,14 +1390,14 @@
         {
             "id": 25734,
             "name": "mdl_chr_kcna-cstm-0181_body",
-            "size": 7766344,
-            "crc": 2366098593,
+            "size": 7766080,
+            "crc": 1690765131,
             "dependencies": [
                 523
             ],
-            "state": "ADD",
-            "md5": "b909a9f8952b51b7021599cf3a5853e5",
-            "objectName": "s2wOy7",
+            "state": "UPDATE",
+            "md5": "b78ad1bdd83a4d92f53dcc356c18cbbf",
+            "objectName": "djeJuW",
             "uploadVersionId": 205100
         },
         {
@@ -3808,6 +3808,26 @@
             "state": "ADD",
             "md5": "83f864dd684fecf12542fe20ffc82ee2",
             "objectName": "H8pGrr",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25965,
+            "name": "img_general_meishi_base_all-018-ttmr-full",
+            "size": 863107,
+            "crc": 2329412964,
+            "state": "ADD",
+            "md5": "a5a2bf89cf9ae79ac02c7f43e5320d41",
+            "objectName": "Qwrtc8",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 25966,
+            "name": "img_general_meishi_base_all-018-ttmr-thumb",
+            "size": 27639,
+            "crc": 2034804515,
+            "state": "ADD",
+            "md5": "ca17bee634acbea8d31187ec09e2321d",
+            "objectName": "giwV6e",
             "uploadVersionId": 205100
         }
     ],
