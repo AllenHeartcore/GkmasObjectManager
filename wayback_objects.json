@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0065",
+    "latest_version": "205100:0066",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -26138,7 +26138,8 @@
             "205100:0038|8jZSuP|fcae4538b4da8c7c2818dba9ac62f16d|9593"
         ],
         "img_general_cidol-jsna-3-022_0-full.unity3d": [
-            "205100:0065|FOjjV8|4dd853a17f57b0faba7edafa3c9dc0a8|570518"
+            "205100:0065|FOjjV8|4dd853a17f57b0faba7edafa3c9dc0a8|570518",
+            "205100:0066|NiHWUf|b37de3ed92a73922ab560e068c85bdf0|578813"
         ],
         "img_general_cidol-jsna-3-022_0-thumb-gasha.unity3d": [
             "205100:0065|sLiAuG|18b78245ba40febe46ecc277f18aebb8|40420"
@@ -26156,7 +26157,8 @@
             "205100:0065|YB4FMh|f49d6fcbd27d6ddc5a96f0c9d800e53e|9280"
         ],
         "img_general_cidol-jsna-3-022_1-full.unity3d": [
-            "205100:0065|DBend5|1da5fa028a59f316d356b816e092ec68|570509"
+            "205100:0065|DBend5|1da5fa028a59f316d356b816e092ec68|570509",
+            "205100:0066|bRNTQL|22e34976cab97bda50c9f4c67ec642c6|578804"
         ],
         "img_general_cidol-jsna-3-022_1-thumb-gasha.unity3d": [
             "205100:0065|WCcVRz|1df75b8ee790a2561066707bfd3eb22a|45169"
@@ -48181,6 +48183,12 @@
         "img_general_media_pv_junk-2026.unity3d": [
             "205000:0436|RxCafZ|7dbfc7db5a5022d593284f76abce40d1|747649",
             "205100:0033|5NIRSO|0a2aa8d738fd0f8e514d5ed46436256d|744865"
+        ],
+        "img_general_meishi_base_all-018-ttmr-full.unity3d": [
+            "205100:0066|Qwrtc8|a5a2bf89cf9ae79ac02c7f43e5320d41|863107"
+        ],
+        "img_general_meishi_base_all-018-ttmr-thumb.unity3d": [
+            "205100:0066|giwV6e|ca17bee634acbea8d31187ec09e2321d|27639"
         ],
         "img_general_meishi_base_all-live-01-full.unity3d": [
             "205000:0355|WAFZKI|c11041c4062ef354a8ec453916424336|903809",
@@ -86143,7 +86151,8 @@
             "205100:0038|NEzctC|5f84e15eff25e03108fd60eb8335bb3d|3637046"
         ],
         "mdl_chr_kcna-cstm-0181_body.unity3d": [
-            "205100:0065|s2wOy7|b909a9f8952b51b7021599cf3a5853e5|7766344"
+            "205100:0065|s2wOy7|b909a9f8952b51b7021599cf3a5853e5|7766344",
+            "205100:0066|djeJuW|b78ad1bdd83a4d92f53dcc356c18cbbf|7766080"
         ],
         "mdl_chr_kcna-cstm-0181_hair.unity3d": [
             "205100:0065|4rl5t1|d2fdb92b17bb73d09b443b8d54737bf6|2996127"
