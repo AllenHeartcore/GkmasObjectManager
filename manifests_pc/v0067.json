@@ -1,42 +1,9 @@
 {
     "revision": [
         69,
-        66
+        67
     ],
     "assetBundleList": [
-        {
-            "id": 25608,
-            "name": "mdl_chr_kcna-cstm-0181_body",
-            "size": 11140728,
-            "crc": 2748407784,
-            "dependencies": [
-                1608
-            ],
-            "state": "UPDATE",
-            "md5": "51ba3513251550a7732c2fdbb97bb7c4",
-            "objectName": "ukrd3s",
-            "uploadVersionId": 705100
-        },
-        {
-            "id": 25710,
-            "name": "img_general_cidol-jsna-3-022_1-full",
-            "size": 1635785,
-            "crc": 3317543877,
-            "state": "UPDATE",
-            "md5": "33dc7bd9e40ef575bedeac4759055b4d",
-            "objectName": "9TJR9M",
-            "uploadVersionId": 705100
-        },
-        {
-            "id": 25717,
-            "name": "img_general_cidol-jsna-3-022_0-full",
-            "size": 1635792,
-            "crc": 540797620,
-            "state": "UPDATE",
-            "md5": "b753318b103ed9ff6c457726229826ce",
-            "objectName": "hxKy8R",
-            "uploadVersionId": 705100
-        },
         {
             "id": 25855,
             "name": "tln_live_all-019",
@@ -56,26 +23,6 @@
             "state": "UPDATE",
             "md5": "83645ffd93c2dedeac801a0574999041",
             "objectName": "zhykIC",
-            "uploadVersionId": 705100
-        },
-        {
-            "id": 25917,
-            "name": "img_general_meishi_base_all-018-ttmr-full",
-            "size": 2407156,
-            "crc": 1459657521,
-            "state": "ADD",
-            "md5": "1c27ea0fbc9b2c34aefcf1923783e122",
-            "objectName": "sPuVNN",
-            "uploadVersionId": 705100
-        },
-        {
-            "id": 25918,
-            "name": "img_general_meishi_base_all-018-ttmr-thumb",
-            "size": 71246,
-            "crc": 3245040276,
-            "state": "ADD",
-            "md5": "01cdcee12a296937cd2f560a143453cd",
-            "objectName": "1ILgrD",
             "uploadVersionId": 705100
         },
         {
