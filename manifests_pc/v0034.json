@@ -1,6 +1,6 @@
 {
     "revision": [
-        69,
+        71,
         34
     ],
     "assetBundleList": [
@@ -3808,6 +3808,16 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 18117,
+            "name": "img_mov_general_gasha_bg_idol_cidol-kllj-3-002",
+            "size": 2073216,
+            "crc": 1811107269,
+            "state": "UPDATE",
+            "md5": "c70e2b0fda31f0445aa57b43f9f90847",
+            "objectName": "lONm55",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 18329,
             "name": "mdl_chr_kllj-cstm-0073_body",
             "size": 10336175,
@@ -4232,6 +4242,16 @@
             "state": "UPDATE",
             "md5": "72fba5bbdafc6693e1042318a39a341f",
             "objectName": "JtLH0T",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 21996,
+            "name": "img_tutorial_another-idol_002",
+            "size": 708994,
+            "crc": 2088900625,
+            "state": "UPDATE",
+            "md5": "5620923703a0afaa29974ef68c791e06",
+            "objectName": "XnVAmd",
             "uploadVersionId": 705100
         },
         {
@@ -25083,6 +25103,1106 @@
             "md5": "80b773b5d9296ad58b2a9a9d0aa1daaa",
             "objectName": "dlFT3A",
             "uploadVersionId": 705100
+        },
+        {
+            "id": 26003,
+            "name": "img_general_skillcard_act-2_116-hmsz",
+            "size": 123412,
+            "crc": 4209558735,
+            "state": "ADD",
+            "md5": "3557464381950fa17397676511f844a6",
+            "objectName": "pyfxw0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26004,
+            "name": "img_general_skillcard_act-2_116-shro",
+            "size": 124599,
+            "crc": 1654928173,
+            "state": "ADD",
+            "md5": "a99978f6c620a6acbae3d6d738acad5e",
+            "objectName": "itUU1x",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26005,
+            "name": "img_general_skillcard_act-2_118-shro",
+            "size": 107688,
+            "crc": 107353754,
+            "state": "ADD",
+            "md5": "4c59970c08f8a778f646a4e04efe5440",
+            "objectName": "B5Aecw",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26006,
+            "name": "img_general_skillcard_act-2_120-fktn",
+            "size": 105403,
+            "crc": 610707169,
+            "state": "ADD",
+            "md5": "9dd977d55d7025cd1cc0d43b8de236d2",
+            "objectName": "KIShMp",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26007,
+            "name": "img_general_skillcard_act-2_113-fktn",
+            "size": 131869,
+            "crc": 2868680275,
+            "state": "ADD",
+            "md5": "08648a24f900dd471f125191a9fff344",
+            "objectName": "5ttkHR",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26008,
+            "name": "img_general_skillcard_act-2_120-kllj",
+            "size": 104775,
+            "crc": 2816070065,
+            "state": "ADD",
+            "md5": "aebed76e2ef8b05e6a276d86f86b680f",
+            "objectName": "nPOsuh",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26009,
+            "name": "img_general_skillcard_act-2_116-ssmk",
+            "size": 123109,
+            "crc": 1531344786,
+            "state": "ADD",
+            "md5": "1e6a1c5550e07b11482eb006847ba8a6",
+            "objectName": "qx9PH5",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26010,
+            "name": "img_general_skillcard_act-2_118-jsna",
+            "size": 106405,
+            "crc": 2825785907,
+            "state": "ADD",
+            "md5": "5851309dfed24aa59d6a65840c2d8bee",
+            "objectName": "ha4JjV",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26011,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-kllj-001-banner-01-large",
+            "size": 632593,
+            "crc": 1769956747,
+            "state": "ADD",
+            "md5": "80085bd176b02fab6066c6dc7cb9ef2e",
+            "objectName": "0aJ2Bd",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26012,
+            "name": "img_notice_update_another-001-banner",
+            "size": 710716,
+            "crc": 3189767342,
+            "state": "ADD",
+            "md5": "4ceb8f0e973e06ea9fe1fc5073b27e99",
+            "objectName": "S1ECxs",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26013,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-select-m",
+            "size": 158184,
+            "crc": 2680809600,
+            "state": "ADD",
+            "md5": "0aaaf7fe2b77cbbe09b1754ee4c5b1eb",
+            "objectName": "5YObG5",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26014,
+            "name": "img_general_skillcard_act-2_044-ssmk",
+            "size": 79122,
+            "crc": 2409843344,
+            "state": "ADD",
+            "md5": "a8f1acee6746e58febef045bcceb5d5b",
+            "objectName": "JyNLwk",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26015,
+            "name": "img_general_skillcard_act-2_116-hski",
+            "size": 124960,
+            "crc": 1391747896,
+            "state": "ADD",
+            "md5": "f5e1624de8f3353d792e5c5c160cb761",
+            "objectName": "cBx5Az",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26016,
+            "name": "img_general_skillcard_act-2_116-amao",
+            "size": 125413,
+            "crc": 2426859309,
+            "state": "ADD",
+            "md5": "b5277f91048ce5ead3b73453498d73f1",
+            "objectName": "KuOd7u",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26017,
+            "name": "img_general_skillcard_act-2_044-hski",
+            "size": 80206,
+            "crc": 1199455564,
+            "state": "ADD",
+            "md5": "fc9d13376c3ceb155420ee009e226cb0",
+            "objectName": "3BOS9G",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26018,
+            "name": "img_general_skillcard_act-2_108-hume",
+            "size": 112934,
+            "crc": 842411515,
+            "state": "ADD",
+            "md5": "447c55d08299e7e71b19980b644f929e",
+            "objectName": "BclYfT",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26019,
+            "name": "img_general_skillcard_act-2_116-kllj",
+            "size": 123507,
+            "crc": 1229653151,
+            "state": "ADD",
+            "md5": "df36b68da6a9147828adaf2c12c4bde5",
+            "objectName": "EcCKqT",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26020,
+            "name": "img_general_skillcard_act-2_120-kcna",
+            "size": 107248,
+            "crc": 471693720,
+            "state": "ADD",
+            "md5": "16a57cc5b9e2025f989a0518f620481f",
+            "objectName": "ClVIuj",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26021,
+            "name": "img_general_skillcard_act-2_044-hume",
+            "size": 79248,
+            "crc": 1601267630,
+            "state": "ADD",
+            "md5": "fcb2d798e0c10584824d1216f336dd76",
+            "objectName": "l6rVoY",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26022,
+            "name": "img_general_skillcard_act-2_108-fktn",
+            "size": 114315,
+            "crc": 2290580896,
+            "state": "ADD",
+            "md5": "69a40bc36ce1476efb61d212accea2ad",
+            "objectName": "Gs7eyB",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26023,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-kcna-001",
+            "size": 2552670,
+            "crc": 2999454757,
+            "state": "ADD",
+            "md5": "bb823dede869c5dd7090030b46415ba3",
+            "objectName": "gnzTt4",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26024,
+            "name": "img_notice_information_update_another-002-large",
+            "size": 1998234,
+            "crc": 1076104794,
+            "state": "ADD",
+            "md5": "1bf4514fce35ba1d50c3795f335c3429",
+            "objectName": "ALMBhQ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26025,
+            "name": "img_general_skillcard_act-2_118-hrnm",
+            "size": 103250,
+            "crc": 1768749705,
+            "state": "ADD",
+            "md5": "4e53727cae5a5508de5603d27f9f8ab6",
+            "objectName": "LVWR6P",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26026,
+            "name": "img_general_skillcard_act-2_113-jsna",
+            "size": 134308,
+            "crc": 1341095100,
+            "state": "ADD",
+            "md5": "7c90dab22cc7e10e103d8a23ce5797ec",
+            "objectName": "PmUL26",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26027,
+            "name": "img_general_skillcard_act-2_044-atbm",
+            "size": 77690,
+            "crc": 1508055096,
+            "state": "ADD",
+            "md5": "f918a92c636b1cc6e15937f1a1120126",
+            "objectName": "DqkFM7",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26028,
+            "name": "img_general_skillcard_act-2_120-amao",
+            "size": 106829,
+            "crc": 3269070851,
+            "state": "ADD",
+            "md5": "31fb7b077de9d68f084d5e674858b06c",
+            "objectName": "zh3rv0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26029,
+            "name": "img_general_skillcard_act-2_113-amao",
+            "size": 141317,
+            "crc": 4120212323,
+            "state": "ADD",
+            "md5": "26ea086b510734344c8006af1ce1edf0",
+            "objectName": "Mqm0ML",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26030,
+            "name": "img_general_skillcard_act-2_108-hmsz",
+            "size": 111474,
+            "crc": 1168383719,
+            "state": "ADD",
+            "md5": "b23333c61696ef573eb2ea89c36a07c8",
+            "objectName": "iOqTfx",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26031,
+            "name": "img_general_comic4_0169-thumb",
+            "size": 51811,
+            "crc": 1915103858,
+            "state": "ADD",
+            "md5": "3156a40cd520c45863aa185969c0894e",
+            "objectName": "ovEX4D",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26032,
+            "name": "img_general_skillcard_act-2_118-fktn",
+            "size": 106243,
+            "crc": 2097087488,
+            "state": "ADD",
+            "md5": "1d9a862912f5f7effba1562bc75f7203",
+            "objectName": "U9xUMS",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26033,
+            "name": "img_general_skillcard_act-2_113-kllj",
+            "size": 130736,
+            "crc": 2196620004,
+            "state": "ADD",
+            "md5": "2b56dabe0e3a53510407987fb1c73c8f",
+            "objectName": "ofuvbh",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26034,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-logo",
+            "size": 26140,
+            "crc": 2147476551,
+            "state": "ADD",
+            "md5": "71bfa5dea312ef0ced2e62fa3974eab9",
+            "objectName": "5aKrX3",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26035,
+            "name": "img_general_home_gasha_gasha-01035-ssr-anotheridol-kllj-001",
+            "size": 40782,
+            "crc": 497509134,
+            "state": "ADD",
+            "md5": "c77964634cfb92496f023516d4575812",
+            "objectName": "NkBcly",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26036,
+            "name": "img_general_skillcard_act-2_118-hume",
+            "size": 104281,
+            "crc": 1867469335,
+            "state": "ADD",
+            "md5": "2e4316f7e3e3ab1c47a27e278439da22",
+            "objectName": "4QbeDk",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26037,
+            "name": "img_general_skillcard_act-2_118-amao",
+            "size": 107740,
+            "crc": 668807401,
+            "state": "ADD",
+            "md5": "5ebcf627beea985e24d96cd67f19ed91",
+            "objectName": "x2GQAq",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26038,
+            "name": "img_general_skillcard_act-2_044-fktn",
+            "size": 79403,
+            "crc": 1122894457,
+            "state": "ADD",
+            "md5": "44a71bb92504be9e9a9fe9e0ae64547b",
+            "objectName": "ktQECF",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26039,
+            "name": "img_general_skillcard_act-2_108-amao",
+            "size": 114223,
+            "crc": 82974944,
+            "state": "ADD",
+            "md5": "7e1b63dfa94d3113689db724c4f13746",
+            "objectName": "69r8Mk",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26040,
+            "name": "img_notice_information_update_another-001-large",
+            "size": 1969087,
+            "crc": 318588713,
+            "state": "ADD",
+            "md5": "1d696b05864cb5b1e992ce3e09abb49f",
+            "objectName": "gjO7ha",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26041,
+            "name": "img_general_skillcard_act-2_118-kllj",
+            "size": 106138,
+            "crc": 2740630493,
+            "state": "ADD",
+            "md5": "902e66c03a2f68613d19ce594c09a3ad",
+            "objectName": "C1v0DO",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26042,
+            "name": "img_general_skillcard_act-2_113-ttmr",
+            "size": 140881,
+            "crc": 4130538754,
+            "state": "ADD",
+            "md5": "e164c084d9e46493bbdc492add12d538",
+            "objectName": "gcgOPf",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26043,
+            "name": "img_general_comic4_0170-thumb",
+            "size": 47757,
+            "crc": 3398042716,
+            "state": "ADD",
+            "md5": "e0a869893a2666e3c622dbf5f09adf19",
+            "objectName": "RgESP9",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26044,
+            "name": "img_general_skillcard_act-2_120-hmsz",
+            "size": 105125,
+            "crc": 3932740086,
+            "state": "ADD",
+            "md5": "fc8adc56fd0444c72e50654009c60541",
+            "objectName": "ftYBAQ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26045,
+            "name": "img_general_home_gasha_gasha-01035-ssr-anotheridol-kcna-001",
+            "size": 41038,
+            "crc": 2799300509,
+            "state": "ADD",
+            "md5": "1a85096c0036af202f1f049959e14fd0",
+            "objectName": "ake9kW",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26046,
+            "name": "img_general_skillcard_act-2_116-hrnm",
+            "size": 122362,
+            "crc": 646712453,
+            "state": "ADD",
+            "md5": "3e57b5b59a50de960a195f6773d68b6e",
+            "objectName": "SSh4LZ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26047,
+            "name": "img_general_skillcard_act-2_044-kcna",
+            "size": 81002,
+            "crc": 847859406,
+            "state": "ADD",
+            "md5": "f874513bea1afc4fbb04ab108668ed7b",
+            "objectName": "ymiNCX",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26048,
+            "name": "img_general_comic4_0170",
+            "size": 446947,
+            "crc": 1826023939,
+            "state": "ADD",
+            "md5": "8dc7eddc5ea1868ea8cacea51b3efe48",
+            "objectName": "lkjoXo",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26049,
+            "name": "img_general_comic4_0171",
+            "size": 468462,
+            "crc": 3364583805,
+            "state": "ADD",
+            "md5": "484cbfb2e443454ed7bbea401c5652e1",
+            "objectName": "D3xELg",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26050,
+            "name": "img_general_skillcard_act-2_108-atbm",
+            "size": 109965,
+            "crc": 1748518882,
+            "state": "ADD",
+            "md5": "fc92790b8f7858a9fc5b6d083139ca1b",
+            "objectName": "zexAJu",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26051,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-select-m",
+            "size": 149220,
+            "crc": 1281684757,
+            "state": "ADD",
+            "md5": "0a8d39c070ed082849bd0075a99e0e3d",
+            "objectName": "pTaCMr",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26052,
+            "name": "img_general_skillcard_men-1_026",
+            "size": 54352,
+            "crc": 2848781035,
+            "state": "ADD",
+            "md5": "f72f3c41b345f7ebe36613c85c9987f4",
+            "objectName": "7GRk5T",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26053,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-amao-001",
+            "size": 2657098,
+            "crc": 1009012165,
+            "state": "ADD",
+            "md5": "382cdcb614685128acbceb59dc7d35fc",
+            "objectName": "oWsEQa",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26054,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-select-m",
+            "size": 151120,
+            "crc": 1134991790,
+            "state": "ADD",
+            "md5": "bc895ebd80ec2fef44c180ff66405c8a",
+            "objectName": "3mCJUs",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26055,
+            "name": "img_general_skillcard_act-2_118-hmsz",
+            "size": 105155,
+            "crc": 4243751585,
+            "state": "ADD",
+            "md5": "ce92830c5f5559eeff333e87fd18dc5b",
+            "objectName": "m0NYhb",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26056,
+            "name": "img_general_skillcard_act-2_116-hume",
+            "size": 123699,
+            "crc": 35011634,
+            "state": "ADD",
+            "md5": "8317fa715ded3a59558770eba5fdcdd6",
+            "objectName": "so9dLR",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26057,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-amao-001-banner-01-large",
+            "size": 710891,
+            "crc": 3110574884,
+            "state": "ADD",
+            "md5": "e662d27e65e1d9785ccaf0bce0a13154",
+            "objectName": "1p300y",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26058,
+            "name": "img_general_skillcard_act-2_108-kcna",
+            "size": 115537,
+            "crc": 3102385090,
+            "state": "ADD",
+            "md5": "275a8461039d59bde820bbf8198a7667",
+            "objectName": "M1vZ7s",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26059,
+            "name": "img_general_skillcard_act-2_113-kcna",
+            "size": 135227,
+            "crc": 1901790022,
+            "state": "ADD",
+            "md5": "f923982656db0c7fdea28b26a8dd15f2",
+            "objectName": "yV6ocJ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26060,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-kcna-001-banner-01-large",
+            "size": 654304,
+            "crc": 2389223109,
+            "state": "ADD",
+            "md5": "404e4c232bfd43a467eccd564c8f9ad0",
+            "objectName": "MTUDYP",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26061,
+            "name": "img_general_skillcard_act-2_108-jsna",
+            "size": 114580,
+            "crc": 2160265681,
+            "state": "ADD",
+            "md5": "8da42fcdcc0272d9abd50669939b899c",
+            "objectName": "2Pn1C5",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26062,
+            "name": "img_general_skillcard_act-2_120-hume",
+            "size": 105346,
+            "crc": 3735031403,
+            "state": "ADD",
+            "md5": "109c8f76185adf32d76639b01422ca84",
+            "objectName": "MKJBo1",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26063,
+            "name": "img_general_skillcard_act-2_113-shro",
+            "size": 141680,
+            "crc": 2008088577,
+            "state": "ADD",
+            "md5": "7cb9b8718da5ad08484de2817db4167f",
+            "objectName": "OdliuP",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26064,
+            "name": "img_general_skillcard_act-2_113-atbm",
+            "size": 139229,
+            "crc": 658565471,
+            "state": "ADD",
+            "md5": "d5333d742f72c3a24efccc313b2ec09d",
+            "objectName": "4tERcG",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26065,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-logo",
+            "size": 26139,
+            "crc": 1993590071,
+            "state": "ADD",
+            "md5": "8b1f5ed6e675d43fb8215670d08f4a5a",
+            "objectName": "aECENp",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26066,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-select-s",
+            "size": 75863,
+            "crc": 1990390391,
+            "state": "ADD",
+            "md5": "25d55a4e08d344f9e29fa597edf42431",
+            "objectName": "kf8jrx",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26067,
+            "name": "img_general_skillcard_men-1_093",
+            "size": 60578,
+            "crc": 3989956308,
+            "state": "ADD",
+            "md5": "7f9c834edbcc98801e4d85a59da7b742",
+            "objectName": "drhC75",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26068,
+            "name": "img_notice_gasha_gasha-01035-ssr-anotheridol-kllj-001",
+            "size": 2425455,
+            "crc": 3089024081,
+            "state": "ADD",
+            "md5": "3b004129a588c6a823e6c2e53e33b3de",
+            "objectName": "CulvrF",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26069,
+            "name": "img_general_skillcard_act-2_120-ssmk",
+            "size": 104689,
+            "crc": 451524667,
+            "state": "ADD",
+            "md5": "16f09a59a0e1e95bea30aaec036caf24",
+            "objectName": "gEyYoG",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26070,
+            "name": "img_general_home_gasha_gasha-01035-ssr-anotheridol-amao-001",
+            "size": 42136,
+            "crc": 2199836853,
+            "state": "ADD",
+            "md5": "2e7ff5b88d1908e6e94ce32f643cf06c",
+            "objectName": "2qpYfO",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26071,
+            "name": "img_general_skillcard_act-2_120-jsna",
+            "size": 106024,
+            "crc": 4146960202,
+            "state": "ADD",
+            "md5": "424659e1369bcd5675223d4c283528a3",
+            "objectName": "ZBW2xe",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26072,
+            "name": "img_general_skillcard_act-2_120-ttmr",
+            "size": 105625,
+            "crc": 472461380,
+            "state": "ADD",
+            "md5": "8f7ad12406418ce75aff0fede542283d",
+            "objectName": "QWrw9K",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26073,
+            "name": "img_general_skillcard_act-2_113-hume",
+            "size": 134214,
+            "crc": 3902722934,
+            "state": "ADD",
+            "md5": "c39b760dd7ca8b06e51d7fea327c9987",
+            "objectName": "gcop8t",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26074,
+            "name": "img_general_skillcard_act-2_118-atbm",
+            "size": 103498,
+            "crc": 1607339203,
+            "state": "ADD",
+            "md5": "440d22e8c0e3ca45ccbe1840cca72e9a",
+            "objectName": "LBNBj8",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26075,
+            "name": "img_general_skillcard_act-2_044-shro",
+            "size": 80594,
+            "crc": 1093271417,
+            "state": "ADD",
+            "md5": "32d33cff7200261d5770e748fbd21338",
+            "objectName": "HWT5xd",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26076,
+            "name": "img_general_skillcard_act-2_120-hrnm",
+            "size": 103798,
+            "crc": 2126911402,
+            "state": "ADD",
+            "md5": "e778fb77674bdd52d2f3e62205961d8e",
+            "objectName": "ImaW5S",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26077,
+            "name": "img_general_skillcard_act-2_108-ssmk",
+            "size": 113754,
+            "crc": 896932991,
+            "state": "ADD",
+            "md5": "7bf46d1d5256104a0eb4a69e476e0167",
+            "objectName": "rOP2XJ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26078,
+            "name": "img_general_skillcard_act-2_108-kllj",
+            "size": 112075,
+            "crc": 3970801752,
+            "state": "ADD",
+            "md5": "f832a9cde02220bc5ea6ccbfb3865095",
+            "objectName": "cBKafT",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26079,
+            "name": "img_general_skillcard_act-2_108-ttmr",
+            "size": 113615,
+            "crc": 902903694,
+            "state": "ADD",
+            "md5": "d5eee5f166b8c98abb34dd97cddedcdf",
+            "objectName": "TVSwgQ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26080,
+            "name": "img_general_skillcard_act-2_113-hrnm",
+            "size": 134942,
+            "crc": 37409376,
+            "state": "ADD",
+            "md5": "9c6213debd43c1e2c20e7e9acc02ca3e",
+            "objectName": "oS1xUY",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26081,
+            "name": "img_general_skillcard_act-2_044-hrnm",
+            "size": 78570,
+            "crc": 4073858197,
+            "state": "ADD",
+            "md5": "b7b614a6ad0b1a811f1e3fe3311ddfd1",
+            "objectName": "uFbWkx",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26082,
+            "name": "img_general_skillcard_act-2_108-hski",
+            "size": 113221,
+            "crc": 3584521785,
+            "state": "ADD",
+            "md5": "183d53822f3bee405ec422483881e6be",
+            "objectName": "FBjCsp",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26083,
+            "name": "img_general_skillcard_act-2_044-jsna",
+            "size": 79961,
+            "crc": 2033073989,
+            "state": "ADD",
+            "md5": "8442fe6672061e798c8e42a873cbc577",
+            "objectName": "HepaEZ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26084,
+            "name": "img_general_skillcard_act-2_120-atbm",
+            "size": 104055,
+            "crc": 499478944,
+            "state": "ADD",
+            "md5": "99ecbd641dbec6053e0bad9046e67297",
+            "objectName": "BcpUsN",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26085,
+            "name": "img_notice_update_another-001",
+            "size": 2471432,
+            "crc": 3953908424,
+            "state": "ADD",
+            "md5": "74493b5cac8baa7511a129928844f54d",
+            "objectName": "UzVqFa",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26086,
+            "name": "img_general_skillcard_act-2_116-ttmr",
+            "size": 123949,
+            "crc": 4053112202,
+            "state": "ADD",
+            "md5": "73de517e1825e8f5544982c5df84309e",
+            "objectName": "ssnOJw",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26087,
+            "name": "img_general_skillcard_men-1_094",
+            "size": 88211,
+            "crc": 313038365,
+            "state": "ADD",
+            "md5": "f2f7088afb6eb97bf275bd6b53149a27",
+            "objectName": "fqgXpC",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26088,
+            "name": "img_general_skillcard_act-2_116-jsna",
+            "size": 124504,
+            "crc": 924015168,
+            "state": "ADD",
+            "md5": "1217de42fda12086ff5403f3b7adb629",
+            "objectName": "wBCQ7h",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26089,
+            "name": "img_general_skillcard_act-2_113-hmsz",
+            "size": 138129,
+            "crc": 1305523553,
+            "state": "ADD",
+            "md5": "1812d21cd6107e841eb644be02c7eff7",
+            "objectName": "FOv80e",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26090,
+            "name": "img_general_skillcard_act-2_113-ssmk",
+            "size": 135317,
+            "crc": 1029921174,
+            "state": "ADD",
+            "md5": "3cd8fcbb4d89ed4ee2650c54edc2f4c5",
+            "objectName": "XvQS1V",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26091,
+            "name": "img_general_skillcard_act-2_044-hmsz",
+            "size": 78944,
+            "crc": 2767124984,
+            "state": "ADD",
+            "md5": "c80f200569d01df44617294978f92179",
+            "objectName": "UVr8Av",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26092,
+            "name": "img_general_comic4_0171-thumb",
+            "size": 55622,
+            "crc": 1369023305,
+            "state": "ADD",
+            "md5": "b7194484bd8a57f8c5fe43e2712f3f03",
+            "objectName": "iKY1DC",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26093,
+            "name": "img_general_skillcard_act-2_113-hski",
+            "size": 136989,
+            "crc": 798744230,
+            "state": "ADD",
+            "md5": "1a808829cb71e457ffbc3b656a7dc4a6",
+            "objectName": "mTnF0o",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26094,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-select-s",
+            "size": 78736,
+            "crc": 890862497,
+            "state": "ADD",
+            "md5": "11577dbb6f9a29324cb31a535736f135",
+            "objectName": "bjtNj0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26095,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-logo",
+            "size": 26592,
+            "crc": 2388392803,
+            "state": "ADD",
+            "md5": "2710d4d42d23d5228e13568fd7ba6e5a",
+            "objectName": "1e9CnC",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26096,
+            "name": "img_general_skillcard_act-2_044-ttmr",
+            "size": 79738,
+            "crc": 2082363801,
+            "state": "ADD",
+            "md5": "03b7ee2e6615aa8c2629df323b3c5b86",
+            "objectName": "t5OHBn",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26097,
+            "name": "img_general_skillcard_act-2_120-shro",
+            "size": 106164,
+            "crc": 2042582214,
+            "state": "ADD",
+            "md5": "03d1cee4515a2a1e34f5e2e260e5029e",
+            "objectName": "wekOVA",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26098,
+            "name": "img_general_skillcard_act-2_116-atbm",
+            "size": 122498,
+            "crc": 1124094310,
+            "state": "ADD",
+            "md5": "fcb501463d3a7e6c9198c1a00967d681",
+            "objectName": "RtMT7Y",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26099,
+            "name": "img_general_skillcard_men-1_091",
+            "size": 55526,
+            "crc": 3222579527,
+            "state": "ADD",
+            "md5": "e922c7d051b3d23e20d0596cacbe7242",
+            "objectName": "SFBdv8",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26100,
+            "name": "img_general_skillcard_act-2_116-kcna",
+            "size": 125711,
+            "crc": 1314686527,
+            "state": "ADD",
+            "md5": "b5f57cbb7298fff0585a59606c39b1fd",
+            "objectName": "Rkxk14",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26101,
+            "name": "img_general_skillcard_act-2_044-kllj",
+            "size": 78168,
+            "crc": 3266154035,
+            "state": "ADD",
+            "md5": "7b8b3614b516bf0813e5479c209212cd",
+            "objectName": "IcazlH",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26102,
+            "name": "img_general_skillcard_act-2_118-hski",
+            "size": 106002,
+            "crc": 2546012931,
+            "state": "ADD",
+            "md5": "a52e6df1383ecada3c089672d0ae7398",
+            "objectName": "RF9MH1",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26103,
+            "name": "img_general_skillcard_act-2_044-amao",
+            "size": 80667,
+            "crc": 549917363,
+            "state": "ADD",
+            "md5": "1e940797428306185a6fbfd84e328334",
+            "objectName": "ahhlga",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26104,
+            "name": "img_general_skillcard_act-2_118-ssmk",
+            "size": 105436,
+            "crc": 3905265211,
+            "state": "ADD",
+            "md5": "b48aa65d8116b17f59f88b9c4f494e3d",
+            "objectName": "zKc4gZ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26105,
+            "name": "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-select-s",
+            "size": 76867,
+            "crc": 3505843586,
+            "state": "ADD",
+            "md5": "10affb4002f4d51ce485a829f410d23d",
+            "objectName": "43zoWq",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26106,
+            "name": "img_general_skillcard_act-2_120-hski",
+            "size": 106395,
+            "crc": 2149981429,
+            "state": "ADD",
+            "md5": "10f7b973403cec7a204f4f9234f671e0",
+            "objectName": "IRlgx3",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26107,
+            "name": "img_general_skillcard_act-2_118-ttmr",
+            "size": 105670,
+            "crc": 3079889431,
+            "state": "ADD",
+            "md5": "6eaa912b9d4e64ce01b29e2639231554",
+            "objectName": "8QEQV8",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26108,
+            "name": "img_general_skillcard_act-2_118-kcna",
+            "size": 108617,
+            "crc": 3783259247,
+            "state": "ADD",
+            "md5": "d0e8f222ddf4ccb9551dd723763c6474",
+            "objectName": "7Vm3Uo",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26109,
+            "name": "img_general_skillcard_act-2_116-fktn",
+            "size": 123932,
+            "crc": 2822202607,
+            "state": "ADD",
+            "md5": "5528a1d8d9d3edbab41dac1092857854",
+            "objectName": "G07Te4",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26110,
+            "name": "img_general_skillcard_act-2_108-hrnm",
+            "size": 112042,
+            "crc": 2932876766,
+            "state": "ADD",
+            "md5": "fafdba32b694c1f90022196e7a6f68e0",
+            "objectName": "epGKSY",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26111,
+            "name": "img_general_comic4_0169",
+            "size": 461874,
+            "crc": 2714076683,
+            "state": "ADD",
+            "md5": "0a8878088a7000f98aa5cdd3580e8aca",
+            "objectName": "f2CTyp",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26112,
+            "name": "img_general_skillcard_act-2_108-shro",
+            "size": 114163,
+            "crc": 292138263,
+            "state": "ADD",
+            "md5": "6ebbe9e5868baefd896ab841def68183",
+            "objectName": "GtZ2BW",
+            "uploadVersionId": 705100
         }
     ],
     "resourceList": [
@@ -25134,10 +26254,10 @@
         {
             "id": 3429,
             "name": "musics.txt",
-            "size": 23280,
+            "size": 23488,
             "state": "UPDATE",
-            "md5": "3bc8528f96211fed0991c0d0d7f6d78a",
-            "objectName": "nD1qr5",
+            "md5": "f86ea76e532d81e4c4f6cd1d01390cca",
+            "objectName": "GYYWG3",
             "uploadVersionId": 705100
         },
         {

@@ -1,0 +1,19 @@
+{
+    "revision": [
+        71,
+        70
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 3429,
+            "name": "musics.txt",
+            "size": 23488,
+            "state": "UPDATE",
+            "md5": "f86ea76e532d81e4c4f6cd1d01390cca",
+            "objectName": "GYYWG3",
+            "uploadVersionId": 705100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
