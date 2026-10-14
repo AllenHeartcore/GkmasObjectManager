@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0068",
+    "latest_version": "205100:0070",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -12067,6 +12067,33 @@
         ],
         "img_gasha_banner_gasha-01030-ssr-anotheridol-ttmr-001-select-s.unity3d": [
             "205100:0068|fL76fi|9fbba6557eae836b572c7c2f2bbe1fbe|29202"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-logo.unity3d": [
+            "205100:0070|V7jXVW|ccf22ca5f60e737b148ae6a06db05079|11602"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-select-m.unity3d": [
+            "205100:0070|gtKl1J|3e9086a2fac2aea67713d4b57d1e2520|57184"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-amao-001-select-s.unity3d": [
+            "205100:0070|jGcR3y|28beb50ed61319e1402ea0c87a1c8ee8|29375"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-logo.unity3d": [
+            "205100:0070|lcf1kc|f431aa255cc0f75217c9b7a07e03fbe5|11421"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-select-m.unity3d": [
+            "205100:0070|rf3agK|1cf7ab192ea2ab4e498d393a21560e01|54403"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kcna-001-select-s.unity3d": [
+            "205100:0070|yqGwQ3|3ab0869b6a96d640de6b1231aa2aec09|28893"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-logo.unity3d": [
+            "205100:0070|u1MXo9|3fabbbd57d252db4be605b87f28ca290|11421"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-select-m.unity3d": [
+            "205100:0070|F78aKO|92520e0a1a2f79788a6c1ed76b97a407|54930"
+        ],
+        "img_gasha_banner_gasha-01035-ssr-anotheridol-kllj-001-select-s.unity3d": [
+            "205100:0070|PlZst6|41fad3bbcae1817472b542294cf92163|28819"
         ],
         "img_gasha_banner_gasha-200limit-select-pickup-001-logo.unity3d": [
             "205000:0365|JSPXGf|e9c44f61ef7c2ef6b7943118e01d4957|13623",
@@ -33317,6 +33344,24 @@
         "img_general_comic4_0168.unity3d": [
             "205100:0065|tqf5vF|e0755885a56e5a20e2331058498ed38e|248155"
         ],
+        "img_general_comic4_0169-thumb.unity3d": [
+            "205100:0070|B11FuY|ca28d5ca84e2054d9674e6f03ce50e2a|26274"
+        ],
+        "img_general_comic4_0169.unity3d": [
+            "205100:0070|iz2F5h|dc9679aa8d22c841d9bf94446471464b|227487"
+        ],
+        "img_general_comic4_0170-thumb.unity3d": [
+            "205100:0070|gO81hm|92749a8afdd8fcbb41195c2483932cc0|24439"
+        ],
+        "img_general_comic4_0170.unity3d": [
+            "205100:0070|XzWiLY|11d7098de99b3245def8406fb4b0eb95|220720"
+        ],
+        "img_general_comic4_0171-thumb.unity3d": [
+            "205100:0070|6joPZ9|0d19dbbe5c0a12170c9b44206a8286e1|27620"
+        ],
+        "img_general_comic4_0171.unity3d": [
+            "205100:0070|Qc277e|d68f2e17127a6079565883253cba8b7c|234325"
+        ],
         "img_general_comic4_radio-0000-thumb.unity3d": [
             "205000:0262|lqqLLT|7570d8148e4bb32aeed23854d23a2a58|25613",
             "205100:0033|OZdd1N|37746b0f7e3fc9f60203d86e1c2e422f|25401"
@@ -39783,6 +39828,15 @@
         ],
         "img_general_home_gasha_gasha-01030-ssr-anotheridol-ttmr-001.unity3d": [
             "205100:0068|caY9q1|fdb4ea192d938999737f9bc7cebc9f79|16254"
+        ],
+        "img_general_home_gasha_gasha-01035-ssr-anotheridol-amao-001.unity3d": [
+            "205100:0070|rkr9w0|6ae8abd8f0c915fea051f53e6854e386|16250"
+        ],
+        "img_general_home_gasha_gasha-01035-ssr-anotheridol-kcna-001.unity3d": [
+            "205100:0070|EfIgRS|964d7434cc468cf0468ec0dea7f80030|15889"
+        ],
+        "img_general_home_gasha_gasha-01035-ssr-anotheridol-kllj-001.unity3d": [
+            "205100:0070|umn91G|0b2934fb3b18d6a8223430e086d99df2|16154"
         ],
         "img_general_home_gasha_gasha-200limit-select-pickup-001.unity3d": [
             "205000:0365|pcbpHC|a8621ee92e0d05e60137a96d18590aa4|15826",
@@ -64520,9 +64574,48 @@
             "205000:0025|W8p2ES|4ec4761c6d8d92c14c02db18cb1d77d7|13554",
             "205100:0033|m8GP5K|bd41cf7a29d8e26b6619c4edfa767403|13383"
         ],
+        "img_general_skillcard_act-2_044-amao.unity3d": [
+            "205100:0070|SayZ0Q|9f1873b186d91777041b6bc1504bd991|11843"
+        ],
+        "img_general_skillcard_act-2_044-atbm.unity3d": [
+            "205100:0070|IDkkye|6059dff719b0021d6f7073ed9aa6279a|11726"
+        ],
+        "img_general_skillcard_act-2_044-fktn.unity3d": [
+            "205100:0070|lz0EUc|2848d8986705a3711c3cb9976a62f55e|11882"
+        ],
+        "img_general_skillcard_act-2_044-hmsz.unity3d": [
+            "205100:0070|tX1ZKe|eef996ef48de629453295fa15282c00c|11730"
+        ],
+        "img_general_skillcard_act-2_044-hrnm.unity3d": [
+            "205100:0070|8WHtPG|3b6c690e5044e877bf3d6d1a385dfcc8|11716"
+        ],
+        "img_general_skillcard_act-2_044-hski.unity3d": [
+            "205100:0070|74l2H7|f21b40bbe16a96812388d26d250b3877|11791"
+        ],
+        "img_general_skillcard_act-2_044-hume.unity3d": [
+            "205100:0070|KN8e0d|607c1dd2faa765d9a9c475efa7628feb|11836"
+        ],
+        "img_general_skillcard_act-2_044-jsna.unity3d": [
+            "205100:0070|FspN8T|3b38649e37a104fd6561b32daec890d4|11673"
+        ],
+        "img_general_skillcard_act-2_044-kcna.unity3d": [
+            "205100:0070|VbfotU|a23fa5253f43581083720f6a140cd87e|11825"
+        ],
+        "img_general_skillcard_act-2_044-kllj.unity3d": [
+            "205100:0070|aFCzTN|38ab403c08f460e03a15c37db02d90d9|11745"
+        ],
         "img_general_skillcard_act-2_044-nasr.unity3d": [
             "205000:0409|K13OHg|aa53ce3662d9bb77f136ee6f825d2f56|12253",
             "205100:0033|L99MgV|920025237be28c5f4082295165304d44|12154"
+        ],
+        "img_general_skillcard_act-2_044-shro.unity3d": [
+            "205100:0070|DJoXjg|eb163e59b5c260cacfe32240126394a3|11882"
+        ],
+        "img_general_skillcard_act-2_044-ssmk.unity3d": [
+            "205100:0070|ltMLdu|aa7731ae1c14ba8ce3246c13178c144c|11939"
+        ],
+        "img_general_skillcard_act-2_044-ttmr.unity3d": [
+            "205100:0070|Q3FhyN|381eb6c43d0a09069ecfe19e60df73b5|11887"
         ],
         "img_general_skillcard_act-2_045-amao.unity3d": [
             "205000:0025|Roi15q|08595388b2b62110ce9ba4efe256d784|13410",
@@ -65712,6 +65805,201 @@
         "img_general_skillcard_act-2_106-ttmr.unity3d": [
             "205000:0378|7HD8mE|2bb1f54d071ee28614e470378084cd13|11488",
             "205100:0033|R4al4J|9c8ca239689ff9c126ae3bf63f7764a6|11313"
+        ],
+        "img_general_skillcard_act-2_108-amao.unity3d": [
+            "205100:0070|Qnfaty|465bcfd15532442464403703bc9eeeee|16296"
+        ],
+        "img_general_skillcard_act-2_108-atbm.unity3d": [
+            "205100:0070|TyAQGd|01fdfcf2d49a03cd3492cfce2b199cec|16009"
+        ],
+        "img_general_skillcard_act-2_108-fktn.unity3d": [
+            "205100:0070|WtRel9|7d73cf06a38b9820f8c366d377fb49b8|16395"
+        ],
+        "img_general_skillcard_act-2_108-hmsz.unity3d": [
+            "205100:0070|TRgnYd|67059ef617e72711cebc83c5412510e8|16222"
+        ],
+        "img_general_skillcard_act-2_108-hrnm.unity3d": [
+            "205100:0070|7nO0A2|066c891369cbf2e704e7ccb7470050fb|16229"
+        ],
+        "img_general_skillcard_act-2_108-hski.unity3d": [
+            "205100:0070|ku4oiv|a4f23c2955781b93cbe33006eca45bae|16229"
+        ],
+        "img_general_skillcard_act-2_108-hume.unity3d": [
+            "205100:0070|zpzrOa|4e9ab77e12dff930ba7695e6d56357b1|16277"
+        ],
+        "img_general_skillcard_act-2_108-jsna.unity3d": [
+            "205100:0070|qKCcCu|74155e8e9d172e2ee6a58602b97d9de7|16295"
+        ],
+        "img_general_skillcard_act-2_108-kcna.unity3d": [
+            "205100:0070|TVURCT|422fcb32e0b2562da31fcda475c982db|16378"
+        ],
+        "img_general_skillcard_act-2_108-kllj.unity3d": [
+            "205100:0070|yFwjZl|20ae2c6557bb0bd34556a6d33d8dfb27|16319"
+        ],
+        "img_general_skillcard_act-2_108-shro.unity3d": [
+            "205100:0070|7J0ym7|43e4d8a6a5f08d238af1331a9b08bab5|16315"
+        ],
+        "img_general_skillcard_act-2_108-ssmk.unity3d": [
+            "205100:0070|wONFDW|29ba157c117afcb63b5c0a6527ac1eee|16430"
+        ],
+        "img_general_skillcard_act-2_108-ttmr.unity3d": [
+            "205100:0070|CRLZdC|60364ed3788bf7b5ea1cf4e733adf92d|16342"
+        ],
+        "img_general_skillcard_act-2_113-amao.unity3d": [
+            "205100:0070|uigxpo|2fac92f03886991e3a1a5042b285c618|20802"
+        ],
+        "img_general_skillcard_act-2_113-atbm.unity3d": [
+            "205100:0070|KFWCSs|1bcb0a8545b3b5f144fc729fc7209cda|20875"
+        ],
+        "img_general_skillcard_act-2_113-fktn.unity3d": [
+            "205100:0070|GCZJTy|56fa4982d4cd5da0eb6c768af33399d7|20287"
+        ],
+        "img_general_skillcard_act-2_113-hmsz.unity3d": [
+            "205100:0070|IDYFoO|67d4ba149473102f7e98faa693ea4b64|20408"
+        ],
+        "img_general_skillcard_act-2_113-hrnm.unity3d": [
+            "205100:0070|GS08tm|af8b85e8cfbf0fbaeeba3f77cec5f00f|20768"
+        ],
+        "img_general_skillcard_act-2_113-hski.unity3d": [
+            "205100:0070|riz2Vx|914c7f6a2b04621c1bdae30e86158ca0|20637"
+        ],
+        "img_general_skillcard_act-2_113-hume.unity3d": [
+            "205100:0070|5sG7Ej|7e13eaeaa3d129dcd41f82bc8a18e532|20657"
+        ],
+        "img_general_skillcard_act-2_113-jsna.unity3d": [
+            "205100:0070|4uwOOt|ff486941601ccb6eba325ff9394ca1a0|20534"
+        ],
+        "img_general_skillcard_act-2_113-kcna.unity3d": [
+            "205100:0070|AfrJoD|4c214802aba81f260d228b021c049de6|20546"
+        ],
+        "img_general_skillcard_act-2_113-kllj.unity3d": [
+            "205100:0070|WU9GaT|c0db9846b30fbf0dce9ebcb3c4ce7568|19783"
+        ],
+        "img_general_skillcard_act-2_113-shro.unity3d": [
+            "205100:0070|QX6j2J|a37b3d6f0013ad843c0da020a170ef52|21040"
+        ],
+        "img_general_skillcard_act-2_113-ssmk.unity3d": [
+            "205100:0070|UHpIrn|f205162b5e0ec59250888c5e5d5f7b5d|20895"
+        ],
+        "img_general_skillcard_act-2_113-ttmr.unity3d": [
+            "205100:0070|yuemLu|b544313a7ee0a79288ae2f74204aabc9|20687"
+        ],
+        "img_general_skillcard_act-2_116-amao.unity3d": [
+            "205100:0070|Pj2gsM|d995e66d1879c9eed64f66d00670006c|19859"
+        ],
+        "img_general_skillcard_act-2_116-atbm.unity3d": [
+            "205100:0070|J3Nqxg|517b217e327cc0245a6137aa1a2b0a62|19840"
+        ],
+        "img_general_skillcard_act-2_116-fktn.unity3d": [
+            "205100:0070|MxLPbH|6186cc70dc8cb7898f696d50d4fc1fed|19820"
+        ],
+        "img_general_skillcard_act-2_116-hmsz.unity3d": [
+            "205100:0070|LifUIV|358752a29b7177a22b335c4254202ee3|19872"
+        ],
+        "img_general_skillcard_act-2_116-hrnm.unity3d": [
+            "205100:0070|juQwSv|7d43ab452720e3745a4d103ea0d71cfd|19728"
+        ],
+        "img_general_skillcard_act-2_116-hski.unity3d": [
+            "205100:0070|aX6yjj|d6d6c0e4548bdb63444caf0a69598db9|19759"
+        ],
+        "img_general_skillcard_act-2_116-hume.unity3d": [
+            "205100:0070|1WzwSr|ac29b728e7cede38eb1f635f7660e092|19792"
+        ],
+        "img_general_skillcard_act-2_116-jsna.unity3d": [
+            "205100:0070|MG6eWe|3a6ab5985340dcc7dd3a640495c7e4bf|19830"
+        ],
+        "img_general_skillcard_act-2_116-kcna.unity3d": [
+            "205100:0070|vLkKUg|c6b15d5e7f045bf71d4d050068d315db|19843"
+        ],
+        "img_general_skillcard_act-2_116-kllj.unity3d": [
+            "205100:0070|8fg7z1|f6adfd99c49c1a09777706463c54912d|19823"
+        ],
+        "img_general_skillcard_act-2_116-shro.unity3d": [
+            "205100:0070|YbhInc|9926fd4bee29ea2661813416cf3bef1e|19902"
+        ],
+        "img_general_skillcard_act-2_116-ssmk.unity3d": [
+            "205100:0070|Gjq0MA|a8fff44520e5561d9a37d7ce9ab10958|19777"
+        ],
+        "img_general_skillcard_act-2_116-ttmr.unity3d": [
+            "205100:0070|wO3W3z|bd926c6bb264bd81fa74b675bc49c88b|19875"
+        ],
+        "img_general_skillcard_act-2_118-amao.unity3d": [
+            "205100:0070|BkyRpl|a38565853faea420a08e27e1877b0d9f|18462"
+        ],
+        "img_general_skillcard_act-2_118-atbm.unity3d": [
+            "205100:0070|5EjLR5|19b933b74e2bcb354a9c50948d7add72|18399"
+        ],
+        "img_general_skillcard_act-2_118-fktn.unity3d": [
+            "205100:0070|GmeBrd|39d1816f58ad25ed00252849d81c36e8|18109"
+        ],
+        "img_general_skillcard_act-2_118-hmsz.unity3d": [
+            "205100:0070|gqX5rJ|c16e7965697357d912b681c020b79b14|18320"
+        ],
+        "img_general_skillcard_act-2_118-hrnm.unity3d": [
+            "205100:0070|ptYnms|bd11f9daa42a031f2a4f7a258e013fc2|18222"
+        ],
+        "img_general_skillcard_act-2_118-hski.unity3d": [
+            "205100:0070|H1K9RA|ce8e586839c6df9e969b155d1852f61a|17946"
+        ],
+        "img_general_skillcard_act-2_118-hume.unity3d": [
+            "205100:0070|EpvVyA|4eca4a5c6aafd83657d642c98675b5d3|18006"
+        ],
+        "img_general_skillcard_act-2_118-jsna.unity3d": [
+            "205100:0070|np75PY|a5be0bb7a6b5f8b09b904430144921ff|18067"
+        ],
+        "img_general_skillcard_act-2_118-kcna.unity3d": [
+            "205100:0070|DP9LTR|7ff83485fa99b2c6f1a751eb9798a762|18105"
+        ],
+        "img_general_skillcard_act-2_118-kllj.unity3d": [
+            "205100:0070|AeuZpL|7b4bc6b13829cb8c895329f1449374a6|18256"
+        ],
+        "img_general_skillcard_act-2_118-shro.unity3d": [
+            "205100:0070|oDeDeG|66fe113bfcca4e14d61408bf5d5de32b|18249"
+        ],
+        "img_general_skillcard_act-2_118-ssmk.unity3d": [
+            "205100:0070|NdCzCt|14858156fee0107c1b8fe7a8a72333ca|18079"
+        ],
+        "img_general_skillcard_act-2_118-ttmr.unity3d": [
+            "205100:0070|kSRv4m|e12bb1eb1a4cc272aaa098f8e4d884fd|18293"
+        ],
+        "img_general_skillcard_act-2_120-amao.unity3d": [
+            "205100:0070|KbrY1M|0f74bf9726f0600f4c7daa9f3ed6b6a6|16076"
+        ],
+        "img_general_skillcard_act-2_120-atbm.unity3d": [
+            "205100:0070|klUq2H|d6970fae4b6890dcb0f0c25e182c6ba7|16014"
+        ],
+        "img_general_skillcard_act-2_120-fktn.unity3d": [
+            "205100:0070|BslZno|69c8433832afd88341a8dc429eb72b4b|16073"
+        ],
+        "img_general_skillcard_act-2_120-hmsz.unity3d": [
+            "205100:0070|rrurF9|e10a3763b52ac08c27ebc66eb4afed98|16030"
+        ],
+        "img_general_skillcard_act-2_120-hrnm.unity3d": [
+            "205100:0070|D2fOex|df662b8d28c918afa4644a27cf370356|15976"
+        ],
+        "img_general_skillcard_act-2_120-hski.unity3d": [
+            "205100:0070|iKxPBD|ac7c41c2e7756486ae9a9937d995b650|16015"
+        ],
+        "img_general_skillcard_act-2_120-hume.unity3d": [
+            "205100:0070|hYEcuz|12fcdae5c75c336798e0adcc387be2a7|16011"
+        ],
+        "img_general_skillcard_act-2_120-jsna.unity3d": [
+            "205100:0070|SaNQmO|4fa16eb81dc7c1e5a866ce0d06a56cf1|16063"
+        ],
+        "img_general_skillcard_act-2_120-kcna.unity3d": [
+            "205100:0070|nGT3M4|0bda9a41b5931c4b4ce478dbe1ea060b|16115"
+        ],
+        "img_general_skillcard_act-2_120-kllj.unity3d": [
+            "205100:0070|68uQfC|2cb102480ca4d6dc7a8c509f8b287bb7|15932"
+        ],
+        "img_general_skillcard_act-2_120-shro.unity3d": [
+            "205100:0070|vQgTOQ|97131c21ac37196903b1d19b1b115be3|16145"
+        ],
+        "img_general_skillcard_act-2_120-ssmk.unity3d": [
+            "205100:0070|XxC11k|9cd52ae33437b488fb5c1be97b9c3822|16083"
+        ],
+        "img_general_skillcard_act-2_120-ttmr.unity3d": [
+            "205100:0070|PQpVE6|e0c0b0132d4a23d4b00500c998a8cc28|16090"
         ],
         "img_general_skillcard_act-3_001-amao.unity3d": [
             "205000:0025|o7fdFn|95f5a87e031f475cd3b14f88cd877020|11398",
@@ -68357,6 +68645,9 @@
             "205000:0025|YpUyW6|6b677952d675388dbfa69020efcbfe2a|10478",
             "205100:0033|ezXBfn|c24184a2d92bae2784882ba0f8dc0725|10370"
         ],
+        "img_general_skillcard_men-1_026.unity3d": [
+            "205100:0070|UFjLgG|a4a4d4bd270ca41edd353dbc94164d6a|9832"
+        ],
         "img_general_skillcard_men-1_030.unity3d": [
             "205000:0025|j9uXKr|e1d462a53bb7c4f3805f280c8a69f33f|9553",
             "205100:0033|jeCWTI|80056f500358c765d6fd564aa42fcf76|9516"
@@ -68404,6 +68695,15 @@
         "img_general_skillcard_men-1_076.unity3d": [
             "205000:0378|GTN4vq|95dc894a6c50e428058bc0bce180e5c0|8696",
             "205100:0033|1zxnB8|997d005647ca441789d70b213412cb4d|8628"
+        ],
+        "img_general_skillcard_men-1_091.unity3d": [
+            "205100:0070|nhej3e|4896eeb1b15c13dcde0e11712686060e|9382"
+        ],
+        "img_general_skillcard_men-1_093.unity3d": [
+            "205100:0070|e8rgaK|401831e954d4816be6fbb620dbb0858b|9849"
+        ],
+        "img_general_skillcard_men-1_094.unity3d": [
+            "205100:0070|xafgka|2195f7ed15c834a23160422edc2c7970|12584"
         ],
         "img_general_skillcard_men-2_004-amao.unity3d": [
             "205000:0025|9Q8t0a|7880a8b2afd57dd45c0a823f6233126d|16913",
@@ -75457,7 +75757,8 @@
         ],
         "img_mov_general_gasha_bg_idol_cidol-kllj-3-002.unity3d": [
             "205000:0081|Efc7F7|65ba26a52cf9a154c86c62c5c796b994|787885",
-            "205100:0033|vDrzOU|a3e440dac0dd0501085e327c4860f38f|785354"
+            "205100:0033|vDrzOU|a3e440dac0dd0501085e327c4860f38f|785354",
+            "205100:0070|9yOVfo|a217d18d1b2a83555ced8cfdc1fd4409|783561"
         ],
         "img_mov_general_gasha_bg_idol_cidol-kllj-3-004.unity3d": [
             "205000:0103|ODSbXH|b12d118502ce95fe0f11942c5a4d96b8|765818",
@@ -79073,6 +79374,24 @@
         "img_notice_gasha_gasha-01030-ssr-anotheridol-ttmr-001.unity3d": [
             "205100:0068|4ECrZI|e6ab37d28318be5faa78f9884640727e|449217"
         ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-amao-001-banner-01-large.unity3d": [
+            "205100:0070|GoAinC|f53a52ec93ed929d0ecfbd8dd613b7a1|114279"
+        ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-amao-001.unity3d": [
+            "205100:0070|zBERgS|18529a676d3d2e51851ab0e3182af9b3|414856"
+        ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-kcna-001-banner-01-large.unity3d": [
+            "205100:0070|Hl8NeK|f29774697b12517b6160fa56289e49eb|107170"
+        ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-kcna-001.unity3d": [
+            "205100:0070|IYU1JB|587775f77ce842a9650628037f09b8c9|408614"
+        ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-kllj-001-banner-01-large.unity3d": [
+            "205100:0070|XqvOJV|2d22f5b9fa7f59e7dc4f581758b07dfc|107092"
+        ],
+        "img_notice_gasha_gasha-01035-ssr-anotheridol-kllj-001.unity3d": [
+            "205100:0070|PP8q56|db96f4752eff1f369a56f2c824de62a2|389567"
+        ],
         "img_notice_gasha_gasha-200limit-select-pickup-001-banner-01-large-pre.unity3d": [
             "205000:0361|X2mXZD|ac58241e0be6e33a4a87eaa5bc31be60|108965",
             "205100:0033|dI1mHR|cd289e062ca2e315e29777bc90cb0ade|108523"
@@ -79430,6 +79749,12 @@
         "img_notice_information_update-meishi-01.unity3d": [
             "205000:0081|c9HBGC|b8188ac33298d884f8c242e18e5e4b8c|47304",
             "205100:0033|7tzRzu|0a43979d4d3878ba272dd088cc91fcba|46826"
+        ],
+        "img_notice_information_update_another-001-large.unity3d": [
+            "205100:0070|fHf6uh|8fa497bc722e7d89b3bd56f9fba4a7a6|247820"
+        ],
+        "img_notice_information_update_another-002-large.unity3d": [
+            "205100:0070|l6opt2|8f1510be84a099df3207ae16c1dcd3aa|276547"
         ],
         "img_notice_maintenance_cmn-01.unity3d": [
             "205000:0118|huyBF4|ee5098da8bc8046990d6a15f95c86078|19891",
@@ -81410,6 +81735,12 @@
         "img_notice_tips_skillcard-switch-01.unity3d": [
             "205100:0056|qPvKlA|4f3ee7d4c3787940faf6fffb4ac0f72b|112369"
         ],
+        "img_notice_update_another-001-banner.unity3d": [
+            "205100:0070|xgtzjn|ea0ac3525f7eeb8ec47c1791e0d8559f|108651"
+        ],
+        "img_notice_update_another-001.unity3d": [
+            "205100:0070|E4dnFN|b765a4bfb7a30746dbd9f61b600eeda1|358735"
+        ],
         "img_notice_update_cmn-01.unity3d": [
             "205000:0118|QLGk6b|098833d96506125014a82f3c548abbd7|22010",
             "205100:0033|uLGzD0|fcfd3ceaf1c31fc25ffd1eb1f374a12e|21931"
@@ -81808,7 +82139,8 @@
         ],
         "img_tutorial_another-idol_002.unity3d": [
             "205000:0081|hDvejE|99a4421ce5e25408d61727c0d9557471|212909",
-            "205100:0033|hHUlwn|63ecfcd981244c101b7b4bf5de7a6437|212361"
+            "205100:0033|hHUlwn|63ecfcd981244c101b7b4bf5de7a6437|212361",
+            "205100:0070|WOAjmP|499e6811fbaa2653ecaf93a46456b2e2|241346"
         ],
         "img_tutorial_another-idol_003.unity3d": [
             "205000:0081|9JR6uH|df5320b7d8e8d46c38b3173a5e0ab812|159851",
@@ -120522,7 +120854,8 @@
             "205000:0406|gkqyeJ|da4435d4cc704bddb555b99a3d96e79c|19568",
             "205000:0422|PXkmZG|071a4a454394e6d6835236acc9308dd9|19728",
             "205100:0033|qjfwpl|3d5fe097cc0373d53d96d399dccd9169|22304",
-            "205100:0046|JJBY4o|3bc8528f96211fed0991c0d0d7f6d78a|23280"
+            "205100:0046|JJBY4o|3bc8528f96211fed0991c0d0d7f6d78a|23280",
+            "205100:0070|FLwkVX|f86ea76e532d81e4c4f6cd1d01390cca|23488"
         ],
         "sud_bgm_adv_all-001-amao_normal-004.acb": [
             "205000:0025|7jAJAn|06bedf714f8efb1649f7078e2bde3398|10752",
