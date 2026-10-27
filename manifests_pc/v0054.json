@@ -1,6 +1,6 @@
 {
     "revision": [
-        75,
+        76,
         54
     ],
     "assetBundleList": [
@@ -11133,6 +11133,16 @@
             "state": "ADD",
             "md5": "9f9c255eb4e219400e2f13b99bb677ce",
             "objectName": "QpT3WQ",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26430,
+            "name": "img_notice_shop_jewel_item-0045",
+            "size": 1522158,
+            "crc": 3985965938,
+            "state": "ADD",
+            "md5": "f9d21437c7b55535d46e42fdb8792671",
+            "objectName": "6DRWJY",
             "uploadVersionId": 705100
         }
     ],

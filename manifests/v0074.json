@@ -1,0 +1,20 @@
+{
+    "revision": [
+        75,
+        74
+    ],
+    "assetBundleList": [
+        {
+            "id": 26478,
+            "name": "img_notice_shop_jewel_item-0045",
+            "size": 258260,
+            "crc": 439138713,
+            "state": "ADD",
+            "md5": "63f6f57fe4f9091936628bef67ee6062",
+            "objectName": "vI8HJ3",
+            "uploadVersionId": 205100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
