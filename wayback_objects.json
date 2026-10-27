@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0074",
+    "latest_version": "205100:0075",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -82363,6 +82363,9 @@
         ],
         "img_notice_shop_jewel_item-0042.unity3d": [
             "205100:0074|Img1P0|e55b66ad256ad5e30c539224f0c9ef5b|258260"
+        ],
+        "img_notice_shop_jewel_item-0045.unity3d": [
+            "205100:0075|vI8HJ3|63f6f57fe4f9091936628bef67ee6062|258260"
         ],
         "img_notice_shop_pack_item-0001.unity3d": [
             "205000:0025|w1p5WO|8693a02dab549cc3cd94de5ec84a04de|167877",
