@@ -1,9 +1,40 @@
 {
     "revision": [
-        78,
+        79,
         77
     ],
-    "assetBundleList": [],
+    "assetBundleList": [
+        {
+            "id": 26438,
+            "name": "img_general_gasha_bg_gasha_select-loginbonus-002",
+            "size": 855925,
+            "crc": 1229043795,
+            "state": "UPDATE",
+            "md5": "251876f9b0c46e7bbbd0f220891f6e74",
+            "objectName": "AORkXY",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26467,
+            "name": "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-select-m",
+            "size": 146946,
+            "crc": 3461356050,
+            "state": "UPDATE",
+            "md5": "c2b73686524bb4ad42a24915fbb9e68c",
+            "objectName": "lNgwl2",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26481,
+            "name": "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-logo",
+            "size": 21814,
+            "crc": 913973649,
+            "state": "UPDATE",
+            "md5": "b24e49c9df3061b1b5a08d22b3ced22b",
+            "objectName": "3ZVvRh",
+            "uploadVersionId": 705100
+        }
+    ],
     "resourceList": [
         {
             "id": 22860,

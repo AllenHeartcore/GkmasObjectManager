@@ -1,6 +1,6 @@
 {
     "revision": [
-        77,
+        78,
         43
     ],
     "assetBundleList": [
@@ -20607,11 +20607,11 @@
         {
             "id": 26498,
             "name": "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-logo",
-            "size": 9521,
-            "crc": 1081098530,
-            "state": "ADD",
-            "md5": "a278b89a4d37a2b62c481bb0b820095a",
-            "objectName": "XF1IAb",
+            "size": 9724,
+            "crc": 3469585724,
+            "state": "UPDATE",
+            "md5": "1377471796669c1cd71677265e1d8764",
+            "objectName": "pBi3QJ",
             "uploadVersionId": 205100
         },
         {
@@ -21335,11 +21335,11 @@
         {
             "id": 26569,
             "name": "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-select-m",
-            "size": 53805,
-            "crc": 2629385832,
-            "state": "ADD",
-            "md5": "737359f6b325720448e789ab1b946b86",
-            "objectName": "jJTSRh",
+            "size": 53924,
+            "crc": 3812544539,
+            "state": "UPDATE",
+            "md5": "5e41225e73e5baf4ddb51f7f3e6b9d65",
+            "objectName": "Peh5WU",
             "uploadVersionId": 205100
         },
         {
@@ -21365,11 +21365,11 @@
         {
             "id": 26572,
             "name": "img_general_gasha_bg_gasha_select-loginbonus-002",
-            "size": 291862,
-            "crc": 3170011748,
-            "state": "ADD",
-            "md5": "babbeac9d5c9ca483c64c59a299f5704",
-            "objectName": "9sOR6r",
+            "size": 291791,
+            "crc": 63546974,
+            "state": "UPDATE",
+            "md5": "84cc4c4a6f0f38c69282d103a3c5f355",
+            "objectName": "9xelzG",
             "uploadVersionId": 205100
         },
         {
