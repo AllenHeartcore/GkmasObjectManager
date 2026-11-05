@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0077",
+    "latest_version": "205100:0078",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -12354,10 +12354,12 @@
             "205100:0077|XcW3sY|1bd87d8d4f96d297addca72137a07dbf|26444"
         ],
         "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-logo.unity3d": [
-            "205100:0077|XF1IAb|a278b89a4d37a2b62c481bb0b820095a|9521"
+            "205100:0077|XF1IAb|a278b89a4d37a2b62c481bb0b820095a|9521",
+            "205100:0078|pBi3QJ|1377471796669c1cd71677265e1d8764|9724"
         ],
         "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-select-m.unity3d": [
-            "205100:0077|jJTSRh|737359f6b325720448e789ab1b946b86|53805"
+            "205100:0077|jJTSRh|737359f6b325720448e789ab1b946b86|53805",
+            "205100:0078|Peh5WU|5e41225e73e5baf4ddb51f7f3e6b9d65|53924"
         ],
         "img_gasha_banner_gasha-01055-select-loginbonus-ticket-002-select-s.unity3d": [
             "205100:0077|o0SlUn|0ee0f832b009b344cb16ab163524bb73|25669"
@@ -39195,7 +39197,8 @@
             "205100:0077|qjXOQK|9f49c9cc4f59a62211b68411f50f421e|294760"
         ],
         "img_general_gasha_bg_gasha_select-loginbonus-002.unity3d": [
-            "205100:0077|9sOR6r|babbeac9d5c9ca483c64c59a299f5704|291862"
+            "205100:0077|9sOR6r|babbeac9d5c9ca483c64c59a299f5704|291862",
+            "205100:0078|9xelzG|84cc4c4a6f0f38c69282d103a3c5f355|291791"
         ],
         "img_general_gasha_bg_gasha_ssr-idol-1-point-5-anniversary.unity3d": [
             "205000:0338|jKoLt1|13985427d0cff58288bd81dee75ac43c|666638",
