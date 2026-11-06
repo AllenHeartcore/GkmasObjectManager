@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0078",
+    "latest_version": "205100:0079",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -77791,7 +77791,8 @@
             "205100:0052|NohaGc|3fd1c085de49c6af4d2f11ef33c398b1|395162"
         ],
         "img_notice_campaign_select-loginbonus-001.unity3d": [
-            "205100:0077|VbekUa|52c791fd9bf8a5e9933035b974818467|245327"
+            "205100:0077|VbekUa|52c791fd9bf8a5e9933035b974818467|245327",
+            "205100:0079|hkFYzB|15748d0c0651f785f04f7e86871b06ff|253008"
         ],
         "img_notice_campaign_sr-idol-present-001.unity3d": [
             "205000:0431|JUX33F|dc669f8f4d211b2030b0b7813cf371f4|366055",
