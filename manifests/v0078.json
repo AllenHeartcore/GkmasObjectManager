@@ -1,0 +1,20 @@
+{
+    "revision": [
+        79,
+        78
+    ],
+    "assetBundleList": [
+        {
+            "id": 26562,
+            "name": "img_notice_campaign_select-loginbonus-001",
+            "size": 253008,
+            "crc": 925819534,
+            "state": "UPDATE",
+            "md5": "15748d0c0651f785f04f7e86871b06ff",
+            "objectName": "hkFYzB",
+            "uploadVersionId": 205100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}

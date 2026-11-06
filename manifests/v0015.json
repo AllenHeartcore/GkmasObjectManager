@@ -1,6 +1,6 @@
 {
     "revision": [
-        78,
+        79,
         15
     ],
     "assetBundleList": [
@@ -34456,11 +34456,11 @@
         {
             "id": 26562,
             "name": "img_notice_campaign_select-loginbonus-001",
-            "size": 245327,
-            "crc": 3525807476,
-            "state": "ADD",
-            "md5": "52c791fd9bf8a5e9933035b974818467",
-            "objectName": "VbekUa",
+            "size": 253008,
+            "crc": 925819534,
+            "state": "UPDATE",
+            "md5": "15748d0c0651f785f04f7e86871b06ff",
+            "objectName": "hkFYzB",
             "uploadVersionId": 205100
         },
         {

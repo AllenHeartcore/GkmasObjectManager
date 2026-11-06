@@ -1,6 +1,6 @@
 {
     "revision": [
-        79,
+        80,
         15
     ],
     "assetBundleList": [
@@ -37485,11 +37485,11 @@
         {
             "id": 26523,
             "name": "img_notice_campaign_select-loginbonus-001",
-            "size": 1132973,
-            "crc": 862780173,
-            "state": "ADD",
-            "md5": "8620c7df85fe798432950524a95b3770",
-            "objectName": "9B8TGV",
+            "size": 1152049,
+            "crc": 262799352,
+            "state": "UPDATE",
+            "md5": "859bb2aaf930ec0c84de050558543f70",
+            "objectName": "Ag0ZNT",
             "uploadVersionId": 705100
         },
         {

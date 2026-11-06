@@ -1,6 +1,6 @@
 {
     "revision": [
-        78,
+        79,
         76
     ],
     "assetBundleList": [
@@ -12,6 +12,16 @@
             "state": "UPDATE",
             "md5": "1377471796669c1cd71677265e1d8764",
             "objectName": "pBi3QJ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26562,
+            "name": "img_notice_campaign_select-loginbonus-001",
+            "size": 253008,
+            "crc": 925819534,
+            "state": "UPDATE",
+            "md5": "15748d0c0651f785f04f7e86871b06ff",
+            "objectName": "hkFYzB",
             "uploadVersionId": 205100
         },
         {
