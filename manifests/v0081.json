@@ -1,0 +1,523 @@
+{
+    "revision": [
+        82,
+        81
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 22927,
+            "name": "adv_dear_hkne_000-04-horizontal.txt",
+            "size": 1211919,
+            "state": "ADD",
+            "md5": "78f86db075883116a8cf002657c2d999",
+            "objectName": "o0Ihjw",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22928,
+            "name": "sud_vo_general_part_shro_128.acb",
+            "size": 27744,
+            "state": "ADD",
+            "md5": "f81a2efb6f8d817145d22be84c629ea1",
+            "objectName": "up9u0M",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22929,
+            "name": "sud_vo_general_part_kcna_146.acb",
+            "size": 46176,
+            "state": "ADD",
+            "md5": "c1ff55314efd2beec9e8f326ab1d0f7e",
+            "objectName": "zMl120",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22930,
+            "name": "adv_dear_hkne_000-03-horizontal.txt",
+            "size": 964324,
+            "state": "ADD",
+            "md5": "d6bf252c892aa83e80f9c50ba45f5b90",
+            "objectName": "7vlDAp",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22931,
+            "name": "sud_vo_general_part_hkne_159.acb",
+            "size": 41408,
+            "state": "ADD",
+            "md5": "2948bd457692a0009c1d2e711b8cb28a",
+            "objectName": "ZFgIsK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22932,
+            "name": "sud_vo_general_part_hkne_155.acb",
+            "size": 51968,
+            "state": "ADD",
+            "md5": "941fa5dffd9f8e9d48f5b3db84eea4ff",
+            "objectName": "xzsDzB",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22933,
+            "name": "sud_vo_adv_csprt-3-0122_02.acb",
+            "size": 1521888,
+            "state": "ADD",
+            "md5": "ae0bf76aeb1fad66b571b8d31a22ceac",
+            "objectName": "XdZVt1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22934,
+            "name": "sud_vo_general_part_hkne_154.acb",
+            "size": 39008,
+            "state": "ADD",
+            "md5": "d0e43d4192446a66b0bdb05b08c38062",
+            "objectName": "cV70UA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22935,
+            "name": "sud_vo_general_part_kcna_156.acb",
+            "size": 98016,
+            "state": "ADD",
+            "md5": "c48f4a4dd240de3624007205458656ed",
+            "objectName": "lqBctW",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22936,
+            "name": "sud_vo_system_csprt-3-0122_01-kcna.acb",
+            "size": 127360,
+            "state": "ADD",
+            "md5": "b0fe974944d528985af6f053897987d8",
+            "objectName": "qWyU1s",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22937,
+            "name": "sud_vo_general_part_hkne_019.acb",
+            "size": 22976,
+            "state": "ADD",
+            "md5": "67e83b4f6808ec086779a1a0816b5293",
+            "objectName": "L65a6o",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22938,
+            "name": "sud_vo_general_part_hkne_153.acb",
+            "size": 17184,
+            "state": "ADD",
+            "md5": "f5105de439ba97c53cca395e4f1e8471",
+            "objectName": "fyKoH7",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22939,
+            "name": "sud_bgm_adv_hkne-001.awb",
+            "size": 2173662,
+            "state": "ADD",
+            "md5": "e47397124c83b8ca9d8b56b8dbfaf33a",
+            "objectName": "U8L9NY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22940,
+            "name": "sud_vo_general_part_kcna_048.acb",
+            "size": 18848,
+            "state": "ADD",
+            "md5": "98800b35007f61d6ecfa4702be30a469",
+            "objectName": "MegKaR",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22941,
+            "name": "sud_vo_general_part_kcna_152.acb",
+            "size": 17536,
+            "state": "ADD",
+            "md5": "33269275ea85217199e840dd0ccbb217",
+            "objectName": "2XxWiX",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22942,
+            "name": "sud_vo_adv_dear_hkne_000-05-horizontal.acb",
+            "size": 3213408,
+            "state": "ADD",
+            "md5": "047da5e65ed79139b9b9b2a1c405636e",
+            "objectName": "76K7uU",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22943,
+            "name": "sud_vo_adv_csprt-3-0122_01.acb",
+            "size": 1518528,
+            "state": "ADD",
+            "md5": "0084c25b1457cbd274696947e56370ee",
+            "objectName": "uoICRh",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22944,
+            "name": "sud_vo_system_csprt-3-0122_02-hkne.acb",
+            "size": 124992,
+            "state": "ADD",
+            "md5": "79af646ae5397fc1424d96af86f0cd91",
+            "objectName": "Jhv0GK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22945,
+            "name": "sud_vo_adv_dear_hkne_000-04-horizontal.acb",
+            "size": 6317216,
+            "state": "ADD",
+            "md5": "637d5edfa1d9e03896d2173df1011d19",
+            "objectName": "OamM5U",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22946,
+            "name": "sud_vo_general_part_hkne_166.acb",
+            "size": 33568,
+            "state": "ADD",
+            "md5": "6b2e5c4bc5159f887ed2da2d4eb901ad",
+            "objectName": "Jtj99W",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22947,
+            "name": "adv_dear_hkne_000-05-horizontal.txt",
+            "size": 570978,
+            "state": "ADD",
+            "md5": "087e2cfe18dc7818c548d3515f3d9ab5",
+            "objectName": "waOIrp",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22948,
+            "name": "sud_vo_general_part_hkne_165.acb",
+            "size": 21280,
+            "state": "ADD",
+            "md5": "637bf777882700d7dafbb42281717f25",
+            "objectName": "IlpiwY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22949,
+            "name": "sud_vo_general_part_kcna_147.acb",
+            "size": 122560,
+            "state": "ADD",
+            "md5": "4676248d84162f096d9a1f63a7ae1e56",
+            "objectName": "cW7Wj1",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22950,
+            "name": "sud_vo_general_part_kcna_155.acb",
+            "size": 55712,
+            "state": "ADD",
+            "md5": "b37d9b936d08b2357188444c5c444ceb",
+            "objectName": "zeqU35",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22951,
+            "name": "sud_vo_general_part_hkne_161.acb",
+            "size": 31168,
+            "state": "ADD",
+            "md5": "e2f3dd261bc6b98a8c8a4391e772d791",
+            "objectName": "xT7g6i",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22952,
+            "name": "adv_csprt-3-0122_01.txt",
+            "size": 114542,
+            "state": "ADD",
+            "md5": "c33ce3a7b3cf732697303269307c8b62",
+            "objectName": "jNyW1p",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22953,
+            "name": "sud_vo_general_part_hkne_158.acb",
+            "size": 29472,
+            "state": "ADD",
+            "md5": "a8f1d3c79f20f4f90edeabde4c25536f",
+            "objectName": "I6txpK",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22954,
+            "name": "sud_vo_general_part_kcna_149.acb",
+            "size": 47552,
+            "state": "ADD",
+            "md5": "6b3732fc9770174e564851fdd089b649",
+            "objectName": "NIVRVG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22955,
+            "name": "adv_dear_hkne_000-02-horizontal.txt",
+            "size": 1184795,
+            "state": "ADD",
+            "md5": "d7bbc0f00306cea258f89aff8fe3755b",
+            "objectName": "5AdnJJ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22956,
+            "name": "sud_vo_adv_dear_hkne_000-03-horizontal.acb",
+            "size": 4020160,
+            "state": "ADD",
+            "md5": "3571d599bc2e694055562c73bb420e7a",
+            "objectName": "xPHHyf",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22957,
+            "name": "sud_vo_adv_dear_hkne_000-02-horizontal.acb",
+            "size": 4744544,
+            "state": "ADD",
+            "md5": "077cb60d884b7b781e1cd1fecaf72217",
+            "objectName": "ygXBLg",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22958,
+            "name": "sud_vo_adv_dear_hkne_000-01-horizontal.acb",
+            "size": 2897312,
+            "state": "ADD",
+            "md5": "f8b719b2f69a30eb4685d4759af60eeb",
+            "objectName": "a1I9pd",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22959,
+            "name": "sud_vo_general_part_hkne_162.acb",
+            "size": 21280,
+            "state": "ADD",
+            "md5": "9570ce3c45548b37d69c506407a8298d",
+            "objectName": "sWwBLp",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22960,
+            "name": "sud_vo_general_part_hume_201.acb",
+            "size": 19232,
+            "state": "ADD",
+            "md5": "26cc86eaaf61c454fb0e6803ad797de8",
+            "objectName": "M549AO",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22961,
+            "name": "sud_vo_general_part_hkne_156.acb",
+            "size": 26048,
+            "state": "ADD",
+            "md5": "a96213c1c58e93c79b9ee5ea22cc5fa8",
+            "objectName": "eRsHf6",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22962,
+            "name": "sud_vo_general_part_hkne_017.acb",
+            "size": 17856,
+            "state": "ADD",
+            "md5": "8a154d41d6cc59df807d12fbd0ed5fdb",
+            "objectName": "TvkmZY",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22963,
+            "name": "sud_vo_system_csprt-3-0122_03-kcna.acb",
+            "size": 63584,
+            "state": "ADD",
+            "md5": "a2c6c05b63f731817ac4a244e68d65c9",
+            "objectName": "S1WycI",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22964,
+            "name": "sud_vo_general_part_hkne_129.acb",
+            "size": 40032,
+            "state": "ADD",
+            "md5": "4e59f2778f16030c61f2d0c8c9d73cb7",
+            "objectName": "PLxR3n",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22965,
+            "name": "sud_vo_general_part_kcna_153.acb",
+            "size": 14816,
+            "state": "ADD",
+            "md5": "8b33e09972b15969131a43e3fab6c81a",
+            "objectName": "HjyGwL",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22966,
+            "name": "sud_vo_general_part_kcna_130.acb",
+            "size": 33536,
+            "state": "ADD",
+            "md5": "6712122d6434ebe2c1e6db4af9530037",
+            "objectName": "vMlqgv",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22967,
+            "name": "adv_dear_hkne_000-01-horizontal.txt",
+            "size": 844356,
+            "state": "ADD",
+            "md5": "466c9b83f5a7596b5ba569e69640d139",
+            "objectName": "ADI7dG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22968,
+            "name": "sud_vo_general_part_hkne_164.acb",
+            "size": 25728,
+            "state": "ADD",
+            "md5": "0e3ab497663de5ae294b2a3e8d92d843",
+            "objectName": "ZmaGID",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22969,
+            "name": "adv_csprt-3-0122_02.txt",
+            "size": 99803,
+            "state": "ADD",
+            "md5": "58187aca698b819060acc79a8c679acb",
+            "objectName": "ILu8iA",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22970,
+            "name": "sud_vo_general_part_kcna_144.acb",
+            "size": 66976,
+            "state": "ADD",
+            "md5": "130af1d1dc06303b836bdfa182e2b711",
+            "objectName": "CqQAJL",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22971,
+            "name": "sud_vo_general_part_hkne_160.acb",
+            "size": 101408,
+            "state": "ADD",
+            "md5": "0c20388be01cb1481f0a66297f5dd562",
+            "objectName": "6wzQVH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22972,
+            "name": "sud_vo_general_part_hkne_163.acb",
+            "size": 26048,
+            "state": "ADD",
+            "md5": "f9ec3fb7012de458647d41711979ac07",
+            "objectName": "3r8ZtH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22973,
+            "name": "sud_vo_general_part_hkne_157.acb",
+            "size": 19584,
+            "state": "ADD",
+            "md5": "8a849fdafcf5d574641d079fccff1f52",
+            "objectName": "09Zrd7",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22974,
+            "name": "sud_vo_general_part_kcna_140.acb",
+            "size": 12032,
+            "state": "ADD",
+            "md5": "df5f43bfc0f5ea8ba1c7423f4cce0acc",
+            "objectName": "H5Akem",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22975,
+            "name": "sud_vo_general_part_kcna_148.acb",
+            "size": 83008,
+            "state": "ADD",
+            "md5": "f340414a7d5547a54a3cf8a4d8b8f73b",
+            "objectName": "pwLDcp",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22976,
+            "name": "sud_vo_general_part_kcna_154.acb",
+            "size": 75168,
+            "state": "ADD",
+            "md5": "20b01de5f620e9077a56b36bc862a42c",
+            "objectName": "Kswdzh",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22977,
+            "name": "sud_vo_general_part_hmsz_153.acb",
+            "size": 26400,
+            "state": "ADD",
+            "md5": "744e2417f659cc165e000e053bc00c28",
+            "objectName": "ZVZCVO",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22978,
+            "name": "sud_vo_general_part_trda_047.acb",
+            "size": 41056,
+            "state": "ADD",
+            "md5": "566fb17cdd17d24521bfe211fc0b9f65",
+            "objectName": "4f3Ckd",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22979,
+            "name": "sud_vo_adv_csprt-3-0122_03.acb",
+            "size": 1674080,
+            "state": "ADD",
+            "md5": "694d9bd2261aa4d30ae977a962eabc9d",
+            "objectName": "lEJzrc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22980,
+            "name": "sud_vo_general_part_hkne_020.acb",
+            "size": 31840,
+            "state": "ADD",
+            "md5": "e089cc01d9e8c02ac490638f0b2acfc1",
+            "objectName": "DrK0wc",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22981,
+            "name": "sud_vo_general_part_hkne_001.acb",
+            "size": 24704,
+            "state": "ADD",
+            "md5": "c8d6de737c1744e465ba5ca300ebbd48",
+            "objectName": "cVh6kZ",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22982,
+            "name": "sud_bgm_adv_hkne-001.acb",
+            "size": 11296,
+            "state": "ADD",
+            "md5": "4270c6c349e5f5131cc3018462ccae9c",
+            "objectName": "NTltPm",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22983,
+            "name": "adv_csprt-3-0122_03.txt",
+            "size": 94633,
+            "state": "ADD",
+            "md5": "ed58b64008f418dac0418194f533bd36",
+            "objectName": "FOpIYx",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
