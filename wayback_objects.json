@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0082",
+    "latest_version": "205100:0084",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -39543,6 +39543,9 @@
             "205000:0334|jlMKFd|890d98187fedeeee5c65cce89b84c892|16182",
             "205100:0033|YCsO1l|a0bf1aab6a0ac8d7dd3202d3f4998630|16121"
         ],
+        "img_general_home_birthday_birthday-ssmk-2026-001.unity3d": [
+            "205100:0084|gFKXIH|0180dcd3d9b230c80721bc49a5b57179|16985"
+        ],
         "img_general_home_birthday_birthday-ttmr-2025-001.unity3d": [
             "205000:0257|M9kBHF|e403c103d856d4ee481bf660fffa7c11|16944",
             "205100:0033|wI2bWr|cdb3210e8788501096a8663f09b119ae|16858"
@@ -49192,6 +49195,9 @@
         "img_general_media_birthday-live-2026-kllj.unity3d": [
             "205100:0033|T5vzRa|31a0107660539209284ef20035ce95df|820726"
         ],
+        "img_general_media_birthday-live-2026-ssmk.unity3d": [
+            "205100:0084|pf6xQu|21c3ce763f1c326471cee87a928a557a|715009"
+        ],
         "img_general_media_birthday-live-2026-ttmr.unity3d": [
             "205000:0446|bW88Gm|52cd0b689b888d7afbb089eda5b2a4e9|872357",
             "205100:0033|5VMfeW|f95e4a51620413e9d920f881040169cf|871292"
@@ -50986,6 +50992,42 @@
         "img_general_meishi_base_panel-mission-007-thumb.unity3d": [
             "205100:0033|JY0bqR|68ae1d2ff0f7e81b3a054956ae91abf2|18591"
         ],
+        "img_general_meishi_base_pr-comic-01-full.unity3d": [
+            "205100:0084|GK8RTq|acd4504318d871920b81190d580c8eb0|690513"
+        ],
+        "img_general_meishi_base_pr-comic-01-thumb.unity3d": [
+            "205100:0084|1GZrhG|0a3d6ac85b9c135c1138e1ce01e75a00|27376"
+        ],
+        "img_general_meishi_base_pr-comic-02-full.unity3d": [
+            "205100:0084|DwRFn5|83500086db809aed450fb45d8093689f|717239"
+        ],
+        "img_general_meishi_base_pr-comic-02-thumb.unity3d": [
+            "205100:0084|HuaX2P|f651392a0b0f216c3cbe582eaf56ad9e|17329"
+        ],
+        "img_general_meishi_base_pr-comic-03-full.unity3d": [
+            "205100:0084|eTDn29|72696f6f8fb54305dad6ac2a32faa94c|669672"
+        ],
+        "img_general_meishi_base_pr-comic-03-thumb.unity3d": [
+            "205100:0084|oqVq4G|02c4e350e9bb36f2251d660b9494a06b|27153"
+        ],
+        "img_general_meishi_base_pr-comic-04-full.unity3d": [
+            "205100:0084|lTagB4|4a4303ae936129e3ec29935b3c486db9|661592"
+        ],
+        "img_general_meishi_base_pr-comic-04-thumb.unity3d": [
+            "205100:0084|rNM2nx|ad89be43c2310a0befaa6e39d171c4d3|17262"
+        ],
+        "img_general_meishi_base_pr-comic-05-full.unity3d": [
+            "205100:0084|YN0pDE|c2450c5dd160fdb8da259dd6070e7be6|702657"
+        ],
+        "img_general_meishi_base_pr-comic-05-thumb.unity3d": [
+            "205100:0084|nOgsgx|e8d679f80bd211c195857ed7203dbc1a|28591"
+        ],
+        "img_general_meishi_base_pr-comic-06-full.unity3d": [
+            "205100:0084|2Sy9kl|1241a248a8e17345d5fcf5b59082fb93|731366"
+        ],
+        "img_general_meishi_base_pr-comic-06-thumb.unity3d": [
+            "205100:0084|sWT1Mx|b17aa5db61fc0592b872afaac13c0264|17388"
+        ],
         "img_general_meishi_base_shibuya-ooh-001-full.unity3d": [
             "205000:0081|hZ0rTU|cd58462bb64007f609de5974f2deca17|692243",
             "205100:0033|wBN8pa|54afac5474aebba3f557daa61072a644|670124"
@@ -51041,6 +51083,12 @@
         "img_general_meishi_base_ssmk-birthday-02-thumb.unity3d": [
             "205000:0334|mZhXvJ|ab21bbdaa42f13be5a39b0dc00c46c93|27449",
             "205100:0033|52eJsy|28c9039e6936c99554d71dbefad1761c|27374"
+        ],
+        "img_general_meishi_base_ssmk-birthday-03-full.unity3d": [
+            "205100:0084|04ujkb|edd432e74c76d08a5fb2b78f6570d6a5|385555"
+        ],
+        "img_general_meishi_base_ssmk-birthday-03-thumb.unity3d": [
+            "205100:0084|awo9M3|2c230e95bb2d47422efc8d2121171c49|27061"
         ],
         "img_general_meishi_base_story-bg-dormitory-amaoroom-00-night-full.unity3d": [
             "205000:0081|rsMel2|867acf5e5a1e5654257a47b32f76e9ad|902085",
@@ -58201,6 +58249,12 @@
         "img_general_meishi_illust_sign-ttmr-03-thumb.unity3d": [
             "205000:0089|ydGRru|be186586d3284c05919e22c0d9ec5a7d|22648",
             "205100:0033|s06xCt|1f85c7f5c00712491c28614e4a0f1bba|21116"
+        ],
+        "img_general_meishi_illust_ssmk-birthday-stream-logo-001-full.unity3d": [
+            "205100:0084|WLw7Fk|d948b2a7ca323d23922132cec54d90b9|36078"
+        ],
+        "img_general_meishi_illust_ssmk-birthday-stream-logo-001-thumb.unity3d": [
+            "205100:0084|6A73os|05ccb5349ff37f36f3f519561abfbb95|28708"
         ],
         "img_general_meishi_illust_stamp-amao-01-full.unity3d": [
             "205000:0081|01RsUD|a315f0c5e62ad1b2e2323c5a2c08bca3|7924",
@@ -77672,6 +77726,9 @@
             "205000:0334|w6vCjH|314b3bd4005731c8289c79a861a2eac5|364681",
             "205100:0033|jkBQyx|84cf20e3dc4478e7a9e14c96654eaece|363544"
         ],
+        "img_notice_birthday_birthday-ssmk-2026.unity3d": [
+            "205100:0084|xExbh6|d0730f184ae45659b8455a6e9fcde665|396186"
+        ],
         "img_notice_birthday_birthday-ttmr-2024.unity3d": [
             "205000:0034|KiMh1b|1a9e2c8a42fc6ef9b6dd892a40e60235|334818",
             "205100:0033|3MHurM|7b5a946f303cecd1e3b1a3b278c9f40f|404683"
@@ -80903,6 +80960,9 @@
         "img_notice_information_birthday-ssmk-2025-large.unity3d": [
             "205000:0334|JTfSWz|22b66ddf5e93cf6ac19e564f5a5e2b12|120003",
             "205100:0033|2hKP4A|210bef4dccc9dfb2bb049d83ff5b171a|119982"
+        ],
+        "img_notice_information_birthday-ssmk-2026-large.unity3d": [
+            "205100:0084|SUnb1U|aaca025de8ad91dd0c96f54233fb936b|122334"
         ],
         "img_notice_information_birthday-ttmr-2024-large.unity3d": [
             "205000:0034|lEhmRh|97aa77d0067361a7d2845219127336ef|112343",
@@ -122455,6 +122515,9 @@
         ],
         "mov_general_media_birthday-live-2026-kllj.usm": [
             "205100:0033|5ymuy5|24a19ba2845925f67a013f831ee03229|1140605632"
+        ],
+        "mov_general_media_birthday-live-2026-ssmk.usm": [
+            "205100:0084|fKjvHS|65e0f0a8acf6059ee3d0a40c423d6cb5|1069881792"
         ],
         "mov_general_media_birthday-live-2026-ttmr-003.usm": [
             "205000:0446|MQUgKY|c25785d14468f29142bd17cc987dfb33|887947936",
