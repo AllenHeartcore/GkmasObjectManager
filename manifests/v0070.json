@@ -1,6 +1,6 @@
 {
     "revision": [
-        82,
+        84,
         70
     ],
     "assetBundleList": [
@@ -5662,6 +5662,206 @@
             "md5": "07f7fe9aa9fff3eeb2d9be2af6446762",
             "objectName": "V04hSK",
             "uploadVersionId": 205100
+        },
+        {
+            "id": 26670,
+            "name": "img_notice_birthday_birthday-ssmk-2026",
+            "size": 396186,
+            "crc": 154563097,
+            "state": "ADD",
+            "md5": "d0730f184ae45659b8455a6e9fcde665",
+            "objectName": "xExbh6",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26671,
+            "name": "img_general_media_birthday-live-2026-ssmk",
+            "size": 715009,
+            "crc": 887370874,
+            "state": "ADD",
+            "md5": "21c3ce763f1c326471cee87a928a557a",
+            "objectName": "pf6xQu",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26672,
+            "name": "img_general_meishi_base_pr-comic-06-thumb",
+            "size": 17388,
+            "crc": 2603407579,
+            "state": "ADD",
+            "md5": "b17aa5db61fc0592b872afaac13c0264",
+            "objectName": "sWT1Mx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26673,
+            "name": "img_general_home_birthday_birthday-ssmk-2026-001",
+            "size": 16985,
+            "crc": 1564300627,
+            "state": "ADD",
+            "md5": "0180dcd3d9b230c80721bc49a5b57179",
+            "objectName": "gFKXIH",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26674,
+            "name": "img_general_meishi_illust_ssmk-birthday-stream-logo-001-full",
+            "size": 36078,
+            "crc": 793851656,
+            "state": "ADD",
+            "md5": "d948b2a7ca323d23922132cec54d90b9",
+            "objectName": "WLw7Fk",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26675,
+            "name": "img_general_meishi_base_pr-comic-05-full",
+            "size": 702657,
+            "crc": 2554034534,
+            "state": "ADD",
+            "md5": "c2450c5dd160fdb8da259dd6070e7be6",
+            "objectName": "YN0pDE",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26676,
+            "name": "img_general_meishi_base_pr-comic-04-full",
+            "size": 661592,
+            "crc": 2134669169,
+            "state": "ADD",
+            "md5": "4a4303ae936129e3ec29935b3c486db9",
+            "objectName": "lTagB4",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26677,
+            "name": "img_general_meishi_base_pr-comic-03-thumb",
+            "size": 27153,
+            "crc": 305660093,
+            "state": "ADD",
+            "md5": "02c4e350e9bb36f2251d660b9494a06b",
+            "objectName": "oqVq4G",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26678,
+            "name": "img_general_meishi_base_pr-comic-04-thumb",
+            "size": 17262,
+            "crc": 785654325,
+            "state": "ADD",
+            "md5": "ad89be43c2310a0befaa6e39d171c4d3",
+            "objectName": "rNM2nx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26679,
+            "name": "img_general_meishi_base_pr-comic-01-full",
+            "size": 690513,
+            "crc": 982701365,
+            "state": "ADD",
+            "md5": "acd4504318d871920b81190d580c8eb0",
+            "objectName": "GK8RTq",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26680,
+            "name": "img_notice_information_birthday-ssmk-2026-large",
+            "size": 122334,
+            "crc": 2765408129,
+            "state": "ADD",
+            "md5": "aaca025de8ad91dd0c96f54233fb936b",
+            "objectName": "SUnb1U",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26681,
+            "name": "img_general_meishi_base_ssmk-birthday-03-full",
+            "size": 385555,
+            "crc": 3215895964,
+            "state": "ADD",
+            "md5": "edd432e74c76d08a5fb2b78f6570d6a5",
+            "objectName": "04ujkb",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26682,
+            "name": "img_general_meishi_base_pr-comic-01-thumb",
+            "size": 27376,
+            "crc": 3040941349,
+            "state": "ADD",
+            "md5": "0a3d6ac85b9c135c1138e1ce01e75a00",
+            "objectName": "1GZrhG",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26683,
+            "name": "img_general_meishi_base_pr-comic-06-full",
+            "size": 731366,
+            "crc": 1946959976,
+            "state": "ADD",
+            "md5": "1241a248a8e17345d5fcf5b59082fb93",
+            "objectName": "2Sy9kl",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26684,
+            "name": "img_general_meishi_base_pr-comic-03-full",
+            "size": 669672,
+            "crc": 426804561,
+            "state": "ADD",
+            "md5": "72696f6f8fb54305dad6ac2a32faa94c",
+            "objectName": "eTDn29",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26685,
+            "name": "img_general_meishi_base_pr-comic-02-full",
+            "size": 717239,
+            "crc": 1614074106,
+            "state": "ADD",
+            "md5": "83500086db809aed450fb45d8093689f",
+            "objectName": "DwRFn5",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26686,
+            "name": "img_general_meishi_illust_ssmk-birthday-stream-logo-001-thumb",
+            "size": 28708,
+            "crc": 3709750805,
+            "state": "ADD",
+            "md5": "05ccb5349ff37f36f3f519561abfbb95",
+            "objectName": "6A73os",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26687,
+            "name": "img_general_meishi_base_pr-comic-05-thumb",
+            "size": 28591,
+            "crc": 2533499758,
+            "state": "ADD",
+            "md5": "e8d679f80bd211c195857ed7203dbc1a",
+            "objectName": "nOgsgx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26688,
+            "name": "img_general_meishi_base_ssmk-birthday-03-thumb",
+            "size": 27061,
+            "crc": 1876065164,
+            "state": "ADD",
+            "md5": "2c230e95bb2d47422efc8d2121171c49",
+            "objectName": "awo9M3",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 26689,
+            "name": "img_general_meishi_base_pr-comic-02-thumb",
+            "size": 17329,
+            "crc": 1746138343,
+            "state": "ADD",
+            "md5": "f651392a0b0f216c3cbe582eaf56ad9e",
+            "objectName": "HuaX2P",
+            "uploadVersionId": 205100
         }
     ],
     "resourceList": [
@@ -9353,6 +9553,15 @@
             "state": "ADD",
             "md5": "ed58b64008f418dac0418194f533bd36",
             "objectName": "FOpIYx",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 22984,
+            "name": "mov_general_media_birthday-live-2026-ssmk.usm",
+            "size": 1069881792,
+            "state": "ADD",
+            "md5": "65e0f0a8acf6059ee3d0a40c423d6cb5",
+            "objectName": "fKjvHS",
             "uploadVersionId": 205100
         }
     ],

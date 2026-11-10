@@ -1,0 +1,19 @@
+{
+    "revision": [
+        84,
+        83
+    ],
+    "assetBundleList": [],
+    "resourceList": [
+        {
+            "id": 22984,
+            "name": "mov_general_media_birthday-live-2026-ssmk.usm",
+            "size": 1069881792,
+            "state": "ADD",
+            "md5": "65e0f0a8acf6059ee3d0a40c423d6cb5",
+            "objectName": "fKjvHS",
+            "uploadVersionId": 205100
+        }
+    ],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
