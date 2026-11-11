@@ -1,6 +1,6 @@
 {
     "revision": [
-        85,
+        86,
         37
     ],
     "assetBundleList": [
@@ -3535,6 +3535,51 @@
             "uploadVersionId": 705100
         },
         {
+            "id": 16010,
+            "name": "tln_live_all-012",
+            "size": 5191796,
+            "crc": 4201739554,
+            "dependencies": [
+                2579,
+                1942,
+                17937,
+                7494,
+                2176,
+                18012,
+                20193,
+                3611,
+                6662,
+                16189,
+                19006,
+                22412,
+                537,
+                16100,
+                6604,
+                20391,
+                5283,
+                5737,
+                22246,
+                15358,
+                16699,
+                4845,
+                1608,
+                18778,
+                20724,
+                5211,
+                6247,
+                15357,
+                4723,
+                1622,
+                2796,
+                3151,
+                15919
+            ],
+            "state": "UPDATE",
+            "md5": "d882a9e73ada75973439bf03c9691bc8",
+            "objectName": "2jQl6t",
+            "uploadVersionId": 705100
+        },
+        {
             "id": 16081,
             "name": "mdl_chr_jsna-cstm-0128_body",
             "size": 10398371,
@@ -4164,6 +4209,28 @@
             "state": "UPDATE",
             "md5": "ce3c278204857f93faa66d87beb7e088",
             "objectName": "YuM1Mh",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 19982,
+            "name": "tln_live_all-014",
+            "size": 13360327,
+            "crc": 1036933308,
+            "dependencies": [
+                21175,
+                3151,
+                18292,
+                18531,
+                2463,
+                6144,
+                6570,
+                3611,
+                15922,
+                16294
+            ],
+            "state": "UPDATE",
+            "md5": "f7622ead433d94d40b4095cc931670aa",
+            "objectName": "gbtwPf",
             "uploadVersionId": 705100
         },
         {
@@ -19507,29 +19574,29 @@
         {
             "id": 25564,
             "name": "tln_live_shro-006",
-            "size": 4563560,
-            "crc": 3736265511,
+            "size": 5113000,
+            "crc": 1204300858,
             "dependencies": [
-                867,
-                25540,
-                25567,
-                2463,
-                3611,
-                25508,
-                25533,
-                1608,
                 3151,
-                25563,
-                5724,
-                25509,
-                25534,
-                489,
                 25487,
-                25499
+                25534,
+                25508,
+                25563,
+                25499,
+                2463,
+                489,
+                25509,
+                3611,
+                25533,
+                25567,
+                5724,
+                25540,
+                1608,
+                867
             ],
-            "state": "ADD",
-            "md5": "a5bc53ccf5b9075a6490d0776db3a908",
-            "objectName": "g9rfGw",
+            "state": "UPDATE",
+            "md5": "e2b93917b55e92911344b52e7781ecba",
+            "objectName": "UPRoA8",
             "uploadVersionId": 705100
         },
         {
@@ -30739,6 +30806,36 @@
             "state": "ADD",
             "md5": "7d01609413b66e4068db0c06a66f0356",
             "objectName": "tL9k75",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26642,
+            "name": "img_general_comic4_0176",
+            "size": 438997,
+            "crc": 2127354828,
+            "state": "ADD",
+            "md5": "7c3e260cf876734164dad503bd11f30b",
+            "objectName": "LvVNa0",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26643,
+            "name": "img_notice_update_achievement-update-01",
+            "size": 565615,
+            "crc": 2703598094,
+            "state": "ADD",
+            "md5": "d30328a5a57bb59a45f7a741993e35af",
+            "objectName": "tjaiPF",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 26644,
+            "name": "img_general_comic4_0176-thumb",
+            "size": 52381,
+            "crc": 1957940862,
+            "state": "ADD",
+            "md5": "9e4098e306fed4f0423e6dcf20f30f03",
+            "objectName": "KL3rqi",
             "uploadVersionId": 705100
         }
     ],
