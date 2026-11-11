@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0084",
+    "latest_version": "205100:0085",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -34026,6 +34026,12 @@
         ],
         "img_general_comic4_0175.unity3d": [
             "205100:0077|3PyD8K|b05555d2776451d4b9246c25ad328043|238208"
+        ],
+        "img_general_comic4_0176-thumb.unity3d": [
+            "205100:0085|Gy59Jk|11c4d1addb0c2b84b2f4eff9850e596f|26987"
+        ],
+        "img_general_comic4_0176.unity3d": [
+            "205100:0085|NmRVu1|32d45bed6005537c9ea201ab0260d4dc|223013"
         ],
         "img_general_comic4_radio-0000-thumb.unity3d": [
             "205000:0262|lqqLLT|7570d8148e4bb32aeed23854d23a2a58|25613",
@@ -83083,6 +83089,9 @@
         "img_notice_tips_skillcard-switch-01.unity3d": [
             "205100:0056|qPvKlA|4f3ee7d4c3787940faf6fffb4ac0f72b|112369"
         ],
+        "img_notice_update_achievement-update-01.unity3d": [
+            "205100:0085|Sp8bnG|6df62d9503cdd63fad6f88221596b9b3|90362"
+        ],
         "img_notice_update_another-001-banner.unity3d": [
             "205100:0070|xgtzjn|ea0ac3525f7eeb8ec47c1791e0d8559f|108651"
         ],
@@ -102947,7 +102956,8 @@
         "tln_live_all-012.unity3d": [
             "205000:0301|bUdX90|0769811baab83431913715415b2d7f87|4960886",
             "205000:0317|h0NdLX|cecec3507a4a8125f16967ca78f77266|4868056",
-            "205100:0033|5IvylZ|14834487ece09351f34a35d9ee6de8ee|5123539"
+            "205100:0033|5IvylZ|14834487ece09351f34a35d9ee6de8ee|5123539",
+            "205100:0085|fK0d6f|60eb7f5dbd84438ba074556d526b6983|5339763"
         ],
         "tln_live_all-013.unity3d": [
             "205000:0316|JNT75D|bd5e7f27a871356240fc31f0f70ab510|3454170",
@@ -102955,7 +102965,8 @@
         ],
         "tln_live_all-014.unity3d": [
             "205000:0390|ZUOj30|f7c9565a990f90dcf7517ee6b6f6f5a6|13246733",
-            "205100:0033|qkI8Z9|169dfe79209940ac8c83dd4265d2244d|13247218"
+            "205100:0033|qkI8Z9|169dfe79209940ac8c83dd4265d2244d|13247218",
+            "205100:0085|Z2125B|6dc03b49fad1d112b9b45745aed4f41f|13654885"
         ],
         "tln_live_all-015.unity3d": [
             "205100:0046|luL9Et|e540baf1b5e51af280eefc2bb73005b0|15790237"
@@ -103482,7 +103493,8 @@
             "205100:0033|ip6il1|a8d85d4f3b0aa380b36c81f17426f58d|24482707"
         ],
         "tln_live_shro-006.unity3d": [
-            "205100:0061|LFftME|f5656300e1739dc006a09a5c3a0ae3f0|4492092"
+            "205100:0061|LFftME|f5656300e1739dc006a09a5c3a0ae3f0|4492092",
+            "205100:0085|qyUYF1|79ff7ac6962fc9417f8f28fe63c3c378|5040595"
         ],
         "tln_live_shro_all-001-normal-002.unity3d": [
             "205000:0025|E4vpfx|95f5318ed990ff81b401b15b9df71d26|65063",
