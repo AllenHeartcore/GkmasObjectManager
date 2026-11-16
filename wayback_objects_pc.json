@@ -1,5 +1,5 @@
 {
-    "latest_version": "705100:0088",
+    "latest_version": "705100:0089",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "705000:0009|DcXTz3|ab9940181896531b3d5468d5842e5662|1644148",
@@ -39842,10 +39842,12 @@
             "705100:0014|zHHnyW|dd68b5306e930b3ab3b3bac926aaba74|1734993"
         ],
         "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-001.unity3d": [
-            "705100:0088|3fq35b|221b6cb4feb9a888215d9e4ca28cf695|1603262"
+            "705100:0088|3fq35b|221b6cb4feb9a888215d9e4ca28cf695|1603262",
+            "705100:0089|AtJzaI|4718ecc7cc54a49cd9893d052928df0f|1594522"
         ],
         "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-002.unity3d": [
-            "705100:0088|L9MW5f|61ed6cf5829d5d180208034676582b8b|1660869"
+            "705100:0088|L9MW5f|61ed6cf5829d5d180208034676582b8b|1660869",
+            "705100:0089|YxrPRD|761bf888d23fcdf35e887d0f60e46b4a|1666153"
         ],
         "img_general_gasha_bg_gasha_ssr-idol-2nd-anniversary.unity3d": [
             "705000:0239|P8n47K|3b473cce30ab7ccfded42e20016299bf|1753106",
@@ -39865,10 +39867,12 @@
             "705100:0014|VX9JUQ|cf6d18a7a2081336fc45f3ba22a2a142|1537767"
         ],
         "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-001.unity3d": [
-            "705100:0088|ulrSNC|44c261615ebb1319a9259956be986c8c|1545264"
+            "705100:0088|ulrSNC|44c261615ebb1319a9259956be986c8c|1545264",
+            "705100:0089|CFRh5G|cfa8f6e9bf06357a1171575139101d8c|1525032"
         ],
         "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-002.unity3d": [
-            "705100:0088|426NNd|018f22ca0775411f307027630f4b3784|1528690"
+            "705100:0088|426NNd|018f22ca0775411f307027630f4b3784|1528690",
+            "705100:0089|P23Ywq|f263dd8758420b48290539d8bc981fa3|1512077"
         ],
         "img_general_gasha_bg_gasha_ssr-support-season-only-01.unity3d": [
             "705000:0170|xlpZCG|3bcd18fbff41aa38658aeef340936fc0|1534520",
@@ -81027,7 +81031,8 @@
             "705100:0080|Ag0ZNT|859bb2aaf930ec0c84de050558543f70|1152049"
         ],
         "img_notice_campaign_select-loginbonus-002.unity3d": [
-            "705100:0088|b1lEBm|9f158662941afa9030e6d0f91ad7cae4|1480938"
+            "705100:0088|b1lEBm|9f158662941afa9030e6d0f91ad7cae4|1480938",
+            "705100:0089|xneAno|d7227a780305f2fa92d3130552058bb1|1481021"
         ],
         "img_notice_campaign_sr-idol-present-001.unity3d": [
             "705000:0235|TWR1Ze|362b34c7381dba56dae9c0987e5d4983|2546097",
