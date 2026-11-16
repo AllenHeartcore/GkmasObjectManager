@@ -1,6 +1,6 @@
 {
     "revision": [
-        87,
+        88,
         57
     ],
     "assetBundleList": [
@@ -17032,11 +17032,11 @@
         {
             "id": 27060,
             "name": "img_notice_campaign_select-loginbonus-002",
-            "size": 321481,
-            "crc": 2312597043,
-            "state": "ADD",
-            "md5": "ca2401e08ed1d3871e55315a29552b92",
-            "objectName": "Wea9PB",
+            "size": 321491,
+            "crc": 4260551731,
+            "state": "UPDATE",
+            "md5": "3bd98551cf23296055ffddcb74bbf06f",
+            "objectName": "nd00j3",
             "uploadVersionId": 205100
         },
         {
@@ -18384,11 +18384,11 @@
         {
             "id": 27194,
             "name": "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-002",
-            "size": 590264,
-            "crc": 344524538,
-            "state": "ADD",
-            "md5": "4097a5c56c2412168bb3188dae96ab9f",
-            "objectName": "0hqOJU",
+            "size": 585280,
+            "crc": 3379352697,
+            "state": "UPDATE",
+            "md5": "64ec75cea511c91ddc9e803b21f4b366",
+            "objectName": "V2Vugf",
             "uploadVersionId": 205100
         },
         {
@@ -19206,11 +19206,11 @@
         {
             "id": 27272,
             "name": "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-002",
-            "size": 630817,
-            "crc": 2225344227,
-            "state": "ADD",
-            "md5": "94a6ea0eb15ce5499ce5c2cc19e2f920",
-            "objectName": "0TF8Rb",
+            "size": 632704,
+            "crc": 2720900946,
+            "state": "UPDATE",
+            "md5": "3b7cac44e5a393744e36ecaf70f1975e",
+            "objectName": "MkyF5J",
             "uploadVersionId": 205100
         },
         {
@@ -23288,11 +23288,11 @@
         {
             "id": 27671,
             "name": "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-001",
-            "size": 614696,
-            "crc": 2330715518,
-            "state": "ADD",
-            "md5": "64ba45789f07d95130bd3f2c7f85e2c6",
-            "objectName": "QXMouZ",
+            "size": 611365,
+            "crc": 2726383278,
+            "state": "UPDATE",
+            "md5": "b7595bee46d738849b7c0fbbe8b6959f",
+            "objectName": "jJ7DDd",
             "uploadVersionId": 205100
         },
         {
@@ -23858,11 +23858,11 @@
         {
             "id": 27725,
             "name": "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-001",
-            "size": 595980,
-            "crc": 2104537144,
-            "state": "ADD",
-            "md5": "f344215ec3419c9e1d6371faed236358",
-            "objectName": "ymK0uP",
+            "size": 590390,
+            "crc": 453094369,
+            "state": "UPDATE",
+            "md5": "7d3d6ef1a0badcf086f2ca5a0e6c0660",
+            "objectName": "kcSrj2",
             "uploadVersionId": 205100
         },
         {

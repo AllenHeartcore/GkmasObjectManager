@@ -1,9 +1,60 @@
 {
     "revision": [
-        88,
+        89,
         87
     ],
-    "assetBundleList": [],
+    "assetBundleList": [
+        {
+            "id": 26695,
+            "name": "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-001",
+            "size": 1594522,
+            "crc": 3073770793,
+            "state": "UPDATE",
+            "md5": "4718ecc7cc54a49cd9893d052928df0f",
+            "objectName": "AtJzaI",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 27127,
+            "name": "img_notice_campaign_select-loginbonus-002",
+            "size": 1481021,
+            "crc": 2542274308,
+            "state": "UPDATE",
+            "md5": "d7227a780305f2fa92d3130552058bb1",
+            "objectName": "xneAno",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 27512,
+            "name": "img_general_gasha_bg_gasha_ssr-idol-2-point-5-anniversary-002",
+            "size": 1666153,
+            "crc": 2380011920,
+            "state": "UPDATE",
+            "md5": "761bf888d23fcdf35e887d0f60e46b4a",
+            "objectName": "YxrPRD",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 27569,
+            "name": "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-002",
+            "size": 1512077,
+            "crc": 3199624537,
+            "state": "UPDATE",
+            "md5": "f263dd8758420b48290539d8bc981fa3",
+            "objectName": "P23Ywq",
+            "uploadVersionId": 705100
+        },
+        {
+            "id": 27605,
+            "name": "img_general_gasha_bg_gasha_ssr-support-2-point-5-anniversary-001",
+            "size": 1525032,
+            "crc": 3043556104,
+            "state": "UPDATE",
+            "md5": "cfa8f6e9bf06357a1171575139101d8c",
+            "objectName": "CFRh5G",
+            "uploadVersionId": 705100
+        }
+    ],
     "resourceList": [
         {
             "id": 22985,
