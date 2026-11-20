@@ -1,6 +1,6 @@
 {
     "revision": [
-        88,
+        89,
         46
     ],
     "assetBundleList": [
@@ -33246,6 +33246,16 @@
             "state": "ADD",
             "md5": "56facf11f90123744d22876555e2949d",
             "objectName": "cKl9aC",
+            "uploadVersionId": 205100
+        },
+        {
+            "id": 27884,
+            "name": "img_notice_notice-list_pr_thanksgiving-2026-01",
+            "size": 430525,
+            "crc": 4250990741,
+            "state": "ADD",
+            "md5": "bd76cfc2083e1075446b7b88ad4413e0",
+            "objectName": "UtCHU7",
             "uploadVersionId": 205100
         }
     ],

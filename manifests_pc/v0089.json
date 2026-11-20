@@ -1,0 +1,20 @@
+{
+    "revision": [
+        90,
+        89
+    ],
+    "assetBundleList": [
+        {
+            "id": 27836,
+            "name": "img_notice_notice-list_pr_thanksgiving-2026-01",
+            "size": 2239768,
+            "crc": 1282070537,
+            "state": "ADD",
+            "md5": "f481df6a7d843641d0baf8607f230b35",
+            "objectName": "t8n0VH",
+            "uploadVersionId": 705100
+        }
+    ],
+    "resourceList": [],
+    "urlFormat": "https://object.asset.game-gakuen-idolmaster.jp/{o}"
+}
