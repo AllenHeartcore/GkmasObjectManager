@@ -1,5 +1,5 @@
 {
-    "latest_version": "205100:0088",
+    "latest_version": "205100:0089",
     "assetBundleList": {
         "actor-shader.unity3d": [
             "205000:0025|cAimwE|f021b1721a7a675a6a91a61c3862c515|7761182",
@@ -85483,6 +85483,9 @@
         "img_notice_notice-list_pr_starlit-season-banner.unity3d": [
             "205000:0103|IpjYkM|5eabd7e99fa878721aaa4422d6a9f2e6|723484",
             "205100:0033|XI4vil|076cadb7e46b66f9dacaf05cc014e5d7|707330"
+        ],
+        "img_notice_notice-list_pr_thanksgiving-2026-01.unity3d": [
+            "205100:0089|UtCHU7|bd76cfc2083e1075446b7b88ad4413e0|430525"
         ],
         "img_notice_notice-list_pr_thanksgiving.unity3d": [
             "205000:0355|YqLJgI|9581821206d484bc18cd8043f6f2e709|12933",
